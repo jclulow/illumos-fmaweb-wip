@@ -1,0 +1,22 @@
+{
+	"private": true,
+	"name": "illumos-fmaweb-wip",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "2.5.0",
+		"jade": ">= 0.0.1",
+		"fmamsg": ">= 0.0.1"
+	},
+	"author": {
+		"name": "Joshua M. Clulow",
+		"email": "josh@sysmgr.org",
+		"url": "http://blog.sysmgr.org"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/jclulow/illumos-fmaweb-wip"
+	},
+	"engines": [ "node" ],
+	"description": "Provide http://www.illumos.org/msg/ZFS-8000-1W style URLs",
+	"homepage": "https://github.com/jclulow/node-fmamsg"
+}

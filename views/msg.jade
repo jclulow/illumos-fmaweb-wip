@@ -1,0 +1,7 @@
+h1 Message: #{msgid}
+table(border='1', cellpadding='6')
+	each field_value, field_title in obj
+		tr
+			td
+				b= field_title
+			td !{field_value}
