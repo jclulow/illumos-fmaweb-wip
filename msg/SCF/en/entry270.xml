@@ -1,0 +1,103 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry270.xml	1.1	08/02/08 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair action to replace the Motherboard.
+</item>
+	<name>description</name>
+	<item>The Motherboard is missing or could not be detected during powerup.
+</item>
+	<name>details</name>
+	<item>The Motherboard is missing or could not be detected during powerup.
+
+The entire platform will not be powered up. The platform becomes unbootable.
+
+The recommended service action for this event is to schedule the replacement of the Motherboard.
+
+
+Step 1. Collect the Fault Message  (two methods)
+
+
+   Single-line fault message displayed on the XSCF console:
+
+   Dec 12 12:22:04 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
+   EVENT-ID: e00a0121-8b23-4fcd-95de-4d935dfaf4fe
+   Refer to http://www.sun.com/msg/SCF-8008-FV for detailed information.
+
+
+   Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
+
+   MSG-ID: SCF-8008-FV, TYPE: upset, VER: 1, SEVERITY: Critical
+   EVENT-TIME: Wed Dec 12 12:22:03 PST 2007
+   PLATFORM: SPARC Enterprise M5000, CSN: BE80601000, HOSTNAME: san-ff2-16-0
+   SOURCE: sde, REV: 1.15
+   EVENT-ID: e00a0121-8b23-4fcd-95de-4d935dfaf4fe
+   DESC: The Motherboard is missing or could not be detected during powerup.
+   Refer to http://www.sun.com/msg/SCF-8008-FV for more information.
+   AUTO-RESPONSE: The entire platform will not be powered up. The platform becomes unbootable.
+   Please consult the detail section of the knowledge article for additional information.
+   IMPACT: The entire platform will not be powered up. The platform becomes unbootable.
+   Please consult the detail section of the knowledge article for additional information.
+   REC-ACTION: Schedule a repair action to replace the Motherboard.
+
+
+
+Step 2. Collect the output from the &#39;fmdump  -v  -u  Event-ID&#39; command
+
+
+   SPARC Enterprise platform example:
+
+   xscf&gt; fmdump -v -u e00a0121-8b23-4fcd-95de-4d935dfaf4fe
+
+	TIME                 UUID                                 MSG-ID
+	Dec 12 12:22:03.9854 e00a0121-8b23-4fcd-95de-4d935dfaf4fe SCF-8008-FV
+	  100%  upset.chassis.SPARC-Enterprise.config.mbu
+
+	        Problem in: hc:///chassis=0
+	           Affects: -
+	               FRU: hc://:product-id=SPARC Enterprise M5000:chassis-id=BE80601000:
+	                    server-id=san-ff2-16-0/component=CHASSIS
+	          Location: CHASSIS
+
+
+
+Step 3. Contact your Authorized Service Provider.
+
+</item>
+	<name>impact</name>
+	<item>The entire platform will not be powered up and the platform becomes unbootable.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>response</name>
+	<item>None.
+</item>
+	<name>title</name>
+	<item>The Motherboard is missing or could not be detected.
+</item>
+</event_registry_properties>

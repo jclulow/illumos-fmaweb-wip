@@ -1,0 +1,217 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry96.xml	1.4	08/10/09 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair action to replace the affected Field Replaceable Unit (FRU),
+the identity of which can be determined using fmdump -v -u EVENT_ID.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>description</name>
+	<item>The number of correctable errors detected within the part of a MAC chip that controls a memory
+bank has exceeded an acceptable threshold.
+</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;SCF-8003-OS&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+The number of correctable errors detected within the part of a MAC chip
+&lt;br&gt;
+that controls a memory bank has exceeded an acceptable threshold.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M3000 platform:&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; There is no MAC chip on a M3000
+platform.&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The JSC chip provides the same
+functionality as the MAC chip and is located on the MBU.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Domain using the memory bank will be
+reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Memory associated with the memory bank
+will be deconfigured after the
+platform is power cycled &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; or after the domain reboots or after a
+Dynamic Reconfiguration
+operation is performed.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M4000/M5000 platforms:&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The MAC Chip is located on the Memory
+board.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Domain using the memory bank will be
+reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Memory associated with the memory bank
+will be deconfigured after the
+platform is power cycled &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; or after the domain reboots or after a
+Dynamic Reconfiguration
+operation is performed.&lt;br&gt;
+&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M8000/M9000 platforms: &lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The MAC Chip us located on the CMU.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Domain using the memory bank will be reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Memory associated with the memory bank
+will be deconfigured after the
+platform is power cycled &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; or after the domain reboots or after a
+Dynamic Reconfiguration
+operation is performed.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+The recommended service action for this event is to schedule the
+replacement of the affected FRU.&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;LEGEND&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; = SUNW-MSG-ID&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; = EVENT_ID&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(51, 51, 255);&quot;&gt; &lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+GREEN&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;&amp;nbsp; =&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt; FRU&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;br&gt;
+Step 1. Collect the fault message (use one of the following methods):&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Single-line fault message displayed on the XSCF console:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Mar 20 21:19:15 san-ff2-21-0 fmd: SOURCE: sde, REV: 1.12,
+CSN: 7860000772 &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;0b0ac2ad-6d03-4b8d-b05a-d80d8f3841b9
+&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8003-0S&lt;/span&gt;
+for detailed information.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Complete fault message using &#39;fmdump -m&#39; on the XSCF
+console:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; MSG-ID:&amp;nbsp;&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8003-0S&lt;/span&gt;,
+TYPE: Fault, VER: 1, SEVERITY: Major&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-TIME: Tue Mar 20 21:19:15 UTC 2007&lt;br&gt;
+&amp;nbsp;&amp;nbsp; PLATFORM: SPARC-Enterprise, CSN: 7860000772, HOSTNAME:
+san-ff2-21-0&lt;br&gt;
+&amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;0b0ac2ad-6d03-4b8d-b05a-d80d8f3841b9
+&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; DESC: The number of correctable errors detected within the
+part of a MAC chip that controls a memory&lt;br&gt;
+&amp;nbsp;&amp;nbsp; bank has exceeded an acceptable threshold.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8003-0S for more
+information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Memory associated with the memory bank will
+be deconfigured after the platform is power cycled or after &lt;br&gt;
+&amp;nbsp;&amp;nbsp; the domain reboots or after a Dynamic Reconfiguration
+operation is performed.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; IMPACT: No immediate impact. Memory associated with the
+memory bank will be deconfigured after the platform &lt;br&gt;
+&amp;nbsp;&amp;nbsp; is power cycled or after the domain reboots or after a
+Dynamic Reconfiguration operation is performed.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; REC-ACTION: Schedule a repair action to replace the
+affected Field Replaceable Unit (FRU),&lt;br&gt;
+&amp;nbsp;&amp;nbsp; the identity of which can be determined using fmdump -v -u
+EVENT_ID.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
+for additional information.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Step 2. Collect the output from the &#39;fmdump -v -u EVENT_ID&#39; command&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; SPARC Enterprise platform example:&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; xscf&amp;gt; fmdump -v -u &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;0b0ac2ad-6d03-4b8d-b05a-d80d8f3841b9
+&lt;/span&gt; &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+UUID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+MSG-ID&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Mar 20 21:19:15.4243 &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;0b0ac2ad-6d03-4b8d-b05a-d80d8f3841b9
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;
+SCF-8003-0S&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 100%&amp;nbsp;
+fault.chassis.SPARC-Enterprise.asic.mac.bank.ce&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Problem in: hc:///chassis=0/cmu=0/mac=0/bank=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Affects: hc:///chassis=0/cmu=0/mac=0/bank=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+FRU: hc://:product-id=SPARC-Enterprise:chassis-id=7860000772:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+server-id=san-ff2-21-0:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+part=CA20393-B54X 001AA:revision=0101/component=/MBU_B/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;MEMB#0&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Step 3. Contact your Authorized Service Provider.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+If you require additional information, please refer to InfoDoc #87402.&lt;br&gt;
+&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>No immediate impact. Memory associated with the memory bank will be deconfigured after the platform 
+is power cycled or after the domain reboots or after a Dynamic Reconfiguration operation is performed.
+</item>
+	<name>response</name>
+	<item>Memory associated with the memory bank will be deconfigured after the platform is power cycled or after 
+the domain reboots or after a Dynamic Reconfiguration operation is performed.
+</item>
+	<name>title</name>
+	<item>Correctable errors within the part of a MAC chip that controls a memory bank have exceeded an acceptable threshold.
+</item>
+</event_registry_properties>

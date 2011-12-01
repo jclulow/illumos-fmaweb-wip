@@ -1,0 +1,239 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry206.xml	1.2	07/03/29 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair action to replace the affected Field Replaceable Unit (FRU),
+the identity of which can be determined using fmdump -v -u EVENT_ID.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>description</name>
+	<item>A fatal error was detected within a XB chip.
+</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+A fatal internal error detected within a XB chip. &lt;br&gt;
+&lt;br&gt;
+The type of fatal error can be determined from the resource affected by
+the fatal error. &lt;br&gt;
+There are three types of fatal errors:&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Faults in the common
+logic of the XB chip or the part of the XB chip that interfaces to
+another XB chip:&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Entire platform will be reset.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If this is the first
+crossbar way being deconfigured, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the platform will
+operate with reduced performance.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If a crossbar way has
+already been deconfigured, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the platform will
+be powered down.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Faults in part of the XB
+chip that interfaces to a SC chip:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Reset of all the domains on the CMU that
+the SC chip resides on will occur.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The CMU and all its associated IO are
+deconfigured.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Faults in part of the XB
+chip that interfaces with an IOC:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; A system operating with both crossbar
+ways enabled would result in a &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; single domain being reset and the
+relevant IO Channel (1/2 an IOC) &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; being deconfigured after the reset
+operation is performed.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; A system operating with a deconfigured
+crossbar way would result in the &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; domains using the IOC chip being reset
+and the entire IOC being &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; deconfigured after the reset operation
+is performed.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; IO Channel 0 on IOC
+chip 0 provides access to PCI Express slots 0 and 1 on this IOU.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; IO Channel 1 on IOC
+chip 0 provides access to PCI Express slots 2 and 3 on this IOU.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; IO Channel 2 on IOC
+chip 1 provides access to PCI Express slots 4 and 5 on this IOU.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; IO Channel 3 on IOC
+chip 1 provides access to PCI Express slots 6 and 7 on this IOU.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+The recommended service action for this event is to schedule the
+replacement of the affected FRU&#39;s.&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;LEGEND&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; = SUNW-MSG-ID&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; = EVENT_ID&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(51, 51, 255);&quot;&gt; &lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+GREEN&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;&amp;nbsp; =&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt; FRU&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;br&gt;
+Step 1. Collect the fault message (use one of the following methods):&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Single-line fault message displayed on the XSCF console:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Mar 27 15:31:10 nwk-dc2-1-sc0 fmd: SOURCE: sde, REV: 1.12,
+CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;6324a996-5341-4875-960b-dd262e79aab5&lt;/span&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8006-FP&lt;/span&gt;
+for detailed information.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Complete fault message using &#39;fmdump -m&#39; on the XSCF
+console:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; MSG-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8006-FP&lt;/span&gt;,
+TYPE: Fault, VER: 1, SEVERITY: Critical&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-TIME: Tue Mar 27 15:31:10 PDT 2007&lt;br&gt;
+&amp;nbsp;&amp;nbsp; PLATFORM: SPARC-Enterprise, CSN: nwk-dc2-1, HOSTNAME:
+nwk-dc2-1-sc0&lt;br&gt;
+&amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;6324a996-5341-4875-960b-dd262e79aab5&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; DESC: A fatal error was detected within a XB chip.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8006-FP for more
+information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Depending upon which part of the XB chip is
+faulty, either a crossbar way is deconfigured,&lt;br&gt;
+&amp;nbsp;&amp;nbsp; or a CMU and all its associated IO are deconfigured, or an
+IOC chip is deconfigured,&lt;br&gt;
+&amp;nbsp;&amp;nbsp; or an IO Channel within an IOC chip is deconfigured.
+Please consult the detail section of the &lt;br&gt;
+&amp;nbsp;&amp;nbsp; knowledge article for additional information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; IMPACT: Depending upon which part of the XB chip is
+faulty, either the entire platform is&lt;br&gt;
+&amp;nbsp;&amp;nbsp; reset, or one or more domains are reset. If the response
+includes deconfiguring a crossbar&lt;br&gt;
+&amp;nbsp;&amp;nbsp; way and this is the first crossbar way to be deconfigured,
+the platform will operate&lt;br&gt;
+&amp;nbsp;&amp;nbsp; with reduced performance. If the response includes
+deconfiguring a crossbar way&lt;br&gt;
+&amp;nbsp;&amp;nbsp; and a crossbar way has already been deconfigured, the
+platform is powered down.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
+for additional information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; REC-ACTION: Schedule a repair action to replace the
+affected Field Replaceable Unit (FRU),&lt;br&gt;
+&amp;nbsp;&amp;nbsp; the identity of which can be determined using fmdump -v -u
+EVENT_ID.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
+for additional information.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Step 2. Collect the output from the &#39;fmdump -v -u EVENT_ID&#39; command&lt;br&gt;
+&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; SPARC Enterprise platform example:&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; xscf&amp;gt; fmdump -v -u &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;6324a996-5341-4875-960b-dd262e79aab5&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+UUID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+MSG-ID&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Mar 27 15:31:10.7928 &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;6324a996-5341-4875-960b-dd262e79aab5&lt;/span&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8006-FP&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 100%&amp;nbsp;
+fault.chassis.SPARC-Enterprise.asic.xb.fe&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Problem in: hc:///chassis=0/xbu=0/xb=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Affects: hc:///chassis=0/xbu=0/xb=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+FRU: hc://:product-id=SPARC-Enterprise:chassis-id=nwk-dc2-1:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+server-id=nwk-dc2-1-sc0:serial=PP0639L444:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+part=CA06620-D301 A6:revision=0201/component=/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;XBU_B#0&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Step 3. Contact your Authorized Service Provider.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+If you require additional information, please refer to InfoDoc #87402.&lt;br&gt;
+&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>Depending upon which part of the XB chip is faulty, either the entire platform is
+reset, or one or more domains are reset. If the response includes deconfiguring a crossbar
+way and this is the first crossbar way to be deconfigured, the platform will operate
+with reduced performance. If the response includes deconfiguring a crossbar way
+and a crossbar way has already been deconfigured, the platform is powered down.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>response</name>
+	<item>Depending upon which part of the XB chip is faulty, either a crossbar way is deconfigured,
+or a CMU and all its associated IO are deconfigured, or an IOC chip is deconfigured,
+or an IO Channel within an IOC chip is deconfigured. Please consult the detail section of the 
+knowledge article for additional information.
+</item>
+	<name>title</name>
+	<item>Fatal error was detected within a XB chip.
+</item>
+</event_registry_properties>

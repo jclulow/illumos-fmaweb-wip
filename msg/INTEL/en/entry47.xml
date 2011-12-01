@@ -1,0 +1,717 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry47.xml	1.2	09/03/16 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Replace faulty dimm. Use &#39;fmadm faulty&#39; to identify the dimm.</item>
+	<name>description</name>
+	<item>A fatal error occured while trying to deploy spare memory.</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;INTEL-8001-G2.html&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&amp;nbsp;
+&lt;br&gt;
+Title&lt;br&gt;
+&amp;nbsp; Spare memory error&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Type&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; Fault &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Severity&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; Major&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Description&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; A fatal error occured while trying to deploy spare
+memory. &lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&lt;br&gt;
+Automated Response&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; System panic or reset by BIOS&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Impact&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; System may panic or be reset by BIOS &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Suggested Action for System Administrator&lt;br&gt;
+&amp;nbsp; &amp;nbsp; Replace faulty dimm. Use &#39;fmadm faulty&#39; to identify the
+dimm. &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Details&lt;br&gt;
+Message ID: &lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8001-G2&lt;/span&gt;
+indicates that the Solaris Fault Manager has received &lt;br&gt;
+an error report indicating a spare memory error has occurred.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+The recommended service actions for this event are as
+follows: &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_86/SOLARIS_CPU_Errors_29_022609/Details_Section_29_Feb2009/INTEL-8000-1J.html#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;Section A -&amp;nbsp; Identify Faulty
+Component / FRU&lt;/span&gt;&lt;/a&gt; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_86/SOLARIS_CPU_Errors_29_022609/Details_Section_29_Feb2009/INTEL-8000-1J.html#B_Contact_your_Authorized_Service&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;Section B -&amp;nbsp; Contact Authorized
+Service Provider&lt;/span&gt;&lt;/a&gt; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_86/SOLARIS_CPU_Errors_29_022609/Details_Section_29_Feb2009/INTEL-8000-1J.html#C_Clearing_Fault_after_Processor&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;Section C -&amp;nbsp; Clearing Fault after
+Replacement&lt;/span&gt;&lt;/a&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;a
+ name=&quot;A_Identify_the_Faulty_ComponentFRU_&quot;&gt;&lt;/a&gt;Section A -&amp;nbsp;
+Identify Faulty Component / FRU&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;
+&lt;span style=&quot;text-decoration: underline;&quot;&gt;LEGEND&lt;/span&gt;&lt;br
+ style=&quot;text-decoration: underline;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;GREEN =&amp;nbsp;
+FRU&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp; EVENT_ID&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp;
+SUNW-MSG-ID&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris provides commands that
+can be used to obtain
+information about faults present in the system.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; The &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;fmadm faulty&lt;/span&gt;&quot;
+command is the preferred method by
+which fault information can be obtained.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; The &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;fmdump -av&lt;/span&gt;&quot;
+command is an alternative method for
+obtaining simular fault information.&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris nomenclature numbering assignment is
+zero-based, therefore all numbering begins with the number 0. &lt;/li&gt;
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
+term &quot;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline; color: rgb(0, 153, 0);&quot;&gt;chip&lt;/span&gt;&quot;
+is used to describe the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;physical&lt;/span&gt;
+CPU/Processor.&lt;br&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Note:&amp;nbsp; The Event-ID&amp;nbsp;
+shown in &lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step
+A1&lt;/span&gt;
+and UUID shown in &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;
+are one in the same, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+as is the MSG-ID shown in &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A1&lt;/span&gt;
+and SUNW-MSG-ID shown in &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Step
+A1.&amp;nbsp; &lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;How to Identify the
+faulty memory DIMM using &quot;&lt;span style=&quot;text-decoration: underline;&quot;&gt;fmadm
+faulty&lt;/span&gt;&quot;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Example:&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp; &lt;/span&gt;Use
+fmadm (1M) faulty to list the faulty FRU&#39;s, unique
+Event_ID,&amp;nbsp; and Sun Message_ID. &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt; # fmadm faulty&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+-----------------&amp;nbsp;&amp;nbsp;&amp;nbsp;
+--------------------------------------------&amp;nbsp;&amp;nbsp;
+------------------&amp;nbsp;&amp;nbsp; ------------&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;
+EVENT-ID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;
+MSG-ID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+SEVERITY&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; -----------------&amp;nbsp;&amp;nbsp;&amp;nbsp;
+--------------------------------------------&amp;nbsp;&amp;nbsp;
+------------------&amp;nbsp;&amp;nbsp; -------------&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; Sep 26 19:00:24&amp;nbsp;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;bce027cd-49ba-69d6-99aa-8a98fa2548cd&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;INTEL-8001-G2&lt;/span&gt;&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;&amp;nbsp;
+&lt;/span&gt;Major&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp; Fault class : fault.cpu.intel.quickpath.mem_spare&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Affects:
+hc:///motherboard=0/chip=1/memory-controller=0/dram-channel=0/dimm=0&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; FRU:
+hc://:product-id=ASSY,MOTHERBOARD,LYNX_SERVER:chassis-id=0000000000:server-id=wgs40-117:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+serial=
+:part=49LF008/motherboard=0/chip=1/memory-controller=0/dram-channel=0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Description : A fatal error occured while trying to
+deploy spare memory.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Response : System panic or reset by BIOS&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Impact : System may panic or be reset by BIOS&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; Action : Replace faulty dimm. Use &#39;fmadm faulty&#39; to
+identify the dimm. &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+If your product does not provide the &quot;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;fmadm faulty&lt;/span&gt;&quot;
+output as shown above, proceed to &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div style=&quot;margin-left: 40px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The example shown in &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A1&lt;/span&gt;;&lt;br&gt;
+&lt;/div&gt;
+&lt;ul style=&quot;margin-left: 80px;&quot;&gt;
+  &lt;li&gt;Identifies the &lt;span style=&quot;font-weight: bold;&quot;&gt;physical &lt;/span&gt;processor
+as &quot;&lt;span style=&quot;font-weight: bold; color: rgb(0, 0, 0);&quot;&gt;chip=1&lt;/span&gt;&quot;
+in the line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;FRU&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Identifies the faulty &lt;span style=&quot;font-weight: bold;&quot;&gt;memory
+DIMM &lt;/span&gt;as &lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;&quot;&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(0, 153, 0);&quot;&gt;&quot;&lt;/span&gt;
+in the
+line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;FRU&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Identifies the location of the physical memory DIMM within the
+server as; &quot;/motherboard=0/chip=1/memory-controller=0/dram-channel=0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+There is typically one motherboard in a server and it is commonly
+referred to as
+&quot;motherboard=0&quot;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The physical processor, &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 0, 0);&quot;&gt;&quot;/chip=1&quot;&lt;/span&gt;,
+refers to the second physical processor
+on the motherboard.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The physical DIMM, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;&quot;dimm-0&quot;&lt;/span&gt;,
+refers to the faulty memory DIMM.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;Recommended
+service
+action is to replace the memory DIMM.&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;&lt;br&gt;
+&lt;/span&gt;
+&lt;div style=&quot;margin-left: 40px;&quot;&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Proceed to &lt;span style=&quot;font-weight: bold;&quot;&gt;Step A3.&lt;/span&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Step
+A2.&amp;nbsp; &lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;How to Identify the
+faulty memory DIMM using &quot;&lt;span style=&quot;text-decoration: underline;&quot;&gt;fmdump
+-av&lt;/span&gt;&quot;.&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Example:&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp; &lt;/span&gt;Use
+fmdump (1M) to list the faulty FRU&#39;s, unique
+Event_ID,&amp;nbsp; and Sun Message_ID. &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt; # fmdump&amp;nbsp; -av&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;
+UUID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;
+SUNW-MSG-ID&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; Sep 26 19:00:24&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;bce027cd-49ba-69d6-99aa-8a98fa2548cd&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;INTEL-8001-G2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+100%&amp;nbsp; fault.cpu.intel.quickpath.mem_spare&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Problem in:
+hc://:product-id=ASSY,MOTHERBOARD,LYNX_SERVER:chassis-id=0000000000:server-id=wgs40-117:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+serial=
+:part=49LF008/motherboard=0/chip=1/memory-controller=0/dram-channel=0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; Affects:
+hc:///motherboard=0/chip=1/memory-controller=0/dram-channel=0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; FRU:
+hc://:product-id=ASSY,MOTHERBOARD,LYNX_SERVER:chassis-id=0000000000:server-id=wgs40-117:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+serial=
+:part=49LF008/motherboard=0/chip=1/memory-controller=0/dram-channel=0/&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp;
+Location: -&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div style=&quot;margin-left: 40px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The example shown in &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A2&lt;/span&gt;;&lt;br&gt;
+&lt;div style=&quot;margin-left: 40px;&quot;&gt;
+&lt;ul&gt;
+  &lt;li&gt;Identifies the &lt;span style=&quot;font-weight: bold;&quot;&gt;physical &lt;/span&gt;processor
+as &quot;&lt;span style=&quot;font-weight: bold; color: rgb(0, 0, 0);&quot;&gt;chip=1&lt;/span&gt;&quot;
+in the line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;FRU&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Identifies the faulty &lt;span style=&quot;font-weight: bold;&quot;&gt;memory
+DIMM &lt;/span&gt;as &lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;&quot;&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(0, 153, 0);&quot;&gt;&quot;&lt;/span&gt;
+in the
+line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;FRU&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Identifies the location of the physical memory DIMM within the
+server as; &quot;/motherboard=0/chip=1/memory-controller=0/dram-channel=0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+There is typically one motherboard in a server and it is commonly
+referred to as
+&quot;motherboard=0&quot;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The physical processor, &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 0, 0);&quot;&gt;&quot;/chip=1&quot;&lt;/span&gt;,
+refers to the second physical processor
+on the motherboard.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The physical DIMM, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;&quot;dimm-0&quot;&lt;/span&gt;,
+refers to the faulty memory DIMM.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;Recommended
+service
+action is to replace the memory DIMM.&lt;/span&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Step
+A3.&amp;nbsp; How to Identify the &quot;&lt;span style=&quot;text-decoration: underline;&quot;&gt;physical&lt;/span&gt;&quot;
+location of the faulty memory DIMM. &lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Sun
+Platforms&lt;/span&gt;&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; A
+service label on the top cover and silk screen on the motherboard
+can assist with identifying the &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+physical location of the memory DIMM.&amp;nbsp; Typically, there is a
+label in the
+proximity of the memory DIMM.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The label nomenclature for a memory DIMM is &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;Dx&lt;/span&gt;, whereby
+&#39;x&#39;
+represents the memory DIMM number.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; Sun platforms use zero-based numbering for their labeling
+scheme, and as such, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+the faulty memory DIMM&amp;nbsp;
+identified in our example above
+(e.g. &quot;&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&quot;)
+would be interpreted as &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;D0&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; e.g.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;D0&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;1&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;D1&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;2&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;D2&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;3&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;D3&quot;&lt;/span&gt;.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Non-Sun
+Platforms&lt;/span&gt;&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; A
+service label on the top cover or silk screen on the motherboard may
+exist
+to assist with identifying the &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+physical location of the memory DIMM.&amp;nbsp; Typically, there is a
+label in the
+proximity of the memory DIMM.. &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The label nomenclature for a memory DIMM can be in the form of:&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;Dx, DIMMx&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;&lt;span
+ style=&quot;font-style: italic;&quot;&gt;&lt;/span&gt;, etc;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+whereby &#39;&lt;span style=&quot;font-style: italic;&quot;&gt;x&lt;/span&gt;&#39;
+represents the processor number.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; If the product uses zero-based numbering for its labeling
+scheme, as Sun&#39;s products do, the faulty&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; processor
+identified in our example
+(e.g. &lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;&quot;&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=0&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(0, 153, 0);&quot;&gt;&quot;&lt;/span&gt;)
+would be &lt;font color=&quot;#ff0000&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;identified&lt;/font&gt;
+as &lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;Dx&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;DIMM&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;x, etc;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; e.g.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;dimm=0&lt;/span&gt;
+maps to the physical location labeled;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;D0&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;DIMM0&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;etc;&lt;/span&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=1&lt;/span&gt;
+maps to the physical location labeled;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;D1&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;DIMM1&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;, etc;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=2&lt;/span&gt;
+maps to the physical location labeled;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;D2&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;DIMM2&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;, etc;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;dimm=3&lt;/span&gt;
+maps to the physical location labeled;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;D3&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;DIMM3&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;, etc;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;Recommended
+service
+action is to replace the memory DIMM.&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;
+&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The memory DIMM is customer
+serviceable.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;a
+ name=&quot;B_Contact_your_Authorized_Service&quot;&gt;&lt;/a&gt;Section B -&amp;nbsp;&amp;nbsp;
+Contact Authorized Service Provider&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;font color=&quot;#000000&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Please contact
+your service provider in accordance with the terms and conditions of
+your service &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; agreement to open a service request and
+to confirm and carry out the required repair actions specified &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; by current service policy.&lt;/font&gt;&lt;font
+ color=&quot;#000000&quot;&gt;&lt;span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Your service provider may ask for
+information displayed using the procedures outlined in &lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_85/DONE_ILOM_CPU_Errors_27_021209/External_Complete_Feb2009/SPX86-8001-0Q.html#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;Section
+&lt;/a&gt;&lt;/span&gt;&lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_85/DONE_ILOM_CPU_Errors_27_021209/External_Complete_Feb2009/SPX86-8001-0Q.html#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;A&lt;/a&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/font&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the product is covered by a current
+service agreement with Sun Microsystems, Inc., &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; please refer to the following&amp;nbsp;
+instructions for reporting the problem and opening a service
+request.&amp;nbsp; &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;font&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/font&gt;&lt;font&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;span
+ style=&quot;text-decoration: underline;&quot;&gt;Auto Service Request (ASR)
+Activated for the Product&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &lt;font&gt;If ASR has been activated for the product on which
+this problem was diagnosed, you have, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; or will receive a notification via e-mail confirming a service
+request has been automatically &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+opened along with instructions for viewing the service request.&lt;/font&gt;&lt;br&gt;
+&lt;font&gt;&lt;i&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; A&lt;/i&gt;ll of the fault event telemetry required to open a service
+request has already been transmitted&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; to Sun Services.
+Unless contacted and instructed otherwise by a Sun Service
+representative,&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; no further actions is required to report this problem to Sun
+Microsystems.&lt;br&gt;
+&lt;/font&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The e-mail notification will provide a pointer back to this same
+article. &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; If you are reading this article in response to a fault
+message or SNMP trap generated on the product, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; rather than
+in response to the ASR notification e-mail above, then you
+can check on the status of the &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; associated service request by logging into the Members
+Support Center at&amp;nbsp; &lt;a href=&quot;http://sun.com/support&quot;&gt;http://sun.com/support&lt;/a&gt;&amp;nbsp;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; For more information on Auto Service Request
+(ASR) and the currently supported products, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; please refer to &lt;a href=&quot;http://sun.com/service/asr&quot;&gt;http://sun.com/service/asr&lt;/a&gt;
+&lt;div&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/font&gt;
+&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Submitting
+a Service Request via the Members Support Center Portal&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+In cases where ASR has not been activated:&lt;br&gt;
+&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/font&gt;&lt;/font&gt;1.&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;Times New Roman&quot;
+ size=&quot;3&quot;&gt;&amp;nbsp; Login to
+the Members Support Center at&amp;nbsp; &lt;/font&gt;&lt;a
+ href=&quot;http://sun.com/support&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;http://sun.com/support&lt;/font&gt;&lt;/a&gt;&lt;font
+ face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt; &lt;/font&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;&lt;/font&gt;2.&lt;font color=&quot;#000000&quot;
+ style=&quot;font-weight: bold;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&amp;nbsp;
+&lt;/font&gt;&lt;/font&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;Create
+a Service
+Request &lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/font&gt;3.&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&amp;nbsp;
+&lt;/font&gt;&lt;/font&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;Copy
+and paste the
+information displayed using the instructions provided in &lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_85/DONE_ILOM_CPU_Errors_27_021209/External_Complete_Feb2009/SPX86-8001-0Q.html#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;Section
+A&lt;/a&gt; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; to identify the faulty
+FRU(s), into the Service Request notes.&lt;/font&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;a
+ name=&quot;C_Clearing_Fault_after_Processor&quot;&gt;&lt;/a&gt;Section C -&amp;nbsp;
+Clearing Fault after Replacement&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;text-decoration: underline;&quot;&gt;LEGEND&lt;/span&gt;&lt;br
+ style=&quot;text-decoration: underline;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;GREEN =&amp;nbsp;
+FRU&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp; EVENT_ID&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp;
+SUNW-MSG-ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Solaris Command
+to Clear the Fault&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; Once the memory DIMM has been physically
+replaced
+and the system
+is rebooted, a fault management command is&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; required to clear the memory DIMM fault
+from the
+Solaris fault manager&#39;s resource cache to accurately reflect faults &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; that are no
+longer
+present.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Invoke the &quot;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;fmadm repair&lt;/span&gt;&quot;
+command along with the &lt;span
+ style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;UUID&lt;/span&gt;
+(Universally
+Unique IDentifier) associated with the faulted processor.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; e.g.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Sep 26
+19:00:24&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt;bce027cd-49ba-69d6-99aa-8a98fa2548cd&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;INTEL-8001-G2&lt;/span&gt;&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Note:&amp;nbsp; The
+Event-ID&amp;nbsp; shown
+in &lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A1&lt;/span&gt;
+and UUID shown in &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;
+are one in the same, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; as is the MSG-ID shown in &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A1&lt;/span&gt;
+and SUNW-MSG-ID shown in &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-style: italic;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+Example:&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp; &lt;/span&gt;Use
+fmadm (1M) repair to clear the fault using the UUID (Universally
+Unique Identifier).&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+#&lt;/span&gt; &lt;span style=&quot;font-weight: bold;&quot;&gt;fmadm
+repair&amp;nbsp;&lt;/span&gt;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;span
+ style=&quot;color: rgb(51, 51, 255);&quot;&gt;bce027cd-49ba-69d6-99aa-8a98fa2548cd&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; fmadm: recorded
+repair to&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;span
+ style=&quot;color: rgb(51, 51, 255);&quot;&gt;bce027cd-49ba-69d6-99aa-8a98fa2548cd&lt;/span&gt;&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>System may panic or be reset by BIOS</item>
+	<name>response</name>
+	<item>System panic or reset by BIOS</item>
+	<name>title</name>
+	<item>Spare memory error</item>
+</event_registry_properties>

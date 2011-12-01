@@ -1,0 +1,55 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)ebus_details.html	1.2	07/01/30 SMI" -->
+The Message ID:&nbsp;&nbsp;<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates a device connected to the Ebus is faulty and requires Service.
+The current Ebus transaction is terminated and the Ebus continues to 
+operate.  
+
+<br><br>
+Use the <tt><b>fmdump -v -u <i>EVENT_ID</i></b></tt> command to determine 
+the faulty component as shown in the example below.
+
+<pre>
+# fmdump -v -u  1dd03a08-3f16-c3d9-8b11-ada871c07a3b
+TIME                 UUID                                 SUNW-MSG-ID
+Nov 17 19:04:03.0975 1dd03a08-3f16-c3d9-8b11-ada871c07a3b SUN4-8000-13
+   50%  fault.io.ebus
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=IOBD
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=0
+
+   50%  fault.io.ebus
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=IOBD
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=1
+</pre>
+
+<br><br>
+Use the <tt><b>fmdump -eV -u <i>EVENT_ID</i></b></tt> command to collect the
+ereports associated with this problem.
+
+<br><br>
+Have this information available when contacting Sun Services for a repair.

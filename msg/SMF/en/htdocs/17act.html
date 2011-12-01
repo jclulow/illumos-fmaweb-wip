@@ -1,0 +1,44 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)17act.html	1.4	07/01/30 SMI" -->
+
+	<p>
+	The dependencies of a service may be retrieved using
+	<code>svcs&nbsp;-l&nbsp;<i>service_fmri</i></code>.
+	Invalid dependencies will be marked.
+	Depending on administrator
+	understanding of the impacted service, it may be preferable to
+	attempt repair or removal of the dependency using
+	<code>svccfg</code> or to consult with Sun Service.
+
+	<p>
+	  Once the dependency is corrected, <code>svcadm&nbsp;refresh
+	  <i>service_fmri</i></code> will update the service's running
+	  configuration snapshot, and <code>svcadm&nbsp;clear
+	  <i>service_fmri</i></code> will instruct the Service Manager to
+	  restore the service to normal operation.
+

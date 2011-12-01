@@ -1,0 +1,51 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry13.xml	1.2	09/05/18 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+
+	<name>title</name>
+	<item>Eft cannot resume diagnosis</item>
+
+	<name>description</name>
+	<item>The diagnosis engine encountered an error while resuming diagnosis.</item>
+
+	<name>response</name>
+	<item>Error reports have been logged for examination by Sun.</item>
+
+	<name>impact</name>
+	<item>Automated diagnosis and response for these events will not occur.</item>
+
+	<name>action</name>
+	<item>Remove the diagnosis engine checkpoint file '/var/fm/fmd/ckpt/eft/eft', repair this defect, and restart the fault manager.</item>
+
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt; indicates that errors were previously detected, but the module responsible for diagnosing those errors was unable to resume diagnosis after a restart.  This may be caused more commonly by a corrupted checkpoint file, downrev or incompatible revisions of software, or less frequently by bugs in the diagnosis module or subsystem.&lt;P&gt;
+
+	Remove the diagnosis engine checkpoint file '/var/fm/fmd/ckpt/eft/eft', repair this defect using 'fmadm acquit &amp;lt;EVENT_ID&amp;gt;', and restart the fault manager using 'svcadm restart'.  If the problem reoccurs after having done this, contact your service provider.</item>
+
+</event_registry_properties>

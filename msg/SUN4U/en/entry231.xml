@@ -1,0 +1,290 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry231.xml	1.27	07/11/27 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected CHIP.  Use fmdump -v -u
+&amp;lt;EVENT_ID&amp;gt;  to identify the smallest CPU/Strand ID of the affected CORE on this
+CHIP.</item>
+	<name>description</name>
+	<item>The number of errors associated with this CHIP has exceeded acceptable levels.</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;231&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;/p&gt;
+The number of errors associated with this CHIP has exceeded acceptable
+levels.&lt;br&gt;
+&lt;p&gt;An attempt will be made to disable the affected CHIP from
+service.&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;On the Sun SPARC Enterprise server, a processor (CHIP) is comprised
+of two CORE&#39;s. &lt;br&gt;
+Each CORE is capable of simultaneously running two
+STRAND&#39;s of
+operation.&lt;/p&gt;
+&lt;p&gt; This message indicates a diagnosis of errors common to all
+&quot;STRAND&#39;S&quot;
+that are associated with all &quot;CORE&#39;s&quot; of a processor (CHIP).&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+The recommended service action for this event is to schedule the
+replacement of the affected FRU.&lt;br&gt;
+&lt;/p&gt;
+&lt;dl&gt;
+  &lt;dd&gt;&lt;br&gt;
+  &lt;/dd&gt;
+  &lt;dd&gt;&lt;br&gt;
+  &lt;/dd&gt;
+  &lt;dd&gt;&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;LEGEND&lt;br&gt;
+    &lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: rgb(204, 0, 0);&quot;&gt;&lt;br&gt;
+    &lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+= SUNW-MSG-ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+    &lt;span style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;
+= EVENT_ID&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 255);&quot;&gt; &lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&lt;br&gt;
+GREEN&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt; =&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt; FRU&lt;/span&gt;&lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+Step 1.&amp;nbsp; Collect the fault message from the system console or
+/var/adm/messages file.&lt;br&gt;
+    &lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; SUNW-MSG-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SUN4U-8007-7S&lt;/span&gt;,
+TYPE: Fault,VER: 1, SEVERITY: Critical&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; EVENT-TIME: Wed Sep 13 12:27:27 PDT 2006&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; PLATFORM: SUNW,SPARC-Enterprise,
+CSN:nwk-ff2-1, HOSTNAME: nwk-ff2-1-c&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; SOURCE: cpumem-diagnosis, REV: 1.6&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;c6ad146f-be98-6db5-b29a-8082b2239ddc&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; DESC: The number of errors associated
+with this CHIP has exceeded
+acceptable levels.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Refer to http://sun.com/msg/&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SUN4U-8007-7S&lt;/span&gt;
+for more information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; AUTO-RESPONSE: An attempt will be made
+to remove the affected CHIP from
+service.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; IMPACT: The system will not be
+functioning at the same performance
+level with the &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; CHIP removal. REC-ACTION: Schedule a repair procedure
+to replace the affected CHIP.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Use fmdump -v -u to identify the
+smallest CPU/Strand ID of the affected CORE &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on this CHIP.&lt;br&gt;
+    &lt;br&gt;
+    &lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+Step 2. Collect the output from the &#39;fmdump -v -u EVENT_ID&#39; command&lt;br&gt;
+    &lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Specify the EVENT_ID collected from the
+fault message as input in the
+fmdump(1M). &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; This output will identify the affected
+resources and faulty FRU requiring replacement.&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Example:&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; # fmdump -v -u&amp;nbsp; &lt;span
+ style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;c6ad146f-be98-6db5-b29a-8082b2239ddc&lt;/span&gt;&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+UUID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+SUNW-MSG-ID&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Sep 13 12:27:27.7458 &lt;span
+ style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;c6ad146f-be98-6db5-b29a-8082b2239ddc
+    &lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SUN4U-8007-7S&lt;/span&gt;&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 25%&amp;nbsp;
+fault.cpu.SPARC64-VI.chip&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Problem in:
+hc:///chassis=0/cmu=0/chip=0/core=0/strand=0&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;
+Affects: cpu:///cpuid=0/serial=B5008B7AB083&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+FRU: hc:///component=&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;/MBU_B/CPUM0&lt;/span&gt;&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; 25%&amp;nbsp;
+fault.cpu.SPARC64-VI.chip&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;
+Problem in:
+hc:///chassis=0/cmu=0/chip=0/core=0/strand=1&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+Affects: cpu:///cpuid=1/serial=B5008B7AB083&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+FRU: hc:///component=&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;/MBU_B/CPUM0&lt;/span&gt;&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; 25%&amp;nbsp;
+fault.cpu.SPARC64-VI.chip&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Problem in:
+hc:///chassis=0/cmu=0/chip=0/core=1/strand=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+Affects: cpu:///cpuid=2/serial=B5008B7AB083&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp;
+FRU: hc:///component=&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;/MBU_B/CPUM0&lt;/span&gt;&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 25%&amp;nbsp;
+fault.cpu.SPARC64-VI.chip&lt;br&gt;
+    &lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;
+Problem in:
+hc:///chassis=0/cmu=0/chip=0/core=1/strand=1&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+Affects: cpu:///cpuid=3/serial=B5008B7AB083&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;
+FRU: hc:///component=&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;/MBU_B/CPUM0&lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;Step 3.&amp;nbsp;Verify
+that each of the CPU&#39;s&amp;nbsp; have been faulted and deconfigured.
+&amp;nbsp;&amp;nbsp;&lt;/span&gt;&amp;nbsp;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The &quot;psrinfo&quot; command displays state of all processors (STRANDS) &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+known to the domain.&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 
+The STRAND(s) that have the state of &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;faulted&lt;/span&gt;
+have been disabled &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 
+and are no longer being used by the domain operating system.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Example:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;
+# psrinfo&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+0&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 0, 0);&quot;&gt;faulted&lt;/span&gt; since
+09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+1&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt;faulted&lt;/span&gt;
+since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;
+2&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt;faulted&lt;/span&gt;
+since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;
+3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt;faulted&lt;/span&gt;
+since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;
+8&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;on-line since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+9&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;on-line since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;
+10&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;on-line since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+11&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;on-line since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+16&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;on-line since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+17&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;on-line since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp;
+18&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;on-line since 09/13/2006 12:27:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;
+19&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;on-line since 09/13/2006 12:27:27
+&lt;dl&gt;
+  &lt;dd&gt;&lt;br&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Step 4.&amp;nbsp; Contact your Authorized Service Provider.&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;
+&lt;dl&gt;
+  &lt;br&gt;
+  &lt;dd&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>The system will not be functioning at the same performance level with the CHIP disabled.</item>
+	<name>po-action</name>
+	<item>Schedule a repair procedure to replace the affected CHIP.  Use fmdump -v -u &amp;lt;EVENT_ID&amp;gt;
+to identify the smallest CPU/Strand ID of the affected CORE on this
+CHIP.</item>
+	<name>po-description</name>
+	<item>The number of errors associated with this CHIP has exceeded acceptable levels.</item>
+	<name>po-impact</name>
+	<item>The system will not be functioning at the same performance level with the CHIP removal.</item>
+	<name>po-response</name>
+	<item>An attempt will be made to remove the affected CHIP from service.</item>
+	<name>response</name>
+	<item>An attempt will be made to disable the affected CHIP from service.</item>
+	<name>title</name>
+	<item>Olympus-C SPARC64-VI chip fault.
+</item>
+</event_registry_properties>

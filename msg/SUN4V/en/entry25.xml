@@ -1,0 +1,141 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry25.xml	1.11	07/10/25 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected resource, the identity of which can be determined using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;.
+</item>
+	<name>description</name>
+	<item>The number of level 2 cache control errors has exceeded acceptable levels.
+</item>
+	<name>details</name>
+	<item>&lt;!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+--&gt;
+
+&lt;!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the &quot;License&quot;).
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets &quot;[]&quot; replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+--&gt;
+
+&lt;!-- ident	&quot;@(#)dimm.html	1.12	07/01/30 SMI&quot; --&gt;
+The Message ID:&amp;nbsp;&amp;nbsp;
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;&lt;/font&gt;
+indicates that processor L2 cache is faulty.  The
+ nature of the fault does not allow an automated attempt to disable 
+the affected resource.  It is recommended that the system administrator contact 
+Sun support and arrange for the replacement of the affected component.
+&lt;p&gt;
+Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the console message
+ to locate the faulty component.  For this fault, the fault manager may
+identify a single thread or all threads on the processor as faulty as
+shown in the examples below.  Note that in both examples, the faulty
+FRU called out is the same.  In these
+examples, the FRU is the motherboard.  Also note the FRU part
+number and location is included in the output of fmdump:  
+&lt;p&gt;
+&lt;pre&gt;
+part=501781301
+
+Location: MB
+&lt;/pre&gt;
+&lt;p&gt;
+This is the example fmdump output where a single thread is designated
+faulty.
+&lt;p&gt;
+&lt;pre&gt;
+# fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;acc4f6d3-c4ef-ec7d-ba45-ef77c524085f&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+Oct 02 12:23:39.4765 &lt;font color = &quot;BLUE&quot;&gt;acc4f6d3-c4ef-ec7d-ba45-ef77c524085f&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/font&gt;
+  100%  fault.cpu.ultraSPARC-T2.l2cachectl
+
+        Problem in: cpu:///cpuid=0/serial=FAC006B0E654482
+           Affects: cpu:///cpuid=0/serial=FAC006B0E654482
+               &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=110508:part=501781301/motherboard=0&lt;/font&gt;
+          Location: MB
+&lt;/pre&gt;
+&lt;p&gt;
+This is the example fmdump output where all threads are designated
+faulty.
+&lt;pre&gt;
+# fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;73cc6480-5d9d-e213-c286-da0d9353b95c&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+Sep 26 12:33:29.0011 &lt;font color = &quot;BLUE&quot;&gt;73cc6480-5d9d-e213-c286-da0d9353b95c&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/font&gt;
+  100%  fault.cpu.ultraSPARC-T2.l2cachectl
+
+        Problem in: cpu:///cpuid=63/serial=FAC006B0E654482
+           Affects: cpu:///cpuid=63/serial=FAC006B0E654482
+               &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=110508:part=501781301/motherboard=0&lt;/font&gt;
+          Location: MB
+
+  100%  fault.cpu.ultraSPARC-T2.l2cachectl
+
+        Problem in: cpu:///cpuid=62/serial=FAC006B0E654482
+           Affects: cpu:///cpuid=62/serial=FAC006B0E654482
+               &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=110508:part=501781301/motherboard=0&lt;/font&gt;
+          Location: MB
+
+                    .
+                    .
+                    .
+
+  100%  fault.cpu.ultraSPARC-T2.l2cachectl
+
+        Problem in: cpu:///cpuid=0/serial=FAC006B0E654482
+           Affects: cpu:///cpuid=0/serial=FAC006B0E654482
+               &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=110508:part=501781301/motherboard=0&lt;/font&gt;
+          Location: MB
+&lt;/pre&gt;</item>
+	<name>impact</name>
+	<item>System performance is likely to be affected. System may be unstable.
+</item>
+	<name>response</name>
+	<item>No automated response.
+</item>
+	<name>title</name>
+	<item>Level 2 cache control errors exceeded acceptable levels
+</item>
+</event_registry_properties>

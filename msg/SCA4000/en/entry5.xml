@@ -1,0 +1,73 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry5.xml	1.3	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Sun Crypto Accelerator 4000 Unable To Load Keystore</item>
+
+	<name>description</name>
+	<item>The Solaris Fault Manager has determined that there is a
+problem loading the keystore to the Sun Crypto Accelerator 4000 via the
+vcad daemon which requires repair action.</item>
+
+	<name>response</name>
+	<item>The driver will attempt to load the keystore prior to
+performing every cryptographic operation until the file is successfully
+loaded.</item>
+
+	<name>impact</name>
+	<item>The card will continue to function, but will be unable to
+perform cryptographic operations using secure keys until the keystore
+file can be loaded.</item>
+
+	<name>action</name>
+	<item>Restore the keystore file to the correct location for the
+module (rsrc) identified in the fmdump(1M) output.  Refer to the
+Sun Crypto Accelerator 4000 Board Installation and Users Guide for
+information on restoring the missing or corrupt keystore.</item>
+
+	<name>details</name>
+	<item>
+The Message ID:&amp;nbsp;&amp;nbsp;&lt;font size="+1"&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;
+indicates diagnosis has determined
+that the SCA4000 (vca) driver was unable to load the keystore via the
+vcad daemon.  The keystore file is most likely missing or corrupt
+and should be restored to the correct location.  If the keystore
+file is not longer available, the card must be zeroized and
+re-initialized with a new keystore.
+&lt;br&gt;&lt;br&gt;
+After restoring the missing or corrupt keystore, the network and
+cryptographic
+accelerator interfaces may be brought back into service using the
+fmadm(1M) command:
+&lt;br&gt;&lt;br&gt;
+fmadm repair &amp;lt;EVENT-ID&amp;gt;
+	</item>
+
+</event_registry_properties>

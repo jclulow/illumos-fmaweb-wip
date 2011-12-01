@@ -1,0 +1,141 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry150.xml	1.1	08/06/26 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair action to replace the affected Field Replaceable Unit (FRU),
+the identity of which can be determined using fmdump -v -u EVENT_ID.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>description</name>
+	<item>A serious overvoltage failure has occurred on a device or FRU.
+</item>
+	<name>details</name>
+	<item>A serious overvoltage failure has occurred on a device or FRU.
+
+The FRU or device with the overvoltage failure
+can be identified from the FMRI of the fault report.
+
+The following section provides a list of the potential FRUs and devices
+that can encounter an overvoltage failure, and specifies the impact and
+automated actions taken by the platform or domain in response to the fault.
+
+ 
+
+   SPARC Enterprise M3000 platforms:
+
+
+      DDC on a Motherboard:
+
+         Platform is powered off and cannot be powered back up.
+         Platform is unbootable.
+
+
+The recommended service action for this event is to schedule the replacement of the affected FRU.
+
+
+Step 1. Collect the Fault Message  (two methods)
+
+
+   Single-line fault message displayed on the XSCF console:
+
+   Mar 27 15:19:33 nwk-ik-1-0 fmd: SOURCE: sde, REV: 1.12, CSN: BF00000031
+   EVENT-ID: 316abc6f-4635-4c4a-880a-a9b646c79cc8
+   Refer to http://www.sun.com/msg/SCF-8004-PS for detailed information.
+
+
+   Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
+
+   MSG-ID: SCF-8004-PS, TYPE: Fault, VER: 1, SEVERITY: Critical
+   EVENT-TIME: Tue Jun 10 03:51:09 PDT 2008
+   PLATFORM: SPARC Enterprise M3000, CSN: BF00000031, HOSTNAME: san-ik-13-0
+   SOURCE: sde, REV: 1.16
+   EVENT-ID: 3df526f5-f743-4ee1-b237-13b945a357dc
+   DESC: A serious overvoltage failure has occurred on a device or FRU.
+   Refer to http://www.sun.com/msg/SCF-8004-PS for more information.
+   AUTO-RESPONSE: The device or FRU will be deconfigured.
+   IMPACT: Domains may be reset, platform may become unbootable, or the platform may be powered down.
+   REC-ACTION: Schedule a repair action to replace the affected Field Replaceable Unit (FRU),
+   the identity of which can be determined using fmdump -v -u EVENT_ID.
+   Please consult the detail section of the knowledge article for additional information.
+
+
+Step 2. Collect the output from the &#39;fmdump  -v  -u  Event-ID&#39; command
+ 
+
+
+   SPARC Enterprise platform example:
+
+   xscf&gt; fmdump -v -u 3df526f5-f743-4ee1-b237-13b945a357dc
+
+         TIME                 UUID                                 MSG-ID
+         Jun 10 03:51:09.4763 3df526f5-f743-4ee1-b237-13b945a357dc SCF-8004-PS
+            40%  fault.chassis.power.overvoltage
+
+                 Problem in: hc:///chassis=0/mbu=0/ddc=1
+                    Affects: hc:///chassis=0/mbu=0/ddc=1
+                        FRU: hc://:product-id=SPARC Enterprise M3000:chassis-id=BF00000031
+                             :server-id=san-ik-13-0:part=CA20393-B60X 001AA
+                             :revision=0101/component=/MBU_A
+                   Location: /MBU_A
+
+            40%  fault.chassis.power.overvoltage
+
+                 Problem in: hc:///chassis=0/mbu=0/ddc=0
+                    Affects: hc:///chassis=0/mbu=0/ddc=0
+                        FRU: hc://:product-id=SPARC Enterprise M3000:chassis-id=BF00000031
+                             :server-id=san-ik-13-0:part=CA20393-B60X 001AA
+                             :revision=0101/component=/MBU_A
+                   Location: /MBU_A
+
+            20%  fault.chassis.power.overvoltage
+         
+                 Problem in: hc:///chassis=0/mbu=0
+                    Affects: hc:///chassis=0/mbu=0
+                        FRU: hc://:product-id=SPARC Enterprise M3000:chassis-id=BF00000031
+                             :server-id=san-ik-13-0:part=CA20393-B60X 001AA
+                             :revision=0101/component=/MBU_A
+                   Location: /MBU_A
+
+
+
+Step 3. Contact your Authorized Service Provider.
+
+
+
+</item>
+	<name>impact</name>
+	<item>Domains may be reset, platform may become unbootable, or the platform may be powered down.
+</item>
+	<name>response</name>
+	<item>The device or FRU will be deconfigured.
+</item>
+	<name>title</name>
+	<item>Serious overvoltage failure from a device or FRU.
+</item>
+</event_registry_properties>

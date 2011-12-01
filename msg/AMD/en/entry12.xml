@@ -1,0 +1,221 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry12.xml	1.12	09/03/24 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected CPU.  Use &#39;fmadm faulty&#39; to identify the module.</item>
+	<name>description</name>
+	<item>The number of errors associated with this CPU has exceeded acceptable levels.</item>
+	<name>details</name>
+	<item>This message indicates that the Solaris Fault Manager has received reports
+from a CPU indicating that correctable Level 1 Instruction 
+Translation Look-aside Buffer errors have occurred, and a CPU fault has 
+been diagnosed. These errors are correctable, however they have 
+occurred at a rate exceeding acceptable levels. There should have 
+been no operational impact on system or application activity from
+correctable errors.
+&lt;P&gt;
+The recommended service action for this event is to schedule replacement 
+of the affected CPU at the earliest possible convenience. The faulted
+CPU has been off-lined to prevent further disruption to system availability.
+However, it is not intended nor recommended that the faulted FRU remain in 
+the system for a prolonged period of time. 
+&lt;P&gt;
+Follow the steps below to complete the recommended repair action.
+&lt;P&gt;
+&lt;B&gt;Step 1: &lt;/B&gt;Find the 36 character EVENT_ID string associated with the
+fault.  
+&lt;P&gt;
+The 36 character EVENT_ID string can be located using the fmdump (1M) or 
+fmadm (1M) commands shown in Example 1.1 below, or it can be extracted 
+from the fault message displayed in the console output at the time of 
+the fault.
+&lt;P&gt;
+Note: Be sure to get the correct 36 character EVENT_ID string if more
+than one is listed.  You can identify the correct string (highlighted 
+in red) by associating
+the fault with the date and time (highlighted in blue) from the fmdump 
+output in Example 1.1 below. The fmadm faulty output in the example
+also shows the EVENT_ID (highlighted in red).
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 1.1 - finding the EVENT_ID (36 character string):&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmdump
+TIME                 UUID                                 SUNW-MSG-ID
+&lt;FONT COLOR=BLUE&gt;Mar 20 10:50:54.7096&lt;/FONT&gt; &lt;FONT COLOR=RED&gt;1eaa6704-1e0b-4ef9-9337-e14c108dfbec&lt;/FONT&gt; AMD-8000-DT
+Mar 24 13:48:00.8161 ffd95aaf-396c-4a5f-d44d-a3cf5f61b80e AMD-8000-5M
+Mar 27 15:16:52.1773 731c7264-0619-e4fd-fdc4-a58b9c1b9ffb AMD-8000-2F
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;PRE&gt;&lt;UL&gt;
+# fmadm faulty
+   STATE RESOURCE / UUID
+------------------------------------------------------------------------------
+ faulted cpu:///cpuid=2
+         &lt;FONT COLOR=RED&gt;1eaa6704-1e0b-4ef9-9337-e14c108dfbec&lt;/FONT&gt;
+------------------------------------------------------------------------------
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;B&gt;Step 2: &lt;/B&gt;Use the command; fmdump -v -u &lt;I&gt;EVENT_ID&lt;/I&gt;, to locate the 
+faulty CPU, where &lt;I&gt;EVENT_ID&lt;/I&gt; consists of the 36 character string 
+obtained in Step 1 above. The faulty FRU is identified by the string
+following the label &#39;FRU:&#39; (highlighted in blue) in Example 2.1 below.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 2.1 - determining which FRU needs to be replaced:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmdump -v -u 1eaa6704-1e0b-4ef9-9337-e14c108dfbec
+TIME                 UUID                                 SUNW-MSG-ID
+Mar 14 13:48:00.8161 1eaa6704-1e0b-4ef9-9337-e14c108dfbec AMD-8000-DT
+  100%  fault.cpu.amd.l1itlb
+
+        Problem in: hc:///motherboard=0/chip=1/cpu=0
+           Affects: &lt;FONT COLOR=GREEN&gt;cpu:///cpuid=2&lt;/FONT&gt;
+               FRU: &lt;FONT COLOR=BLUE&gt;hc:///motherboard=0/chip=1&lt;/FONT&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 3: &lt;/B&gt;Identify the FRU that needs to be replaced.
+&lt;P&gt;
+In our example, the service action would be to replace CPU1, as the
+chip identified in the string following the &#39;FRU:&#39; label (highlighted 
+in blue) in Example 2.1 above, is hc:///motherboard=0/chip=1.
+&lt;P&gt;
+The term &#39;chip&#39; used in the output above can also be used to refer
+to a processor or CPU chip, hence &#39;chip=x&#39; equates to &#39;CPU chipx&#39;.
+Note that the cpuid refers to a logical CPU number within the CPU 
+chip.
+&lt;P&gt;
+For all Sun AMD based systems;
+&lt;P&gt;
+chip=x maps to the processor chip labeled CPUx within the system.
+&lt;P&gt;
+For example:
+&lt;UL&gt;
+chip=0 maps to the physical location labeled; CPU0
+&lt;BR&gt;chip=1 maps to the physical location labeled; CPU1
+&lt;P&gt;
+&lt;/UL&gt;
+&lt;B&gt;Step 4: &lt;/B&gt;Replace the faulty FRU (and reboot the system)
+&lt;P&gt;
+Refer to the service label or hardware maintenance manual for correct 
+replacement procedures.
+&lt;P&gt;
+&lt;B&gt;Step 5: &lt;/B&gt;Update the Fault Manager&#39;s resource cache to indicate
+that no problems are present in the resources that had been diagnosed
+faulty and subsequently replaced in Step 4. Shown in Example 5.1
+&lt;P&gt;
+Once the CPU has been physically replaced and the system rebooted,
+you must invoke the &#39;fmadm repair&#39; command using the UUID (Universally 
+Unique IDentifier) to identify the repaired FRU.  The UUID is synonymous
+with the EVENT_ID (highlighted in red) in Example 1.1 above.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 5.1 - Updating the Fault Manager&#39;s resource cache:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm repair 1eaa6704-1e0b-4ef9-9337-e14c108dfbec
+# fmadm: recorded repair to 1eaa6704-1e0b-4ef9-9337-e14c108dfbec
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 6: &lt;/B&gt;Verify the repaired resource is no longer faulty
+&lt;P&gt;
+Use the Solaris command &#39;fmadm faulty&#39; to display all faulted resources
+in the system.  Confirm that the repaired resource is no longer listed
+as faulted as shown in Example 6.1 below where no resources are
+faulted.
+&lt;P&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 6.1 - verifying the repaired resource is no longer faulty:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm faulty
+   STATE RESOURCE / UUID
+------------------------------------------------------------------------------
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 7: &lt;/B&gt;Place the CPU back into the active configuration
+&lt;P&gt;
+Once you have completed the repair action, and told the fault manager 
+that the FRU has been repaired, it may still be necessary to tell Solaris 
+to use the affected system resource.  If the &lt;B&gt;Automated Response&lt;/B&gt; 
+described above in this article was; &quot;An attempt will be made to remove 
+this CPU from service.&quot;, you will need to place the CPU back into the 
+active configuration and verify that the CPU has been returned to service.
+&lt;P&gt;
+To place the CPU back into the active configuration, you will need to 
+know the logical CPU number that was faulted.  The logical CPU number 
+was identified in the fmdump output following the label &#39;Affects:&#39; 
+(highlighted in green) in Example 2.1 above. You can also identify a 
+CPU that is still considered faulted by Solaris using the psrinfo (1M) 
+command shown in Example 7.1 below.  
+&lt;UL&gt;
+&lt;B&gt;Example 7.1 - identifying the logical CPU number that was faulted:&lt;/B&gt;
+&lt;PRE&gt;
+# psrinfo
+0       on-line   since 03/20/2006 14:04:16
+1       on-line   since 03/20/2006 14:04:19
+2       faulted   since 03/20/2006 14:08:52
+3       on-line   since 03/20/2006 14:04:23 
+&lt;/UL&gt;
+&lt;P&gt;&lt;/PRE&gt;
+&lt;P&gt;
+Place the faulted CPU back into the active configuration using the psradm 
+(1M) command; &#39;psradm -F -n x&#39; where x is the logical cpuid.  As logical CPU 
+2 was identified as the faulted CPU, the psradm (1M) command shown in Example 
+7.2 below will return it to the active configuration.
+&lt;UL&gt;
+&lt;B&gt;Example 7.2 - returning the repaired CPU to the active configuration:&lt;/B&gt;
+&lt;PRE&gt;
+# psradm -F -n 2
+&lt;/UL&gt;&lt;/PRE&gt;
+&lt;P&gt;
+&lt;B&gt;Step 8: &lt;/B&gt;Verify the CPU is in use by the system.
+&lt;P&gt;
+To verify that the CPU has been returned to service, use the Solaris 
+command psrinfo (1M). See Example 8.1 below.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 8.1 - verifying the CPU has returned to service:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# psrinfo
+0       on-line   since 03/20/2006 14:04:16
+1       on-line   since 03/20/2006 14:04:19
+2       on-line   since 03/20/2006 14:09:57
+3       on-line   since 03/20/2006 14:04:23 
+&lt;/UL&gt;&lt;/PRE&gt;</item>
+	<name>impact</name>
+	<item>Performance of this system may be affected.</item>
+	<name>response</name>
+	<item>An attempt will be made to remove this CPU from service.</item>
+	<name>title</name>
+	<item>CPU errors exceeded acceptable levels</item>
+</event_registry_properties>

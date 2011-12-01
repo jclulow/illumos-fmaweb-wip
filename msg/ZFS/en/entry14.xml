@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry14.xml	1.1	07/09/06 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Too many I/O errors on ZFS device</item>
+	<name>description</name>
+	<item>The number of I/O errors associated with a ZFS device exceeded
+acceptable levels.</item>
+	<name>response</name>
+	<item>The device has been offlined and marked as faulted.  An attempt
+will be made to activate a hot spare if available. </item>
+        <name>impact</name>
+	<item>The fault tolerance of the pool may be affected.</item>
+	<name>action</name>
+	<item>
+&lt;p&gt;A device within a ZFS pool experienced too many I/O errors.  Run
+'zpool status -x' to determine exactly which device failed and why:&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool status -x
+  pool: test
+ state: DEGRADED
+status: The number of I/O errors associated with a ZFS device exceeded
+        acceptable levels.
+action: Replace the device using 'zpool replace'.
+   see: http://www.sun.com/msg/ZFS-8000-4J
+ scrub: none requested
+config:
+
+        NAME                  STATE     READ WRITE CKSUM
+        test                  DEGRADED     0     0     0
+          mirror              DEGRADED     0     0     0
+            c0t0d0            ONLINE       0     0     0
+&lt;font color='red'&gt;            c0t0d1            FAULTED    103     0     0  too many errors&lt;/font&gt;
+
+errors: No known data errors.
+&lt;/pre&gt;
+
+&lt;p&gt;If the pool has available hot spares, then a hot spare will have been
+substituted.  To repair the pool, replace the physical device in the system and
+issue a 'zpool replace' command:&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool replace test c0t0d1
+&lt;/pre&gt;
+
+&lt;p&gt;To replace the disk with a different disk, specify the replacement disk
+as the second argument to 'zpool replace':&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool replace test c0t0d1 c0t0d2
+&lt;/pre&gt;
+
+&lt;p&gt;This will begin resilvering data to the new device.  Use 'zpool status'
+to monitor resilvering progress.  When the resilvering completes, any hot spares
+will be removed and the pool will return to the healthy state.&lt;/p&gt;
+
+&lt;p&gt;If the device has been diagnosed in error, then run 'zpool clear' to
+clear the errors and the associated status.  If the errors persist, the device
+may be diagnosed as faulty again.  Replace the disk as described above, or
+contact your service provider.&lt;/p&gt;
+	</item>
+	<name>details</name>
+	<item>The Message ID: &lt;tt&gt;%MSGID%&lt;/tt&gt; indicates a
+	    ZFS device experienced too many I/O errors to continue.  Take the
+	    documented action to resolve the problem.</item>
+	<name>po-description</name>
+	<item>The number of I/O errors associated with a ZFS device exceeded
+	     acceptable levels.</item>
+	<name>po-impact</name>
+	<item>Fault tolerance of the pool may be compromised.</item>
+	<name>po-response</name>
+	<item>The device has been offlined and marked as faulted.  An attempt
+	     will be made to activate a hot spare if available. </item>
+	<name>po-action</name>
+	<item>Run 'zpool status -x' and replace the bad device.</item>
+</event_registry_properties>

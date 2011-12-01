@@ -1,0 +1,103 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry52.xml	1.12	08/01/28 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected resource, the identity of which can be determined using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;.
+</item>
+	<name>description</name>
+	<item>A CPU chip&#39;s Link Framing Unit has stopped using a bad lane.
+</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;&lt;/font&gt; 
+indicates a problem
+in the interconnect between the UltraSPARC T2 Plus processors.
+No data has been lost. However, a data lane has been taken
+ out of service which will reduce the system&#39;s ability to correct 
+transmission errors and may impact system performance.  The system 
+is at increased risk of incurring an uncorrectable error, which 
+will cause a service interruption, until the problem is resolved.  
+&lt;p&gt;
+Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the PSH console message
+ to locate the suspected faulty components.  For this fault, the fault manager identifies each thread in the 
+processor as faulty as shown in the example below.
+
+&lt;p&gt;
+&lt;pre&gt; 
+# fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;4a6ee8b0-129a-eaae-847d-c6c62860a110&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+Jan 08 11:21:17.7669 &lt;font color = &quot;BLUE&quot;&gt;4a6ee8b0-129a-eaae-847d-c6c62860a110&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;SUN4V-8001-MR&lt;/font&gt;
+  100%  fault.cpu.ultraSPARC-T2plus.lfu-f
+
+        Problem in: cpu:///cpuid=63/serial=FAD806CD143516C
+           Affects: cpu:///cpuid=63/serial=FAD806CD143516C
+               &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=100048:part=501784702/motherboard=0&lt;/font&gt;
+          Location: MB
+
+  100%  fault.cpu.ultraSPARC-T2plus.lfu-f
+
+        Problem in: cpu:///cpuid=62/serial=FAD806CD143516C
+           Affects: cpu:///cpuid=62/serial=FAD806CD143516C
+               &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=100048:part=501784702/motherboard=0&lt;/font&gt;
+          Location: MB
+
+                   .
+                   .
+                   .
+
+  100%  fault.cpu.ultraSPARC-T2plus.lfu-f
+
+        Problem in: cpu:///cpuid=0/serial=FAD806CD143516C
+           Affects: cpu:///cpuid=0/serial=FAD806CD143516C
+               &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=100048:part=501784702/motherboard=0&lt;/font&gt;
+          Location: MB
+&lt;/pre&gt;
+
+&lt;p&gt;
+Note the FRU called out for each faulty thread is the same.  In the
+example above, the FRU is the motherboard.  Also note the FRU part
+number and location is included:  
+&lt;p&gt;
+&lt;pre&gt;
+part=501784702
+
+Location: MB
+&lt;/pre&gt;
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>The system&#39;s capacity to correct transmission errors between CPU chips has been reduced.
+</item>
+	<name>response</name>
+	<item>No other automated response.
+</item>
+	<name>title</name>
+	<item>Link Framing Unit has encountered a single lane failure.
+</item>
+</event_registry_properties>

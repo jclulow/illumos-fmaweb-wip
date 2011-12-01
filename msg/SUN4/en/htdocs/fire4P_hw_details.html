@@ -1,0 +1,49 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)fire4P_hw_details.html	1.10	07/01/30 SMI" -->
+The Message ID:&nbsp;&nbsp;<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates a problem in the PCI-Express subsystem. 
+
+The fault is caused by a PCI device in the system.  If that device 
+is contained with the Motherboard then the Motherboard will be indicted.
+If the device is in a slot then the slot will be called out.
+
+Use the <tt><b>fmdump -v -u <i>EVENT_ID</i></b></tt> command to determine 
+the faulty components as shown in the example below.
+
+<pre>
+# fmdump -v -u f3b6c67b-45ac-6dcf-d88c-f7f1ffdf0bf9
+TIME                 UUID                                 SUNW-MSG-ID
+Dec 31 21:42:18.4003 f3b6c67b-45ac-6dcf-d88c-f7f1ffdf0bf9 SUN4-8000-4P
+  100%  fault.io.fire.pciex.device
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=IOBD
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=0/pciexbus=2/pciexdev=0/pciexfn=0
+
+</pre>
+
+In this example, the failing device is contained within the IOBD.  
+Have this information available when contacting Sun Services for a repair.

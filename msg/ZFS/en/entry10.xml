@@ -1,0 +1,80 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry10.xml	1.8	07/09/05 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Incompatible version</item>
+        <name>description</name>
+	<item>The on-disk version is not compatible with the running
+	    system.</item>
+        <name>response</name>
+	<item>No automated response will occur.</item>
+        <name>impact</name>
+	<item>The pool is unavailable.</item>
+        <name>action</name>
+        <item>
+&lt;p&gt;If this error is seen during 'zpool import', see the section below.
+Otherwise, run 'zpool status -x' to determine which pool is faulted:&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool status -x
+  pool: test
+ state: FAULTED
+status: The ZFS version for the pool is incompatible with the software running
+        on this system.
+action: Destroy and re-create the pool.
+ scrub: none requested
+config:
+
+        NAME                  STATE     READ WRITE CKSUM
+&lt;font color='red'&gt;        test                  FAULTED      0     0     0  incompatible version&lt;/font&gt;
+          mirror              ONLINE       0     0     0
+            c0t0d0            ONLINE       0     0     0
+            c0t0d1            ONLINE       0     0     0
+
+errors: No known errors
+&lt;/pre&gt;
+
+&lt;p&gt;The pool cannot be used on this system.  Either move the storage to the
+system where the pool was originally created, upgrade the current system
+software to a more recent version, or destroy the pool and re-create it from
+backup.&lt;/p&gt;
+
+&lt;p&gt;If this error is seen during import, the pool cannot be imported on the
+current system.  The disks must be attached to the system which originally
+created the pool, and imported there.&lt;/p&gt;
+
+&lt;p&gt;The list of currently supported versions can be displayed using 'zpool
+upgrade -v'.&lt;/p&gt;
+	</item>
+        <name>details</name>
+        <item>The Message ID: &lt;tt&gt;%MSGID%&lt;/tt&gt; indicates a version
+	    mismatch exists between the running system and the on-disk
+	    data.</item>
+</event_registry_properties>

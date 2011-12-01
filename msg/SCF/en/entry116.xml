@@ -1,0 +1,385 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry116.xml	1.3	08/10/10 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair action to replace the affected Field Replaceable Unit (FRU),
+the identity of which can be determined using fmdump -v -u EVENT_ID.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>description</name>
+	<item>An uncorrectable error was detected on a DMA channel between two MBC chips on two
+different FRUs. Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;SCF-8003-M3&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+An uncorrectable error was detected on a DMA channel between two MBC
+chips on two different FRUs.&lt;br&gt;
+&lt;br&gt;
+There are two DMA channels between MBC chips. &lt;br&gt;
+&lt;br&gt;
+If the first DMA channel fails, then the system will switch to using
+the second DMA channel. &lt;br&gt;
+&lt;br&gt;
+The XSCF will no longer be able to contact the chips and devices that
+are connected to the faulty MBC chip. &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M3000 platform:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; MBC chip is on the XSCFU, with the later
+actually being part of the Motherboard Unit (MBU).&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the fault involves the MBC chip on
+the Motherboard (this can be &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; determined by examining the FMRI of the
+fault), then the platform will &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; gradually become unbootable as domains
+try to reboot.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; If the MBC chip is on an XSCFU and this is the
+first DMA channel on the MBC chip to fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then nothing is deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU and the
+second DMA channel fails (dma_ch=1 in the FMRI of the ereport), &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the MBC chip loses contact with all
+the other MBC chips connected to the XSCFU.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; This means that if the MBC chip on the
+XSCFU fails, the platform becomes unmanageable.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp; SPARC Enterprise
+M4000 platform:&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+MBC chip is on the XSCFU.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; If the fault involves the MBC chip on
+the Motherboard (this can be &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; determined by examining the FMRI of the
+fault), then the platform will &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; gradually become unbootable as domains
+try to reboot.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; If the MBC chip is on an XSCFU and this is the
+first DMA channel on the MBC chip to fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then nothing is deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU and the
+second DMA channel fails (dma_ch=1 in the FMRI of the ereport), &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the MBC chip loses contact with all
+the other MBC chips connected to the XSCFU.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; This means that if the MBC chip on the
+XSCFU fails, the platform becomes unmanageable.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M5000 platform:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; MBC chip is on the XSCFU.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The precise MBC chip that has the
+problem sometimes cannot be identified.&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; In such cases, the FMRI for the ereport and the
+fault does not specify an MBC chip.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; If the fault involves the MBC chip on
+the Motherboard (this can be &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; determined by examining the FMRI of the
+fault), then the platform will &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; gradually become unbootable as domains
+try to reboot.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; If the MBC chip is on an XSCFU and this is the
+first DMA channel on the MBC chip to fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then nothing is deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU and the
+second DMA channel fails (dma_ch=1 in the FMRI of the ereport), &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the MBC chip loses contact with all
+the other MBC chips connected to the XSCFU.. &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; This means that if the MBC chip on the
+XSCFU fails, the platform becomes unmanageable.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt; SPARC Enterprise M8000
+platform:&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; If the MBC chip is on a BP_A Backplane: &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The platform cannot be restarted after
+the next platform reset or&amp;nbsp; power-off.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on a CMU: The CMU
+with the faulty chip will gradually be deconfigured; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; domains will&amp;nbsp; not be allowed to use
+XSBs on this CMU as domains reboot or domains stop&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; using the XSBs due to DR operations.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU or
+XSCFU_C&amp;nbsp; and&amp;nbsp; this is the first DMA channel on the MBC chip
+to fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then nothing is deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU or
+XSCFU_C&amp;nbsp; and this is the second DMA channel on the MBC chip to
+fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the XSCFU and&amp;nbsp; its partner
+XSCFU_C are deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on the XSCFU, the
+XSCFU will fail over to the standby XSCFU.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M9000-32 platform:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on a CMU: The CMU
+with the faulty chip will gradually be deconfigured; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; domains will&amp;nbsp; not be allowed to use
+XSBs on this CMU as domains reboot or domains stop&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; using the XSBs due to DR operations.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XBU: &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The crossbar way with this XBU is
+deconfigured the next time the platform&amp;nbsp; is restarted.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; If the MBC chip is on a CLKU: &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If this is the active CLKU, then the
+CLKU is deconfigured the next time the platform is restarted. &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If this is the standby CLKU, the CLKU is
+deconfigured immediately.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU or
+XSCFU_C&amp;nbsp; and&amp;nbsp; this is the first DMA channel on the MBC chip
+to fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then nothing is deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU or
+XSCFU_C&amp;nbsp; and this is the second DMA channel on the MBC chip to
+fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the XSCFU and&amp;nbsp; its partner
+XSCFU_C are deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+If the MBC chip is on the XSCFU, the XSCFU will fail over to the
+standby XSCFU.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M9000-64 platform:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on a CMU: The CMU with the faulty
+chip will gradually be deconfigured; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; domains will&amp;nbsp; not be allowed to use
+XSBs on this CMU as domains reboot or domains stop&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; using the XSBs due to DR operations.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XBU: &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The crossbar way with this XBU is
+deconfigured the next time the platform&amp;nbsp; is restarted.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; If the MBC chip is on a CLKU: &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If this is the active CLKU, then the
+CLKU is deconfigured the next time the platform is restarted. &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If this is the standby CLKU, the CLKU is
+deconfigured immediately.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU or
+XSCFU_C&amp;nbsp; and&amp;nbsp; this is the first DMA channel on the MBC chip
+to fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then nothing is deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the MBC chip is on an XSCFU or
+XSCFU_C&amp;nbsp; and this is the second DMA channel on the MBC chip to
+fail, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the XSCFU and&amp;nbsp; its partner
+XSCFU_C are deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+If the MBC chip is on the XSCFU, the XSCFU will fail over to the
+standby XSCFU.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+The recommended service action for this event is to schedule the
+replacement of the affected FRU.&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;LEGEND&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; = SUNW-MSG-ID&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; = EVENT_ID&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(51, 51, 255);&quot;&gt; &lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+GREEN&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;&amp;nbsp; =&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt; FRU&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;br&gt;
+Step 1. Collect the fault message (use one of the following methods):&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Single-line fault message displayed on the XSCF console:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Mar 20 21:22:44 san-ff2-21-0 fmd: SOURCE: sde, REV: 1.12,
+CSN: 7860000772 &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8cac43fb-97ef-496c-96ae-5af9aed785f4&lt;/span&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8003-M3&lt;/span&gt;
+for detailed information.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Complete fault message using &#39;fmdump -m&#39; on the XSCF
+console:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; MSG-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8003-M3&lt;/span&gt;,
+TYPE: Fault, VER: 1, SEVERITY: Major&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-TIME: Tue Mar 20 21:22:44 UTC 2007&lt;br&gt;
+&amp;nbsp;&amp;nbsp; PLATFORM: SPARC-Enterprise, CSN: 7860000772, HOSTNAME:
+san-ff2-21-0&lt;br&gt;
+&amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8cac43fb-97ef-496c-96ae-5af9aed785f4&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; DESC: An uncorrectable error was detected on a DMA channel
+between two MBC chips on two&lt;br&gt;
+&amp;nbsp;&amp;nbsp; different FRUs. Please consult the detail section of the
+knowledge article for additional information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8003-M3 for more
+information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; AUTO-RESPONSE: There are two DMA channels between MBC
+chips. If the first DMA channel fails, the system&lt;br&gt;
+&amp;nbsp;&amp;nbsp; will switch to using the second DMA channel. If the second
+DMA channel fails, then the&lt;br&gt;
+&amp;nbsp;&amp;nbsp; FRU with the MBC chip becomes unmanageable. If the second
+DMA channel fails, then resources&lt;br&gt;
+&amp;nbsp;&amp;nbsp; associated with the FRU with the MBC chip will be
+deconfigured after the platform is power cycled or &lt;br&gt;
+&amp;nbsp;&amp;nbsp; after the domain reboots or after a Dynamic
+Reconfiguration operation is performed.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Deconfiguration of these resources may reduce system
+performance or may cause the&lt;br&gt;
+&amp;nbsp;&amp;nbsp; platform to become unbootable. Please consult the detail
+section of the knowledge article for &lt;br&gt;
+&amp;nbsp;&amp;nbsp; additional information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; IMPACT: If it is the second DMA channel for the MBC chip
+that has failed, the XSCF will no longer be able &lt;br&gt;
+&amp;nbsp;&amp;nbsp; to contact the chips and devices that are connected to the
+faulty MBC chip.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; REC-ACTION: Schedule a repair action to replace the
+affected Field Replaceable Unit (FRU),&lt;br&gt;
+&amp;nbsp;&amp;nbsp; the identity of which can be determined using fmdump -v -u
+EVENT_ID.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
+for additional information.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Step 2. Collect the output from the &#39;fmdump -v -u EVENT_ID&#39; command&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; SPARC Enterprise platform example:&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; xscf&amp;gt; fmdump -v -u &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8cac43fb-97ef-496c-96ae-5af9aed785f4&lt;/span&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+UUID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+MSG-ID&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Mar 20 21:22:44.1631 &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8cac43fb-97ef-496c-96ae-5af9aed785f4&lt;/span&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8003-M3&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 100%&amp;nbsp;
+fault.chassis.SPARC-Enterprise.asic.mbc.se-dma&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Problem in: hc:///chassis=0/xscfu=0/mbc=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Affects: hc:///chassis=0/xscfu=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+FRU: hc://:product-id=SPARC-Enterprise:chassis-id=7860000772:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+server-id=san-ff2-21-0:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+part=CA20393-B56X 001AA:revision=0101/component=/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;XSCFU&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Step 3. Contact your Authorized Service Provider.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+If you require additional information, please refer to InfoDoc #87402.&lt;br&gt;
+&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>If it is the second DMA channel for the MBC chip that has failed, the XSCF will no longer be able 
+to contact the chips and devices that are connected to the faulty MBC chip.
+</item>
+	<name>response</name>
+	<item>There are two DMA channels between MBC chips. If the first DMA channel fails, the system
+will switch to using the second DMA channel. If the second DMA channel fails, then the
+FRU with the MBC chip becomes unmanageable. If the second DMA channel fails, then resources
+associated with the FRU with the MBC chip will be deconfigured after the platform is power cycled or 
+after the domain reboots or after a Dynamic Reconfiguration operation is performed.
+Deconfiguration of these resources may reduce system performance or may cause the
+platform to become unbootable. Please consult the detail section of the knowledge article for 
+additional information.
+</item>
+	<name>title</name>
+	<item>Uncorrectable error detected on DMA channel between MBC chips.
+</item>
+</event_registry_properties>

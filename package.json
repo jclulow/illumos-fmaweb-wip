@@ -5,7 +5,8 @@
 	"dependencies": {
 		"express": "2.5.0",
 		"jade": ">= 0.0.1",
-		"fmamsg": ">= 0.0.1"
+		"fmamsg": ">= 0.0.1",
+		"sax": "*"
 	},
 	"author": {
 		"name": "Joshua M. Clulow",

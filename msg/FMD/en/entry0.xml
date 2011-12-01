@@ -1,0 +1,153 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry0.xml	1.19	08/04/09 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Run &lt;tt&gt;pkgchk -n SUNWfmd&lt;/tt&gt; to ensure that fault management software is installed properly.  
+If the fault management software is properly installed, also refer to the 
+&lt;b&gt;NOTE&lt;/b&gt; at the end of the &lt;b&gt;Details&lt;/b&gt; section below before 
+contacting Sun for support.</item>
+	<name>description</name>
+	<item>The Solaris Fault Manager received an event from a component to which no automated diagnosis software is currently subscribed.</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;FMD-8000-0W&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+The Fault Manager receives error reports from numerous sub-systems and
+arranges for the appropriate fault diagnosis and automated responses.
+&lt;p&gt;
+The Message ID:
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;FMD-8000-0W&lt;/font&gt;&lt;/font&gt;
+indicates that the Fault Manager received an error report it
+did not expect.
+This can indicate a mismatch in the versions of various software components, 
+a misconfiguration of the system, automated diagnosis software may 
+not have been loaded or be currently available, or a defect in the 
+software.
+&lt;p&gt;
+For SPARC based systems running Solaris 10, the kernel patch 127111 and 
+Solaris FMA patch 119578 are particularly critical and should be 
+examined. Ensure that any dependencies documented in the patch README 
+files are noted and addressed.
+&lt;p&gt;
+For x64 based systems running Solaris 10, the kernel patch 127112 and 
+Solaris FMA patches 118344 and 125370 are particularly critical and 
+should be examined. Ensure that any dependencies documented in the 
+patch README files are noted and addressed.
+&lt;p&gt;
+The recommended actions for the system administrator are:
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; 1.)&amp;nbsp;Run
+&amp;nbsp;&lt;tt&gt;&lt;b&gt;pkgchk -n SUNWfmd&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; to confirm that there 
+are no errors, ensuring that the fault management software is
+installed properly.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+2.)&amp;nbsp;Ensure the latest
+firmware/patches are installed on the system.&lt;br&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; 3.)&amp;nbsp;
+Check the
+&lt;b&gt;NOTE&lt;/b&gt; below for issues that may be particular to your platform.&lt;/p&gt;
+
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 4.)&amp;nbsp;
+If the failure persists, error telemetry will have to be examined by 
+your Authorized Service Provider.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;NOTE&lt;/span&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;b&gt;&lt;br&gt;
+
+&lt;p&gt;
+
+&lt;/b&gt;Information applicable to the &lt;span
+ style=&quot;font-style: italic; text-decoration: underline;&quot;&gt;&#39;Sun SPARC
+Enterprise M4000/M5000/M8000/M9000&#39;&lt;/span&gt; platforms&lt;br&gt;
+can be found in Troubleshooting Doc&lt;a href=http://sunsolve.sun.com/search/document.do?assetkey=1-65-217751-1&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt; #217751&lt;/span&gt;&lt;/a&gt;
+ 
+
+
+&lt;br&gt;
+&lt;p&gt;
+
+&lt;/p&gt;
+&lt;p&gt;
+For &lt;span
+ style=&quot;font-style: italic; text-decoration: underline;
+&quot;&gt;&#39;Sun Fire T1000, Sun Fire T2000, Netra T2000, Sun SPARC 
+Enterprise T5120,and T5220&#39;&lt;/span&gt;  systems, please make sure that the software and firmware patch levels are as follows:
+&lt;p&gt;
+1.) Solaris 5.10: kernel patch 127111-08 or higher
+&lt;p&gt;
+2.) Solaris 5.10: FMA Patch 119578-30 or higher
+&lt;p&gt;
+3.) System firmware:
+&lt;p&gt;
+T5120 and T5220 firmware patch 127580-05 or higher
+&lt;p&gt;
+T2000 firmware patch 127576-03 or higher
+&lt;p&gt;
+Netra T20000 firmware patch 127578-03 or higher
+&lt;p&gt;
+T1000 firmware patch 127577-03 or higher 
+&lt;p&gt;
+&lt;b&gt;Also Note -&lt;/b&gt; On some system platforms there could be additional 
+information that may disclose a hardware fault, see the following:
+&lt;p&gt;
+On Sun SPARC Enterprise Mx000 systems, please check the output of 
+&quot;showstatus&quot; and &quot;fmdump&quot; from the xscfu for possible hardware faults.
+&lt;p&gt;
+On Sun Fire 12K, 15K, 20K and E25K systems, please check the output 
+of &quot;showlogs -E -p e list 3&quot; from the main system controller for 
+information about possible hardware faults.
+&lt;p&gt;
+On Sun Fire 3800, 48x0, 6800, v1280, E2900, E4900, E6900 and 
+Netra 1280/1290 systems, please check the output of &quot;showlogs -v&quot; 
+from the main system controller for information about possible 
+hardware faults. 
+&lt;p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>Automated diagnosis and response for these events will not occur.</item>
+	<name>po-action</name>
+	<item>Run &lt;tt&gt;pkgchk -n SUNWfmd&lt;/tt&gt; to ensure that fault management software is installed properly.  Contact Sun for support.</item>
+	<name>po-response</name>
+	<item>Error reports from the component will be logged for examination by Sun.</item>
+	<name>response</name>
+	<item>Error reports from the component will be logged for examination by a Sun Service technician.</item>
+	<name>title</name>
+	<item>Solaris Fault Manager Received Unexpected Event</item>
+</event_registry_properties>

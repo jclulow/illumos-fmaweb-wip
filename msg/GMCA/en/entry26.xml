@@ -1,0 +1,97 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry26.xml	1.16	08/12/05 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Additional manual investigation is required to determine the root cause of the fault.  Use &#39;fmadm faulty&#39; to see which chip *detected* the errors (it is likely not the cause of them).</item>
+	<name>description</name>
+	<item>Errors reported by a bus or interconnect (typically IO or memory errors) have exceeded acceptable levels</item>
+	<name>details</name>
+	<item>This message ID: &lt;B&gt;GMCA-8000-T0&lt;/B&gt; indicates that the Solaris Fault 
+Manager has received errors reported by a bus or interconnect 
+(typically IO or memory errors) that have exceeded acceptable levels.
+Further investigation needed to determine the cause of the fault.
+&lt;P&gt;
+Please collect additional data to identify the faulty component. Follow
+the steps below.
+&lt;P&gt;
+&lt;B&gt;Step 1: &lt;/B&gt; Use fmadm (1M) &lt;tt&gt;faulty&lt;/tt&gt; that lists the chip that 
+detected the errors, identify unique Event_ID string, and Sun Message_ID.&lt;/B&gt;
+&lt;BR&gt; See Example 1.1 for details.
+&lt;P&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = CHIP THAT DETECTED ERROR &lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;p&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 1.1 - finding chip that detected error, Event_ID, and Sun Message_ID&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+&lt;p&gt;
+# fmadm faulty
+--------------- ------------------------------------  -------------- ---------
+TIME            EVENT-ID                              MSG-ID         SEVERITY
+--------------- ------------------------------------  -------------- ---------
+Dec 05 12:39:50&lt;FONT COLOR=&quot;blue&quot;&gt; 3721bbfb-0a15-cec6-c925-dea615446c11&lt;/FONT&gt;&lt;FONT COLOR=&quot;red&quot;&gt;  GMCA-8000-T0 &lt;/FONT&gt;  Major    
+
+Fault class : fault.cpu.generic-x86.bus_interconnect
+Affects     : cpu:///cpuid=0
+                  degraded but still in service
+Problem in  : hc://:product-id=Sun-Fire-X4600-M2:chassis-id=0806AM0254:server-id=sx64-x4600m2a-bur02
+              /motherboard=0/&lt;FONT COLOR=&quot;green&quot;&gt;chip=0&lt;/FONT&gt;/cpu=0
+
+&lt;B&gt;Note:&lt;/B&gt; When Solaris can not determine the platform type. The above product-id=, and
+server-id= will be seen as follows.
+
+Problem in  : hc://:product-id=ThirdParty:server-id=random/
+               motherboard=0/&lt;FONT COLOR=&quot;green&quot;&gt;chip=0&lt;/FONT&gt;/cpu=0
+
+Description : Errors reported by a bus or interconnect (typically IO or memory
+              errors) have exceeded acceptable levels  Refer to
+              http://sun.com/msg/GMCA-8000-T0 for more information.
+
+Response    : No automated response action is possible
+
+Impact      : None (no automated response)
+
+Action      : Additional manual investigation is required to determine the root
+              cause of the fault.  Use &#39;fmadm faulty&#39; to see which chip
+              *detected* the errors (it is likely not the cause of them).
+&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 2: &lt;/B&gt; As additional manual investigation is required to determine
+the faulty component. Please take the information gathered above and contact
+your service provider</item>
+	<name>impact</name>
+	<item>None (no automated response)</item>
+	<name>response</name>
+	<item>No automated response action is possible</item>
+	<name>title</name>
+	<item>Bus/Interconnect fault</item>
+</event_registry_properties>

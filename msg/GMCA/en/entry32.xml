@@ -1,0 +1,161 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry32.xml	1.10	09/03/24 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule an urgent repair action to replace the memory module indicated by &#39;fmadm faulty&#39;.</item>
+	<name>description</name>
+	<item>A memory module has suffered an uncorrectable error.</item>
+	<name>details</name>
+	<item>This message ID: &lt;B&gt;GMCA-8001-09&lt;/B&gt; indicates that the Solaris Fault Manager has received reports
+of Uncorrectable Multiple-Bit memory errors associated with a Memory 
+Module have been detected, and a Memory Module fault has been diagnosed.
+No data has been lost, and pages of the affected Memory Module are being
+retired as errors are encountered.
+&lt;P&gt;
+The recommended service action for this event is to schedule replacement 
+of the affected Memory Module(s) at the earliest possible convenience.
+&lt;P&gt;
+Follow the steps below to complete the recommended repair action.
+&lt;P&gt;
+&lt;B&gt;Step 1: &lt;/B&gt;Find the 36 character EVENT_ID string associated 
+with the fault.  
+&lt;P&gt;
+Use fmdump (1M) shown in Example 1.1 below, or extract it from the fault message 
+displayed in the console output at the time of the fault.
+&lt;p&gt;
+Note: Be sure to get the correct 36 character EVENT_ID string if more
+than one is listed.  You can identify the correct string by associating
+the fault with the date and time stamp in Example 1.1 
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 1.1 - finding the EVENT_ID (36 character string):&lt;/B&gt;
+&lt;/UL&gt;
+&lt;P&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;P&gt;
+&lt;UL&gt;&lt;PRE&gt;
+&lt;P&gt;
+# fmdump
+TIME                 UUID                                 SUNW-MSG-ID
+Nov 24 08:52:11.8258 &lt;FONT COLOR=&quot;blue&quot;&gt;813c6dfd-fbbd-ed99-f70d-e9ebded96133&lt;/FONT&gt;&lt;FONT COLOR=&quot;red&quot;&gt; GMCA-8001-09&lt;/FONT&gt;
+Dec 05 12:39:50.7994 3721bbfb-0a15-cec6-c925-dea615446c11 GMCA-8000-T0
+&lt;/UL&gt;
+&lt;B&gt;Step 2: &lt;/B&gt;Use the command; fmdump -v -u &lt;I&gt;EVENT_ID&lt;/I&gt;, to locate the faulty 
+memory module, where &lt;I&gt;EVENT_ID&lt;/I&gt; consists of the 36 character string 
+obtained in Step 1 above. See Example 2.1 below.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 2.1 - determining which FRU needs to be replaced:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;P&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;UL&gt;&lt;PRE&gt;
+&lt;P&gt;
+# fmdump -v -u &lt;FONT COLOR=&quot;blue&quot;&gt; 813c6dfd-fbbd-ed99-f70d-e9ebded96133 &lt;/FONT&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+Nov 24 08:52:11.8258&lt;FONT COLOR=&quot;blue&quot;&gt; 813c6dfd-fbbd-ed99-f70d-e9ebded96133&lt;/FONT&gt;&lt;FONT COLOR=&quot;red&quot;&gt; GMCA-8001-09&lt;/FONT&gt;
+  100%  fault.memory.generic-x86.dimm_ue
+
+        Problem in: hc://:product-id=Sun-Fire-X4600-M2:chassis-id=0806AM0254:server-id=sx64-x4600m2a-bur02/
+          motherboard=0/chip=0/memory-controller=0/dram-channel=0/chip-select=0
+           Affects: mem:///motherboard=0/chip=0/memory-controller=0/dram-channel=0/chip-select=0
+               FRU: -
+          Location: CPU 0 &lt;FONT COLOR=&quot;green&quot;&gt;DIMM 0&lt;/FONT&gt;
+&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 3: &lt;/B&gt;Replace the faulty FRU in our case Dimm 0 associated 
+with CPU 0 (and reboot the system)
+&lt;P&gt;
+Refer to the service label or hardware maintenance manual for correct 
+replacement procedures.
+&lt;P&gt;
+&lt;B&gt;Step 4: &lt;/B&gt;Update the Fault Manager&#39;s resource cache to indicate
+that no problems are present in the resources that had been diagnosed
+faulty and subsequently replaced in Step 3. Shown in Example 4.1
+&lt;P&gt;
+Once the Memory Modules have been physically replaced and the system rebooted,
+you must invoke the &#39;fmadm repair&#39; command using the UUID (Universally 
+Unique IDentifier) to identify the repaired FRU.  The UUID is synonymous
+with the EVENT_ID (highlighted in blue) in Example 1.1 above.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 4.1 - Updating the Fault Manager&#39;s resource cache:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm repair &lt;FONT COLOR=&quot;blue&quot;&gt; 813c6dfd-fbbd-ed99-f70d-e9ebded96133 &lt;/FONT&gt;
+# fmadm: recorded repair to &lt;FONT COLOR=&quot;blue&quot;&gt; 813c6dfd-fbbd-ed99-f70d-e9ebded96133 &lt;/FONT&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 5: &lt;/B&gt;Reset the Faulted Page Counters.
+&lt;P&gt;
+Once the fmadm repair &amp;lt;UUID&amp;gt has completed reset the Faulted Page  counter,
+you must invoke the &#39;fmadm reset&#39; command shown in Example 5.1 below.
+The required action in this step is temporary. When this becomes automated
+this article will be updated to reflect these changes.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 5.1 - Reset Faulted Page Counters&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm reset eft
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;p&gt;
+Note: By resetting the Faulted Page Counters, this will reset ALL diagnosis
+state for the diagnosis engine. All event history will be lost. All
+Already diagnosed faults will continue to appear in fmadm faulty. Before
+resetting capture the outputs from fmstat -m eft, fmstat -s -m eft.
+&lt;p&gt;
+&lt;B&gt;Step 6: &lt;/B&gt;Verify the repaired resource is no longer faulty
+&lt;P&gt;
+Use the Solaris command &#39;fmadm faulty&#39; to display all faulted resources
+in the system.  Confirm that the repaired resource is no longer listed
+as faulted shown in Example 6.1.
+&lt;P&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 6.1 - verifying the repaired resource is no longer faulty:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm faulty
+   STATE RESOURCE / UUID
+-------- ----------------------------------------------------------------------
+&lt;/PRE&gt;&lt;/UL&gt;</item>
+	<name>impact</name>
+	<item>\n\nPage retirement (where supported) is capped at a small fraction of memory to avoid performance impact.\n</item>
+	<name>response</name>
+	<item>\n\nIf Solaris is running on bare-metal (native) then affected memory pages associated with this memory module will be removed from service.\n</item>
+	<name>title</name>
+	<item>A memory module has suffered an uncorrectable error.</item>
+</event_registry_properties>

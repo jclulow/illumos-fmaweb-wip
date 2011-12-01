@@ -1,0 +1,70 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)hwsw_details.html	1.5	07/01/30 SMI" -->
+
+The Message ID:&nbsp;&nbsp;<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates a problem with the hardware and/or driver software in the PCI 
+subsystem which requires service.  
+<p> 
+Use the <tt><b>fmdump -v -u <i>EVENT_ID</i></b></tt> command to determine 
+the faulty components as shown in the example below:
+<p>
+ 
+<pre>
+#fmdump -v -u 4a64c9ca-2e7f-4168-ab71-d2ad7393ef85
+
+Aug 30 18:02:59.4798 4a64c9ca-2e7f-4168-ab71-d2ad7393ef85 PCI-8000-6E
+ 
+   20%  defect.io.pci.driver
+         FRU: pkg:///SUNWcakr
+        rsrc: mod:///mod-name=pcisch/mod-id=29
+
+   20%  fault.io.pci.bus
+         FRU: hc://product-id=SUNW,Sun-Fire-880/motherboard=0
+        rsrc: hc:///motherboard=0/hostbridge=1/pcibus=0
+
+   60%  fault.io.pci.device
+         FRU: hc://product-id=SUNW,Sun-Fire-880/component=/pci@9,600000:PCI8
+        rsrc: hc:///motherboard=0/hostbridge=1/pcibus=0/pcidev=1/pcifn=0
+
+
+</pre>
+
+<p>
+The defective software module is indicated in the <b>rsrc</b> line as the <b>mod-name.</b>
+Make note of the module(s) indicated (<i><b>pcisch</b> above</i>) and go 
+to <a href="http://sunsolve.sun.com">http://sunsolve.sun.com </a> to 
+determine is there are any recent patches for the module(s).  Apply any 
+necessary patches.  If the problem persists or if you have any trouble 
+obtaining patches contact Sun Services for assistence.
+<p>
+In this example, the most likely failing device is in <b>PCI Slot 8</b>.  Have 
+the above information available when contacting Sun Services for a repair.
+<p>
+<b>Note:</b> You may also be requested to provide a copy of the files in the 
+/var/fm/fmd directory and also a copy of the output from the 
+<tt><b>fmadm config</b></tt> command.

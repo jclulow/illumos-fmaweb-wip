@@ -1,0 +1,71 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)18.html	1.10	08/08/21 SMI" -->
+
+	<p>
+	  If a service is enabled and its dependencies are met, the
+	  Solaris Service Manager will send a start command to the
+	  service's restarter, which may be the Solaris Service Manager
+	  (<code>svc.startd</code>) itself.
+	  To start a service, <code>svc.startd</code> executes the service's
+	  start method.
+	  If the method is a program and it exits with a non-zero exit
+	  status or terminates due to a signal, <code>svc.startd</code>
+	  considers the method to have failed.
+	  If the method exited with an exit status of
+	  <code>$SMF_EXIT_ERR_CONFIG</code> (defined in
+	  <code>/lib/svc/share/smf_include.sh</code>), the Service Manager
+	  concludes that the service is misconfigured and places it in the
+	  maintenance state.
+	  Otherwise it retries the method a number of times.
+	  If the method fails each time, <code>svc.startd</code> stops
+	  retrying and places the service in the maintenance state.
+
+	<p>
+	The Message ID:&nbsp;&nbsp; <font
+	  size="+1"><code><b>SMF-8000-KS</b></code></font> indicates
+	that the Solaris Service Manager has placed a service in the
+	maintenance state for this reason.  This outcome can indicate a
+	misunderstanding of the requirements of various software
+	components, a misconfiguration of the system, or a defect in
+	Solaris.
+	</p>
+
+
+	<p>
+	See <a href="http://www.sun.com/bigadmin/content/selfheal/">"Predictive
+	Self-Healing"</a> for additional information. Specifically, view  
+        <a href="http://www.sun.com/software/solaris/howtoguides/servicemgmthowto.jsp">
+        "SMF How To Guide"</a> the section entitled "Retrieving Dependency Tree Information". 
+        This provides detailed information for troubleshooting service dependency issues.
+        </p>
+
+
+	<p>
+        If the above Action doesn't help, use the instructions in document <a href="http://sunsolve.sun.com/search/document.do?assetkey=1-61-203634-1&searchclause=203634">
+        203634</a> to place svc.startd in debug mode and contact your service provider.
+        </p>

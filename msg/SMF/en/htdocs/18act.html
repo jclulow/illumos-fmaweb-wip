@@ -1,0 +1,42 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)18act.html	1.4	07/01/30 SMI" -->
+
+	<p>
+	  Determine why the service's start method failed.
+	  Consult the service's log file, typically in
+	  <code>/var/svc/log</code> and named based on the service's FMRI.
+	  (Very early in boot, service logs are placed in
+	  <code>/etc/svc/volatile</code>.)
+
+	<p>
+	  Once the problem has been fixed, run <code>svcadm&nbsp;clear
+	  <i>service_fmri</i></code> to request that the Solaris Service
+	  Manager clear the service's maintenance state and treat the
+	  service normally.
+	  If it is still enabled and its dependencies are met, it will be
+	  started.

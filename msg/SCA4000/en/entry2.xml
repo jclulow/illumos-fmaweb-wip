@@ -1,0 +1,79 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry2.xml	1.3	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Sun Crypto Accelerator 4000 Firmware May Be Defective</item>
+
+	<name>description</name>
+	<item>The Solaris Fault Manager has determined that a firmware
+defect was detected on Sun Crypto Accelerator 4000 card which requires
+repair action.</item>
+
+	<name>response</name>
+	<item>The driver has been disabled and unregistered as a hardware
+provider to the Solaris Cryptographic Framework.</item>
+
+	<name>impact</name>
+	<item>The card will no longer function as a network device or
+cryptographic accelerator until the problem has been resolved.</item>
+
+	<name>action</name>
+	<item>Run &lt;tt&gt;pkgchk -n SUNWvcafw&lt;/tt&gt; to ensure that the latest firmware
+package is correctly installed and has been downloaded to the adapter
+(rsrc) identified in the fmdump(1M) output as instructed in the Sun
+Crypto Accelerator 4000 Board Installation and Users Guide.
+&lt;br&gt;&lt;br&gt;
+If the latest firmware has already been correctly installed, contact
+Sun for support.</item>
+
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp;&lt;font size="+1"&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;
+indicates diagnosis has determined
+that the firmware running on the SCA4000 PCI adapter is
+defective.  The SCA4000 (vca) driver
+has disabled the network and cryptographic accelerator
+interfaces.  Insure that the latest firmware package
+(SUNWvcafw) is installed on the system and that the firmware supplied
+with that package (sca4000fw) has been downloaded to the card before
+contacting Sun for support.  The version 2.0 driver will only
+work with firmware version 2.0 or higher.
+&lt;br&gt;&lt;br&gt;
+Refer to the Sun Crypto Accelerator 4000 Board Installation and Users
+Guide for information on determining version of firmware currently
+running on the card and downloading the correct version if necessary.
+&lt;br&gt;&lt;br&gt;
+After installing the latest firmware version, the network and
+cryptographic
+accelerator interfaces may be brought back into service using the
+fmadm(1M) command:
+&lt;br&gt;&lt;br&gt;
+fmadm repair &amp;lt;EVENT-ID&amp;gt;</item>
+
+</event_registry_properties>

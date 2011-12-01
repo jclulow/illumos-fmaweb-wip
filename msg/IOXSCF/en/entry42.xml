@@ -1,0 +1,101 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry42.xml	1.4	07/05/22 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected FRU.
+</item>
+	<name>description</name>
+	<item>Two I/O boats appear, to the management software, to be in the
+same location in an External I/O Expansion Unit
+</item>
+	<name>details</name>
+	<item>One of the boat location signals is faulty. Physically check the serial numbers of the boat detected by
+the system to determine which reported location is correct. The signal failure is in the chassis or the
+boat. It is also possible that the system will not be able to determine a boat location if there is a
+problem with the I2C bus. This event commonly occurs during the initialization of the uplink card and
+result in only be able to access the down link card. The uplink and boat won&#39;t be managed.&lt;p&gt;
+
+You may see the fault message IOXSCF-8000-U4 associated with this error.&lt;p&gt;
+
+Follow the steps below to obtain the necessary data for presentation to your authorized service
+provider.&lt;p&gt;
+
+&lt;b&gt;Step 1:&lt;/b&gt;  Collect the fault message.&lt;br&gt;
+A single line fault message is displayed to the system console and logged in the /var/logs/message file.
+The complete message may be retrieved by using the &#39;fmdump&#39; command on the XSCF console as
+shown below.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -m&lt;/i&gt;
+   MSG-ID: &lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-AD&lt;/font&gt;, TYPE: Fault, VER: 1, SEVERITY: Major
+   EVENT-TIME: Tue Mar 27 08:39:02 PDT 2007
+   PLATFORM: SPARC-Enterprise, CSN: BE80601000, HOSTNAME: server-0
+   SOURCE: sde, REV: 1.12
+   EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;88974baa-7d18-499e-9352-1177cb0a78cd&lt;/font&gt;
+   DESC: Two I/O boats appear, to the management software, to be in the
+   same location in an External I/O Expansion Unit
+   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-AD&lt;/font&gt; for more information.
+   AUTO-RESPONSE: No immediate action is taken
+   IMPACT: One I/O boat will not be monitored.
+   REC-ACTION: Schedule a repair procedure to replace the affected FRU.&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 2:&lt;/b&gt; Collect the &quot;fmdump&quot; output.&lt;br&gt;
+Use the fmdump command with the Event-ID option to retrieve more information on the fault which
+has occurred.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;88974baa-7d18-499e-9352-1177cb0a78cd&lt;/font&gt;&lt;/i&gt;
+   TIME                 UUID                                 MSG-ID
+   Mar 27 08:39:02.7474 &lt;font color = &quot;BLUE&quot;&gt;88974baa-7d18-499e-9352-1177cb0a78cd&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-AD&lt;/font&gt;
+       100% fault.chassis.iox.boat-access
+       Problem in: hc:///chassis=0/iou=0/pcislot=2/link=0/cable=0
+          Affects: -
+              FRU: hc://:product-id=SPARC-Enterprise:chassisid=BE80601000:server-id=server-
+0/component=&lt;font color = &quot;GREEN&quot;&gt;/IOU#0/PCI#2/LINK/CABLE&lt;/font&gt;&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 3:&lt;/b&gt; Provide the output collected to your service provider.&lt;br&gt;
+The information collected above will help your service provider to schedule a repair at your
+convenience.</item>
+	<name>impact</name>
+	<item>One I/O boat will not be monitored.
+</item>
+	<name>response</name>
+	<item>No immediate action is taken
+</item>
+	<name>title</name>
+	<item>External I/O Expansion Unit I/O boat location failure
+</item>
+</event_registry_properties>

@@ -1,0 +1,83 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry0.xml	1.26	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Ensure latest drivers and patches are installed.  
+Run &lt;tt&gt;fmdump -v -u &amp;lt;EVENT_ID&amp;gt;&lt;/tt&gt; to find the suspect 
+driver(s).</item>
+	<name>description</name>
+	<item>The system has diagnosed a problem in one or more PCI controller 
+drivers, based on the error telemetry detected in the PCI subsystem.</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;
+indicates a problem with a PCI driver.  This message occurs 
+primarily when a PCI service was used that had not been enabled.  This could
+be the result of a nexus,driver or application bug.
+&lt;p&gt;
+Use the &lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;i&gt;EVENT_ID&lt;/i&gt;&lt;/b&gt;&lt;/tt&gt; command to 
+determine the possible faulty driver(s) as shown in the example below.
+&lt;p&gt;
+
+&lt;pre&gt;
+Aug 30 18:58:26.6844 4a64c9ca-2e7f-4168-ab71-d2ad7393ef85 PCI-8000-0C
+
+   100%  defect.io.pci.driver
+         FRU: pkg:///SUNWcakr
+        rsrc: mod:///mod-name=pcisch/mod-id=29
+
+
+&lt;/pre&gt;
+&lt;p&gt;
+The defective software module is indicated in the &lt;b&gt;rsrc&lt;/b&gt; line as the &lt;b&gt;mod-name.&lt;/b&gt;
+Make note of the module(s) indicated (&lt;i&gt;&lt;b&gt;pcisch&lt;/b&gt; above&gt;&lt;/i&gt;) and go 
+to &lt;a href=&quot;http://sunsolve.sun.com&quot;&gt;http://sunsolve.sun.com &lt;/a&gt; to 
+determine is there are any recent patches for the module(s).  Apply any 
+necessary patches.  If the problem persists or if you have any trouble 
+obtaining patches contact Sun Services for assistence.
+&lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt; You may also be requested to provide a copy of the files in the /var/fm/fmd directory and also a copy of the output from the &lt;tt&gt;&lt;b&gt;fmadm config&lt;/b&gt;&lt;/tt&gt; command.
+</item>
+	<name>impact</name>
+	<item>Possible loss of services provided by the device instances associated with this 
+problem and/or system downtime.</item>
+	<name>po-action</name>
+	<item>Ensure latest drivers and patches are installed.  Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT_ID&amp;gt;&lt;/tt&gt; to identify the module/package, or contact Sun for support.</item>
+	<name>po-description</name>
+	<item>A problem was detected in the PCI controller software.</item>
+	<name>po-impact</name>
+	<item>Loss of services provided by the device instances associated with this problem.</item>
+	<name>po-response</name>
+	<item>One or more of device instances may be disabled.</item>
+	<name>response</name>
+	<item>This defect requires user and/or service interaction and currently does 
+not have an automated response agent.</item>
+	<name>title</name>
+	<item>Defective PCI Device Driver</item>
+</event_registry_properties>

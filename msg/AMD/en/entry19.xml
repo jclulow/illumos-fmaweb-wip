@@ -1,0 +1,46 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry19.xml	1.16	09/03/24 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected memory module.  Use &#39;fmadm faulty&#39; to identify the module.</item>
+	<name>description</name>
+	<item>The system BIOS has failed one or more ranks of this DIMM during test.
+</item>
+	<name>details</name>
+	<item>At system reset a DIMM failed under test and was not configured into the system memory map by the BIOS.  This may have been preceded by a system reset following a Sync Flood after an uncorrectable memory error.  The SEL (system event log, if this system has one) may include more detail; it may be viewed via any service processor this platform has, or via &amp;quot;/usr/sfw/bin/ipmitool sel list&amp;quot;.
+</item>
+	<name>impact</name>
+	<item>Available system memory is substantially reduced</item>
+	<name>response</name>
+	<item>The BIOS has not configured the affected rank(s) into the system memory
+map.
+</item>
+	<name>title</name>
+	<item>Memory Module Has Failed BIOS Test</item>
+</event_registry_properties>

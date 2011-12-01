@@ -1,0 +1,48 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)16act.html	1.4	07/01/30 SMI" -->
+
+	<p>
+	  Determine the dependency chain which leads to the service.
+	  The Solaris Service Manager logged the FMRIs of the services
+	  to <code>/var/adm/messages</code> under standard
+	  <code>syslogd</code>(1M) settings.
+	  Direct dependencies of the service may be listed with
+	  <code>svcs&nbsp;-l <i>service_fmri</i></code>.
+
+	<p>
+	  Depending on
+	administrator understanding of the impacted service, it may be
+	preferable to attempt repair or removal of the dependency using
+	<code>svccfg</code>(1M) or to consult with Sun Service.
+
+	<p>
+	  Once the dependency chain has been broken,
+	  <code>svcadm&nbsp;refresh <i>service_fmri</i></code> will instruct
+	  the Service Manager to reread the service's dependencies, and
+	  <code>svcadm&nbsp;clear <i>service_fmri</i></code> will instruct
+	  the Service Manager to clear the service's maintenance state.

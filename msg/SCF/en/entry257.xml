@@ -1,0 +1,67 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry257.xml	1.1	08/02/08 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>The platform administrator should investigate the cause of the boot
+problem and schedule a service action, if necessary.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>description</name>
+	<item>Failure to boot Solaris on a domain using an internal SAS (Serial Attached SCSI) device.
+This includes the internal hard drives and the internal DVD drives and the internal tape drives.
+</item>
+	<name>details</name>
+	<item>This message indicates a failure to boot Solaris on a domain using an internal SAS device.
+
+The OpenBoot PROM fcode did not detect any fault with the device.
+
+The domain drops to the OpenBoot PROM &#39;ok&#39; prompt.
+
+The precise cause of the failure to boot using cannot be determined.
+
+The cause may be some;
+
+   Difficult-to-diagnose hardware problem.
+   Corrupted boot image.
+   External problem.
+
+The administrator should investigate the cause of the boot problem and schedule a service action.
+
+
+</item>
+	<name>impact</name>
+	<item>The domain drops to the OpenBoot PROM &#39;ok&#39; prompt.
+</item>
+	<name>response</name>
+	<item>Nothing is deconfigured.
+</item>
+	<name>title</name>
+	<item>Failure to boot Solaris on a domain using an internal SAS device.
+</item>
+</event_registry_properties>

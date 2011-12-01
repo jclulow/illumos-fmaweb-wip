@@ -1,0 +1,57 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry5.xml	1.16	09/03/24 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected CPU.  Use &#39;fmadm faulty&#39; to identify the module.</item>
+	<name>description</name>
+	<item>The number of errors associated with this CPU has exceeded acceptable levels.</item>
+	<name>details</name>
+	<item>&lt;P&gt;
+&lt;B&gt;Step 4: &lt;/B&gt;Verify the CPU is in use by the system.
+&lt;P&gt;
+To verify that the CPU has been returned to service, use the Solaris 
+command psrinfo (1M). See Example 4.1 below.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 4.1 - verifying the CPU has returned to service:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# psrinfo
+0       on-line   since 09/22/2008 14:45:16
+1       on-line   since 09/22/2008 14:44:19
+2       on-line   since 09/22/2008 14:44:57
+3       on-line   since 09/22/2008 14:44:23 
+&lt;/UL&gt;&lt;/PRE&gt;</item>
+	<name>impact</name>
+	<item>Performance of this system may be affected.</item>
+	<name>response</name>
+	<item>An attempt will be made to remove this CPU from service.</item>
+	<name>title</name>
+	<item>CPU errors exceeded acceptable levels</item>
+</event_registry_properties>

@@ -1,0 +1,162 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry5.xml	1.16	08/12/03 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Ensure that the latest drivers and patches are installed. 
+Otherwise schedule a repair procedure to replace the affected device(s).  Use fmadm faulty to identify the devices or contact Sun for support.</item>
+	<name>description</name>
+	<item>The transmitting device sent an invalid request.
+</item>
+	<name>details</name>
+	<item>The transmitting device sent an invalid request.
+&lt;p&gt;
+This message occurs when a PCI driver queries a component which does 
+not  does not support the request.  The request was correctly formed 
+and has not incurred any detected error during transport, however  
+the transaction cannot be fulfilled due to a variety of reasons 
+including illegal access, improper address or invalid command for this 
+device.
+&lt;p&gt;  
+This is most likely caused by a piece of software that is not aligned 
+with the capabilities of the PCI component(s) pointed to by this message.
+The component(s) are listed in the &quot;Affects&quot; portion it&#39;s location 
+is listed in the &quot;FRU&quot; portion of 
+&quot;fmadm faulty&quot; or &quot;fmdump&quot; output.
+&lt;p&gt;
+It is extremely unlikely that this is a hardware problem and replacing 
+hardware is not warranted unless it is verified that software is 
+not the root cause.
+&lt;p&gt;
+Verify that the patches associated with the component(s) and FRU(s) 
+are up to date.  
+This should include OS level PCI driver patches as well as 
+any potential firmware patches for the device itself.  
+Apply current versions of any patches not up to date to reduce the 
+potential of this error re-occurring.
+&lt;P&gt;
+&lt;B&gt;Step 1: &lt;/B&gt;Find the 36 character EVENT_ID string associated with the
+fault.  
+&lt;P&gt;
+The EVENT_ID can be located using either the fmdump (1M) or fmadm (1M) 
+commands or from the fault message 
+displayed in the console output at the time of the fault. 
+fmdump output is shown in Example 1.1 below.
+&lt;P&gt;
+Note: Be sure to get the correct 36 character EVENT_ID string if more
+than one is listed.  You can identify the correct string by associating
+the fault with the date and time stamp from the fmdump output. fmadm faulty shows the EVENT_ID (highlighted
+in blue).
+&lt;P&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 1.1 - finding the EVENT_ID (36 character string):&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmdump
+TIME                 UUID                                 SUNW-MSG-ID
+Feb 17 19:36:38.5312 &lt;FONT COLOR=BLUE&gt;eccf460a-968b-e005-85ac-aecb6e4b7214&lt;/FONT&gt; &lt;FONT COLOR=RED&gt;PCIEX-8000-5Y&lt;/FONT&gt;
+
+
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;B&gt;Step 2: &lt;/B&gt;Use the command; fmadm faulty -u &lt;I&gt;EVENT_ID&lt;/I&gt;, to locate the  
+affected components (highlighted in green), where &lt;I&gt;EVENT_ID&lt;/I&gt; consists of the 36 character string 
+obtained in Step 1 above. The component is located on the FRU (highlighted in green) See Example 2.1 below.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 2.1 - determining affected component(s):&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm faulty -u &lt;FONT COLOR=BLUE&gt;eccf460a-968b-e005-85ac-aecb6e4b7214&lt;/FONT&gt;
+
+--------------- ------------------------------------ -------------- --------- 
+TIME            EVENT-ID                             MSG-ID         SEVERITY 
+--------------- ------------------------------------ -------------- --------- 
+
+Feb 17 19:36:38.5312 &lt;FONT COLOR=BLUE&gt;eccf460a-968b-e005-85ac-aecb6e4b7214&lt;/FONT&gt; &lt;FONT COLOR=RED&gt;PCIEX-8000-5Y&lt;/FONT&gt; Major 
+
+Fault class : fault.io.pci.device-invreq 33% 
+Affects     : &lt;FONT COLOR=GREEN&gt;dev:////pci@8,600000/SUNW,qlc@4&lt;/FONT&gt;  
+              faulted but still in service 
+FRU         : &lt;FONT COLOR=GREEN&gt;&quot;*MB*&quot; (hc://:component=MB)&lt;/FONT&gt; 
+              faulty 
+
+Fault class : fault.io.pci.device-invreq 33% 
+Affects     : &lt;FONT COLOR=GREEN&gt;dev:////pci@8,600000/ethernet@1&lt;/FONT&gt;  
+              faulted but still in service 
+FRU         : &lt;FONT COLOR=GREEN&gt;&quot;*PCI 1*&quot; (hc://:product-id=SUNW,Sun-Blade-1000:server-id=blade/motherboard=0/hostbridge=0/pcibus=0/pcidev=1)&lt;/FONT&gt; 
+              faulty 
+
+Fault class : fault.io.pci.device-invreq 33% 
+Affects     : &lt;FONT COLOR=GREEN&gt;dev:////pci@8,600000/ethernet@1,1&lt;/FONT&gt;  
+              faulted but still in service 
+FRU         : &lt;FONT COLOR=GREEN&gt;&quot;*PCI 1*&quot; (hc://:product-id=SUNW,Sun-Blade-1000:server-id=blade/motherboard=0/hostbridge=0/pcibus=0/pcidev=1)&lt;/FONT&gt; 
+              faulty 
+
+
+
+
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 3: &lt;/B&gt;Identify the software component(s) that needs to be repaired.
+&lt;P&gt;
+Software under suspicion in this example would be associated with the
+hardware components listed in the &quot;Affects&quot; field of the output, in 
+this example ethernet or else the QLC chip on the motherboard.  
+Note that both are PCI and not PCIe.  
+Any drivers or firmware for either component need 
+to be checked for currency. Check &lt;a href=&quot;http://sunsolve.sun.com/show.do?target=home&quot;&gt;&quot;SunSolve&quot;&lt;/a&gt; 
+patch finder for patches with
+pci and, in this example, ethernet and qlc keywords to search 
+for possible updated patches. 
+&lt;P&gt;
+If patches are applied, run the command; fmadm repair &lt;I&gt;EVENT_ID&lt;/I&gt;
+in order to clear the fault staus of the hardware components.
+&lt;P&gt;
+In the case that there are no patches, the applicable patches 
+are current or if the problem reappears after applying patches, 
+contact your service provider with the above information.  
+Your service provider may request additional information to attempt
+to further isolate the issue.
+&lt;P&gt;</item>
+	<name>impact</name>
+	<item>Loss of services provided by the device instances associated with this fault
+</item>
+	<name>po-action</name>
+	<item>Ensure that the latest drivers and patches are installed. Otherwise schedule a repair procedure to replace the affected device(s).  Use fmadm faulty to identify the devices or contact Sun for support.</item>
+	<name>response</name>
+	<item>One or more device instances may be disabled
+</item>
+	<name>title</name>
+	<item>PCIEX subsytem problem
+</item>
+</event_registry_properties>

@@ -1,0 +1,176 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry39.xml	1.12	08/09/12 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>At convenient time, try reseating the memory module(s).  If problem persists,
+contact Sun to schedule part replacement.
+</item>
+	<name>description</name>
+	<item>A problem was detected in the interconnect between a memory DIMM module and
+its memory controller.  A lane failover has taken place.
+</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;&lt;/font&gt; 
+indicates a problem
+in the interconnect between the identified memory DIMM(s)
+and the memory controller as a result of exceeding the threshold
+for correctable memory link errors.
+No data has been lost. However, a memory data lane has been taken
+ out of service which may impact system performance.  The system 
+is at increased risk of incurring an uncorrectable error, which 
+will cause a service interruption, until the problem is resolved.
+&lt;p&gt;
+Also, see &lt;b&gt;NOTE&lt;/b&gt; below for a description of an existing issue with this
+diagnosis (CR 6618751).  
+&lt;p&gt;
+Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the PSH console message
+ to locate the suspected faulty components as shown in the example below.
+
+&lt;p&gt;
+&lt;pre&gt;
+# fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;d505971c-f3dd-e27e-9e05-faed155c39bd&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+Oct 16 15:10:53.2312 &lt;font color = &quot;BLUE&quot;&gt;d505971c-f3dd-e27e-9e05-faed155c39bd&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;SUN4V-8001-7R&lt;/font&gt;
+   70%  fault.memory.link-c
+
+        Problem in: mem:///unum=MB/CMP0/BR0/CH0/D0
+           Affects: mem:///unum=MB/CMP0/BR0/CH0/D0
+               &lt;font color = &quot;GREEN&quot;&gt;FRU:
+hc://:product-id=SUNW,SPARC-Enterprise-T5220:chassis-id=0704
+BB5053:server-id=wgs48-100:serial=22ab471//motherboard=0/chip=0/branch=0/dram-ch
+annel=0/dimm=0&lt;/font&gt;
+          Location: MB/CMP0/BR0/CH0/D0
+
+   30%  fault.memory.link-c
+
+        Problem in:
+hc://:product-id=SUNW,SPARC-Enterprise-T5220:chassis-id=0704
+BB5053:server-id=wgs48-100:serial=101083:part=541215101/motherboard=0
+           Affects:
+hc://:product-id=SUNW,SPARC-Enterprise-T5220:chassis-id=0704
+BB5053:server-id=wgs48-100:serial=101083:part=541215101/motherboard=0
+               &lt;font color = &quot;GREEN&quot;&gt;FRU:
+hc://:product-id=SUNW,SPARC-Enterprise-T5220:chassis-id=0704
+BB5053:server-id=wgs48-100:serial=101083:part=541215101/motherboard=0&lt;/font&gt;
+          Location: MB
+&lt;/pre&gt;
+&lt;p&gt;
+In the above example, two suspected components are listed (green font);
+a memory DIMM and the system motherboard.  Depending on the system
+configuration, several memory DIMMs may be included in the suspect
+list.  Also note the diagnosis indicates the probability of the problem
+being the memory DIMM (70%) is higher than the motherboard (30%).
+&lt;p&gt;
+A possible cause of the connection problem is the seating of a 
+memory DIMM.  Use the following steps to verify correct DIMM seating.
+&lt;p&gt;
+&lt;UL&gt;
+&lt;B&gt;1.) Locate the suspected DIMM(s)&lt;/B&gt;
+&lt;p&gt;
+The location of the suspected DIMM(s) is specified in the &quot;Location&quot;
+field.  In the example above, the DIMM is located at:
+&lt;p&gt;
+&lt;pre&gt;
+Location: MB/CMP0/BR0/CH0/D0
+&lt;/pre&gt;
+Refer to the Service Manual or the Service Label attached to the 
+server chassis to find the physical location of the DIMM. 
+Some platforms also provide fault indicators for individual DIMMs 
+to validate the location.  
+&lt;p&gt;
+&lt;B&gt;2.) Reseat the DIMM(s)&lt;/B&gt;
+&lt;p&gt;
+Follow the instructions in the Service Manual to insure the DIMM is
+seated correctly. The Service Manual for your platform is available 
+through the &lt;a href=http://www.sun.com/documentation/index.html &gt;Sun Documentation Center&lt;/a&gt;.
+&lt;p&gt;
+&lt;B&gt;3.) Clear the fault&lt;/B&gt;
+&lt;p&gt;
+Clear the original fault to insure that a new problem will be noted.
+Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmadm repair &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; 
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the PSH
+console message as shown in the example below.
+&lt;p&gt;
+&lt;pre&gt;
+# fmadm repair &lt;font color = &quot;BLUE&quot;&gt;d505971c-f3dd-e27e-9e05-faed155c39bd&lt;/font&gt;
+fmadm: recorded repair to &lt;font color = &quot;BLUE&quot;&gt;d505971c-f3dd-e27e-9e05-faed155c39bd&lt;/font&gt;
+&lt;/pre&gt;
+&lt;/UL&gt;
+&lt;p&gt;
+If the problem occurs again after reseating the DIMM(s), then the
+recommended action is to replace the DIMM(s) called out in the 
+suspect list.
+&lt;p&gt;
+&lt;UL&gt;
+&lt;B&gt;1.) Locate and replace the suspected DIMM(s)&lt;/B&gt;
+&lt;p&gt;
+The DIMM(s) to replace are identified by the command
+&amp;nbsp;&lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+as shown in the example above.
+&lt;p&gt;
+&lt;B&gt;2.) Clear the fault&lt;/B&gt;
+&lt;p&gt;
+After replacing the DIMM(s) clear the original fault to insure
+that a new problem will be noted.  
+Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmadm repair &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; 
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the PSH
+console message as shown in the example above.
+&lt;p&gt;
+&lt;/UL&gt;
+If the problem occurs again after replacing the DIMM(s) then contact your service provider.
+&lt;p&gt;
+&lt;p&gt;
+&lt;b&gt;NOTE&lt;/b&gt;: For the T5440, a suspect FRU for this fault may be a
+Memory Module, and for the T5240 a suspect FRU may be the optional
+Memory Mezzanine.  Neither of these FRUs will be included in the 
+suspect list for this fault (CR 6618751).
+&lt;p&gt;
+If this fault occurs on either of these platforms follow the 
+instructions above to reseat or replace the DIMMs identified in 
+the suspect list (Note, the identified DIMMs may be located on a 
+T5440 Memory Module or T5240 Memory Mezzanine.  Refer to your 
+server&#39;s Service Manual or Service Label to find the physical 
+location of the DIMMs).  If these actions do not resolve the problem, 
+contact your service provider.
+&lt;p&gt;
+A patch is not yet available to resolve this issue.  When the patch 
+becomes available, it will be posted on this message.
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>System performance may be impacted.
+</item>
+	<name>response</name>
+	<item>No automated response.
+</item>
+	<name>title</name>
+	<item>DIMM socket or interconnect problem generating correctable errors
+</item>
+</event_registry_properties>

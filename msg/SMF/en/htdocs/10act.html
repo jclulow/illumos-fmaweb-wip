@@ -1,0 +1,48 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)10act.html	1.4	07/01/30 SMI" -->
+
+	<p>
+	  Determine the restarter for the service with <code>svcs&nbsp;-l
+	  <i>service_fmri</i></code>.
+
+	<p>
+	  For services managed by
+	  <code>svc:/system/svc/restarter:default</code>, collect
+	data for Sun Service.  In particular, obtain a core file for
+	<code>svc.startd</code>(1M) by using <code>gcore</code>(1), as
+	well as <code>svcs -x</code> output.  Once data has been
+	obtained, it may be possible to restore service operation by
+	requesting restart or clearing a degraded or maintenance state,
+	using <code>svcadm</code>(1M).
+	<p>
+	For services managed by other restarters, no diagnosis may be
+	available by design.  See the documentation for the relevant
+	restarter for guidance.
+	If the service is in the maintenance state, <code>svcadm&nbsp;clear
+	<i>service_fmri</i></code> will instruct the restarter to clear it.
+	</p>

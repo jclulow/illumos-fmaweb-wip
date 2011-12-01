@@ -1,0 +1,372 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry82.xml	1.4	08/10/09 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>The platform administrator should schedule a service action to replace
+the affected Field Replaceable Unit (FRU), the identity of which can be
+determined using fmdump -v -u EVENT_ID.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>description</name>
+	<item>JTAG access failure to a specific chip when attempting a reconfiguration operation.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;SCF-8002-K2&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+JTAG access failure to a specific chip when attempting a
+reconfiguration operation.&lt;br&gt;
+&lt;br&gt;
+The domain may be reset, platform may be reset, or platform may become
+unbootable.&lt;br&gt;
+&lt;br&gt;
+The resources associated with the chip will be deconfigured. &lt;br&gt;
+&lt;br&gt;
+This type of fault implies that the chip may be configured incorrectly &lt;br&gt;
+and the consequences of the fault are quite unpredictable.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+The chips affected by this fault and the consequences that might occur
+are as follows:&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M3000 platform:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;CPU
+chips on Motherboard:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The platform may reset or
+may hang or some other problem may occur.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The platform becomes
+unbootable.&lt;br&gt;
+&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; JSC
+chips on Motherboards &lt;br&gt;
+&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The JSC chip replaces
+both the SC chip
+and the MAC chip. &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; It is possible the entire platform
+will be affected and it is possible the platform will be reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The platform becomes
+unbootable.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M4000 platform:&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;CPU
+chips on CPUM&#39;s:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Consequences are
+limited to the domain that is using the CPU chip.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Domain may reset or
+may hang or some other problem may occur.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The CPU chip is
+deconfigured after the platform is power cycled or &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; after the domain
+reboots or after a Dynamic Reconfiguration operation is performed.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SC
+chips on Motherboards &lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; It is possible the entire platform
+will be affected and it is possible the platform will be reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Domains will not be
+allowed to reboot and the platform will gradually become unusable.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M5000 platform:&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;CPU
+chips on CPUM&#39;s:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Consequences are
+limited to the domain that is using the CPU chip.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Domain may reset or
+may hang or some other problem may occur.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The CPU chip is
+deconfigured after the platform is power cycled or &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; after the domain
+reboots or after a Dynamic Reconfiguration operation is performed.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SC
+chips on Motherboards&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; It is possible the entire platform
+will be affected and it is possible the platform will be reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; One half of the
+Motherboard with the chip will gradually be deconfigured.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Domains will not be
+allowed to use XSB&#39;s on the one half Motherboard,&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; as the domain reboots
+or after a Dynamic Reconfiguration operation is performed.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SPARC Enterprise
+M8000/M9000 platforms:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;CPU
+chips on CPUM&#39;s:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Consequences are
+limited to the domain that is using the CPU chip.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Domain may reset or
+may hang or some other problem may occur.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The CPU chip is
+deconfigured after the platform is power cycled or &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; after the domain
+reboots or after a Dynamic Reconfiguration operation is performed.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;SC
+chips on CMU&#39;s:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Only the domains using
+the CMU will be affected, but it is also possible that&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; the entire PPAR group
+for this CMU is affected.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; CMU with the chip will
+gradually be deconfigured.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Domains will not be
+allowed to use XSB&#39;s on this CMU, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; as the domain reboots
+or after a Dynamic Reconfiguration operation is performed.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;XB
+chips on BP_A Backplane:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The entire platform
+may be reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The crossbar way with
+this XB chip is deconfigured the next time the platform is restarted.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If
+this is the first crossbar way being deconfigured, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then
+the platform will operate with reduced performance.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If a
+crossbar way has already been deconfigured, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then
+the platform will be powered down.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;XB
+chips on XBU&#39;s:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The entire platform
+may be reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The crossbar way with
+this XBU is deconfigured the next time the platform is restarted.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If
+this is the first crossbar way being deconfigured, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then
+the platform will operate with reduced performance.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If a
+crossbar way has already been deconfigured, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then
+the platform will be powered down.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;CLK
+chips on BP_A Backplane:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The entire platform
+may be reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The platform cannot be
+restarted after the next platform reset or power-off.&lt;br&gt;
+&lt;br&gt;
+&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; CLK
+chips on Clock Units:&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The entire platform
+may be reset.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If this is the active
+CLKU, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; then the CLKU is
+deconfigured the next time the platform is restarted. &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If this is the standby
+CLKU, then the CLKU is deconfigured immediately.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+The recommended service action for this event is to schedule the
+replacement of the affected FRU.&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;LEGEND&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; = SUNW-MSG-ID&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; = EVENT_ID&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(51, 51, 255);&quot;&gt; &lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+GREEN&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 153, 0);&quot;&gt;&amp;nbsp; =&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt; FRU&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;br&gt;
+Step 1. Collect the fault message (use one of the following methods):&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Single-line fault message displayed on the XSCF console:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Mar 27 15:06:12 nwk-dc2-1-sc0 fmd: SOURCE: sde, REV: 1.12,
+CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;68544eae-cd1d-413d-ab18-13749721291c&lt;/span&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-K2&lt;/span&gt;
+for detailed information.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Complete fault message using &#39;fmdump -m&#39; on the XSCF
+console:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; MSG-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-K2&lt;/span&gt;,
+TYPE: Fault, VER: 1, SEVERITY: Critical&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-TIME: Tue Mar 27 15:06:12 PDT 2007&lt;br&gt;
+&amp;nbsp;&amp;nbsp; PLATFORM: SPARC-Enterprise, CSN: nwk-dc2-1, HOSTNAME:
+nwk-dc2-1-sc0&lt;br&gt;
+&amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
+&amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;68544eae-cd1d-413d-ab18-13749721291c&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp; DESC: JTAG access failure to a specific chip when
+attempting a reconfiguration operation.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
+for additional information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8002-K2 for more
+information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The resources associated with the chip will
+be deconfigured. &lt;br&gt;
+&amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
+for additional information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; IMPACT: The platform may be reset or a domain may be
+reset. The platform may become unbootable.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; It is also possible that some other problem may occur. &lt;br&gt;
+&amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
+for additional information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; REC-ACTION: The platform administrator should schedule a
+service action to replace&lt;br&gt;
+&amp;nbsp;&amp;nbsp; the affected Field Replaceable Unit (FRU), the identity of
+which can be&lt;br&gt;
+&amp;nbsp;&amp;nbsp; determined using fmdump -v -u EVENT_ID.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
+for additional information.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Step 2. Collect the output from the &#39;fmdump -v -u EVENT_ID&#39; command&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; SPARC Enterprise platform example:&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; xscf&amp;gt; fmdump -v -u &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;68544eae-cd1d-413d-ab18-13749721291c&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+UUID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+MSG-ID&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Mar 27 15:06:12.3757 &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;68544eae-cd1d-413d-ab18-13749721291c&lt;/span&gt;
+&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-K2&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 100%&amp;nbsp;
+fault.chassis.jtag.device-internal&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Problem in: hc:///chassis=0/cmu=0/cpu=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Affects: hc:///chassis=0/cmu=0/cpu=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+FRU: hc://:product-id=SPARC-Enterprise:chassis-id=nwk-dc2-1:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+server-id=nwk-dc2-1-sc0:serial=PP0640S689:&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+part=CA06620-D021 A6:revision=0201/component=/CMU#0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;CPUM#0&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Step 3. Contact your Authorized Service Provider.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+If you require additional information, please refer to InfoDoc #87402.
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>The platform may be reset or a domain may be reset. The platform may become unbootable.
+It is also possible that some other problem may occur. Please consult the detail section of the 
+knowledge article for additional information.
+</item>
+	<name>response</name>
+	<item>The resources associated with the chip will be deconfigured. Please consult the detail section of 
+the knowledge article for additional information.
+</item>
+	<name>title</name>
+	<item>JTAG access failure to a specific chip.
+</item>
+</event_registry_properties>

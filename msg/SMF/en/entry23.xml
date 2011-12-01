@@ -1,0 +1,202 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry23.xml	1.7	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>See Details for potential actions.</item>
+	<name>description</name>
+	<item>General instructions on handling and recovering from potential errors
+during system boot.</item>
+	<name>details</name>
+	<item>&lt;p&gt;
+Failures that bring the system to maintenance mode may include hardware
+or critical software failures.  The procedures below are given so that
+some software repairs can be made; the recommended exit approach once a
+repair has been made is to reboot the system.  The system can be brought
+to maintenance mode deliberately via the &#39;-s&#39; option to boot(1M), or via
+the &#39;s&#39; option to init(1M).
+&lt;/p&gt;
+
+&lt;p&gt;
+In failure scenarios, smf(5) may or may not be running, depending on
+which component has failed.  If smf(5) is running, and the /usr
+filesystem is reachable, then the usual svcadm(1M) invocations to clear
+maintenance state and restart services instances can be used.
+Otherwise, the following instructions describe the direct execution of
+service methods, so that capabilities that svc.startd(1M) would normally
+start automatically can be started manually.  In the case that the
+document recommends an invocation like
+
+&lt;pre&gt;
+# /lib/svc/method/example-method start
+&lt;/pre&gt;
+
+you may also consider running these scripts with the shell displaying
+the commands from the service method as they are executed.  For sh(1)
+based scripts, this would mean running the method as
+
+&lt;pre&gt;
+# /sbin/sh -x /lib/svc/method/example-method start
+&lt;/pre&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Some methods may be written to instead use ksh(1), with invocation
+
+&lt;pre&gt;
+# /usr/bin/ksh -x /lib/svc/method/example-method start
+&lt;/pre&gt;
+
+The first line of the service method script will generally specify its
+required interpreter using the standard #! notation.  Method scripts may
+potentially require interpreters other than sh(1) or ksh(1).
+&lt;p&gt;
+
+&lt;h2&gt;1.  Boot archive failure.&lt;/h2&gt;
+
+&lt;p&gt;
+On systems offering a boot archive-based system boot, the
+boot archive may become out of sync with the root filesystem in
+a reboot following an abnormal system shutdown. The recommended
+action is to reboot immediately, choose &quot;Solaris failsafe&quot; when
+the boot menu is displayed. Type &#39;i&#39; to get an interactive recovery
+shell and follow instructions to update the boot archive.
+&lt;/p&gt;
+
+&lt;p&gt;
+If the list of stale files are not yet loaded by the kernel
+or are compatible, you may continue booting by clearing the
+boot-archive service state
+
+&lt;pre&gt;
+# svcadm clear system/boot-archive
+&lt;/pre&gt;
+&lt;/p&gt;
+
+&lt;h2&gt;2.  Failure to mount filesystems.&lt;/h2&gt;
+
+&lt;p&gt;
+In cases where the system was unable to bring a combination of the
+system/filesystem/{root,usr,minimal} services online, it may be possible
+to directly execute the corresponding service methods
+
+&lt;pre&gt;
+# /lib/svc/method/fs-root
+# /lib/svc/method/fs-usr
+# /lib/svc/method/fs-minimal
+&lt;/pre&gt;
+
+to mount the various filesystems.  In the case that these methods fail,
+a direct invocation of mount(1M), and potentially fsck(1M), should be
+attempted for file systems required for recovery purposes.
+&lt;/p&gt;
+
+&lt;p&gt;
+/lib/svc/method/fs-usr attempts to remount the root file system
+read-write, such that persistent changes can be made to the system&#39;s
+configuration.  If this method is failing, one can directly remount
+using the mount(1M) command via
+
+&lt;pre&gt;
+# /sbin/mount -o rw,remount /
+&lt;/pre&gt;
+
+/etc/svc/volatile is a temporary filesystem generally reserved for Sun
+private use.  It may prove a useful location to create mount points if
+the root file system cannot be remounted read-write.
+&lt;/p&gt;
+
+&lt;h2&gt;3.  Failure to run svc.configd(1M).&lt;/h2&gt;
+
+&lt;p&gt;
+svc.configd(1M) will give detailed instructions for recovery if the
+corruption is detected in the repository.  If svc.configd(1M) cannot be
+run because of missing or corrupt library components, then the affected
+components will need to be replaced.  Components could be copied from a
+CD-ROM or DVD-ROM, or from another system.
+&lt;/p&gt;
+
+&lt;h2&gt;4.  Failure to run svc.startd(1M).&lt;/h2&gt;
+
+&lt;p&gt;
+If the inittab(4) line to invoke svc.startd(1M) is missing or incorrect,
+it will need to be restored.  A valid entry is
+
+&lt;pre&gt;
+smf::sysinit:/lib/svc/bin/svc.startd    &gt;/dev/msglog 2&lt;&gt;/dev/msglog &lt;/dev/console
+&lt;/pre&gt;
+
+If svc.startd(1M) cannot be run because of missing or corrupt library
+components, then the affected components will need to be replaced, as
+for svc.configd(1M) above.
+&lt;/p&gt;
+
+&lt;h2&gt;5.  Activating basic networking configuration.&lt;/h2&gt;
+
+&lt;p&gt;
+If svc.startd(1M) did not execute successfully, it may also be necessary
+to activate network interfaces manually, such that other hosts can be
+contacted.  The service methods can be invoked directly as
+
+&lt;pre&gt;
+# /lib/svc/method/net-loopback
+# /lib/svc/method/net-physical
+&lt;/pre&gt;
+
+If these methods fail, a direct invocation of ifconfig(1M) can be
+attempted.
+&lt;/p&gt;
+
+&lt;p&gt;
+In some scenarios, one may be able to use routeadm(1M) to activate more
+dynamic route management functionality; restoring the default dynamic
+routing behaviour can be done using the &#39;-u&#39; option.  (Invoking routeadm
+with no arguments will display which commands must be accessible for the
+current routing configuration to be invoked.)  Otherwise, once
+interfaces are up, a default route can be manually added using the
+route(1M) command.  On typical IPv4 networks, this invocation would be
+&lt;/p&gt;
+
+&lt;pre&gt;
+# /sbin/route add net default _gateway_IP_
+&lt;/pre&gt;
+
+&lt;h2&gt;Additional resources.&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://docs.sun.com/app/docs/doc/817-1985/&quot;&gt;System
+Administration Guide: Basic Administration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sun.com/bigadmin/content/selfheal/&quot;&gt;Predictive
+Self-Healing on BigAdmin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</item>
+	<name>impact</name>
+	<item>N/A</item>
+	<name>title</name>
+	<item>smf(5):  Notes on maintenance mode and recovery</item>
+</event_registry_properties>

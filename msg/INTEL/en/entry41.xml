@@ -1,0 +1,50 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry41.xml	1.12	09/03/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected memory module. Use 'fmadm faulty' to identify the memory module.</item>
+	<name>description</name>
+	<item>The number of correctable errors associated with this memory module has exceeded acceptable levels.</item>
+	<name>details</name>
+	<item>This message indicates that the Solaris Fault Manager has received 
+reports of single bit correctable errors from a Memory Module at a 
+rate exceeding acceptable levels, and a Memory Module fault has been 
+diagnosed. No data has been lost, and pages of the affected Memory 
+Module are being retired as errors are encountered.  The recommended 
+service action for this event is to schedule replacement of the 
+affected Memory Module at the earliest possible convenience. The errors 
+are correctable in nature so they do not present an immediate threat to 
+system availability. Use &#39;fmadm faulty&#39; to identify the dimm to replace.</item>
+	<name>impact</name>
+	<item>Total system memory capacity has been reduced (where supported).</item>
+	<name>response</name>
+	<item>Pages of memory associated with this memory module may have been removed from service, up to a limit which has now been reached.</item>
+	<name>title</name>
+	<item>Memory module correctable errors exceeding acceptable levels</item>
+</event_registry_properties>

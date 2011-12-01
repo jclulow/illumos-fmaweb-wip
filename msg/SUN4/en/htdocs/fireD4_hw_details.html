@@ -1,0 +1,79 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)fireD4_hw_details.html	1.13	07/01/30 SMI" -->
+The Message ID:&nbsp;&nbsp;<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates a buffer overflow has occurred between components in the PCI-Express 
+subsystem. If that device is contained with the Motherboard then the 
+Motherboard will be indicted. If the device is in a slot then the slot will 
+be called out.
+
+<p>
+Use the <tt><b>fmdump -v -u <i>EVENT_ID</i></b></tt> command to determine 
+the faulty components as shown in the example below (rsrc is split into multiple lines for formatting reasons).
+
+<pre>
+# fmdump -v
+TIME                 UUID                                 SUNW-MSG-ID
+Oct 18 12:05:57.3084 02ab67d0-5e03-e949-b15b-c653bbce1573 SUN4-8000-D4
+   20%  fault.io.fire.asic
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=IOBD
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=1
+
+   20%  fault.io.fire.pci.device
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=PCIX1
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=1/pciexbus=2/pciexdev=0/
+                    pciexfn=0/pciexbus=3/pciexdev=1/pciexfn=0/pciexbus=4/
+                    pciexdev=0/pciexfn=2/pcibus=6/pcidev=1/pcifn=0
+
+   20%  fault.io.fire.pci.device
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=PCIX0
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=1/pciexbus=2/pciexdev=0/
+                    pciexfn=0/pciexbus=3/pciexdev=1/pciexfn=0/pciexbus=4/
+                    pciexdev=0/pciexfn=2/pcibus=6/pcidev=2/pcifn=0
+
+   20%  fault.io.fire.pciex.device
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=PCIE1
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=1/pciexbus=2/pciexdev=0/
+                    pciexfn=0/pciexbus=3/pciexdev=8/pciexfn=0/pciexbus=8/
+                    pciexdev=0/pciexfn=0
+
+   20%  fault.io.fire.pciex.device
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=PCIE2
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=1/pciexbus=2/pciexdev=0/
+                    pciexfn=0/pciexbus=3/pciexdev=9/pciexfn=0/pciexbus=9/
+                    pciexdev=0/pciexfn=0
+</pre> 
+
+Have this information available when contacting Sun Services for a repair.
+
+<p> 
+<b>NOTE</b> - If this message occurs on a Sun Fire T2000, it may be because 
+a required parameter has not been set in the /etc/system file.  See the
+Sun Fire T2000 Server Product Notes available at the
+<a href=http://www.sun.com/documentation/index.html >Sun Documentation Center</a>
+for details (enter "Sun Fire T2000 Server Product Notes" in the Search 
+Documentation box).

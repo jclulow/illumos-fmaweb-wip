@@ -1,0 +1,82 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry34.xml	1.10	07/10/25 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected
+device if necessary, or contact Sun for support.
+</item>
+	<name>description</name>
+	<item>A problem was detected in the SIU subsystem of the N2&#39;s SOC
+</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp;
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;&lt;/font&gt;
+indicates a diagnosis has determined a faulty resource in the IO 
+subsystem.  There may have been a hardware reset if the error was not
+correctable. 
+The nature of the fault does not allow an automated attempt to disable 
+the affected resource.  
+&lt;p&gt;
+It is recommended that the system administrator 
+contact Sun support and arrange for the replacement of the affected 
+component.  Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the PSH console message
+ to locate the faulty FRU as shown in the example below. 
+&lt;p&gt;
+&lt;pre&gt;
+# fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;f72c2e56-c301-e22b-a430-e7e3fd9fb26c&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+Jul 03 00:43:40.8398 &lt;font color = &quot;BLUE&quot;&gt;f72c2e56-c301-e22b-a430-e7e3fd9fb26c&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;&lt;b&gt;SUN4V-8001-2E&lt;/b&gt;&lt;/font&gt;
+  100%  fault.io.n2.siu
+
+        Problem in: hc://:product-id=SUNW,SPARC-Enterprise-T5220:chassis-id=000000:
+                    server-id=san-hur2u-1/motherboard=0/chip=0/hostbridge=0/pciexrc=0
+           Affects: dev:////pci@0
+               &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:product-id=SUNW,SPARC-Enterprise-T5220:chassis-id=000000:
+                    server-id=san-hur2u-1:serial=110512:part=501781301/motherboard=0&lt;/font&gt;
+          Location: -
+&lt;/pre&gt;
+&lt;p&gt;
+In the example above, the faulty FRU is the motherboard.  Also note the FRU part
+number is included in the output of fmdump:   
+&lt;p&gt;
+&lt;pre&gt;
+&lt;font color = &quot;GREEN&quot;&gt;part=501781301&lt;/font&gt;
+&lt;/pre&gt;</item>
+	<name>impact</name>
+	<item>Loss of services provided by the device
+instances associated with this fault
+</item>
+	<name>response</name>
+	<item>One or more device instances may be disabled
+</item>
+	<name>title</name>
+	<item>N2 SOC-SIU Fault
+</item>
+</event_registry_properties>

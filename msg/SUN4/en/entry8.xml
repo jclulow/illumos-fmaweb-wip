@@ -1,0 +1,46 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry8.xml	1.14	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Ensure latest driver and patch are installed.  Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT_ID&amp;gt;&lt;/tt&gt; to identify the module/package, or contact Sun for support.</item>
+	<name>description</name>
+	<item>&lt;!-- ident	&quot;@(#)pciex_sw_descr.html	1.1	05/06/09 SMI&quot; --&gt;
+A problem was detected in the PCI-Express subsystem software.</item>
+	<name>details</name>
+	<use>htdocs/fire5A_sw_details.html</use>
+	<name>impact</name>
+	<item>Loss of services provided by the device instances associated with this 
+problem.  This message is caused by a normally correctable event. It 
+may however generate a number of messages and should be investigated.</item>
+	<name>po-action</name>
+	<item>Ensure latest driver and patch are installed.  Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT_ID&amp;gt;&lt;/tt&gt; to identify the module/package, or contact Sun for support.</item>
+	<name>po-impact</name>
+	<item>Loss of services provided by the device instances associated with this problem</item>
+</event_registry_properties>

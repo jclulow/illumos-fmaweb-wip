@@ -1,0 +1,189 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry3.xml	1.16	09/03/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected memory module. Use 'fmadm faulty' to identify the memory module.</item>
+	<name>description</name>
+	<item>The number of correctable errors associated with this memory module has exceeded acceptable levels.</item>
+	<name>details</name>
+	<item>This message indicates that the Solaris Fault Manager has received reports
+of ChipKill-Correctable Multi-bit errors from a Memory Module at a rate
+exceeding acceptable levels, and a Memory Module fault has been diagnosed.
+No data has been lost, and pages of the affected Memory Module are being
+retired as errors are encountered. 
+&lt;P&gt;
+The recommended service action for this event is to schedule replacement
+of the affected Memory Module at the earliest possible convenience. The
+errors are correctable in nature so they do not present an immediate
+threat to system availability.
+&lt;P&gt;
+Follow the steps below to complete the recommended repair action.
+&lt;P&gt;
+&lt;B&gt;Step 1: &lt;/B&gt;Find the 36 character EVENT_ID string associated with the
+fault.  
+&lt;P&gt;
+It can be located using several methods. Either fmdump (1M) or fmadm (1M) 
+commands shown in Example 1.1 below, or extracted from the fault message 
+displayed in the console output at the time of the fault.
+&lt;P&gt;
+Note: Be sure to get the correct 36 character EVENT_ID string if more
+than one is listed.  You can identify the correct string by associating
+the fault with the date and time stamp (highlighted in blue in Example 1.1 
+below) from the fmdump output. fmadm faulty shows the EVENT_ID (highlighted
+in red).
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 1.1 - finding the EVENT_ID (36 character string):&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmdump
+TIME                 UUID                                 SUNW-MSG-ID
+&lt;FONT COLOR=BLUE&gt;Mar 21 14:36:51.7997&lt;/FONT&gt; &lt;FONT COLOR=RED&gt;566b809d-77c5-e50f-d084-b3c8b543e1d7&lt;/FONT&gt; AMD-8000-3K
+Mar 22 12:26:46.0362 ab688055-6049-60aa-817b-cf25406dac43 AMD-8000-67
+Mar 23 10:50:54.7096 1eaa6704-1e0b-4ef9-9337-e14c108dfbec AMD-8000-AV
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm faulty
+    STATE RESOURCE / UUID
+-----------------------------------------------------------------------
+degraded mem:///motherboard=0/chip=1/memory-controller=0/dimm=0
+         &lt;FONT COLOR=RED&gt;566b809d-77c5-e50f-d084-b3c8b543e1d7&lt;/FONT&gt;
+-----------------------------------------------------------------------
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;B&gt;Step 2: &lt;/B&gt;Use the command; fmdump -v -u &lt;I&gt;EVENT_ID&lt;/I&gt;, to locate the faulty 
+memory module, where &lt;I&gt;EVENT_ID&lt;/I&gt; consists of the 36 character string 
+obtained in Step 1 above. FRU (highlighted in blue) See Example 2.1 below.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 2.1 - determining which FRU needs to be replaced:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmdump -v -u 566b809d-77c5-e50f-d084-b3c8b543e1d7
+TIME                 UUID                                 SUNW-MSG-ID
+Mar 21 14:36:51.7997 566b809d-77c5-e50f-d084-b3c8b543e1d7 AMD-8000-3K
+  100%  fault.memory.dimm_ck
+
+        Problem in: hc:///motherboard=0/chip=1/memory-controller=0/dimm=0
+           Affects: mem:///motherboard=0/chip=1/memory-controller=0/dimm=0
+               FRU: &lt;FONT COLOR=BLUE&gt;hc:///motherboard=0/chip=1/memory-controller=0/dimm=0&lt;/FONT&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 3: &lt;/B&gt;Identify the FRU that needs to be replaced.
+&lt;p&gt;
+In our example, the service action would be to replace memory module 0 
+associated with CPU1 (chip=1), as the memory module identified in the 
+string following the &#39;FRU:&#39; label (highlighted in blue) in Example 2.1 above, 
+is hc///motherboard=0/chip=1/memory-controller=0/dimm=0.
+&lt;P&gt;
+The term &#39;chip&#39; used in the output above can also be used to refer
+to a processor or CPU chip, hence &#39;chip=x&#39; equates to &#39;CPU chipx&#39;.
+Note that the cpuid refers to a logical CPU number within the CPU 
+chip.
+&lt;P&gt;
+For all Sun AMD based systems;
+&lt;P&gt;
+chip=x maps to the processor chip labeled CPUx within the system.
+&lt;P&gt;
+For example:
+&lt;UL&gt;
+chip=0 maps to the physical location labeled; CPU0
+&lt;BR&gt;chip=1 maps to the physical location labeled; CPU1
+&lt;P&gt;
+Once you have identified the correct CPU location, you then need to 
+&lt;br&gt;identify it&#39;s corresponding memory module.
+&lt;p&gt;
+Please reference the following SRDB (Symptom Resolution Data Base)
+&lt;br&gt;link for the labeling of your Platforms Memory Module(s).
+&lt;p&gt;
+&lt;a href=http://sunsolve.sun.com/search/document.do?assetkey=1-25-85497-1&amp;searchclause=&gt;Memory Labeling&lt;/a&gt;
+&lt;/UL&gt;
+&lt;B&gt;Step 4: &lt;/B&gt;Replace the faulty FRU (and reboot the system)
+&lt;P&gt;
+Refer to the service label or hardware maintenance manual for correct 
+replacement procedures.
+&lt;P&gt;
+&lt;B&gt;Step 5: &lt;/B&gt;Update the Fault Manager&#39;s resource cache to indicate
+that no problems are present in the resources that had been diagnosed
+faulty and subsequently replaced in Step 4. Shown in Example 5.1
+&lt;P&gt;
+Once the Memory Modules have been physically replaced and the system rebooted,
+you must invoke the &#39;fmadm repair&#39; command using the UUID (Universally 
+Unique IDentifier) to identify the repaired FRU.  The UUID is synonymous
+with the EVENT_ID (highlighted in red) in Example 1.1 above.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 5.1 - Updating the Fault Manager&#39;s resource cache:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm repair 566b809d-77c5-e50f-d084-b3c8b543e1d7
+# fmadm: recorded repair to 566b809d-77c5-e50f-d084-b3c8b543e1d7
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 6: &lt;/B&gt;Reset the Faulted Page Counters.
+&lt;P&gt;
+Once the fmadm repair &amp;lt;UUID&amp;gt has completed reset the Faulted Page  counter,
+&lt;br&gt;you must invoke the &#39;fmadm reset&#39; command shown in Example 6.1 below.
+&lt;br&gt;The required action in this step is temporary. When this becomes automated
+&lt;br&gt;this article will be updated to reflect these changes.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 6.1 - Reset Faulted Page Counters&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm reset eft
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;p&gt;
+Note: By resetting the Faulted Page Counters, this will reset ALL diagnosis
+&lt;br&gt;state for the diagnosis engine. All event history will be lost. All
+&lt;br&gt;Already diagnosed faults will continue to appear in fmadm faulty. Before
+&lt;br&gt;resetting capture the outputs from fmstat -m eft, fmstat -s -m eft.
+&lt;p&gt;
+&lt;B&gt;Step 7: &lt;/B&gt;Verify the repaired resource is no longer faulty
+&lt;P&gt;
+Use the Solaris command &#39;fmadm faulty&#39; to display all faulted resources
+&lt;br&gt;in the system.  Confirm that the repaired resource is no longer listed
+&lt;br&gt;as faulted shown in Example 7.1.
+&lt;P&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 7.1 - verifying the repaired resource is no longer faulty:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm faulty
+   STATE RESOURCE / UUID
+-------- ----------------------------------------------------------------------
+&lt;/PRE&gt;&lt;/UL&gt;</item>
+	<name>impact</name>
+	<item>Total system memory capacity has been reduced (where supported).</item>
+	<name>response</name>
+	<item>Pages of memory associated with this memory module may have been removed from service, up to a limit which has now been reached.</item>
+	<name>title</name>
+	<item>Memory module correctable errors exceeding acceptable levels</item>
+</event_registry_properties>

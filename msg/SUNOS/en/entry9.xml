@@ -1,0 +1,110 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry9.xml	1.4	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Upgrading Solaris systems with non-global zones installed</item>
+
+	<name>description</name>
+	<item>
+	The Solaris system or boot environment that is being upgraded
+	has non-global zones installed.  The current version of Live
+	Upgrade cannot upgrade a boot environment that has non-global
+	zones installed.
+	</item>
+
+	<name>response</name>
+	<item>The upgrade procedure has been terminated.</item>
+
+	<name>impact</name>
+	<item>The Solaris system or boot environment is not upgraded.</item>
+
+	<name>action</name>
+	<item>
+	Evaluate each of the choices below and select the one that is
+	best for your needs.  Contact Sun for support.
+	</item>
+
+	<name>details</name>
+	<item>
+	&lt;ul&gt;
+	&lt;li&gt;
+	Use the standard Solaris interactive installation program to
+	upgrade your system.  See Chapter 3, Solaris Installation and
+	Upgrade (Planning) in
+	&lt;a href=&quot;http://docs.sun.com/app/docs/doc/817-5505/&quot;&gt;
+	Solaris 10 Installation Guide: Solaris Live Upgrade and Upgrade Planning
+	&lt;/a&gt;,
+	and
+	&lt;a href=&quot;http://docs.sun.com/app/docs/doc/817-0544&quot;&gt;
+	Solaris 10 Installation Guide: Basic Installations
+	&lt;/a&gt;.
+	Note that the media used for the installation must be either a
+	DVD or a network installation image created from a DVD.
+	&lt;/li&gt;
+
+	&lt;br&gt;
+	&lt;li&gt;
+	Use the custom JumpStart installation program to upgrade your
+	system.  See Chapter 3, Solaris Installation and Upgrade
+	(Planning) in
+	&lt;a href=&quot;http://docs.sun.com/app/docs/doc/817-5505/&quot;&gt;
+	Solaris 10 Installation Guide: Solaris Live Upgrade and Upgrade Planning
+	&lt;/a&gt;,
+	and Chapter 11, Custom JumpStart (Reference) in
+	&lt;a href=&quot;http://docs.sun.com/app/docs/doc/817-5506/&quot;&gt;
+	Solaris 10 Installation Guide:
+	Custom JumpStart and Advanced Installations
+	&lt;/a&gt;.
+	Note that the media used for the installation must be either a
+	DVD or a network installation image created from a DVD.
+	&lt;/li&gt;
+
+	&lt;br&gt;
+	&lt;li&gt;
+	Save all application data, uninstall all of the existing
+	non-global zones, and use any installation method to upgrade
+	your system.  All of the non-global zones and their
+	applications must then be reinstalled.  This option is
+	basically an upgrade of the global zone using any installation
+	method, including Live Upgrade, and an initial install of all
+	the non-global zones.
+	&lt;/li&gt;
+
+	&lt;br&gt;
+	&lt;li&gt;
+	Choose to wait for Solaris Live Upgrade to be supported on your
+	system configuration in a future release.  With this option,
+	specific patches for issues of concern can still be installed
+	at this time.
+	&lt;/li&gt;
+	&lt;/ul&gt;
+	</item>
+
+</event_registry_properties>

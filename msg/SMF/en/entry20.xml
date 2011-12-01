@@ -1,0 +1,187 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry20.xml	1.6	08/04/04 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Log in to the sulogin(1M) shell.  Run the command
+&lt;code&gt;/lib/svc/bin/restore_repository&lt;/code&gt;, and follow its
+instructions to restore one of the automatic backup copies of
+the repository.  Upon successful completion, the system or
+local zone will be rebooted, and the restored repository will
+take effect.</item>
+	<name>description</name>
+	<item>The Solaris Repository Daemon discovered that the smf(5)
+repository is corrupt.</item>
+	<name>details</name>
+	<item>When &lt;code&gt;svc.configd&lt;/code&gt;(1M), the Solaris Repository Daemon,
+	  is started, it does an integrity check of the &lt;code&gt;smf&lt;/code&gt;(5)
+	  repository, stored in &lt;code&gt;/etc/svc/repository.db&lt;/code&gt;.  This
+	  integrity check can fail due to a disk failure, the database
+	  file being corrupted either due to a hardware bug, a software
+	  bug, or an accidental overwrite.  If the integrity check fails,
+	  &lt;code&gt;svc.configd&lt;/code&gt; will write a message to the console, similar
+	  to the following:
+	  &lt;pre&gt;
+svc.configd: smf(5) database integrity check of:
+
+    /etc/svc/repository.db
+
+  failed.  The database might be damaged or a media error might have
+  prevented it from being verified.  Additional information useful to
+  your service provider is in:
+
+    /etc/svc/volatile/db_errors
+
+  The system will not be able to boot until you have restored a working
+  database.  svc.startd(1M) will provide a sulogin(1M) prompt for recovery
+  purposes.  The command:
+
+    /lib/svc/bin/restore_repository
+
+  can be run to restore a backup version of your repository.  See
+  http://sun.com/msg/SMF-8000-MY for more information.
+	  &lt;/pre&gt;
+	  and exit, informing &lt;code&gt;svc.startd&lt;/code&gt;(1M) that system
+	  maintenance is needed.  &lt;code&gt;svc.startd&lt;/code&gt;(1M) will then
+	  starts &lt;code&gt;sulogin&lt;/code&gt;(1M), allowing the system
+	  administrator to perform maintenance.
+	&lt;p&gt;
+	  Once the system administrator has logged in, he should
+	  run &lt;code&gt;/lib/svc/bin/restore_repository&lt;/code&gt;, which will
+	  take him through the steps necessary to restore a non-corrupt
+	  backup.  &lt;code&gt;smf&lt;/code&gt;(5) automatically takes backups of the
+	  repository at key system moments:
+	  &lt;ul&gt;
+	    &lt;li&gt;The &lt;code&gt;&lt;b&gt;boot&lt;/b&gt;&lt;/code&gt; backup is taken immediately
+	    before the first change to the repository is made during each
+	    system startup.
+	    &lt;li&gt;The &lt;code&gt;&lt;b&gt;manifest_import&lt;/b&gt;&lt;/code&gt; backup is taken
+	    after &lt;code&gt;svc:/system/manifest-import:default&lt;/code&gt;
+	    completes, if it imported any new manifests or ran any upgrade
+	    scripts.
+	  &lt;/ul&gt;
+	&lt;p&gt;
+	  The system maintains up to four backups of each type, deleting
+	  the oldest backup when necessary.  The backups are stored as
+&lt;code&gt;/etc/svc/repository-&lt;i&gt;type&lt;/i&gt;-&lt;i&gt;YYYYMMDD&lt;/i&gt;_&lt;i&gt;HHMMSS&lt;/i&gt;&lt;/code&gt;,
+	  where &lt;code&gt;YYYYMMDD&lt;/code&gt; and &lt;code&gt;HHMMSS&lt;/code&gt; are the date
+	  (year, month, day) and time (24-hour hour, minute, second),
+	  when the backup was taken.
+	&lt;p&gt;
+	  When started, &lt;code&gt;/lib/svc/bin/restore_repository&lt;/code&gt;
+	  prints out a message similar to the following:
+	  &lt;pre&gt;
+Repository Restore utility
+
+See http://sun.com/msg/SMF-8000-MY for more information on the use of
+this script to restore backup copies of the smf(5) repository.
+
+If there are any problems which need human intervention, this script will
+give instructions and then exit back to your shell.
+
+Note that upon full completion of this script, the system will be rebooted
+using reboot(1M), which will interrupt any active services.
+	  &lt;/pre&gt;
+	  If the system being recovered is not a local zone (see
+	  &lt;code&gt;zones&lt;/code&gt;(5)), the script will give you instructions
+	  on how to re-mount &lt;code&gt;/&lt;/code&gt; and &lt;code&gt;/usr&lt;/code&gt;
+	  read-write, so that it can recover the databases.  After
+	  printing the instructions, the script will exit.
+	  The administrator should follow the directions given, paying
+	  careful attention to any errors which may occur.
+	&lt;p&gt;
+	  After &lt;code&gt;/&lt;/code&gt; has been mounted writable (or if the
+	  system is a local zone), &lt;code&gt;restore_repository&lt;/code&gt; will
+	  prompt you for the repository backup you would like to
+	  restore, with a message similar to:
+	  &lt;pre&gt;
+The following backups of /etc/svc/repository.db exists, from
+oldest to newest:
+
+&lt;i&gt;... list of backups ...&lt;/i&gt;
+
+The backups are named based on their type and the time when they were taken.
+Backups beginning with &quot;boot&quot; are made before the first change is made to
+the repository after system boot.  Backups beginning with &quot;manifest_import&quot;
+are made after svc:/system/manifest-import:default finishes its processing.
+The time of backup is given in YYYYMMDD_HHMMSS format.
+
+Please enter one of:
+        1) boot, for the most recent post-boot backup
+        2) manifest_import, for the most recent manifest_import backup.
+        3) a specific backup repository from the above list
+        4) -seed-, the initial starting repository.  (All customizations
+           will be lost.)
+        5) -quit-, to cancel.
+
+Enter response [boot]: 
+	  &lt;/pre&gt;
+	  If you type &lt;code&gt;enter&lt;/code&gt; without specifying a backup to
+	  restore, the default response, enclosed in &lt;code&gt;[]&lt;/code&gt;
+	  will be chosen.   Entering &lt;code&gt;-quit-&lt;/code&gt; will exit the
+	  &lt;code&gt;restore_repository&lt;/code&gt; shell, returning you to the
+	  &lt;code&gt;sulogin&lt;/code&gt;(1M) prompt.  Entering &lt;code&gt;-seed-&lt;/code&gt;
+	  will restore the &quot;seed&quot; repository, which is designed for use
+	  during initial installation and upgrade -- using it as a recovery
+	  repository should be a last resort, since it is not designed
+	  for that use.
+	&lt;p&gt;
+	  Typically, the most recent backup should be chosen.
+	&lt;p&gt;
+	  Once the backup to restore has been selected, it is validated
+	  and integrity checked.  If there are any problems,
+	  &lt;code&gt;restore_repository&lt;/code&gt; will print error messages and
+	  prompt for another selection.  Once a valid backup has been
+	  selected, &lt;code&gt;restore_repository&lt;/code&gt; will print out the
+	  steps it is going to take, and prompt for final confirmation:
+	  &lt;pre&gt;
+After confirmation, the following steps will be taken:
+
+svc.startd(1M) and svc.configd(1M) will be quiesced, if running.
+/etc/svc/repository.db
+    -- renamed --&amp;gt; /etc/svc/repository.db_old_&lt;i&gt;YYYYMMDD&lt;/i&gt;_&lt;i&gt;HHMMSS&lt;/i&gt;
+/etc/svc/volatile/db_errors
+    -- copied --&amp;gt; /etc/svc/repository.db_old_&lt;i&gt;YYYYMMDD&lt;/i&gt;_&lt;i&gt;HHMMSS&lt;/i&gt;_errors
+&lt;i&gt;repository_to_restore&lt;/i&gt;
+    -- copied --&amp;gt; /etc/svc/repository.db
+and the system will be rebooted with reboot(1M).
+
+Proceed [yes/no]? 
+	   &lt;/pre&gt;
+	   Typing &lt;code&gt;yes&lt;/code&gt; will cause the actions listed to be
+	   carried out, including making the system reboot, remedying the
+	   fault. See the &lt;a href=&quot;http://docs.sun.com/app/docs/doc/817-1985/ecdps?a=view&quot;/&gt;
+           &quot;SMF Troubleshooting Guide&quot;&lt;/a&gt; for additional details.</item>
+	<name>impact</name>
+	<item>The Solaris Service Manager will start an sulogin(1M) shell on
+the console to allow the administrator to recover the system.  The
+system will not be able to boot until a non-corrupted replacement is
+installed.</item>
+	<name>title</name>
+	<item>Repository Integrity Check Failed</item>
+</event_registry_properties>

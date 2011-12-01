@@ -1,0 +1,110 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry27.xml	1.4	07/05/22 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Physically examine the chassis to detemine if it is shared by
+two different host platforms.
+</item>
+	<name>description</name>
+	<item>Both I/O boats are not being managed by the same host system
+</item>
+	<name>details</name>
+	<item>The I/O Expansion Unit should never be connected to two different host systems and is considered a
+faulty configuration.
+
+The centerplane and power supply FRUID&#39;s may be accessed via either I/O boat. If there is a different
+system connected to each boat they may attempt to read or write information to one of these FRU&#39;s
+while the other &#39;host&#39; is doing the same. If both systems attempt to update FRUID data, the records
+may become corrupted. For this reason dual-hosting is not supported.&lt;p&gt;
+
+If there are two hosts attached to this I/O Expansion Unit then one of them should be removed.
+(Note: They may be attached to two different logical domains but must be on the same physical host)
+If both boats are connected to a single host system, then one of the boats is not detected by the Service
+Processor. Physically locate the linkcards in the host system attached to the box to determine if
+communication to one of the linkcards is not functioning correctly. This problem can also be caused
+by a corrupted FRUID in the chassis preventing the host software from identify the correct box for
+both installed boats.&lt;p&gt;
+
+If a second boat is not installed in the system, there is a failure on the centerplane and the chassis
+should be replaced.&lt;p&gt;
+
+Follow the steps below to obtain the necessary data for presentation to your authorized service
+provider.&lt;p&gt;
+
+&lt;b&gt;Step 1:&lt;/b&gt; Collect the fault message.&lt;br&gt;
+A single line fault message is displayed to the system console and logged in the /var/logs/message file.
+The complete message may be retrieved by using the &#39;fmdump&#39; command on the XSCF console as
+shown below.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;i&gt; XSCF&gt; fmdump -m&lt;/i&gt;
+   MSG-ID: &lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-U4&lt;/font&gt;, TYPE: Fault, VER: 1, SEVERITY: Major
+   EVENT-TIME: Tue Mar 27 05:43:34 PDT 2007
+   PLATFORM: SPARC-Enterprise, CSN: BE80601000, HOSTNAME: server-0
+   SOURCE: sde, REV: 1.12
+   EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;22b286f8-b174-441f-b240-195d94e93802&lt;/font&gt;
+   DESC: Both I/O boats are not being managed by the same host system
+   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-U4&lt;/font&gt; for more information.
+   AUTO-RESPONSE: No immediate action is taken
+   IMPACT: FRUID data may be corrupted or hardware is not being monitored
+   REC-ACTION: Physically examine the chassis to determine if it is shared by two different host platforms.&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 2:&lt;/b&gt; Collect the &quot;fmdump&quot; output.&lt;br&gt;
+Use the fmdump command with the Event-ID option to retrieve more information on the fault which
+has occurred.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+
+&lt;pre&gt;&lt;i&gt; XSCF&gt; fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;22b286f8-b174-441f-b240-195d94e93802&lt;/font&gt;&lt;/i&gt;
+   TIME                 UUID                                 MSG-ID
+   Mar 27 05:43:34.0675 &lt;font color = &quot;BLUE&quot;&gt;22b286f8-b174-441f-b240-195d94e93802&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-U4&lt;/font&gt;
+       100% fault.chassis.iox.env.config
+       Problem in: hc:///iox=983392
+          Affects: -
+              FRU: hc://:product-id=SPARC-Enterprise:chassisid=BE80601000:server-id=server-
+0:serial=XCX031:part=5016937:revision=03/component=&lt;font color = &quot;GREEN&quot;&gt;IOX@X031&lt;/font&gt;&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 3:&lt;/b&gt; Provide the output collected to your service provider.&lt;br&gt;
+The information collected above will help your service provider to schedule a repair at your
+convenience.</item>
+	<name>impact</name>
+	<item>FRUID data may be corrupted or hardware is not being monitored
+</item>
+	<name>response</name>
+	<item>No immediate action is taken
+</item>
+	<name>title</name>
+	<item>Invalid Configuration of an External I/O Expansion Unit
+</item>
+</event_registry_properties>

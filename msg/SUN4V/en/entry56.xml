@@ -1,0 +1,80 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry56.xml	1.10	08/09/08 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected component, the identity
+of which can be determined by using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;.
+</item>
+	<name>description</name>
+	<item>The ultraSPARC-T2plus Coherency Interconnect has detected an internal problem.
+</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;&lt;/font&gt; 
+indicates an ultraSPARC-T2plus Coherency Interconnect has detected an
+internal problem which may impact system integrity.  The nature of the fault does not
+allow an automated attempt to disable the affected resource.
+&lt;p&gt;
+Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the PSH console message
+ to locate the suspected faulty components.   
+
+&lt;p&gt;
+&lt;pre&gt; 
+# fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;39bc195a-1f03-ef2b-b2a6-938819ce7470&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID 
+Sep 02 10:49:45.5398 &lt;font color = &quot;BLUE&quot;&gt;39bc195a-1f03-ef2b-b2a6-938819ce7470&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;SUN4V-8001-R3&lt;/font&gt; 
+ 100%  fault.asic.ultraSPARC-T2plus.interconnect.opu-c 
+
+       Problem in: hc://:product-id=SUNW,T5440:chassis-id=0704BB5053:server-id=wgs40-49/motherboard=0/interconnect=1 
+          Affects: hc://:product-id=SUNW,T5440:chassis-id=0704BB5053:server-id=wgs40-49/motherboard=0/interconnect=1 
+              &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:product-id=SUNW,T5440:chassis-id=0704BB5053:server-id=wgs40-49:serial=2A013E:part=501778312/motherboard=0&lt;/font&gt; 
+         &lt;font color = &quot;GREEN&quot;&gt;Location: MB&lt;/font&gt; 
+&lt;/pre&gt;
+
+&lt;p&gt;
+In the example above, the FRU is the motherboard.  Also note the FRU part
+number and location is included:  
+&lt;p&gt;
+&lt;pre&gt;
+&lt;font color = &quot;GREEN&quot;&gt;part=501778312&lt;/font&gt;
+
+&lt;font color = &quot;GREEN&quot;&gt;Location: MB&lt;/font&gt;
+&lt;/pre&gt;
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>The system&#39;s integrity is compromised.
+</item>
+	<name>response</name>
+	<item>No automated reponse.
+</item>
+	<name>title</name>
+	<item>ultraSPARC-T2plus Coherency Interconnect OPU subsystem fault
+</item>
+</event_registry_properties>

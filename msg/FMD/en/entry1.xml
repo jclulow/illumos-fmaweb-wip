@@ -1,0 +1,131 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry1.xml	1.7	07/10/25 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT-ID&amp;gt;&lt;/tt&gt; to view the diagnosis result.  Run &lt;tt&gt;pkgchk -n SUNWfmd&lt;/tt&gt; to ensure that fault management software is installed properly.</item>
+	<name>description</name>
+	<item>A Solaris Fault Manager component generated a diagnosis for which no message summary exists.</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;FMD-8000-11&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+The Fault Manager receives error reports from numerous sub-systems and
+arranges for the appropriate fault diagnosis and automated responses.
+&lt;p&gt;
+The Message ID:
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;FMD-8000-11&lt;/font&gt;&lt;/font&gt;
+indicates that the Solaris Fault Manager received a diagnosis it did
+not expect. This can result from a mismatch in the versions of software 
+components, a misconfiguration of the system, automated diagnosis software may
+ not be loaded or currently unavailable, or a defect in the software.
+&lt;p&gt;
+The recommended actions for the system administrator are:
+
+&lt;UL&gt;
+&lt;p&gt;
+&lt;b&gt;1.)&lt;/b&gt;&amp;nbsp;View the diagnosis results
+&lt;p&gt;
+Use the command &lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the console message.
+It may be that a correct diagnosis was made but was not recognized by
+the fault manager.  Below is an example of this case.  Also refer to the
+&lt;b&gt;NOTES&lt;/b&gt; below which may contain information particular to your platform.
+&lt;p&gt;
+&lt;pre&gt;
+# fmdump -v -u  &lt;font color = &quot;BLUE&quot;&gt;e4cb7d73-b795-61d0-a232-ac5e017108ab&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+Jun 15 00:06:22.2007 &lt;font color = &quot;BLUE&quot;&gt;e4cb7d73-b795-61d0-a232-ac5e017108ab&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;FMD-8000-11&lt;/font&gt;
+ 100%  &lt;fault class&gt;
+
+       Problem in: cpu:///cpuid=8/serial=5D67334847
+          Affects: cpu:///cpuid=8/serial=5D67334847
+              &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=101083:part=541215101/motherboard=0&lt;/font&gt;
+         Location: MB 
+&lt;/pre&gt;
+&lt;p&gt;
+&lt;b&gt;2.)&lt;/b&gt;&amp;nbsp;Ensure that fault management software is installed properly.
+&lt;p&gt;
+Run &amp;nbsp;&lt;tt&gt;&lt;b&gt;pkgchk -n SUNWfmd&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;.
+&lt;p&gt;
+&lt;b&gt;3.)&lt;/b&gt;&amp;nbsp;Ensure the latest
+firmware/patches are installed on the system.
+&lt;p&gt;
+Consult the Product Notes for your platform to insure all required
+patches are installed.
+&lt;p&gt;
+&lt;b&gt;4.)&lt;/b&gt;&amp;nbsp;Check the
+&lt;b&gt;NOTE&lt;/b&gt; below for issues that may be particular to your platform.
+&lt;p&gt;
+&lt;b&gt;5.)&lt;/b&gt;&amp;nbsp;If the
+failure persists, contact your Authorized Service Provider.
+
+&lt;/UL&gt;
+
+
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;NOTE&lt;/span&gt;&lt;br&gt;
+&lt;/p&gt;
+
+
+&lt;b&gt;&lt;br&gt;
+&lt;/b&gt;Information applicable to the &lt;span
+ style=&quot;font-style: italic; text-decoration: underline;&quot;&gt;&#39;Sun SPARC
+Enterprise M4000/M5000/M8000/M9000&lt;/span&gt;&#39; platforms&lt;br&gt;
+can be found in Troubleshooting Doc&lt;a href=http://sunsolve.sun.com/search/document.do?assetkey=1-37-88172-1&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt; #88172&lt;/span&gt;&lt;/a&gt;.
+&lt;p&gt;
+
+
+
+&lt;b&gt;&lt;br&gt;
+&lt;/b&gt;Information applicable to the &lt;span
+ style=&quot;font-style: italic; text-decoration: underline;&quot;&gt;&#39;Sun SPARC
+Enterprise T5120 and T5220&lt;/span&gt;&#39; platforms&lt;br&gt;
+can be found in the Symptoms and Resolutions document&lt;a href=http://sunsolve.sun.com/search/document.do?assetkey=1-25-91179-1&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt; #91179&lt;/span&gt;&lt;/a&gt;.
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html</item>
+	<name>impact</name>
+	<item>The fault log will need to be manually examined using fmdump(1M) in order to determine if any human response is required.</item>
+	<name>po-response</name>
+	<item>The diagnosis has been saved in the fault log for examination by Sun.</item>
+	<name>response</name>
+	<item>The diagnosis has been saved in the fault log for examination by a Sun Service technician.</item>
+	<name>title</name>
+	<item>Solaris Fault Manager unable to determine message summary</item>
+</event_registry_properties>

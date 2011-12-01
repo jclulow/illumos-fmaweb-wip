@@ -1,0 +1,105 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry8.xml	1.8	07/09/05 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Corrupted data</item>
+        <name>description</name>
+	<item>A file or directory could not be read due to corrupt data.</item>
+        <name>response</name>
+        <item>No automated response will be taken.</item>
+        <name>impact</name>
+	<item>The file or directory is unavailable.</item>
+        <name>action</name>
+	<item>
+&lt;p&gt;Run 'zpool status -x' to determine which pool is damaged:&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool status -x
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an error and no valid replicas
+        are available.  Some filesystem data is corrupt, and applications
+        may have been affected.
+action: Destroy the pool and restore from backup.
+   see: http://www.sun.com/msg/ZFS-8000-8A
+ scrub: none requested
+config:
+
+        NAME                  STATE     READ WRITE CKSUM
+        test                  ONLINE       0     0     2
+          c0t0d0              ONLINE       0     0     2
+          c0t0d1              ONLINE       0     0     0
+
+errors: 1 data errors, use '-v' for a list
+&lt;/pre&gt;
+
+&lt;p&gt;Unfortunately, the data cannot be repaired, and the only choice to
+repair the data is to restore the pool from backup.  Applications attempting to
+access the corrupted data will get an error (EIO), and data may be permanently
+lost.&lt;/p&gt;
+
+&lt;p&gt;On recent versions of Solaris, the list of affected files can be
+retrieved by using the '-v' option to 'zpool status':&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool status -xv
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an error and no valid replicas
+        are available.  Some filesystem data is corrupt, and applications
+        may have been affected.
+action: Destroy the pool and restore from backup.
+   see: http://www.sun.com/msg/ZFS-8000-8A
+ scrub: none requested
+config:
+
+        NAME                  STATE     READ WRITE CKSUM
+        test                  ONLINE       0     0     2
+          c0t0d0              ONLINE       0     0     2
+          c0t0d1              ONLINE       0     0     0
+
+errors: Permanent errors have been detected in the following files:
+
+        /export/example/foo
+&lt;/pre&gt;
+
+&lt;p&gt;Damaged files may or may not be able to be removed depending on the
+type of corruption.  If the corruption is within the plain data, the file should
+be removable.  If the corruption is in the file metadata, then the file cannot
+be removed, though it can be moved to an alternate location.  In either case,
+the data should be restored from a backup source.  It is also possible for the
+corruption to be within pool-wide metadata, resulting in entire datasets being
+unavailable.  If this is the case, the only option is to destroy the pool and
+re-create the datasets from backup.&lt;/p&gt;
+	</item>
+        <name>details</name>
+	<item>The Message ID: &lt;tt&gt;%MSGID%&lt;/tt&gt; indicates
+	    corrupted data exists in the current pool</item>
+</event_registry_properties>

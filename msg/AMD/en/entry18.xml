@@ -1,0 +1,46 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry18.xml	1.22	09/03/24 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule system maintenance time as soon as possible and investigate the affected DRAM channel.  Use &#39;fmadm faulty&#39; to identify the channel.\n</item>
+	<name>description</name>
+	<item>A memory channel is experiencing errors from sources outside of the memory modules (DIMMs).
+</item>
+	<name>details</name>
+	<item>A fault in the dram channel itself and likely not the memory modules of this channel. The fault cannot readily be isolated to a single resource with the telemetry available. The fault may lie in the on-chip DRAM controller, on or around a DIMM socket associated with this DRAM channel, on the motherboard itself, or possibly even a DIMM on the channel. Further investigation is required to isolate the fault.
+</item>
+	<name>impact</name>
+	<item>A faulty DRAM channel could lead to large numbers of correctable errors, some uncorrectable errors which will affect system availability, and perhaps even some undetectable errors and consequent data corruption.
+</item>
+	<name>response</name>
+	<item>None - there is no hardware resource that the system can disable to attempt to isolate this fault.
+</item>
+	<name>title</name>
+	<item>A Fault In A DRAM Channel</item>
+</event_registry_properties>

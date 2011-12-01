@@ -1,0 +1,42 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry56.xml	1.1	09/11/12 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Please refer to the &#39;Details&#39; section of the knowledge article for the latest service procedures and policies for resolving this issue.</item>
+	<name>description</name>
+	<item>An uncorrectable software recoverable memory scrubbing error has occurred.</item>
+	<name>details</name>
+	<item>An uncorrectable software recoverable memory scrubbing error has occurred.</item>
+	<name>impact</name>
+	<item>No impact to the system in the presence of this fault.</item>
+	<name>response</name>
+	<item>A pair of pages on two different DIMM&#39;s will be retired.</item>
+	<name>title</name>
+	<item>Uncorrectable SW recoverable memory scrubbing error</item>
+</event_registry_properties>

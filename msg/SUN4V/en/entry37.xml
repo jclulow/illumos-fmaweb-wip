@@ -1,0 +1,68 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry37.xml	1.9	07/10/25 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected
+device if necessary, or contact Sun for support.
+</item>
+	<name>description</name>
+	<item>An uncorrectable problem was detected in the IO hostbridge in which a mismatch
+in the SW and FW prevents the error to be properly handled.
+</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp; &lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;
+&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;indicates a problem was detected 
+in the IO hostbridge. However, no diagnosis was possible and there 
+was a system panic.
+&lt;p&gt;
+The inability to diagnose the problem was a result of one of
+the following issues:
+&lt;p&gt;
+&amp;nbsp;&amp;nbsp;- The latest firmware revision is not installed.
+&lt;p&gt;
+&amp;nbsp;&amp;nbsp;- The latest PX driver is not installed.
+&lt;p&gt;
+&amp;nbsp;&amp;nbsp;- There is a mismatch between the revisions of the firmware and PX driver.
+&lt;p&gt;
+Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmdump -eV -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the PSH console message
+to list the error report associated with the fault.  Have this information
+available when contacting Sun for support.
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>Loss of services provided by the device
+instances associated with this fault
+</item>
+	<name>response</name>
+	<item>One or more device instances may be disabled
+</item>
+	<name>title</name>
+	<item>SW/HV version mismatch preventing correct error handling
+</item>
+</event_registry_properties>

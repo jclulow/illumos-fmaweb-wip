@@ -1,0 +1,60 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)pci_hwsw_details.html	1.5	07/01/30 SMI" -->
+
+The Message ID:&nbsp;&nbsp;<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates a problem with the hardware and/or driver software in the PCI 
+subsystem.  The most likely faulty components, as shown with <tt><b>fmdump</b></tt>,
+should be repaired in order to restore the system.
+<p>
+If the most likely suspect is a package then run <tt><b>pkgchk</b></tt> 
+on the package(s). Check for updates and patches for suspected package(s).  
+Contact Sun Service if no problems are found with package or no updates 
+exist.
+<p>
+Potentially defective software is identified in the 
+<tt><b>fmdump</b></tt> output as 
+follows:
+<p>
+<ul>
+<tt>FRU: pkg:///SUNWcakr</tt>
+</ul>
+<p>
+Potentially faulty hardware is identified in the 
+<tt><b>fmdump</b></tt> output as 
+follows:
+<p>
+<ul>
+<tt>FRU: hc://product-id=SUNW,Sun-Fire-280R/motherboard=0</tt>
+</ul>
+<p>
+If there are multiple FRU's suspected, the FRU with the highest percentage
+probability should be replaced first.
+<p>
+Note: You may also be requested to provide a copy of the files in the 
+/var/fm/fmd directory and also a copy of the output from the 
+<tt><b>fmadm config</b></tt> command.

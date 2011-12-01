@@ -1,0 +1,54 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)fire0Y_hw_details.html	1.11	07/01/30 SMI" -->
+The Message ID:&nbsp;&nbsp;<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates an internal parity error has occurred within the hostbridge.  
+
+Use the <tt><b>fmdump -v -u <i>EVENT_ID</i></b></tt> command to determine 
+the faulty Field Replaceable Unit (FRU). As shown in the example below, 
+the <b><i>IOBD</i></b> is identified as the failing component by the <b><i>FRU:</i></b>
+ tag in the fmdump output.
+
+<pre>
+fmdump -v -u f1ae0753-0981-6019-ca62-92125659ce6d
+TIME                 UUID                                 SUNW-MSG-ID
+Dec 31 21:32:09.6466 f1ae0753-0981-6019-ca62-92125659ce6d SUN4-8000-0Y
+  100%  fault.io.fire.asic
+         FRU: hc://product-id=SUNW,Sun-Fire-T200/component=IOBD
+        rsrc: hc:///ioboard=0/hostbridge=0/pciexrc=1
+ 
+</pre>
+
+Have this information available when contacting Sun Services for a repair.
+
+<p> 
+<b>NOTE</b> - If this message occurs on a Sun Fire T2000, it may be because 
+a required parameter has not been set in the /etc/system file.  See the
+Sun Fire T2000 Server Product Notes available at the
+<a href=http://www.sun.com/documentation/index.html >Sun Documentation Center</a>
+for details (enter "Sun Fire T2000 Server Product Notes" in the Search 
+Documentation box).

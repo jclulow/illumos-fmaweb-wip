@@ -1,0 +1,80 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry11.xml	1.15	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected CPU, the identity of which can be determined using fmdump -v -u &amp;lt;EVENT-ID&amp;gt;
+&lt;p&gt;
+to view the results of diagnosis and the specific Field Replaceable 
+Unit (FRU) identified for repair.
+&lt;p&gt;
+The event-id can be found in the EVENT-ID field of the message.
+For example:
+&lt;p&gt;
+&lt;ul&gt;
+
+&lt;tt&gt;EVENT-ID: d05a9f16-e969-4988-d340-dea1b54bd307&lt;/tt&gt;
+&lt;/ul&gt;</item>
+	<name>description</name>
+	<item>The number of errors associated with this CPU has exceeded acceptable levels.</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp;
+&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;
+indicates that the Solaris[TM] Fault Manager has received reports from 
+a CPU that one or more errors associated with the Level 2 Cache tags 
+have been detected. The Diagnostic Engine (DE) has triggered an 
+automatic response to disable and isolate this CPU from the 
+configuration in order to prevent repeat errors and increase the 
+system&#39;s total Availability.
+&lt;p&gt;
+Arrangements should be made to replace the Field Replaceable Unit (FRU)
+on which the suspect CPU is located.  Refer to the information displayed
+in the FRU: field of the fmdump output.  For example: 
+&lt;p&gt;
+&lt;ul&gt;
+&lt;PRE&gt;
+%fmdump -v -u eb847cd6-168b-cc6b-97b7-87bcba2ee179 
+TIME                 UUID                                 SUNW-MSG-ID 
+Sep 06 21:03:05.4129 eb847cd6-168b-cc6b-97b7-87bcba2ee179 SUN4U-8000-CQ 
+  100%  fault.cpu.ultraSPARC-IIIi.l2cachetag 
+        FRU: hc:///component=Slot A 
+        rsrc: cpu:///cpuid=0/serial=D27081B5443 
+
+&lt;/PRE&gt;
+
+&lt;/ul&gt;</item>
+	<name>impact</name>
+	<item>System performance may be affected.</item>
+	<name>po-action</name>
+	<item>Schedule a repair procedure to replace the affected CPU, the identity of which can be determined using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;.</item>
+	<name>response</name>
+	<item>The fault manager will attempt to remove the affected CPU from service.</item>
+	<name>title</name>
+	<item>CPU errors exceeding acceptable levels</item>
+</event_registry_properties>

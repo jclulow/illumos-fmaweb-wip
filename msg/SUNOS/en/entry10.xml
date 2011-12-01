@@ -1,0 +1,128 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry10.xml	1.4	08/04/02 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Examine &lt;tt&gt;/boot/grub/menu.lst&lt;/tt&gt; and revise as
+described in &lt;b&gt;Details&lt;/b&gt;.
+</item>
+	<name>description</name>
+	<item>Solaris OS could not automatically adjust
+&lt;tt&gt;/boot/grub/menu.lst&lt;/tt&gt;
+to the new boot architecture
+</item>
+	<name>details</name>
+	<item>&lt;p&gt;The multiboot program that previously implemented the kernel side of the 
+Multiboot Specification is no longer used. The kernel can now now be 
+directly booted from the GRUB bootloader.
+
+&lt;p&gt;The kernel to boot is specified in &lt;tt&gt;/boot/grub/menu.lst&lt;/tt&gt;.  The 
+entries in this file are automatically converted by install and upgrade 
+tools using &lt;tt&gt;bootadm&lt;/tt&gt;(1M) to entries compatible with direct boot 
+semantics.  However, the message ID %MSGID% indicates that
+&lt;tt&gt;menu.lst&lt;/tt&gt; could not be automatically converted and you must edit
+this file as specified below. See &lt;tt&gt;boot&lt;/tt&gt;(1M) and
+&lt;tt&gt;bootadm&lt;/tt&gt;(1M) for more information on GRUB&#39;s &lt;tt&gt;menu.lst&lt;/tt&gt; file
+and the direct boot service.
+
+&lt;p&gt;&lt;b&gt;&lt;tt&gt;menu.lst&lt;/tt&gt; changes if you are running Solaris on hardware&lt;/b&gt;
+
+&lt;p&gt;The default entries in the &lt;tt&gt;menu.lst&lt;/tt&gt; file for a multiboot
+environment typically look like this:
+
+&lt;pre&gt;
+#---------- ADDED BY BOOTADM - DO NOT EDIT ----------
+title Solaris Nevada snv_53 X86
+kernel /platform/i86pc/multiboot [*]
+module /platform/i86pc/boot_archive
+#---------------------END BOOTADM--------------------
+
+#---------- ADDED BY BOOTADM - DO NOT EDIT ----------
+title Solaris failsafe
+kernel /boot/multiboot kernel/unix [-B *] -s [*]
+module /boot/x86.miniroot-safe
+#---------------------END BOOTADM--------------------
+&lt;/pre&gt;
+
+&lt;p&gt;The first entry specifies the default kernel to boot via the multiboot 
+service.  The second entry specifies the failsafe miniroot.
+
+&lt;p&gt;The default boot entry above must be changed to work in the direct boot
+environment. The lines that begin with the &lt;tt&gt;kernel&lt;/tt&gt; and
+&lt;tt&gt;module&lt;/tt&gt; keywords must be modified as follows.  Note that the
+&lt;tt&gt;[*]&lt;/tt&gt; flag must be preserved if present in the original
+&lt;tt&gt;menu.lst&lt;/tt&gt; file and the &lt;tt&gt;kernel&lt;/tt&gt; and &lt;tt&gt;module&lt;/tt&gt; keywords
+must each have a &lt;i&gt;$&lt;/i&gt; appended.
+
+&lt;pre&gt;
+#---------- ADDED BY BOOTADM - DO NOT EDIT ----------
+title Solaris Nevada snv_53 X86
+kernel$ /platform/i86pc/kernel/$ISADIR/unix [*]
+module$ /platform/i86pc/$ISADIR/boot_archive
+#---------------------END BOOTADM--------------------
+&lt;/pre&gt;
+
+&lt;p&gt;This will boot 64-bit Solaris on 64-bit capable machines, and 32-bit 
+Solaris on all other machines.  To boot 32-bit Solaris, you must remove 
+&lt;tt&gt;$ISADIR&lt;/tt&gt; in two places in the first entry: before &lt;tt&gt;unix&lt;/tt&gt; in 
+the kernel line, and before &lt;tt&gt;boot_archive&lt;/tt&gt; in the module line:
+
+&lt;pre&gt;
+#---------- ADDED BY BOOTADM - DO NOT EDIT ----------
+title Solaris Nevada snv_53 X86
+kernel$ /platform/i86pc/kernel/unix [*]
+module$ /platform/i86pc/boot_archive
+#---------------------END BOOTADM--------------------
+&lt;/pre&gt;
+
+&lt;p&gt;The failsafe entry must also be changed.  The line that begins with the
+keyword &lt;tt&gt;kernel&lt;/tt&gt; must be changed as follows.  Note that the &lt;tt&gt;[-B
+*]&lt;/tt&gt; and &lt;tt&gt;[*]&lt;/tt&gt; flags must be preserved if present in the original
+&lt;tt&gt;menu.lst&lt;/tt&gt; file.  The failsafe entry should always have a
+&lt;tt&gt;-s&lt;/tt&gt; flag.
+
+&lt;pre&gt;
+#---------- ADDED BY BOOTADM - DO NOT EDIT ----------
+title Solaris failsafe
+kernel /boot/platform/i86pc/kernel/unix [-B *] -s [*]
+module /boot/x86.miniroot-safe
+#---------------------END BOOTADM--------------------
+&lt;/pre&gt;
+
+&lt;p&gt;In addition, if you have added any entries beyond the default, you will 
+need to manually make equivalent changes.</item>
+	<name>impact</name>
+	<item>Future reboots could fail until this problem is corrected.
+</item>
+	<name>response</name>
+	<item>No automated response.
+</item>
+	<name>title</name>
+	<item>Boot upgrade problem
+</item>
+</event_registry_properties>

@@ -1,0 +1,102 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry26.xml	1.4	07/05/22 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Check AC input power for failure. If this error is the result of
+improper removal, insure that a \&quot;ioxadm poweroff\&quot; is issued
+before future PSU shutdowns.
+</item>
+	<name>description</name>
+	<item>A power supply experienced loss of input power
+</item>
+	<name>details</name>
+	<item>A power supply has lost input power while configured into an I/O Expansion Unit. It may also be
+caused by an under-voltage condition. This event may also be preceded by a power warning and/or a
+power fail message. If the unit is busy when these messages are indicated only the power fail will be
+reported.&lt;p&gt;
+
+If power is lost by both PSUs, you&#39;ll see this message followed by the IOXSCF-8000-84 message.
+
+Boats in the affected unit may not be reachable after power failure because host pci slot may be
+powered off.&lt;p&gt;
+
+Follow the steps below to obtain the necessary data for presentation to your authorized service
+provider.&lt;p&gt;
+
+&lt;b&gt;Step 1:&lt;/b&gt;  Collect the fault message.&lt;br&gt;
+A single line fault message is displayed to the system console and logged in the /var/logs/message file.
+The complete message may be retrieved by using the &#39;fmdump&#39; command on the XSCF console as
+shown below.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;i&gt; XSCF&gt; fmdump -m&lt;/i&gt;
+   MSG-ID: &lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-TR&lt;/font&gt;, TYPE: Fault, VER: 1, SEVERITY: Major
+   EVENT-TIME: Tue Mar 27 06:07:55 PDT 2007
+   PLATFORM: SPARC-Enterprise, CSN: BE80601000, HOSTNAME: server-0
+   SOURCE: sde, REV: 1.12
+   EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;5d0ce6cf-ec73-4921-8b12-b082b717fd4c&lt;/font&gt;
+   DESC: A power supply experienced loss of input power
+   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-TR&lt;/font&gt; for more information.
+   AUTO-RESPONSE: No immediate action is taken
+   IMPACT: If both power supplies lose power, the hardware is unavailable.
+   REC-ACTION: Check AC input power for failure. If this error is the result of
+   improper removal, insure that a &quot;ioxadm poweroff&quot; is issued before future PSU shutdowns.&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 2:&lt;/b&gt; Collect the &quot;fmdump&quot; output.&lt;br&gt;
+Use the fmdump command with the Event-ID option to retrieve more information on the fault which
+has occurred.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+&lt;pre&gt;&lt;i&gt; XSCF&gt; fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;5d0ce6cf-ec73-4921-8b12-b082b717fd4c&lt;/font&gt;&lt;/i&gt;
+   TIME                 UUID                                 MSG-ID
+   Mar 27 06:07:55.6010 &lt;font color = &quot;BLUE&quot;&gt;5d0ce6cf-ec73-4921-8b12-b082b717fd4c&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-TR&lt;/font&gt;
+       100% fault.chassis.iox.env.power.loss
+       Problem in: hc:///iox=983392/ps=0
+          Affects: -
+              FRU: hc://:product-id=SPARC-Enterprise:chassisid=BE80601000:server-id=server-
+0:serial=T00560:part=3001701:revision=02/component=&lt;font color = &quot;GREEN&quot;&gt;IOX@X031/PS0&lt;/font&gt;&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 3:&lt;/b&gt;  Provide the output collected to your service provider.&lt;br&gt;
+The information collected above will help your service provider to schedule a repair at your
+convenience.</item>
+	<name>impact</name>
+	<item>If both power supplies lose power, the hardware is unavailable.
+</item>
+	<name>response</name>
+	<item>No immediate action is taken
+</item>
+	<name>title</name>
+	<item>Loss of input power
+</item>
+</event_registry_properties>

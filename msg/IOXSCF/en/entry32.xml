@@ -1,0 +1,107 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry32.xml	1.5	07/05/22 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected FRU.
+</item>
+	<name>description</name>
+	<item>A power failure was detected in an External I/O Expansion Unit FRU
+</item>
+	<name>details</name>
+	<item>A failure was detected within one of the system power supplies or associated with an internal power
+rail. This failure was the result of detecting an over current or an over voltage condition. Voltage
+failures in the boat may cause the host to power off the associated downlink card slot causing the unit
+to be unreachable. ( you may not be able to gather info via the &quot;ioxadm&quot; command)&lt;p&gt;
+
+If the failure is in the PSU it will be shut down and the fault LED will be lit. You will also see it listed
+with state= On in the &#39;ioxadm -v list&#39;, the &#39;fmtopo -f&#39; command should show it as &#39;Faulted&#39;.&lt;p&gt;
+
+A rail failure will be located within the IO boats and will cause it to shut down to prevent damage and
+possible data corruption. In this case the PSU&#39;s will be functioning normally.&lt;p&gt;
+
+Follow the steps below to obtain the necessary data for presentation to your authorized service
+provider.&lt;p&gt;
+
+&lt;b&gt;Step 1:&lt;/b&gt;  Collect the fault message.&lt;br&gt;
+A single line fault message is displayed to the system console and logged in the /var/logs/message file.
+The complete message may be retrieved by using the &#39;fmdump&#39; command on the XSCF console as
+shown below.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;i&gt; XSCF&gt; fmdump -m&lt;/i&gt;
+   MSG-ID: &lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-0J&lt;/font&gt;, TYPE: Fault, VER: 1, SEVERITY: Critical
+   EVENT-TIME: Tue Mar 27 06:13:24 PDT 2007
+   PLATFORM: SPARC-Enterprise, CSN: BE80601000, HOSTNAME: server-0
+   SOURCE: sde, REV: 1.12
+   EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;f8f35515-327a-45ca-85ae-1d561d734d25&lt;/font&gt;
+   DESC: A power failure was detected in an External I/O Expansion Unit FRU
+   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-0J&lt;/font&gt; for more information.
+   AUTO-RESPONSE: No immediate action is taken
+   IMPACT: If one power supply fails, the redundant supply will provide
+   power to the system. If a power failure occurred in an I/O
+   boat, all PCI-Express and PCI-X devices are powered off and
+   the domain may panic.
+   REC-ACTION: Schedule a repair procedure to replace the affected FRU.&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 2:&lt;/b&gt; Collect the &quot;fmdump&quot; output.&lt;br&gt;
+Use the fmdump command with the Event-ID option to retrieve more information on the fault which
+has occurred.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;f8f35515-327a-45ca-85ae-1d561d734d25&lt;/font&gt;&lt;/i&gt;
+   TIME                 UUID                                 MSG-ID
+   Mar 27 06:13:24.3000 &lt;font color = &quot;BLUE&quot;&gt;f8f35515-327a-45ca-85ae-1d561d734d25&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-0J&lt;/font&gt;
+       100% fault.chassis.iox.power.fail
+       Problem in: hc:///iox=983392/ps=0
+          Affects: -
+              FRU: hc://:product-id=SPARC-Enterprise:chassisid=BE80601000:server-id=server-
+0:serial=T00560:part=3001701:revision=02/component=&lt;font color = &quot;GREEN&quot;&gt;IOX@X031/PS0&lt;/font&gt;&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 3:&lt;/b&gt; Provide the output collected to your service provider.&lt;br&gt;
+The information collected above will help your service provider to schedule a repair at your
+convenience.</item>
+	<name>impact</name>
+	<item>If one power supply fails, the redundant supply will provide
+power to the system. If a power failure occurred in an I/O
+boat, all PCI-Express and PCI-X devices are powered off and
+the domain may panic.
+</item>
+	<name>response</name>
+	<item>No immediate action is taken
+</item>
+	<name>title</name>
+	<item>External I/O Expansion Unit internal power failure
+</item>
+</event_registry_properties>

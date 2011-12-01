@@ -1,0 +1,110 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)bank.html	1.12	07/10/25	SMI" -->
+The Message ID:&nbsp;&nbsp;
+<font color = "RED"><font size="+1"><tt><b>%MSGID%</b></tt></font></font>
+indicates one or more uncorrectable memory errors occurred. The memory
+pages associated with the uncorrectable errors have been retired.  However,
+ the system is at risk of incurring additional uncorrectable errors.
+ There may be two memory DIMMs associated with the error.  Replace both DIMMs
+as soon as possible. 
+<p>
+Use the command <tt><b>fmdump -v -u <font color = "BLUE">&lt;EVENT_ID&gt;</font></b></tt>&nbsp;
+with the &nbsp;<tt><b><font color = "BLUE">&lt;EVENT_ID&gt;</font></b></tt>&nbsp; from the console message to locate the faulty DIMMs.
+Depending on the platform the fault was diagnosed on, the location of the
+ faulty DIMMs will be displayed in one of two ways.  For some platforms, 
+the output of fmdump will appear as follows: 
+<p>
+<pre>
+fmdump -v -u <font color = "BLUE">d5b2eeda-ff44-622f-b794-969dbd2082fe</font>  
+TIME                 UUID                                 SUNW-MSG-ID
+Sep 14 09:54:33.7068 <font color = "BLUE">d5b2eeda-ff44-622f-b794-969dbd2082fe</font> <font color = "RED">SUN4U-8000-E2</font>
+   95%  fault.memory.bank
+         <font color = "GREEN">FRU: mem:///component=MB/CMP0/CH0:R0/D0/J0601,R0/D1/J0701</font>
+        rsrc: mem:///component=MB/CMP0/CH0:R0/D0/J0601,R0/D1/J0701
+</pre>
+<p>
+In this example, the location of the two DIMMs are:
+<p>
+<pre>
+MB/CMP0/CH0:R0/D0/J0601
+MB/CMP0/CH0:R0/D1/J0701
+</pre>
+<p>
+The alternate format for the output of fmdump for this fault is:
+<p>
+<pre>
+fmdump -v -u  <font color = "BLUE">b277ec2e-55b6-ea0b-8c88-aaff3ba7fa9a</font> 
+TIME                 UUID                                 SUNW-MSG-ID
+Jun 21 23:50:16.6635 <font color = "BLUE">b277ec2e-55b6-ea0b-8c88-aaff3ba7fa9a</font> <font color = "RED">SUN4V-8000-E2</font>
+95%  fault.memory.bank
+    Problem in:mem:///unum=MB/CMP0/BR1:CH1/D0/J1601
+       Affects:mem:///unum=MB/CMP0/BR1:CH1/D0/J1601
+          <font color = "GREEN">FRU: hc://:serial=00CE01062351032B66:
+            part=371-2143-01 Rev01//motherboard=0/chip=0/branch=1/
+            dram-channel=1/dimm=0</font>
+       Location: MB/CMP0/BR1: CH1/D0/J1601
+95%  fault.memory.bank
+    Problem in:mem:///unum=MB/CMP0/BR1:CH0/D0/J1401
+       Affects:mem:///mem:///unum=MB/CMP0/BR1:CH0/D0/J1401
+       <font color = "GREEN">FRU: hc://:serial=00CE01062351032E73:
+          part=371-2143-01 Rev 01//motherboard=0/chip=0/branch=1/
+          dram-channel=0/dimm=0</font>
+      Location: MB/CMP0/BR1: CH0/D0/J1401
+</pre>
+<p>
+In this example the FRU includes a part number field:
+<p>
+<pre>part=371-2143-01 Rev01</pre> 
+<p>
+This is the part number of the faulty 
+DIMM.  The locations of the two DIMMs in this example are specified 
+in the “Location” field for each fault DIMM:
+<p>
+<pre>
+MB/CMP0/BR1: CH1/D0/J1601
+MB/CMP0/BR1: CH0/D0/J1401
+</pre>
+<p>
+Refer to the Service Manual or the Service Label attached to the server
+chassis to find the physical location of the DIMMs. Some platforms also 
+provide fault indicators for individual DIMMs to validate the location.  
+Once the DIMMs have
+been replaced, use the Service Manual and Product Notes for instructions 
+on clearing the fault condition and validating the repair action.
+<p>
+<b>NOTES</b>
+<p>
+&nbsp;&nbsp; - The server Product Notes may contain updated service
+procedures.  The latest version of the Service Manual and Product Notes
+are available at the 
+<a href=http://www.sun.com/documentation/index.html >Sun Documentation Center</a>.
+<p>
+&nbsp;&nbsp; - For a Sun SPARC Enterprise T5120 or T5220 also see the 
+Symptoms and Resolutions document <a href=http://sunsolve.sun.com/search/document.do?assetkey=1-25-91180-1>
+<span style="font-weight: bold; text-decoration: underline;"> #91180</span></a> prior to ordering replacement
+DIMMs

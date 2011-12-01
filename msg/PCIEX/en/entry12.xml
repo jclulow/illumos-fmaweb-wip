@@ -1,0 +1,48 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry12.xml	1.12	08/09/12 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>If a plug-in card is involved check for badly-seated cards or bent pins. Otherwise schedule a repair procedure to replace the affected device(s).  Use fmadm faulty to identify the devices or contact Sun for support.
+</item>
+	<name>description</name>
+	<item>A problem has been detected on one of the specified devices or on one of the specified connecting buses.
+</item>
+	<name>details</name>
+	<item>A problem has been detected on one of the specified devices or on one of the specified connecting buses.
+</item>
+	<name>impact</name>
+	<item>Loss of services provided by the device instances associated with this fault
+</item>
+	<name>response</name>
+	<item>One or more device instances may be disabled
+</item>
+	<name>title</name>
+	<item>PCIEX subsytem problem
+</item>
+</event_registry_properties>

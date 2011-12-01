@@ -1,0 +1,87 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- start: templates/empty -->
+<!-- ident	"@(#)empty	1.6	09/04/11 SMI" -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<h2><span class="pagetitlenopad">Predictive Self Healing</span><br>
+<span class="pagetitleblue">Knowledge Article Web</span></h2>
+<td valign="top" width="500" border="0">
+<p><hr><p>
+Across the board, Sun products ensure business-critical applications and
+essential system services can run without interruption in the event of 
+software failures, degradation or failure of major hardware components 
+and even issues with software configuration.
+<p>
+Whether it be an enterprise server, a storage appliance or even the Solaris 
+Operating System itself, the Predictive Self Healing capabilities ensure 
+optimal availability and overall improvements in system management, 
+maintenance and repair.
+<p>
+You can learn more about Sun's Predictive Self Healing technologies from 
+the following sources: 
+<p>
+<ul>
+<li>Predictive Self-Healing in the Solaris 10 Operating System (<a href="http://sun.com/software/solaris/ds/self_healing.pdf">PDF</a>)
+<li><a href="http://www.opensolaris.org/os/community/fm/">OpenSolaris Community</a>
+<li><a href="http://docs.sun.com">Documentation for your system</a>
+</ul>
+
+</td>
+<td valign="top" border="0">
+<br><br><br>
+<img src="/msgdoc/costill_014.jpg" width="205" height="306">
+</td>
+</tr>
+<tr><td colspan="1"><br><hr></td></tr>
+</table>
+
+<table width="600"><tr><td>
+<p>
+A self-healing system will typically direct an administrator to a 
+knowledge article to learn more about a problem impact or repair 
+procedure. You can access the knowledge article corresponding to a 
+self-healing message by taking the Sun Message Identifier 
+(SUNW-MSG-ID) and entering it into the field on this page, or by 
+appending it to the link <tt>%MSGURL%/</tt> in your web browser.
+<p>
+The message IDs used by self-healing components resemble the following example:
+<p>
+<ul>
+SUNW-MSG-ID: <i>NAME</i><tt>-XXXX-XX</tt>
+</ul>
+<p>
+The <i>NAME</i> identifies a system type or software component, and is
+followed by a series of groups of letters and numbers (X) separated by dashes.
+Some IDs are longer and contain additional <tt>XXXX-</tt> sequences.
+To retrieve a knowledge article, enter the message ID below:
+<p>
+<form method="post" action="%MSGURL%/">
+SUNW-MSG-ID:&nbsp;&nbsp;<input name="msgid" maxLength="200" size="40">&nbsp;&nbsp;<input type="submit" value="Lookup"><br>
+</form>
+<td><tr></table>
+<!-- end: templates/empty -->

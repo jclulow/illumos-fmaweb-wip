@@ -1,0 +1,77 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry1.xml	1.35	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT_ID&amp;gt;&lt;/tt&gt; to identify the suspected 
+faulty device.
+&lt;p&gt;
+Schedule a repair procedure to replace the device.
+&lt;p&gt;</item>
+	<name>description</name>
+	<item>The system has diagnosed a problem in one or more PCI buses.</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;
+indicates a problem with a PCI bus which requires service.  Use the 
+&lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;i&gt;EVENT_ID&lt;/i&gt;&lt;/b&gt;&lt;/tt&gt; command to determine 
+the faulty components as shown in the example below.
+
+&lt;pre&gt;
+# fmdump -v -u e876f58d-7236-cd53-cb1f-be0bd1b49557
+TIME                 UUID                                 SUNW-MSG-ID
+Aug 30 18:58:53.5290 e876f58d-7236-cd53-cb1f-be0bd1b49557 PCI-8000-1Q
+   100%  fault.io.pci.bus
+         FRU: hc://product-id=SUNW,Sun-Fire-880/motherboard=0
+        rsrc: hc:///motherboard=0/hostbridge=1/pcibus=0
+&lt;/pre&gt;
+
+In this example, the faulty component resides on the motherboard.  Have this information available when contacting Sun Services for a 
+repair.
+&lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt; You may also be requested to provide a copy of the files in the 
+/var/fm/fmd directory and also a copy of the output from the 
+&lt;tt&gt;&lt;b&gt;fmadm config&lt;/b&gt;&lt;/tt&gt; command.
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>Possible loss of devices that may be attached to the system via this bus 
+and/or system downtime.</item>
+	<name>po-action</name>
+	<item>Schedule a repair procedure to replace the affected device.  Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT_ID&amp;gt;&lt;/tt&gt; to identify the device or contact Sun for support.</item>
+	<name>po-description</name>
+	<item>A problem was detected for a PCI bus.</item>
+	<name>po-impact</name>
+	<item>Loss of services provided by the device instances associated with this fault.</item>
+	<name>po-response</name>
+	<item>One or more device instances may be disabled.</item>
+	<name>response</name>
+	<item>This fault requires user and/or service interaction and currently does 
+not have an automated response agent.</item>
+	<name>title</name>
+	<item>Problem in PCI Subsystem</item>
+</event_registry_properties>

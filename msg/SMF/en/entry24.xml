@@ -1,0 +1,71 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry24.xml	1.1	09/03/05 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Run &lt;code&gt;svcs -xv &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to see the responsible
+service that placed this service in maintanence. Check the responsible
+service&#39;s log file for errors and/or explanations. Correct the errors
+and run &lt;code&gt;svcadm clear &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to clear
+maintenance state and restart the service.
+</item>
+	<name>description</name>
+	<item>The service requesting maintenance has detected some configuration issue
+and decide to place this service in maintenance.
+</item>
+	<name>details</name>
+	<item>&lt;p&gt;
+Related services can request the Solaris Service Manager to
+place another service into maintenance state.&lt;br&gt;
+
+&lt;p&gt;
+The Message ID:&amp;nbsp;&amp;nbsp;
+&lt;font size=&quot;+1&quot;&gt;&lt;code&gt;&lt;b&gt;SMF-8000-R4&lt;/b&gt;&lt;/code&gt;&lt;/font&gt;
+indicates that this service has been placed in maintenance by
+request of another service, typically via
+&lt;code&gt;svcadm&amp;nbsp;mark maintenance &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+If the Suggested Action does not work, contact Sun Service with the
+output of &lt;code&gt;svcs&amp;nbsp;-xv&lt;/code&gt; and &lt;code&gt;svcs&amp;nbsp;-l
+&lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt;.
+&lt;/p&gt;
+
+&lt;p&gt;
+See &lt;a href=&quot;http://www.sun.com/bigadmin/content/selfheal/&quot;&gt;&quot;Predictive
+Self-Healing&quot;&lt;/a&gt; for additional information.
+&lt;/p&gt;
+</item>
+	<name>impact</name>
+	<item>Functionality provided by the maintenanced service is unavailable. The
+service will not be started until the maintenance state is cleared.
+</item>
+	<name>title</name>
+	<item>Service is placed in maintenance by request of another service
+</item>
+</event_registry_properties>

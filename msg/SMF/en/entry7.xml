@@ -1,0 +1,46 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry7.xml	1.3	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Service's method has failed repeatedly</item>
+
+	<name>description</name>
+	<item>The Solaris Service Manager has determined that the service has been moved into maintenance because one of its methods (other than the start method) has failed repeatedly.</item>
+
+	<name>impact</name>
+	<item>The service will remain in the maintenance state until the condition that led to method failure is remedied, and the service's maintenance state is cleared by the administrator.  Services that express a dependency on the impacted services may also be affected.</item>
+
+	<name>action</name>
+	<item>The per-instance log file may contain information to determine the cause of method failure.  Log files associated with the service are typically in &lt;code&gt;/var/svc/log&lt;/code&gt; and are named based on the service instance's FMRI.  (Services that start very early in boot may log instead to	&lt;code&gt;/etc/svc/volatile&lt;/code&gt;.)  A review of the service's configuration files may also be appropriate.  &lt;p&gt; Once remedied, run &lt;code&gt;svcadm&amp;nbsp;clear&amp;nbsp;&lt;i&gt;impacted_service_fmri&lt;/i&gt;&lt;/code&gt; to bring the service instance out of the maintenance state.	&lt;/p&gt;</item>
+
+	<name>details</name>
+	<use>htdocs/7.html</use>
+
+</event_registry_properties>

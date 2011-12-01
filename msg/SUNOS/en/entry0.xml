@@ -1,0 +1,96 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry0.xml	1.11	08/04/10 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Save the error information from the console, if possible. Log any 
+ereports, panic strings and other information appearing on the system
+and have it available If placing a service call.  Please look for 
+diagnostic messages upon reboot.</item>
+	<name>description</name>
+	<item>Errors have been detected that require a reboot to ensure system integrity.</item>
+	<name>details</name>
+	<item>&lt;b&gt;&lt;FONT COLOR=RED&gt;PLEASE NOTE:  THIS ERROR EVENT IS NOT A DIAGNOSIS OF THE FAULT OR 
+ERROR THAT RESULTED IN THE REBOOT.  THIS IS AN INFORMATIONAL 
+MESSAGE INDICATING THAT THE SYSTEM IS ATTEMPTING TO REBOOT AND 
+THE ACTION REQUESTED IS TO COLLECT ANY ADDITIONAL ERROR INFORMATION THAT MAY EXIST.&lt;/FONT&gt;&lt;/b&gt;
+&lt;p&gt;
+
+The Message ID:&amp;nbsp;&amp;nbsp;
+&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;
+indicates errors detected by the Solaris kernel required immediate
+reboot to preserve system integrity.
+&lt;p&gt;
+This error event could be caused by a hardware fault, such as a 
+defective component or firmware incompatibility, or a software event, 
+such as a bad patch, misconfiguration, or downrev device driver.  
+This list is not an exhaustive list of possible reasons for the reboot, 
+but merely some suggestions as to why it took place.
+&lt;p&gt;  
+If the system environment has been modified immediately prior to the 
+error event (added hardware, patched the configuration, new firmware, 
+etc), consider that the change may be the actual cause of this reboot 
+event and if logging a service call, inform the engineer of this 
+change so it can be investigated.
+&lt;p&gt;
+The system will attempt to save the error information and then perform
+diagnosis as the system reboots. It can be examined using several methods. 
+Use the fmdump (1M) or fmadm (1M) commands, or examine the fault 
+message displayed in the console output at the time of the fault.
+&lt;p&gt;
+In the event that the system is unable to save or process the additional
+information and system diagnosis fails, the error report information from the system
+console may be useful in trying to manually diagnose a system failure.
+Please have this information available when placing a service call for 
+additional help.
+&lt;P&gt;
+&lt;b&gt;Please Note -&lt;/b&gt; On some system platforms there could be additional 
+information that may disclose a hardware fault, see the following:
+&lt;P&gt;
+On Sun SPARC Enterprise Mx000 systems,  
+please check the output of &quot;showstatus&quot; and &quot;fmdump&quot; from the xscfu for 
+possible hardware faults.
+&lt;P&gt;
+On Sun Fire 12K, 15K, 20K and E25K systems, please check the output of  
+&quot;showlogs -E -p e list 3&quot; from the main system controller for 
+information about possible hardware faults.
+&lt;P&gt;
+On Sun Fire 3800, 48x0, 6800, v1280, E2900, E4900, E6900 and Netra 1280/1290 systems, 
+please check the output of &quot;showlogs -v&quot; from the main system controller 
+for information about possible hardware faults.
+
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>The system will sync files, save a crash dump if needed, and reboot</item>
+	<name>po-action</name>
+	<item>Save the error summary below in case telemetry cannot be saved</item>
+	<name>response</name>
+	<item>Solaris will attempt to save and diagnose the error telemetry</item>
+	<name>title</name>
+	<item>Errors require a reboot</item>
+</event_registry_properties>

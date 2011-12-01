@@ -1,0 +1,116 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry21.xml	1.4	07/05/22 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Check ambient temperatures in the environment.
+</item>
+	<name>description</name>
+	<item>A thermal sensor is above the high warning threshold in an External I/O Expansion Unit FRU
+</item>
+	<name>details</name>
+	<item>This message indicates that temperatures with a FRU have reached temperatures requiring that the OS
+be shut down to protect components and data integrity. The PSU&#39;s will shut themselves off if a critical
+overtemp is encountered. Overtemps in other FRU&#39;s will cause the fan speed to increase in the PSU&#39;s.
+If both PSU&#39;s go overtemp they will both shut down causing the unit to be completely off.&lt;p&gt;
+
+In general this fault is related to a rise in the ambient temperature of the surrounding environment.&lt;p&gt;
+
+1) Ensure the ambient temperature of your system is within the recommended range.
+Run the ioxadm command, as shown below, to get a full report of the current temperature
+values.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; ioxadm -v env&lt;/i&gt;
+  Location     Sensor    Min Min Alarm Value Max Alarm Max   Units
+  IOX@X031     ACTIVE    -        -      On      -     -     LED
+  IOX@X031     LOCATE    -        -      Off     -     -     LED
+  IOX@X031     OVERTEMP  -        -      Off     -     -     LED
+  IOX@X031     SERVICE   -        -      Off     -     -     LED
+  IOX@X031/PS0 DCOK      -        -      On      -     -     LED
+  IOX@X031/PS0 POWER     -        -      On      -     -     LED
+  IOX@X031/PS0 RDY2RM    -        -      Off     -     -     LED
+  IOX@X031/PS0 SERVICE   -        -      Off     -     -     LED
+  IOX@X031/PS0 T_AMBIENT -128.000 -    26.000 37.000 127.000 C
+  IOX@X031/PS0 T_CHIP    -128.000 -    27.000 37.000 127.000 C
+  IOX@X031/PS0 T_HOTSPOT -128.000 -    29.000 90.000 127.000 C
+  IOX@X031/PS0 SWITCH    -        -      On      -     -     SWITCH
+  ...&lt;/pre&gt;&lt;p&gt;
+2) Ensure there are no blockages of the air intakes at the front of the unit.&lt;p&gt;
+3) Ensure there are no existing Fan faults.&lt;p&gt;
+
+&lt;b&gt;Step 1:&lt;/b&gt; Collect the fault message.&lt;br&gt;
+A single line fault message is displayed to the system console and logged in the /var/logs/message file.
+The complete message may be retrieved by using the &#39;fmdump&#39; command on the XSCF console as
+shown below.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -m&lt;/i&gt;
+   MSG-ID: &lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-NH&lt;/font&gt;, TYPE: Fault, VER: 1, SEVERITY: Major
+   EVENT-TIME: Tue Mar 27 05:59:59 PDT 2007
+   PLATFORM: SPARC-Enterprise, CSN: BE80601000, HOSTNAME: server-0
+   SOURCE: sde, REV: 1.12
+   EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;e37f42ad-946d-4e52-8952-3eb3e4c7da21&lt;/font&gt;
+   DESC: A thermal sensor is above the high warning threshold in an External I/O Expansion Unit FRU
+   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-NH&lt;/font&gt; for more information.
+   AUTO-RESPONSE: Domains using the affected hardware may be shut down.
+   IMPACT: Interruption of service to the attached domains if the domain is shut down.
+   REC-ACTION: Check ambient temperatures in the environment.&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 2:&lt;/b&gt; Collect the &quot;fmdump&quot; output.&lt;br&gt;
+Use the fmdump command with the Event-ID option to retrieve more information on the fault which
+has occurred.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -vu &lt;font color = &quot;BLUE&quot;&gt;e37f42ad-946d-4e52-8952-3eb3e4c7da21&lt;/font&gt;&lt;/i&gt;
+   TIME                 UUID                                 MSG-ID
+   Mar 27 05:59:59.1975 &lt;font color = &quot;BLUE&quot;&gt;e37f42ad-946d-4e52-8952-3eb3e4c7da21&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-NH&lt;/font&gt;
+       100% fault.chassis.iox.env.temp.over-warn
+       Problem in: hc:///iox=983392/ps=0/thermctrl=0/t_ambient=0
+          Affects: -
+              FRU: hc://:product-id=SPARC-Enterprise:chassisid=BE80601000:server-id=server-
+0:serial=T00560:part=3001701:revision=02/component=&lt;font color = &quot;GREEN&quot;&gt;IOX@X031/PS0&lt;/font&gt;&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 3:&lt;/b&gt; Provide the output collected to your service provider.</item>
+	<name>impact</name>
+	<item>Interruption of service to the attached domains if the domain is shut down.
+</item>
+	<name>response</name>
+	<item>Domains using the affected hardware may be shut down.
+</item>
+	<name>title</name>
+	<item>Thermal over-temperature warning
+</item>
+</event_registry_properties>

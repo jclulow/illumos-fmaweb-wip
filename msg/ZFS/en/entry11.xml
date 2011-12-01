@@ -1,0 +1,104 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry11.xml	1.7	09/11/02 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>ZFS pool failure</item>
+        <name>description</name>
+	<item>A ZFS pool failed to open due to corrupted data or
+	    unavailable devices.</item>
+        <name>response</name>
+	<item>No automated response will occur.</item>
+        <name>impact</name>
+	<item>The pool data is unavailable.</item>
+        <name>action</name>
+	<item>
+&lt;p&gt;This indicates that a pool could not be opened due to data corruption
+or missing devices.  Running 'zpool status -x' will provide more detailed
+information about the particular failure, as in the examples below:&lt;/p&gt;
+
+&lt;pre&gt;
+  pool: share
+ state: FAULTED
+status: The pool metadata is corrupted and the pool cannot be opened.
+action: Recovery is possible, but will result in some data loss.
+        Returning the pool to its state as of Mon Sep 28 10:24:39 2009
+        should correct the problem.  Approximately 59 seconds of data
+        will have to be discarded, irreversibly.  Recovery can be
+        attempted by executing 'zpool clear -F share'.  A scrub of the pool
+        is strongly recommended following a successful recovery.
+   see: &lt;font color='red'&gt;http://www.sun.com/msg/ZFS-8000-72&lt;/font&gt;
+ scrub: none requested
+config:
+
+        NAME                       STATE     READ WRITE CKSUM
+        share                      FAULTED      0     0     1  corrupted data
+            c0t20000014C3F04FCFd0  ONLINE       0     0     4
+            c0t20000014C3F050B6d0  ONLINE       0     0     4
+
+&lt;/pre&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;pre&gt;
+  pool: test
+ state: FAULTED
+status: One or more devices could not be used because the the label is missing 
+        or invalid.  There are insufficient replicas for the pool to continue
+        functioning.
+action: Destroy and re-create the pool from a backup source.
+   see: &lt;font color='red'&gt;http://www.sun.com/msg/ZFS-8000-5E&lt;/font&gt;
+ scrub: none requested
+config:
+
+        NAME                  STATE     READ WRITE CKSUM
+        test                  UNAVAIL      0     0     0  insufficient replicas
+          c0t0d0              FAULTED      0     0     0  corrupted data
+          c0t0d1              ONLINE       0     0     0
+
+errors: No known data errors
+&lt;/pre&gt;
+
+&lt;p&gt;The 'see:' field will direct you to a more detailed article explaining
+why the pool could not be opened.&lt;/p&gt;
+	</item>
+	<name>details</name>
+	<item>The Message ID: &lt;tt&gt;%MSGID%&lt;/tt&gt; indicates a
+	    ZFS pool failure.  Take the documented action to
+	    resolve the problem.</item>
+	<name>po-description</name>
+	<item>A ZFS pool failed to open.</item>
+	<name>po-impact</name>
+	<item>The pool data is unavailable</item>
+	<name>po-response</name>
+	<item>No automated response will occur.</item>
+	<name>po-action</name>
+	<item>Run 'zpool status -x' and attach any missing devices, follow
+     any provided recovery instructions or restore from backup.</item>
+</event_registry_properties>

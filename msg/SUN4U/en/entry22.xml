@@ -1,0 +1,89 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry22.xml	1.10	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected CPU, the identity 
+of which can be determined using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;.
+&lt;p&gt;
+The event-id can be found in the EVENT-ID field of the message.
+For example:
+&lt;p&gt;
+&lt;ul&gt;
+
+&lt;tt&gt;EVENT-ID: 3127744a-095e-cc87-9d6b-fc805ef2f437&lt;/tt&gt;
+&lt;/ul&gt;</item>
+	<name>description</name>
+	<item>A fault has been detected in the FPU of this CPU.</item>
+	<name>details</name>
+	<item>&lt;!-- ident	&quot;@(#)faulty_fpu.html	1.5	05/12/08 SMI&quot; --&gt;
+
+The Message ID:&amp;nbsp;&amp;nbsp;
+&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;
+indicates that the Solaris[TM] Fault Manager has determined that a CPU 
+has suffered an FPU failure.  The Diagnostic Engine (DE) has triggered 
+an automatic FMA response to disable and isolate this CPU from the 
+configuration in order to prevent repeat errors and increase the 
+system&#39;s total Availability.
+&lt;p&gt;
+Arrangements should be made to replace the Field Replaceable Unit (FRU)
+on which the suspect CPU is located.  Refer to the information displayed
+in the &lt;b&gt;FRU:&lt;/b&gt; field of the fmdump output.  For example: 
+&lt;p&gt;
+&lt;ul&gt;
+&lt;pre&gt;
+# fmdump -vu 3127744a-095e-cc87-9d6b-fc805ef2f437
+TIME                 UUID                                 SUNW-MSG-ID
+Nov 23 09:43:58.3287 3127744a-095e-cc87-9d6b-fc805ef2f437 SUN4U-8000-P3
+   100%  fault.cpu.ultraSPARC-IIIplus.fpu
+          FRU: hc:///component=SB0
+         rsrc: rsrc: cpu:///cpuid=0/serial=D27081B5443
+
+
+&lt;/pre&gt;
+
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;b&gt;Sun Fire Midrange and High End notes:&lt;/b&gt;
+&lt;p&gt;
+There may be additional fault information logged by System Controller 
+Application (ScApp) on Sun Fire[TM] Midrange (3800, 48x0, 6800, v1280, 
+E2900, E4900, E6900) and System Management Services (SMS) on 
+High End (12K, 15K, E20K, E25K) Servers.  
+Availability enhancements (called AVL) have been integrated into 
+ScApp 5.19.0 and SMS 1.5 to allow FMA/AVL interaction to coexist.</item>
+	<name>impact</name>
+	<item>System performance may be affected.</item>
+	<name>po-action</name>
+	<item>Schedule a repair procedure to replace the affected CPU, the identity of which can be determined using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;.</item>
+	<name>response</name>
+	<item>The fault manager will attempt to remove the affected CPU from service.</item>
+	<name>title</name>
+	<item>FPU fault detected</item>
+</event_registry_properties>

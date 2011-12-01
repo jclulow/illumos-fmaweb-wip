@@ -1,0 +1,130 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry1.xml	1.1	07/09/13 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure for the affected device, which
+can be determined using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;
+</item>
+	<name>description</name>
+	<item>A fault in the XAUI component used for 10GbE networking. 
+</item>
+	<name>details</name>
+	<item>The Message ID: &lt;tt&gt;%MSGID%&lt;/tt&gt; indicates a problem in a XAUI card or
+in the XAUI component inside of a 10G network interface card (NIC).&lt;p&gt;
+
+XAUI stands for 10-gigabit Attachment Unit Interface. It is a interface
+between MAC layer and 10G physical layer and may be installed in one of
+two ways:&lt;p&gt;
+
+    1) The XAUI card is plugged into the XAUI slot on a motherboard as a
+       interface for the network interface unit (NIU) embedded inside
+       the CPU.&lt;p&gt;
+
+  or&lt;p&gt;
+
+    2) A XAUI is also used internally on the 10G PCIe NIC as a interface
+       component.&lt;p&gt;
+
+Make sure that the XAUI card or the PCIe NIC is properly installed.&lt;p&gt;
+
+If the problem persits follow the steps below to obtain the necessary
+data for presentation to your authorized service provider.&lt;p&gt;
+
+&lt;b&gt;Step 1:&lt;/b&gt; Collect the fault message.&lt;p&gt;
+
+    A fault message is displayed to the system console and logged in the
+    /var/logs/message file and should be collected.  An example of what
+    that message looks like is below.&lt;p&gt;
+
+    &lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+    LEGEND:&lt;br&gt;
+
+    &lt;font color=red&gt;RED&lt;/font&gt; = SUNW-MSG-ID&lt;br&gt;
+    &lt;font color=blue&gt;BLUE&lt;/font&gt; = EVENT_ID&lt;br&gt;
+    &lt;font color=green&gt;GREEN&lt;/font&gt; = FRU&lt;p&gt;
+
+
+    &lt;pre&gt;SUNW-MSG-ID: &lt;font color=red&gt;%MSGID%&lt;/font&gt;, TYPE: Fault, VER: 1, SEVERITY: Critical
+    EVENT-TIME: Fri Sep  7 17:03:56 PDT 2007
+    PLATFORM: SUNW,SPARC-Enterprise-T5220, CSN: -, HOSTNAME: nsn104-139
+    SOURCE: eft, REV: 1.16
+    EVENT-ID: &lt;font color=blue&gt;fbe714d4-e181-6cfd-aa3d-93b87b3dfacc&lt;/font&gt;
+    DESC: A fault in the XAUI component used for 10GbE networking.
+      Refer to http://sun.com/msg/&lt;font color=red&gt;%MSGID%&lt;/font&gt; for more information.
+    AUTO-RESPONSE: The device instance will be disabled.
+    IMPACT: Loss of services provided by the device instances
+      associated with this fault.
+    REC-ACTION: Schedule a repair procedure for the affected device, which
+      can be determined using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;&lt;/pre&gt;&lt;p&gt;
+
+
+&lt;b&gt;Step 2:&lt;/b&gt; Collect the &quot;fmdump&quot; output.&lt;p&gt;
+
+    Use the fmdump command with the Event-ID option to retrieve more
+    information on the fault which has occurred.&lt;p&gt;
+
+    Example:&lt;p&gt;
+
+    &lt;pre&gt;# fmdump -v -u &lt;font color=blue&gt;fbe714d4-e181-6cfd-aa3d-93b87b3dfacc&lt;/font&gt;&lt;p&gt;
+
+    TIME                 UUID                                 SUNW-MSG-ID&lt;br&gt;
+    Sep 07 17:03:56.7629 fbe714d4-e181-6cfd-aa3d-93b87b3dfacc &lt;font color=red&gt;%MSGID%&lt;/font&gt;
+
+        100%  fault.io.n2.niu-xaui
+
+        Problem in: hc:///motherboard=0/chip=0/hostbridge=0/niu=0/niufn=0
+           Affects: hc:///motherboard=0/chip=0/hostbridge=0/niu=0/niufn=0
+               FRU: hc:///motherboard=0/chip=0/hostbridge=0/niu=0/niufn=0/&lt;font color=green&gt;xaui=0&lt;/font&gt;
+          Location: -
+
+    Sep 07 17:31:02.6543 &lt;font color=blue&gt;fbe714d4-e181-6cfd-aa3d-93b87b3dfacc&lt;/font&gt; &lt;font color=red&gt;%MSGID%&lt;/font&gt;
+       100%  fault.io.n2.niu-xaui
+
+        Problem in: hc:///motherboard=0/chip=0/hostbridge=0/niu=0/niufn=0
+           Affects: hc:///motherboard=0/chip=0/hostbridge=0/niu=0/niufn=0
+               FRU: hc:///motherboard=0/chip=0/hostbridge=0/niu=0/niufn=0/&lt;font color=green&gt;xaui=0&lt;/font&gt;
+          Location: -&lt;p&gt;&lt;/pre&gt;
+
+
+&lt;b&gt;Step 3:&lt;/b&gt; Provide the output collected to your service provider.&lt;p&gt;
+
+The information collected above will help your service provider to schedule
+a repair at your convenience.&lt;p&gt;
+</item>
+	<name>impact</name>
+	<item>Loss of services provided by the device instances
+associated with this fault.
+</item>
+	<name>response</name>
+	<item>The device instance will be disabled.
+</item>
+	<name>title</name>
+	<item>XAUI Fault
+</item>
+</event_registry_properties>

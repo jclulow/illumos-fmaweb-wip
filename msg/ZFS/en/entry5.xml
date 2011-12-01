@@ -1,0 +1,83 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry5.xml	1.8	07/09/05 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Corrupted device label in non-replicated configuration</item>
+        <name>description</name>
+	<item>A device could not be opened due to a missing or invalid
+	    device label and no replicas are available.</item>
+        <name>response</name>
+        <item>No automated response will be taken.</item>
+        <name>impact</name>
+	<item>The pool is no longer available</item>
+        <name>action</name>
+        <item>
+&lt;h4&gt;For an active pool&lt;/h4&gt;
+
+&lt;p&gt;If this error was encountered while running 'zpool import', please see
+the section below.  Otherwise, run 'zpool status -x' to determine which pool
+has experienced a failure:&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool status -x
+  pool: test
+ state: FAULTED
+status: One or more devices could not be used because the the label is missing 
+        or invalid.  There are insufficient replicas for the pool to continue
+        functioning.
+action: Destroy and re-create the pool from a backup source.
+   see: http://www.sun.com/msg/ZFS-8000-5E
+ scrub: none requested
+config:
+
+        NAME                  STATE     READ WRITE CKSUM
+        test                  FAULTED      0     0     0  insufficient replicas
+&lt;font color='red'&gt;          c0t0d0              FAULTED      0     0     0  corrupted data&lt;/font&gt;
+          c0t0d1              ONLINE       0     0     0
+
+errors: No known data errors
+&lt;/pre&gt;
+
+&lt;p&gt;The device listed as FAULTED with 'corrupted data' cannot be opened due
+to a corrupt label.  ZFS will be unable to use the pool, and all data within the
+pool is irrevocably lost.  The pool must be destroyed and recreated from an
+appropriate backup source.  Using replicated configurations will prevent this
+from happening in the future.&lt;/p&gt;
+
+&lt;h4&gt;For an exported pool&lt;/h4&gt;
+
+&lt;p&gt;If this error is encountered during 'zpool import', the action is the
+same.  The pool cannot be imported - all data is lost and must be restored from
+an appropriate backup source.&lt;/p&gt;
+	</item>
+        <name>details</name>
+	<item>The Message ID: &lt;tt&gt;%MSGID%&lt;/tt&gt; indicates a
+	    device which was unable to be opened by the ZFS subsystem.</item>
+</event_registry_properties>

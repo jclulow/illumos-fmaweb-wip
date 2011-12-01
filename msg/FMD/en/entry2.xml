@@ -1,0 +1,104 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry2.xml	1.7	08/08/21 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT-ID&amp;gt;&lt;/tt&gt; to locate the module.  Use &lt;tt&gt;fmadm reset &amp;lt;module&amp;gt;&lt;/tt&gt; to reset the module.</item>
+	<name>description</name>
+	<item>A Solaris Fault Manager component has experienced an error that required the module to be disabled.</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;FMD-8000-2K&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;br&gt;
+The Fault Manager loads multiple
+components, referred to as modules, &lt;br&gt;
+which perform fault diagnosis and
+automated response actions. &lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;The Message ID:&amp;nbsp;&lt;small&gt;&lt;small&gt; &lt;tt&gt;&lt;font
+ size=&quot;4&quot;&gt;&lt;small&gt;&lt;small&gt;FMD-8000-2K&lt;/small&gt;&lt;/small&gt;&lt;/font&gt;&lt;/tt&gt;&lt;/small&gt;&lt;/small&gt;
+indicates that one of these modules has encountered&lt;br&gt;
+an irrecoverable
+error. Since the module cannot continue its work, the Fault Manager
+has &lt;br&gt;
+unloaded and disabled the module. &lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;This can indicate a defect in
+the module or the Fault Manager.&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp; The recommended actions for
+the system
+administrator are as follows:&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Identify
+the affected module (&amp;nbsp; # fmdump -v -u
+&amp;lt;EVENT-ID&amp;gt; )&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Attempt
+to reset and restart
+the module.&amp;nbsp; ( # fmadm reset
+&amp;lt;module&amp;gt; )&lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;
+If the reset fails, try removing the module checkpoint data file before attempting to restart:
+&lt;p&gt;
+&lt;PRE&gt;
+# cd /var/fm/fmd/ckpt
+# rm &amp;lt;module&amp;gt/* 
+&lt;/PRE&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Ensure
+the latest
+firmware/patches are installed on the system.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the
+failure
+persists, please contact your Authorized Service Provider.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;NOTE&lt;/span&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;b&gt;&lt;br&gt;
+&lt;/b&gt;Information applicable to the &lt;span
+ style=&quot;font-style: italic; text-decoration: underline;&quot;&gt;&#39;Sun SPARC
+Enterprise M4000/M5000/M8000/M9000&lt;/span&gt;&#39; platforms&lt;br&gt;
+can be found in Troubleshooting Doc&lt;a href=&quot;http://sunsolve.sun.com/search/document.do?assetkey=1-37-88172-1&amp;searchclause=88172&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;&lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;#88172&lt;/span&gt;.
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>Automated diagnosis and response for subsequent events associated with this module will not occur.</item>
+	<name>response</name>
+	<item>The module has been disabled.  Events destined for the module will be saved for manual diagnosis.</item>
+	<name>title</name>
+	<item>Solaris Fault Manager component had disabling error</item>
+</event_registry_properties>

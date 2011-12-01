@@ -1,0 +1,79 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry7.xml	1.14	08/09/12 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected device.  Use fmadm faulty to identify the device or contact Sun for support.
+</item>
+	<name>description</name>
+	<item>An unrecoverable problem was detected for a PCI device.
+</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;
+indicates a problem with a PCI device which requires service.
+&lt;p&gt; 
+Use the &lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;i&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/i&gt;&lt;/b&gt;&lt;/tt&gt; command to determine 
+the faulty components as shown in the example below:
+&lt;p&gt;
+ 
+&lt;pre&gt;
+#fmdump -v -u 4a64c9ca-2e7f-4168-ab71-d2ad7393ef85
+
+Aug 30 18:02:59.4798 4a64c9ca-2e7f-4168-ab71-d2ad7393ef85 PCI-8000-6E
+ 
+  100%  fault.io.pci.device-interr
+         FRU: hc://product-id=SUNW,Sun-Fire-880/component=/pci@9,600000:&lt;U&gt;PCI8&lt;/U&gt;
+        rsrc: hc:///motherboard=0/hostbridge=1/pcibus=0/pcidev=1/pcifn=0
+
+&lt;/pre&gt;
+
+&lt;p&gt;
+In this example, the failing device is in &lt;b&gt;PCI Slot 8&lt;/b&gt;.  Have 
+the above information available when contacting Sun Services for a repair.
+&lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt; You may also be requested to provide a copy of the files in the 
+/var/fm/fmd directory and also a copy of the output from the 
+&lt;tt&gt;&lt;b&gt;fmadm config&lt;/b&gt;&lt;/tt&gt; command.
+&lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt; If you have encountered this problem on a 
+Sun Blade 1000 system, reported FRUs may be mislabeled.
+Please reference the following SRDB (Symptom Resolution Data Base)
+link for further information.
+&lt;p&gt;
+&lt;a href=http://sunsolve.sun.com/search/document.do?assetkey=1-25-86358-1&amp;searchclause=&gt;86358 Sun Blade 1000 FRU Mislabeling&lt;/a&gt;
+</item>
+	<name>impact</name>
+	<item>Possible loss of services provided by the device instances associated with this fault
+</item>
+	<name>response</name>
+	<item>One or more device instances may be disabled
+</item>
+	<name>title</name>
+	<item>PCI subsytem problem
+</item>
+</event_registry_properties>

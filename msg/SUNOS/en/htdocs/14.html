@@ -1,0 +1,80 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)14.html	1.1	09/01/15 SMI" -->
+
+The Message ID:&nbsp;&nbsp;<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates that errors were detected, but the module responsible for
+diagnosing those errors was unable to perform a diagnosis.
+This is typically due to problems in the topology, error telemetry, and/or
+diagnosis rules.  This may be caused more commonly by downrev or incompatible
+revisions  of software and/or firmware, or less frequently by bugs in the
+diagnosis module or subsystem.   
+<P>
+The Solaris Kernel and Predictive Self-Healing (PSH) patches are particularly
+critical, and should be examined.  Ensure that the latest patches are
+installed, and that any dependencies documented in the patch README files
+are noted and addressed.
+Check <a href="http://sunsolve.sun.com/show.do?target=home">'SunSolve'</a>
+patch finder for patches with 'fma' and/or 'eft.so' keywords. 
+<P>
+Also, please make sure that the firmware patch levels are up to date for the
+following systems.
+<P>
+	<UL>
+	<LI>	T5120 and T5220: firmware patch 127580-05 or higher
+		<P>
+	<LI>	T2000: firmware patch 136927-01 or higher
+		<P>
+	<LI>	Netra T2000: firmware patch 136929-01 or higher
+		<P>
+	<LI>	T1000: firmware patch 127577-03 or higher
+	</UL>
+<P>
+<b>Please Note -</b> On some systems there could be additional 
+information that may indicate a hardware fault. If this is the
+case then it is possible that this defect is a result of the
+service processor diagnosing a fault and deconfiguring a device.
+<P>
+	<UL>
+	<LI>	On Sun SPARC Enterprise Mx000 systems,  please check the
+		output of 'showstatus' and 'fmdump' from the XSCFU for
+		information about possible hardware faults.
+		<P>
+	<LI>	On Sun Fire 12K, 15K, 20K and E25K systems, please check
+		the output of  'showlogs -E -p e list 3' from the main system
+		controller for information about possible hardware faults.
+		<P>
+	<LI>	On Sun Fire 3800, 48x0, 6800, v1280, E2900, E4900, E6900,
+		and Netra 1280/1290 systems, please check the output of
+		'showlogs -v' from the main system controller for information
+		about possible hardware faults.
+	</UL>
+<P>
+If there is no indication of the service processor having diagnosed a fault
+and having deconfigured a device, and all patches appear to be current and
+all dependencies are properly addressed, error telemetry will need to be
+examined by Service personnel to make a further determination of the problem.

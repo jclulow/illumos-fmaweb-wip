@@ -1,0 +1,61 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)15.html	1.9	08/08/21 SMI" -->
+
+	<p>
+	  If a service is enabled and its dependencies are met, the
+	  Solaris Service Manager will send a start command to the
+	  service's restarter, which may be the Solaris Service Manager
+	  itself.
+	  Dependencies other than exclude-type dependencies are satisfied
+	  when the indicated services are running (online or degraded
+	  states).
+
+	<p>
+	The Message ID:&nbsp;&nbsp;
+	<font size="+1"><code><b>SMF-8000-GE</b></code></font>
+	indicates that the Solaris Service Manager determined that the
+	service's dependencies are not met.
+	This outcome can indicate a misunderstanding of the requirements
+	of various software components, a misconfiguration of the system,
+	or a defect in Solaris.
+	</p>
+
+
+	<p>
+	See <a href="http://www.sun.com/bigadmin/content/selfheal/">"Predictive
+	Self-Healing"</a> for additional information and the
+        <a href="http://www.sun.com/software/solaris/howtoguides/servicemgmthowto.jsp#1/">
+        "SMF How To Guide"</a> to clear dependencies.
+        </p>
+
+        <p>
+        If the service does not start, contact Sun Service with the
+	output of <code>svcs&nbsp;-xv</code>, <code>svcs&nbsp;-l
+	</i></code>, and <code>/var/svc/log</code> for associated service.
+        See <code>svcs(1)</code> for additional syntax.
+        </p>

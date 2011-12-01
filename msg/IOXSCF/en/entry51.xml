@@ -1,0 +1,100 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry51.xml	1.5	07/05/22 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected FRU.
+</item>
+	<name>description</name>
+	<item>A failure was detected in the PCI-Express datapath
+</item>
+	<name>details</name>
+	<item>PCI-Express datapath failures are caused by failures in any portion of the datapath. This path includes
+the host I/O unit, the linkcards, the cable, or the I/O boat. This fault is determined by monitoring the
+transceivers in the link cards for connectivity. Possible Causes are:&lt;p&gt;
+
+1. Cable is not connected fully.
+Verify that the cable is fully connected and secured.&lt;br&gt;
+2. IO Boat - Verify that it is powered on and operational&lt;br&gt;
+3. Bad uplink card - If the boat is powered on you may see that the uplink card is not active
+although its corresponding downlink card is.&lt;p&gt;
+
+Follow the steps below to obtain the necessary data for presentation to your authorized service
+provider.&lt;p&gt;
+
+&lt;b&gt;Step 1:&lt;/b&gt;  Collect the fault message.&lt;br&gt;
+A single line fault message is displayed to the system console and logged in the /var/logs/message file.
+The complete message may be retrieved by using the &#39;fmdump&#39; command on the XSCF console as
+shown below.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -m&lt;/i&gt;
+   MSG-ID: &lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-LJ&lt;/font&gt;, TYPE: Fault, VER: 1, SEVERITY: Major
+   EVENT-TIME: Tue Mar 27 08:45:35 PDT 2007
+   PLATFORM: SPARC-Enterprise, CSN: BE80601000, HOSTNAME: server-0
+   SOURCE: sde, REV: 1.12
+   EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;f04d978c-7c1e-4633-9fc3-57629989bab4&lt;/font&gt;
+   DESC: A failure was detected in the PCI-Express datapath
+   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-LJ&lt;/font&gt; for more information.
+   AUTO-RESPONSE: The Service Processor may poweroff the affected host slot.
+   IMPACT: Communication with the I/O boat is not possible thru the indicated path.
+   REC-ACTION: Schedule a repair procedure to replace the affected FRU.&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 2:&lt;/b&gt; Collect the &quot;fmdump&quot; output.&lt;br&gt;
+Use the fmdump command with the Event-ID option to retrieve more information on the fault which
+has occurred.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;f04d978c-7c1e-4633-9fc3-57629989bab4&lt;/font&gt;&lt;/i&gt;
+   TIME                 UUID                                 MSG-ID
+   Mar 27 08:45:35.2708 &lt;font color = &quot;BLUE&quot;&gt;f04d978c-7c1e-4633-9fc3-57629989bab4&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-LJ&lt;/font&gt;
+       100% fault.chassis.iox.pciex.datapath
+       Problem in: hc:///iox=983392/iob=0/link=0/sigcon=0/porta=0
+          Affects: -
+              FRU: hc://:product-id=SPARC-Enterprise:chassisid=BE80601000:server-id=server-
+0:serial=XF00VW:part=5017040:revision=03/component=&lt;font color = &quot;GREEN&quot;&gt;IOX@X031/IOB0/LINK&lt;/font&gt;&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 3:&lt;/b&gt; Provide the output collected to your service provider.&lt;br&gt;
+The information collected above will help your service provider to schedule a 
+repair at your convenience.</item>
+	<name>impact</name>
+	<item>Communication with the I/O boat is not possible thru the indicated path.
+</item>
+	<name>response</name>
+	<item>The Service Processor may poweroff the affected host slot.
+</item>
+	<name>title</name>
+	<item>External I/O Expansion Unit PCI-Express datapath failure
+</item>
+</event_registry_properties>

@@ -1,0 +1,55 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry1.xml	1.4	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Memory module errors exceeding limits</item>
+
+	<name>po-description</name>
+	<item>The number of errors associated with this memory module continues to exceed acceptable levels.</item>
+
+	<name>description</name>
+	<item>The Solaris Fault Manager has determined that the number of errors reported against a page of physical memory exceeds recommended limits.</item>
+
+	<name>po-response</name>
+	<item>An attempt will be made to remove this memory page from service.</item>
+
+	<name>response</name>
+	<item>An attempt will be made to remove the affected page of memory from service.</item>
+
+	<name>impact</name>
+	<item>The performance of the system may be minimally impacted as a result of removing the memory page from operation.</item>
+
+	<name>action</name>
+	<item>No repair action is recommended at this time.</item>
+
+	<name>details</name>
+	<use>htdocs/1.html</use>
+
+</event_registry_properties>

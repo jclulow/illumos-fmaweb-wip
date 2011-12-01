@@ -1,0 +1,100 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry266.xml	1.1	08/02/08 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair action to replace the XSCFU_B.
+</item>
+	<name>description</name>
+	<item>An XSCFU_B is either not present or could not be detected during powerup.
+</item>
+	<name>details</name>
+	<item>An XSCFU_B is either not present or could not be detected during powerup.
+
+XSCFU failover is disabled.
+
+The recommended service action for this event is to schedule the replacement of the XSCFU_B.
+
+
+Step 1. Collect the Fault Message  (two methods)
+
+
+   Single-line fault message displayed on the XSCF console:
+
+   Dec 13 06:08:40 san-dc3-2-0 fmd: SOURCE: sde, REV: 1.15, CSN: 2010643002
+   EVENT-ID: 9516445d-3f04-479c-b4a6-8efb6f5eee9d
+   Refer to http://www.sun.com/msg/SCF-8008-AN for detailed information.
+
+
+   Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
+
+   MSG-ID: SCF-8008-AN, TYPE: upset, VER: 1, SEVERITY: Major
+   EVENT-TIME: Thu Dec 13 06:08:40 PST 2007
+   PLATFORM: SPARC Enterprise M9000, CSN: 2010643002, HOSTNAME: san-dc3-2-0
+   SOURCE: sde, REV: 1.15 
+   EVENT-ID: 9516445d-3f04-479c-b4a6-8efb6f5eee9d
+   DESC: An XSCFU_B is either not present or could not be detected during powerup.
+   Refer to http://www.sun.com/msg/SCF-8008-AN for more information.
+   AUTO-RESPONSE: Nothing is deconfigured.
+   IMPACT: XSCFU failover is disabled.
+   REC-ACTION: Schedule a repair action to replace the XSCFU_B.
+
+
+
+Step 2. Collect the output from the &#39;fmdump  -v  -u  Event-ID&#39; command
+
+
+   SPARC Enterprise platform example:
+
+   xscf&gt; fmdump -v -u 9516445d-3f04-479c-b4a6-8efb6f5eee9d
+
+	 TIME		      UUID				   MSG-ID
+	 Dec 13 06:08:40.2442 9516445d-3f04-479c-b4a6-8efb6f5eee9d SCF-8008-AN
+	   100%  upset.chassis.SPARC-Enterprise.config.xscfu_b
+
+		 Problem in: hc:///chassis=0
+		    Affects: -
+			FRU: hc://:product-id=SPARC Enterprise M9000:chassis-id=2010643002:
+			     server-id=san-dc3-2-0/component=CHASSIS
+	           Location: CHASSIS
+
+
+
+Step 3. Contact your Authorized Service Provider.
+
+</item>
+	<name>impact</name>
+	<item>XSCFU failover is disabled.
+</item>
+	<name>response</name>
+	<item>Nothing is deconfigured.
+</item>
+	<name>title</name>
+	<item>An XSCFU_B is either not present or could not be detected.
+</item>
+</event_registry_properties>

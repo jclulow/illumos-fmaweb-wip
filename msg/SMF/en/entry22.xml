@@ -1,0 +1,71 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry22.xml	1.8	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>&lt;p&gt;
+Wait until the service reaches the declared next state, or definitively fails
+to do so. (If the service&#39;s executing method executes for longer than its
+associated timeout, then the restarter will declare the method to have
+failed.)  The next state may be viewed by invoking &quot;svcs -v&quot;.
+&lt;/p&gt;</item>
+	<name>description</name>
+	<item>The service still transitioning to a new state.  Once the transition has completed, the service will be placed in its new state.</item>
+	<name>details</name>
+	<item>&lt;p&gt;
+If a service is being moved to a state (due to an administrative action
+or a response to a failure of that service or a dependency), the Solaris
+Service Manager will ultimately send a request to the service&#39;s restarter. If
+the service&#39;s restarter is the Solaris Service Manager
+(svc:/system/svc/restarter:default), it will execute the service&#39;s
+appropriate method to complete the transition. For most services, when
+the method completes successfully, the service will be placed in the
+requested state.
+&lt;/p&gt;
+    
+&lt;p&gt;
+The Message ID:   SMF-8000-PH indicates that the transition 
+is in progress. This outcome can indicate a system being shut down,
+or a defect in Solaris or third party software.
+&lt;/p&gt;
+	
+&lt;p&gt;
+If the service does not leave the initial state, contact Sun Service
+with the output of svcs -x and svcs -l service_fmri.
+&lt;/p&gt;
+	    
+&lt;p&gt;
+See &lt;a href=&quot;http://sun.com/bigadmin/content/selfheal/&quot;&gt;&quot;Predictive
+Self-Healing&quot;&lt;/a&gt; for additional information.
+&lt;/p&gt;</item>
+	<name>impact</name>
+	<item>A previous invocation of the service may still be running, despite a request to disable, refresh, or restart it.</item>
+	<name>title</name>
+	<item>Service instance is transitioning to a new state</item>
+</event_registry_properties>

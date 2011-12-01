@@ -1,0 +1,46 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry19.xml	1.3	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>Service restarting too quickly</item>
+
+	<name>description</name>
+	<item>The service terminated and was restarted more frequently than normal.  The Solaris Service Manager placed the service into maintenance mode instead of restarting it again.</item>
+
+	<name>impact</name>
+	<item>The service will remain stopped until its maintenance state is cleared.  Other services with require-type dependencies on the service will not be started until this service is repaired.  (Use &lt;code&gt;svcs&amp;nbsp;-xv&amp;nbsp;&lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to list such impacted services.)</item>
+
+	<name>action</name>
+	<use>htdocs/19act.html</use>
+
+	<name>details</name>
+	<use>htdocs/19.html</use>
+
+</event_registry_properties>

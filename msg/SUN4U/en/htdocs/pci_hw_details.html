@@ -1,0 +1,54 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)pci_hw_details.html	1.5	07/01/30 SMI" -->
+
+The Message ID:&nbsp;&nbsp;<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates a device connected to the hostbridge bus is faulty and requires Service.
+The system may attempt to disable the faulty device and allow the rest of the 
+system to continue operation.
+
+Arrangements should be made to replace the Field Replaceable Unit (FRU)
+on which the suspect resource is located.  
+<p>
+Refer to the information displayed in the FRU: field of the <tt><b>fmdump -v -u <i>EVENT_ID</i></b></tt> command to determine 
+the faulty components as shown in the example below.
+
+<pre>
+# fmdump -v -u 719ff23c-9828-6c65-9099-ad3bf0a07c40
+TIME                 UUID                                 SUNW-MSG-ID
+Dec 31 21:40:07.0023 719ff23c-9828-6c65-9099-ad3bf0a07c40 SUN4U-8001-DA
+  100%  fault.io.hbus
+         FRU: hc:///ioboard=0/hostbridge=0
+        rsrc: hc:///ioboard=0/hostbridge=0
+</pre>
+
+Have this information available when contacting Sun Services for a repair.
+
+<p>
+Note: You may also be requested to provide a copy of the files in the 
+/var/fm/fmd directory and also a copy of the output from the 
+<tt><b>fmadm config</b></tt> command.

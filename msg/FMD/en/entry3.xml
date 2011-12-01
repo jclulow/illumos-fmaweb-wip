@@ -1,0 +1,102 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry3.xml	1.5	08/08/21 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT-ID&amp;gt;&lt;/tt&gt; to locate the module.  Use &lt;tt&gt;fmadm load &amp;lt;module&amp;gt;&lt;/tt&gt; to load the module after repairing its configuration.</item>
+	<name>description</name>
+	<item>A Solaris Fault Manager component could not load due to an erroroneous configuration file.</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;content-type&quot;
+ content=&quot;text/html; charset=ISO-8859-1&quot;&gt;
+  &lt;title&gt;FMD-8000-3F&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;br&gt;
+The Fault Manager loads multiple
+components, referred to as modules, &lt;br&gt;
+which perform fault diagnosis and
+automated response actions. &lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt; &lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;The Message ID: &lt;big
+ style=&quot;font-weight: bold;&quot;&gt;&lt;font size=&quot;4&quot;&gt;&lt;big&gt;&lt;font
+ face=&quot;Cumberland, monospace&quot;&gt;FMD-8000-3F&lt;/font&gt;&lt;/big&gt;&lt;/font&gt;&lt;/big&gt;
+indicates that one of the modules failed &lt;br&gt;
+to load during fault manager
+startup.&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;This indicates the module&#39;s
+configuration file has an error.&lt;br&gt;
+&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp; The recommended actions for
+the
+system administrator are as follows:&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Identify
+the affected module (&amp;nbsp; # fmdump -v -u
+&amp;lt;EVENT-ID&amp;gt; )&lt;br&gt;
+&lt;/p&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Attempt to reset and restart
+the module.&amp;nbsp; ( # fmadm reset
+&amp;lt;module&amp;gt; )&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Fix error in the
+configuration file.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Load the module after repairing its
+configuration. &amp;nbsp; (&amp;nbsp; # fmadm load
+&amp;lt;module&amp;gt; )&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Ensure the latest
+firmware/patches are installed on the system.
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the
+failure persists, please contact your Authorized Service Provider.&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;NOTE&lt;/span&gt;&lt;br&gt;
+&lt;/p&gt;
+&lt;b&gt;&lt;br&gt;
+&lt;/b&gt;Information applicable to the &lt;span
+ style=&quot;font-style: italic; text-decoration: underline;&quot;&gt;&#39;Sun SPARC
+Enterprise M4000/M5000/M8000/M9000&lt;/span&gt;&#39; platforms&lt;br&gt;
+can be found in Troubleshooting Doc&lt;a href=&quot;http://sunsolve.sun.com/search/document.do?assetkey=1-37-88172-1&amp;searchclause=88172&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;#88172&lt;/span&gt;.
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>Automated diagnosis and response for subsequent events associated with this module will not occur.</item>
+	<name>response</name>
+	<item>The module has been disabled.  Events destined for the module will be saved for manual diagnosis.</item>
+	<name>title</name>
+	<item>Solaris Fault Manager component has erroneous configuration file</item>
+</event_registry_properties>

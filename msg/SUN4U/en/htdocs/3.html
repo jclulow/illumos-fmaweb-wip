@@ -1,0 +1,89 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)3.html	1.8	07/01/30 SMI" -->
+
+The Message ID:&nbsp;&nbsp;
+<font size="+1"><tt><b>%MSGID%</b></tt></font>
+that the Solaris Fault Manager has received reports that one or more 
+multibit, uncorrectable memory errors have been detected. Diagnosis  
+has determined that a fault requiring repair action is present. 
+<p>
+If there are no indications of a system board or platform problem 
+(See Note, below)
+Schedule replacement of the affected DIMMs as identified in the 
+<b>fmdump</b>(1M) output.
+<pre>
+
+% fmdump -vU d05a9f16-e969-4988-d340-dea1b54bd307
+TIME                 UUID                                 SUNW-MSG-ID
+Feb 10 23:34:29.0307 d05a9f16-e969-4988-d340-dea1b54bd307 SUN4U-8000-35
+   95%  fault.memory.bank
+         FRU: mem:///component=J0100,J0202,J0304,J0406
+        rsrc: mem:///component=J0100,J0202,J0304,J0406
+
+
+</pre>
+<p>
+Once the DIMMs have been replaced, the command <tt><b>fmadm faulty
+</b></tt> should be run to see the status of the memory involved.
+<p>
+Example:
+<p>
+
+<pre>
+
+# fmadm faulty
+   STATE RESOURCE / UUID
+-------- ----------------------------------------------------------------------
+degraded mem:///component=J0100,J0202,J0304,J0406
+         d05a9f16-e969-4988-d340-dea1b54bd307
+-------- ---------------------------------------------------------------------- 
+
+</pre>
+
+Then <tt><b>fmadm repair</b></tt> should be run to remove the memory 
+from the faulty list. 
+
+<pre>
+
+# fmadm repair mem:///component=J0100,J0202,J0304,J0406
+fmadm: recorded repair to mem:///component=J0100,J0202,J0304,J0406
+
+</pre>
+
+<p>
+See the <b>fmadm</b> man page for specific syntax 
+of the command.
+<p>
+<b>Sun Fire Midrange and High End notes:</b>
+<p>
+There may be additional fault information logged by System Controller 
+Application (ScApp) on Sun Fire[TM] Midrange (3800, 48x0, 6800, v1280, 
+E2900, E4900, E6900) and System Management Services (SMS) on 
+High End (12K, 15K, E20K, E25K) Servers.  
+Availability enhancements (called AVL) have been integrated into 
+ScApp 5.19.0 and SMS 1.5 to allow PSH/AVL interaction to coexist.

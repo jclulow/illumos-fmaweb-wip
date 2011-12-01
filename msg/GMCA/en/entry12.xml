@@ -1,0 +1,255 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry12.xml	1.9	08/12/05 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected CPU.  Use &#39;fmadm faulty&#39; to identify the module.</item>
+	<name>description</name>
+	<item>A level 2 Instruction TLB on this cpu is faulty.</item>
+	<name>details</name>
+	<item>This message ID: &lt;B&gt;GMCA-8000-DN&lt;/B&gt; indicates that the Solaris Fault Manager has received 
+reports from a CPU indicating that one or more errors have occurred 
+with this resource resulting in a CPU fault being diagnosed. If an
+uncorrectable error was reported, it likely resulted in a system panic
+or reset followed by a reboot.  If the errors were correctable, they 
+have occurred at a rate exceeding acceptable levels. There should have 
+been no operational impact on system or application activity from 
+correctable errors.
+&lt;P&gt;
+The recommended service action for this event is to schedule replacement 
+of the affected CPU at the earliest possible convenience. The faulted
+CPU has been off-lined to prevent further disruption to system availability.
+However it is not intended nor recommended that the faulted FRU remain 
+in the system for a prolonged period of time.
+&lt;p&gt;
+Identifying the fauty FRU varies depending on the type of Hardware.
+&lt;P&gt;
+Follow the procedure below that applies to your system.
+&lt;p&gt;
+&lt;UL&gt;
+&lt;B&gt;&lt;a href=&quot;#A_Sun_x64_systems&quot;&gt;A) Identify FRU on Sun x64 systems -&lt;/a&gt; &lt;/B&gt;&lt;BR&gt;
+&lt;p&gt;
+&lt;B&gt;&lt;a href=&quot;#B_Third_party_systems&quot;&gt;B) Identify FRU on third party systems -&lt;/a&gt; &lt;/B&gt;&lt;BR&gt;
+&lt;/UL&gt;
+&lt;p&gt;
+&lt;B&gt;&lt;a name=&quot;A_Sun_x64_systems&quot;&gt;&lt;/a&gt;A) Identify FRU on Sun x64 systems,&lt;/B&gt; Follow the steps below to complete FRU identification.
+&lt;p&gt;
+&lt;B&gt;Step 1: &lt;/B&gt; Use fmadm (1M) &lt;tt&gt;faulty&lt;/tt&gt; to List Faulty FRUs, identify unique Event_ID
+string, and Sun Message_ID.&lt;/B&gt;&lt;BR&gt; See Example 1.1 for details.
+&lt;p&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;p&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 1.1 - finding faulty FRU, Event_ID, and Sun Message_ID&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+&lt;p&gt;
+# fmadm faulty
+--------------- ------------------------------------  -------------- ---------
+TIME            EVENT-ID                              MSG-ID         SEVERITY
+--------------- ------------------------------------  -------------- ---------
+Sep 22 14:34:31&lt;FONT COLOR=&quot;blue&quot;&gt; 697735d4-dab0-cf5e-cc94-805bde46e5e0&lt;/FONT&gt;&lt;FONT COLOR=&quot;red&quot;&gt;  GMAC-8000-DN &lt;/FONT&gt;   Major
+
+Fault class : fault.cpu.generic-x86.l2itlb
+
+Affects     : cpu:///cpuid=0
+
+FRU         : &lt;FONT COLOR=&quot;green&quot;&gt;&quot;CPU 0&quot;&lt;/FONT&gt; (hc://:product-id=Sun-Fire-X4100-Server:chassis-id=0618AM0781:
+              server-id=backmarker/motherboard=0/chip=0) faulty
+  
+
+Description : The number of errors associated with this CPU has exceeded
+              acceptable levels.  Refer to http://sun.com/msg/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-DN&lt;/FONT&gt; for
+              more information.
+
+Response    : An attempt will be made to remove this CPU from service.
+
+Impact      : Performance of this system may be affected.
+
+Action      : Schedule a repair procedure to replace the affected CPU.  Use
+              fmdump -v -u &lt;EVENT_ID&gt; to identify the module.
+&lt;/UL&gt;
+&lt;p&gt;
+If a FRU label is supplied like (&quot;CPU 0&quot; as seen above) go to Procedure &lt;a href=&quot;#procedure_C&quot;&gt; &lt;B&gt;C) Completing the recommended 
+repair action &lt;/a&gt;&lt;/B&gt;
+&lt;p&gt;
+&lt;B&gt;Note:&lt;/B&gt;If no FRU label (&quot;CPU 0&quot; as seen above) is listed then you&#39;ll need to 
+follow procedure &lt;B&gt;&lt;a href=&quot;#B_Third_party_systems&quot;&gt;B (Step 1)&lt;/a&gt;&lt;/B&gt; listed below. 
+&lt;p&gt;
+&lt;B&gt;&lt;a name=&quot;B_Third_party_systems&quot;&gt;&lt;/a&gt;B) Identify FRU on third party systems,&lt;/B&gt; Follow the steps below to complete FRU identification
+&lt;p&gt;
+&lt;B&gt;Step 1:&lt;/B&gt; Use fmadm (1M) &lt;tt&gt;faulty&lt;/tt&gt; to List Faulty FRUs, identify unique Event_ID
+string, and Sun Message_ID.&lt;/B&gt;&lt;BR&gt; See Example 1.1 for details.
+&lt;p&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;p&gt;
+&lt;UL&gt;
+&lt;p&gt;
+&lt;B&gt;Example 1.1 - finding faulty FRU, Event_ID, and Message_ID&lt;/B&gt;
+&lt;p&gt;
+On non-Sun systems there will be no FRU label or serial information in
+&lt;tt&gt;fmadm faulty&lt;/tt&gt; output.  We must identify the FRU for replacement
+based on the resource identifier in &lt;tt&gt;fmamd faulty&lt;/tt&gt; output:
+&lt;p&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+&lt;p&gt;
+# fmadm faulty
+--------------- ------------------------------------  -------------- ---------
+TIME            EVENT-ID                              MSG-ID         SEVERITY
+--------------- ------------------------------------  -------------- ---------
+Sep 22 14:34:31&lt;FONT COLOR=&quot;blue&quot;&gt; 697735d4-dab0-cf5e-cc94-805bde46e5e0&lt;/FONT&gt; &lt;FONT COLOR=&quot;red&quot;&gt; GMAC-8000-DN &lt;/FONT&gt;   Major
+
+Fault class : fault.cpu.generic-x86.l2itlb
+
+Affects     : cpu:///cpuid=0
+
+FRU         :  hc://:product-id=ThirdParty:server-id=random/
+               motherboard=0/&lt;FONT COLOR=&quot;green&quot;&gt;chip=0&lt;/FONT&gt; faulty
+  
+
+Description : The number of errors associated with this CPU has exceeded
+              acceptable levels.  Refer to http://sun.com/msg/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-DN&lt;/FONT&gt; for
+              more information.
+
+Response    : An attempt will be made to remove this CPU from service.
+
+Impact      : Performance of this system may be affected.
+
+Action      : Schedule a repair procedure to replace the affected CPU.  Use
+              fmdump -v -u &lt;EVENT_ID&gt; to identify the module.
+&lt;/UL&gt;
+&lt;p&gt;
+As seen in Example 1.1 The FRU is identified as motherboard=0/&lt;FONT COLOR=&quot;green&quot;&gt;chip=0&lt;/FONT&gt;.
+&lt;p&gt;
+The term &#39;chip&#39; used in the output above can also be used to refer
+to a processor or CPU chip, hence &#39;chip=x&#39; equates to &#39;CPU chipx&#39;.
+Note that the cpuid refers to a logical CPU number within the CPU 
+chip.
+&lt;P&gt;
+chip=x maps to the processor chip labeled within the system.
+&lt;BR&gt;The CPU socket for chip=x will usually have a physical label of
+CPU#, CHIP#, P#...
+&lt;P&gt;
+For example:
+&lt;UL&gt;
+chip=0 maps to the physical location labeled; CPU0, CHIP0, P0...
+&lt;BR&gt;chip=1 maps to the physical location labeled; CPU1, CHIP1, P1...
+&lt;p&gt;
+In this example replace chip labeled CPU0, CHIP0, P0...
+&lt;/UL&gt;
+&lt;P&gt;
+Proceed with Procedure &lt;a href=&quot;#procedure_C&quot;&gt; C Completing the recommended repair action &lt;/a&gt;
+&lt;P&gt;
+&lt;B&gt;&lt;a name=&quot;procedure_C&quot;&gt;&lt;/a&gt;C) Completing the recommended repair action &lt;/B&gt;
+&lt;p&gt;
+&lt;B&gt;Step 1: &lt;/B&gt;Replace chip labeled CPU0, CHIP0, P0...(and reboot the system)
+&lt;UL&gt;
+&lt;p&gt;
+Refer to the service label or hardware maintenance manual for correct 
+replacement procedures.
+&lt;/UL&gt;
+&lt;p&gt;
+&lt;B&gt;Step 2: &lt;/B&gt;Update the Fault Manager&#39;s resource cache to indicate
+that no problems are present in the resources that had been diagnosed
+faulty and subsequently replaced in Step 1.
+&lt;P&gt;
+Once the CPU has been physically replaced and the system rebooted,
+you must invoke the &#39;fmadm repair&#39; command using the UUID (Universally 
+Unique IDentifier) to identify the repaired FRU.  The UUID is synonymous
+with the EVENT_ID (highlighted in blue) in procedures A or B Example 1.1 above.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 2.1 - Updating the Fault Manager&#39;s resource cache:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm repair &lt;FONT COLOR=&quot;blue&quot;&gt;697735d4-dab0-cf5e-cc94-805bde46e5e0&lt;/FONT&gt;
+# fmadm: recorded repair to &lt;FONT COLOR=&quot;blue&quot;&gt;697735d4-dab0-cf5e-cc94-805bde46e5e0&lt;/FONT&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 3: &lt;/B&gt;Bring the faulted resource back online by placing the
+          CPU back into the active configuration.
+&lt;P&gt;
+Once you have completed the repair action, and told the fault manager 
+that the FRU has been repaired, it may still be necessary to tell Solaris 
+to use the affected system resource.  If the &lt;B&gt;Automated Response&lt;/B&gt; 
+described above in this article was; &quot;An attempt will be made to remove 
+this CPU from service.&quot;, you will need to place the CPU back into the 
+active configuration and verify that the CPU has been returned to service.
+&lt;P&gt;
+Use Solaris command psrinfo (1M) to identify the logical CPU number that
+was faulted. Example 3.1 below.  
+&lt;UL&gt;
+&lt;B&gt;Example 3.1 - identifying the logical CPU number that was faulted:&lt;/B&gt;
+&lt;PRE&gt;
+# psrinfo
+0       faulted   since 09/22/2008 14:34:31
+1       on-line   since 09/22/2008 14:31:30
+2       on-line   since 09/22/2008 14:34:32
+3       on-line   since 09/22/2008 14:34:34
+&lt;/UL&gt;
+&lt;P&gt;&lt;/PRE&gt;
+&lt;P&gt;
+Place the faulted CPU back into the active configuration using the psradm 
+(1M) command; &#39;psradm -F -n x&#39; where x is the logical cpuid.  As logical CPU 
+0 was identified as the faulted CPU, the psradm (1M) command shown in Example 
+3.2 below will return it to the active configuration.
+&lt;UL&gt;
+&lt;B&gt;Example 3.2 - returning the repaired CPU to the active configuration:&lt;/B&gt;
+&lt;PRE&gt;
+# psradm -F -n 0
+&lt;/UL&gt;&lt;/PRE&gt;
+&lt;P&gt;
+&lt;B&gt;Step 4: &lt;/B&gt;Verify the CPU is in use by the system.
+&lt;P&gt;
+To verify that the CPU has been returned to service, use the Solaris 
+command psrinfo (1M). See Example 4.1 below.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 4.1 - verifying the CPU has returned to service:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# psrinfo
+0       on-line   since 09/22/2008 14:45:16
+1       on-line   since 09/22/2008 14:44:19
+2       on-line   since 09/22/2008 14:44:57
+3       on-line   since 09/22/2008 14:44:23 
+&lt;/UL&gt;&lt;/PRE&gt;</item>
+	<name>impact</name>
+	<item>Performance of this system may be affected.</item>
+	<name>response</name>
+	<item>The system will attempt to offline this cpu to remove it from service.</item>
+	<name>title</name>
+	<item>Level 2 Instruction TLB Fault</item>
+</event_registry_properties>

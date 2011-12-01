@@ -1,0 +1,72 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry34.xml	1.12	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Use &lt;tt&gt;&lt;b&gt;fmdump -v -e -u &lt;i&gt;EVENT_ID&lt;/i&gt;&lt;/b&gt;&lt;/tt&gt; to get information 
+on the detected error(s).
+&lt;p&gt;
+The event-id can be found in the EVENT-ID field of the message.
+&lt;p&gt;
+For example:
+&lt;p&gt;
+&lt;ul&gt;
+
+&lt;tt&gt;EVENT-ID: d05a9f16-e969-4988-d340-dea1b54bd307&lt;/tt&gt;
+&lt;/ul&gt;</item>
+	<name>description</name>
+	<item>An error has been detected in a system which currently does not support 
+diagnosis.</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;&amp;nbsp;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt; 
+indicates a memory error was detected by your system.  
+Diagnosis is not currently available for this system, please use 
+&lt;tt&gt;&lt;b&gt;fmdump -v -e -u &lt;i&gt;EVENT_ID&lt;/i&gt;&lt;/b&gt;&lt;/tt&gt; to gather more 
+information on the error and open a call to your Sun Service provider.
+&lt;p&gt;
+&lt;b&gt;Note:&lt;/b&gt; You may also be requested to provide a copy of the files in the 
+/var/fm/fmd directory and also a copy of the output from the 
+&lt;tt&gt;&lt;b&gt;fmadm config&lt;/b&gt;&lt;/tt&gt; command.
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>The error log will need to be manually examined using fmdump(1M) in 
+order to determine if any human response is required.</item>
+	<name>po-action</name>
+	<item>Use fmdump -ev -u &amp;lt;EVENT-ID&amp;gt; to view and record the undiagnosed errors.</item>
+	<name>po-description</name>
+	<item>The Solaris Fault Manager received an event from the IO subsystem for which automated diagnosis software is currently unavailable.</item>
+	<name>po-impact</name>
+	<item>The error log will need to be manually examined using fmdump(1M) in order to determine if any human response is required.</item>
+	<name>po-response</name>
+	<item>The error information has been saved for examination by Sun.</item>
+	<name>response</name>
+	<item>None.</item>
+	<name>title</name>
+	<item>Diagnosis software unavailable</item>
+</event_registry_properties>

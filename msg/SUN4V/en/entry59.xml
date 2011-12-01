@@ -1,0 +1,108 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry59.xml	1.12	08/09/08 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected component, the identity
+of which can be determined by using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;.
+</item>
+	<name>description</name>
+	<item>An ultraSPARC-T2plus Coherency Interconnect has detected a single-lane
+failure communicating with a CPU.
+</item>
+	<name>details</name>
+	<item>The Message ID:&amp;nbsp;
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;&lt;/font&gt; 
+indicates an ultraSPARC-T2plus Coherency Interconnect has detected a single-lane
+failure communicating with a CPU.
+No data has been lost. However, a data lane has been taken
+ out of service which will reduce the system&#39;s ability to correct 
+transmission errors and may impact system performance.  The system 
+is at increased risk of incurring an uncorrectable error, which 
+will cause a service interruption, until the problem is resolved.
+&lt;p&gt;
+Also, see &lt;b&gt;NOTE&lt;/b&gt; below for a description of an existing issue with this
+diagnosis (CR 6703902).
+&lt;p&gt;
+Use the command &amp;nbsp;&lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the PSH console message
+ to locate the suspected faulty components.   
+
+&lt;p&gt;
+&lt;pre&gt; 
+# fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;c835b359-c892-4960-af42-d19d6220d9c1&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID 
+Sep 02 12:44:53.2208 &lt;font color = &quot;BLUE&quot;&gt;c835b359-c892-4960-af42-d19d6220d9c1&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;SUN4V-8001-UH&lt;/font&gt; 
+  50%  fault.asic.ultraSPARC-T2plus.interconnect.lfu-f 
+
+       Problem in: hc://:product-id=SUNW,T5440:chassis-id=0704BB5053:server-id=wgs40-49/motherboard=0/interconnect=0 
+          Affects: hc://:product-id=SUNW,T5440:chassis-id=0704BB5053:server-id=wgs40-49/motherboard=0/interconnect=0 
+              &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:product-id=SUNW,T5440:chassis-id=0704BB5053:server-id=wgs40-49:serial=2A013E:part=501778312/motherboard=0&lt;/font&gt;  
+         &lt;font color = &quot;GREEN&quot;&gt;Location: MB&lt;/font&gt;  
+
+  50%  fault.cpu.ultraSPARC-T2plus.chip 
+
+       Problem in: hc://:product-id=SUNW,T5440:chassis-id=0704BB5053:server-id=wgs40-49:serial=6fa9906d91965d0e/motherboard=0/cpuboard=1/chip=1 
+          Affects: hc:///motherboard=0/cpuboard=1/chip=1 
+              &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:product-id=SUNW,T5440:chassis-id=0704BB5053:server-id=wgs40-49:serial=2E005E:part=501794007/motherboard=0/cpuboard=1&lt;/font&gt;  
+         &lt;font color = &quot;GREEN&quot;&gt;Location: MB/CPU1&lt;/font&gt;  
+&lt;/pre&gt;
+
+&lt;p&gt;
+In the example above, the diagnosis indicates the faulty FRU may be 
+either the motherboard or a CPU module.  Also note the FRU part
+numbers and locations of the suspect FRUs are included:  
+&lt;p&gt;
+&lt;pre&gt;
+&lt;font color = &quot;GREEN&quot;&gt;part=501778312&lt;/font&gt;
+&lt;font color = &quot;GREEN&quot;&gt;Location: MB&lt;/font&gt;
+
+&lt;font color = &quot;GREEN&quot;&gt;part=501794007&lt;/font&gt;
+&lt;font color = &quot;GREEN&quot;&gt;Location: MB/CPU1&lt;/font&gt;
+&lt;/pre&gt;
+&lt;p&gt;
+&lt;p&gt;
+&lt;b&gt;NOTE&lt;/b&gt;: This diagnosis will also result from a multi-lane failure
+between the ultraSPARC-T2plus Coherency Interconnect and a CPU (CR 6703902).
+If this occurs, the system will reset.  When the system reboots, there
+will be a diagnosis similar to the example above.  In this case,
+the suspect FRUs are correct, however the problem was not recoverable.
+&lt;p&gt;
+A patch is not yet available to resolve this issue.  When the patch 
+becomes available, it will be posted on this message.
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>The system&#39;s performance may be impacted.
+</item>
+	<name>response</name>
+	<item>No automated reponse.
+</item>
+	<name>title</name>
+	<item>ultraSPARC-T2plus Coherency Interconnect LFU subsystem fault
+</item>
+</event_registry_properties>

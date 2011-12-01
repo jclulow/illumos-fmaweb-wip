@@ -1,0 +1,51 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)0.html	1.10	08/08/21 SMI" -->
+
+While a service is disabled, the Solaris Service Manager will not
+start it.  If a running service is disabled (for example, by
+<code>svcadm&nbsp;disable&nbsp;-t</code>),
+the Service Manager will send a stop command to the service's
+restarter, which may be the Solaris Service Manager itself.  The
+restarter will stop the service and place it in the disabled state.
+<p>
+The Message ID:&nbsp;&nbsp;
+<font size="+1"><code><b>SMF-8000-05</b></code></font> indicates
+that the service is disabled.
+</p>
+<p>
+See <a href="http://www.sun.com/bigadmin/content/selfheal/">"Predictive
+Self-Healing"</a> for additional information and the 
+<a href="http://www.sun.com/software/solaris/howtoguides/servicemgmthowto.jsp#2/">
+"SMF How To Guide"</a>.
+</p>
+<p>
+If the Suggested Action fails to start the service, contact Sun Service
+with the output of <code>svcs&nbsp;-xv</code>,<code> svcs&nbsp;-l&nbsp;</code> and
+the output from <i>/var/svc/log/</i> from associated service. See <code>smf(5)</code>
+for additional FMRI definition.
+</p>

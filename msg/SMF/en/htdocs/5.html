@@ -1,0 +1,57 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)5.html	1.6	08/08/21 SMI" -->
+
+	<p>
+	  The Solaris Service Manager issues commands for a service to its
+	  responsible restarter, which may be the Solaris Service Manager
+	  itself.
+
+	<p>
+	The Message ID:&nbsp;&nbsp; <font
+	  size="+1"><code><b>SMF-8000-5H</b></code></font> indicates
+	that the service's restarter is not running, so commands from the
+	Service Manager for the service will not be executed.
+	This outcome can indicate a misunderstanding of the requirements
+	of various software components, a misconfiguration of the
+	system, or a defect in Solaris.
+        <p>
+        Use <code>svcs&nbsp;-l</code> to determine the FMRI of the 
+        service's restarter.  
+        Use <code>svcs&nbsp;-xv</code> to see 
+        an explanation for the restarter's state and to see a list of 
+        services waiting for the service to start.
+        See <code>svcs(1)</code> for additional syntax and <code>smf(5)</code> 
+        for FMRI definition.
+        <p>
+	See <a href="http://www.sun.com/bigadmin/content/selfheal/">"Predictive
+	Self-Healing"</a> for additional information.
+        </p>
+
+	If the above Action doesn't help, use the instructions in document <a href="http://sunsolve.sun.com/search/document.do?assetkey=1-61-203634-1&searchclause=203634">
+        203634</a> to place svc.startd in debug mode and contact your service provider.
+        </p>

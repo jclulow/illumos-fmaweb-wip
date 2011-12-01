@@ -1,0 +1,102 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry31.xml	1.4	07/05/22 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Verify that the configuration of the I/O boats are supported, and that
+the total current draw of the installed IO cards is within spec. If
+nothing further is found, please open a case with your authorized
+service provider to assist with further analysis.
+</item>
+	<name>description</name>
+	<item>An over-current warning was detected in a power supply
+</item>
+	<name>details</name>
+	<item>A power supply is experiencing a persistent over-current warning. This indicates excessive current
+draw on the supply from within the I/O Expansion Unit. This can be caused by a short in the system, or
+using too many high-power I/O cards. This is not caused by a current spike entering the system.&lt;p&gt;
+
+Follow the steps below to obtain the necessary data for presentation to your authorized service
+provider.&lt;p&gt;
+
+&lt;b&gt;Step 1:&lt;/b&gt;  Collect the fault message.&lt;br&gt;
+A single line fault message is displayed to the system console and logged in the /var/logs/message file.
+The complete message may be retrieved by using the &#39;fmdump&#39; command on the XSCF console as
+shown below.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+LEGEND:&lt;br&gt;
+&lt;font color = &quot;RED&quot;&gt;    RED = SUNW-MSG-ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;BLUE&quot;&gt;   BLUE = EVENT_ID&lt;/font&gt;&lt;br&gt;
+&lt;font color = &quot;GREEN&quot;&gt;  GREEN = FRU&lt;/font&gt;&lt;br&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -m&lt;/i&gt;
+   MSG-ID: &lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-YE&lt;/font&gt;, TYPE: Fault, VER: 1, SEVERITY: Major
+   EVENT-TIME: Tue Mar 27 10:28:25 PDT 2007
+   PLATFORM: SPARC-Enterprise, CSN: BE80601000, HOSTNAME: server-0
+   SOURCE: sde, REV: 1.12
+   EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;e8986c1a-d4af-4a7f-bea4-bf2ab8a984aa&lt;/font&gt;
+   DESC: An over-current warning was detected in a power supply
+   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-YE&lt;/font&gt; for more information.
+   AUTO-RESPONSE: No immediate action is taken
+   IMPACT: No immediate impact to the system. This warning may precede a power failure.
+   REC-ACTION: Verify that the configuration of the I/O boats are supported, and
+   that the total current draw of the installed IO cards is within spec. If
+   nothing further is found, please open a case with your authorized service
+   provider to assist with further analysis.&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 2:&lt;/b&gt; Collect the &quot;fmdump&quot; output.&lt;br&gt;
+
+Use the fmdump command with the Event-ID option to retrieve more information on the fault which
+has occurred.&lt;p&gt;
+
+&lt;b&gt;Example:&lt;/b&gt;&lt;p&gt;
+
+&lt;pre&gt;&lt;i&gt;XSCF&gt; fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;e8986c1a-d4af-4a7f-bea4-bf2ab8a984aa&lt;/font&gt;&lt;/i&gt;
+   TIME                 UUID                                 MSG-ID
+   Mar 27 10:28:25.9254 &lt;font color = &quot;BLUE&quot;&gt;e8986c1a-d4af-4a7f-bea4-bf2ab8a984aa&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-YE&lt;/font&gt;
+       100% fault.chassis.iox.power.warning
+       Problem in: hc:///iox=983392/ps=1
+          Affects: -
+              FRU: hc://:product-id=SPARC-Enterprise:chassisid=BE80601000:server-id=server-
+0:serial=LL0380:part=CF003002001/3002001:revision=02/component=&lt;font color = &quot;GREEN&quot;&gt;IOX@X031/PS1&lt;/font&gt;&lt;/pre&gt;&lt;p&gt;
+
+&lt;b&gt;Step 3:&lt;/b&gt; Provide the output collected to your service provider.&lt;br&gt;
+
+The information collected above will help your service provider to schedule a repair at your
+convenience.</item>
+	<name>impact</name>
+	<item>No immediate impact to the system. This warning may preceed a power failure.
+</item>
+	<name>response</name>
+	<item>No immediate action is taken
+</item>
+	<name>title</name>
+	<item>External I/O Expansion Unit internal power warning
+</item>
+</event_registry_properties>

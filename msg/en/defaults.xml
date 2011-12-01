@@ -1,0 +1,93 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)defaults.xml	1.7	07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>article</name>
+	<item>&lt;!-- start: article --&gt;
+&lt;!-- code: %MSGID% --&gt;
+&lt;!-- keys: %(keys)% --&gt;
+&lt;table width="80%"&gt;&lt;tr&gt;&lt;td&gt;
+&lt;b&gt;%(title)%&lt;/b&gt;
+&lt;p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;p&gt;&lt;b&gt;Type&lt;/b&gt;
+&lt;dd&gt;%(type)%
+&lt;dt&gt;&lt;p&gt;&lt;b&gt;Severity&lt;/b&gt;
+&lt;dd&gt;%(severity)%
+&lt;dt&gt;&lt;p&gt;&lt;b&gt;Description&lt;/b&gt;
+&lt;dd&gt;%(description)%
+&lt;dt&gt;&lt;p&gt;&lt;b&gt;Automated Response&lt;/b&gt;
+&lt;dd&gt;%(response)%
+&lt;dt&gt;&lt;p&gt;&lt;b&gt;Impact&lt;/b&gt;
+&lt;dd&gt;%(impact)%
+&lt;dt&gt;&lt;p&gt;&lt;b&gt;Suggested Action for System Administrator&lt;/b&gt;
+&lt;dd&gt;%(action)%
+&lt;dt&gt;&lt;p&gt;&lt;b&gt;Details&lt;/b&gt;
+&lt;dd&gt;%(details)%
+&lt;/dl&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;!-- end: article --&gt;
+</item>
+	<name>po-entry</name>
+	<item>#
+# code: %(_MSGID)%
+# keys: %(keys)%
+#
+msgid "%(_MSGID)%.type"
+msgstr "%(\po-type:\type)%"
+msgid "%(_MSGID)%.severity"
+msgstr "%(\po-severity:\severity)%"
+msgid "%(_MSGID)%.description"
+msgstr "%(\po-description:\description)%  Refer to %s for more information."
+msgid "%(_MSGID)%.response"
+msgstr "%(\po-response:\response)%"
+msgid "%(_MSGID)%.impact"
+msgstr "%(\po-impact:\impact)%"
+msgid "%(_MSGID)%.action"
+msgstr "%(\po-action:\action)%"
+</item>
+
+	<name>text-defect</name>
+	<item>Defect</item>
+
+	<name>text-fault</name>
+	<item>Fault</item>
+
+	<name>text-error</name>
+	<item>Error</item>
+
+	<name>text-minor</name>
+	<item>Minor</item>
+
+	<name>text-major</name>
+	<item>Major</item>
+
+	<name>text-critical</name>
+	<item>Critical</item>
+</event_registry_properties>

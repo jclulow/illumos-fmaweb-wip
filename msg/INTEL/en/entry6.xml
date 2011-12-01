@@ -1,0 +1,1064 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry6.xml	1.10	09/02/26 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected CPU.  Use &#39;fmadm faulty&#39; to identify the module.</item>
+	<name>description</name>
+	<item>A level 0 Data TLB on this cpu is faulty.</item>
+	<name>details</name>
+	<item>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;INTEL-8000-6C&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;br&gt;
+Message ID: &lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8000-6C&lt;/span&gt;
+indicates that the Solaris Fault Manager
+has received an error report&lt;br&gt;
+indicating that a processor has experienced an error in the level 0
+data translation lookaside bufer (TLB).&lt;br&gt;
+&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;/span&gt;&lt;br&gt;
+If an&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;ArialNarrow-Bold&quot;&gt;&lt;font size=&quot;3&quot;&gt;
+uncorrectable
+or fatal processor error is reported by a machine check exception,&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;font
+ color=&quot;#000000&quot;&gt;&lt;font face=&quot;ArialNarrow-Bold&quot;&gt;&lt;font size=&quot;3&quot;&gt;&amp;nbsp;
+&lt;br&gt;
+Solaris
+will generate an ereport and then proceed to panic &lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;font
+ color=&quot;#000000&quot;&gt;&lt;font face=&quot;ArialNarrow-Bold&quot;&gt;&lt;font size=&quot;3&quot;&gt;the
+system, followed by a warm reset.&lt;br&gt;
+Upon
+reboot, the Solaris operating system will replay the error telemetry
+and diagnose a faulty cpu, &lt;br&gt;
+resulting in that CPU/processor being off-lined.&amp;nbsp; &lt;/font&gt;&lt;/font&gt;&lt;/font&gt;Performance
+of this system may be affected.&lt;br&gt;
+&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;ArialNarrow-Bold&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;
+Your system may provide the capability to illuminate a service-required
+LED on or near a faulty component &lt;br&gt;
+as an aid in physically locating the faulty component. The Sun products
+listed below provide this feature.&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Sun Fire X2270, Sun Fire X4170, Sun Fire
+X4270, Sun Fire X4275, Sun
+Blade X6270, Sun Blade X6275&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; The
+service-required LED indicator next to the faulty processor will be
+illuminated.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; However, when
+equipped with a
+&quot;&lt;span style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;fault
+remind&lt;/span&gt;&quot; button on the motherboard, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; the
+service required LED will illuminate only when this button is
+depressed. &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
+status of the processor&#39;s service required LED is displayed from the
+ILOM CLI as:
+/SYS/MB/P0/SERVICE = On&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Refer to
+the
+service label located on top cover for the location of
+processor and the &quot;Fault Remind&quot; button.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; The chassis-wide service
+required LED on the rackmount server or blade
+server will also be illuminated.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; The status of the
+chassis-wide service required LED is displayed from the ILOM CLI
+as:&amp;nbsp; /SYS/SERVICE = On&lt;br&gt;
+&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;ArialNarrow-Bold&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;
+&amp;nbsp;
+&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&lt;/span&gt;The recommended service actions for this event are as
+follows: &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a
+ href=&quot;#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;Section A -&amp;nbsp; Identify Faulty
+Component / FRU&lt;/span&gt;&lt;/a&gt; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a
+ href=&quot;#B_Contact_your_Authorized_Service&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;Section B -&amp;nbsp; Contact Authorized
+Service Provider&lt;/span&gt;&lt;/a&gt; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a
+ href=&quot;#C_Clearing_Fault_after_Processor&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;Section C -&amp;nbsp; Clearing Fault after
+Replacement&lt;/span&gt;&lt;/a&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a href=&quot;#D_Enable_Processor&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;Section D -&amp;nbsp; Enable Off-lined Resource&lt;/span&gt;&lt;/a&gt;&lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_85/SOLARIS_CPU_Errors_21/INTEL-8000-6C_fault.cpu.intel.l0dtlb.html#C_Clearing_Fault_after_Processor&quot;
+ style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;
+&lt;/a&gt;&lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_85/SOLARIS_CPU_Errors_21/INTEL-8000-6C_fault.cpu.intel.l0dtlb.html#C_Clearing_Fault_after_Processor&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;div style=&quot;text-align: left;&quot;&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;a
+ name=&quot;A_Identify_the_Faulty_ComponentFRU_&quot;&gt;&lt;/a&gt;Section A -&amp;nbsp;
+Identify Faulty Component / FRU&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;
+&lt;span style=&quot;text-decoration: underline;&quot;&gt;LEGEND&lt;/span&gt;&lt;br
+ style=&quot;text-decoration: underline;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;GREEN =&amp;nbsp;
+FRU&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp; EVENT_ID&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp;
+SUNW-MSG-ID&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris provides commands that
+can be used to obtain
+information about faults present in the system.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; The &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;fmadm faulty&lt;/span&gt;&quot;
+command is the preferred method by
+which fault information can be obtained.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; The &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;fmdump -av&lt;/span&gt;&quot;
+command is an alternative method for
+obtaining simular fault information.&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris nomenclature numbering assignment is
+zero-based, therefore all numbering begins with the number 0. &lt;/li&gt;
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
+term &quot;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline; color: rgb(0, 153, 0);&quot;&gt;chip&lt;/span&gt;&quot;
+is used to describe the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;physical&lt;/span&gt;
+CPU/Processor.&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
+term &quot;&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;cpuid&lt;/span&gt;&quot;
+is used to describe the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;logical/virtual&lt;/span&gt;
+CPU/Processor.&lt;/li&gt;
+  &lt;li&gt;&amp;nbsp; &amp;nbsp; A logical CPU is a strand/thread of a core
+contained within a physical CPU/Processor.&lt;/li&gt;
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; The field replaceable unit is the &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;physical &lt;/span&gt;CPU/Processor.&lt;/li&gt;
+&lt;/ul&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Note:&amp;nbsp; The Event-ID&amp;nbsp;
+shown in &lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step
+A1&lt;/span&gt;
+and UUID shown in &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;
+are one in the same, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+as is the MSG-ID shown in &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A1&lt;/span&gt;
+and SUNW-MSG-ID shown in &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Step
+A1.&amp;nbsp; &lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;How to Identify the
+faulty processor/chip using &quot;&lt;span style=&quot;text-decoration: underline;&quot;&gt;fmadm
+faulty&lt;/span&gt;&quot;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Example:&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp; &lt;/span&gt;Use
+fmadm (1M) faulty to list the faulty FRU&#39;s, unique
+Event_ID,&amp;nbsp; and Sun Message_ID. &lt;br&gt;
+&lt;span style=&quot;font-style: italic;&quot;&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt; # fmadm faulty&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+---------------&amp;nbsp;&amp;nbsp;&amp;nbsp;
+--------------------------------------------&amp;nbsp;
+------------------&amp;nbsp; ------------&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+EVENT-ID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+MSG-ID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+SEVERITY&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; ---------------&amp;nbsp;&amp;nbsp;&amp;nbsp;
+--------------------------------------------&amp;nbsp;
+------------------&amp;nbsp; -------------&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; Sep 26 20:46:15 &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8a47c7ba-8e66-c19f-f874-8f22a2b70cac&lt;/span&gt;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8000-6C&amp;nbsp;&lt;/span&gt;
+Major&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp; Fault class : fault.cpu.intel.l0dtlb&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Affects : cpu:///&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;cpuid=1&lt;/span&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; degraded but still in service&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; FRU :
+hc://:product-id=ASSY,MOTHERBOARD,LYNX_SERVER:chassis-id=0000000000:server-id=wgs40-117/motherboard=0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+faulty&lt;br&gt;
+&amp;nbsp;
+&lt;span style=&quot;font-style: italic;&quot;&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Description : A level 0 Data
+TLB on this cpu is faulty.&amp;nbsp; Refer to http://sun.com/msg/&lt;span
+ style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8000-6C&lt;/span&gt;
+for more information.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span
+ style=&quot;font-style: italic;&quot;&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Response : The system will attempt to offline this
+cpu to remove it
+from service.&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Impact : Performance of
+this system may be affected.&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; Action : Schedule a
+repair procedure to replace the affected CPU.&amp;nbsp; Use fmadm faulty&#39;
+to identify the module.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+If your product does not provide the &quot;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;fmadm faulty&lt;/span&gt;&quot;
+output as shown above, proceed to &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div style=&quot;margin-left: 40px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The example shown in &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A1&lt;/span&gt;;&lt;br&gt;
+&lt;/div&gt;
+&lt;ul style=&quot;margin-left: 80px;&quot;&gt;
+  &lt;li&gt;Identifies the&amp;nbsp;&lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;logical/virtual&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;processor as &quot;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 0, 0);&quot;&gt;cpuid=1&lt;/span&gt;&quot; in the
+line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Affects&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Identifies the &lt;span style=&quot;font-weight: bold;&quot;&gt;physical &lt;/span&gt;processor
+as &quot;&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;&quot;&amp;nbsp;
+in the line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;FRU&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Identifies the location of the physical processor within the
+server as &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;/motherboard=0/&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&quot;margin-left: 40px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+There is typically one motherboard in a server and it is commonly
+referred to as
+&quot;motherboard=0&quot;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The physical processor, &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;/chip=1&quot;&lt;/span&gt;,
+refers to the second physical processor
+on the motherboard.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Proceed to &lt;span style=&quot;font-weight: bold;&quot;&gt;Step A3.&lt;/span&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Step
+A2.&amp;nbsp; &lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;How to Identify the
+faulty processor/chip using &quot;&lt;span style=&quot;text-decoration: underline;&quot;&gt;fmdump
+-av&lt;/span&gt;&quot;.&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&lt;/span&gt;&lt;span style=&quot;font-style: italic;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Example:&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp; &lt;/span&gt;Use
+fmdump (1M) to list the faulty FRU&#39;s, unique
+Event_ID,&amp;nbsp; and Sun Message_ID. &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt; # fmdump&amp;nbsp; -av&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+TIME&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp;
+UUID&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;
+SUNW-MSG-ID&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Sep 26 20:46:15.5823&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8a47c7ba-8e66-c19f-f874-8f22a2b70cac&lt;/span&gt;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8000-6C&lt;/span&gt;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+100%&amp;nbsp; fault.cpu.intel.l0dtlb&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Problem in:
+hc://:product-id=ASSY,MOTHERBOARD,LYNX_SERVER:chassis-id=0000000000:server-id=wgs40-117/motherboard=0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;/core=0/strand=0&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp;
+Affects: cpu:///cpuid=1&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+FRU:
+hc://:product-id=ASSY,MOTHERBOARD,LYNX_SERVER:chassis-id=0000000000:server-id=wgs40-117/motherboard=0/&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp;
+Location: -&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div style=&quot;margin-left: 40px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The example shown in &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A2&lt;/span&gt;;&lt;br&gt;
+&lt;/div&gt;
+&lt;ul style=&quot;margin-left: 80px;&quot;&gt;
+  &lt;li&gt;Identifies the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;logical/virtual
+    &lt;/span&gt;processor as &quot;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 0, 0);&quot;&gt;cpuid=1&lt;/span&gt;&quot; in the
+line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Affects&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Identifies the &lt;span style=&quot;font-weight: bold;&quot;&gt;physical &lt;/span&gt;processor
+as &quot;&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;&quot;&amp;nbsp;
+in the line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;FRU&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Identifies the &lt;span style=&quot;font-weight: bold;&quot;&gt;strand &lt;/span&gt;contained
+within the physical processor as &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;strand=0&lt;/span&gt;&quot;
+in the line beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Problem&lt;/span&gt;.&lt;br&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Identifies the location of the physical processor within the
+server as &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;/motherboard=0/&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&quot;margin-left: 40px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+There is typically one motherboard in a server and can be commonly
+referred to as
+&quot;motherboard=0&quot;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The physical processor, &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;/chip=1&quot;&lt;/span&gt;,
+refers to the second physical processor
+on the motherboard.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Proceed to &lt;span style=&quot;font-weight: bold;&quot;&gt;Step A3.&lt;/span&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;Step
+A3.&amp;nbsp; How to Identify the &quot;&lt;span style=&quot;text-decoration: underline;&quot;&gt;physical&lt;/span&gt;&quot;
+location of the faulty processor/chip. &lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Sun
+Platforms&lt;/span&gt;&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; A
+service label on the top cover and silk screen on the motherboard
+can assist with identifying the &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+physical location of the processor/chip.&amp;nbsp; Typically, there is a
+label in the
+proximity of the processor/chip. &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The label nomenclature for a CPU/Processor is &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;Px&lt;/span&gt;, whereby
+&#39;x&#39;
+represents the processor number.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; Sun platforms use zero-based numbering for their labeling
+scheme, and as such, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+the faulty
+processor/chip
+identified in our example above
+(e.g. &quot;&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;/chip=1&lt;/span&gt;&quot;)
+would be interpreted as &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P1&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; e.g.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=0&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P0&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P1&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=2&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P2&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=3&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P3&quot;&lt;/span&gt;.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Non-Sun
+Platforms&lt;/span&gt;&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; A
+service label on the top cover or silk screen on the motherboard may
+exist
+to assist with identifying the &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+physical location of the processor/chip.&amp;nbsp; Typically, there is a
+label in the
+proximity of the processor/chip. &lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The label nomenclature for a CPU/Processor can be in the form of:&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;P&lt;span
+ style=&quot;font-style: italic;&quot;&gt;x&lt;/span&gt;&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CPU&lt;span
+ style=&quot;font-style: italic;&quot;&gt;x&lt;/span&gt;&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CHIP&lt;span
+ style=&quot;font-style: italic;&quot;&gt;x&lt;/span&gt;&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;SCKT&lt;span
+ style=&quot;font-style: italic;&quot;&gt;x&lt;/span&gt;, etc;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+whereby &#39;&lt;span style=&quot;font-style: italic;&quot;&gt;x&lt;/span&gt;&#39;
+represents the processor number.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; If the product uses zero-based numbering for its labeling
+scheme, as Sun&#39;s products do, the faulty&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; processor
+identified in our example
+(e.g. &quot;&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;/chip=1&lt;/span&gt;&quot;)
+would be &lt;font color=&quot;#ff0000&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;identified&lt;/font&gt;
+as &lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;Px&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CPUx&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CHIPx&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;SCKTx, etc;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; e.g.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;chip=0&lt;/span&gt;
+maps to the physical location labeled;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;P0&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CPU0&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CHIP0&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;SCKT0, etc;&lt;/span&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;
+maps to the physical location labeled;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;P1&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CPU1&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CHIP1&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;SCKT1, etc;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=2&lt;/span&gt;
+maps to the physical location labeled;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;P2&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CPU2&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CHIP2&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;SCKT2, etc;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=3&lt;/span&gt;
+maps to the physical location labeled;&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;P1&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CPU3&lt;/span&gt;, &lt;span
+ style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;CHIP3&lt;/span&gt;,
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;SCKT3, etc;&lt;/span&gt;.
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; The recommended service action for this
+event is to replace the faulty processor.&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; The processor is not customer
+serviceable and requires repair by
+an authorized service provider.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;a
+ name=&quot;B_Contact_your_Authorized_Service&quot;&gt;&lt;/a&gt;Section B -&amp;nbsp;&amp;nbsp;
+Contact Authorized Service Provider&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;font color=&quot;#000000&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Please contact
+your service provider in accordance with the terms and conditions of
+your service &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; agreement to open a service request and
+to confirm and carry out the required repair actions specified &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; by current service policy.&lt;/font&gt;&lt;font
+ color=&quot;#000000&quot;&gt;&lt;span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Your service provider may ask for
+information displayed using the procedures outlined in &lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_85/DONE_ILOM_CPU_Errors_27_021209/External_Complete_Feb2009/SPX86-8001-0Q.html#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;Section
+&lt;/a&gt;&lt;/span&gt;&lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_85/DONE_ILOM_CPU_Errors_27_021209/External_Complete_Feb2009/SPX86-8001-0Q.html#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;A&lt;/a&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/font&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; If the product is covered by a current
+service agreement with Sun Microsystems, Inc., &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; please refer to the following&amp;nbsp;
+instructions for reporting the problem and opening a service
+request.&amp;nbsp; &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;font&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/span&gt;&lt;/font&gt;&lt;font&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;span
+ style=&quot;text-decoration: underline;&quot;&gt;Auto Service Request (ASR)
+Activated for the Product&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/font&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &lt;font&gt;If ASR has been activated for the product on which
+this problem was diagnosed, you have, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; or will receive a notification via e-mail confirming a service
+request has been automatically &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+opened along with instructions for viewing the service request.&lt;/font&gt;&lt;br&gt;
+&lt;font&gt;&lt;i&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; A&lt;/i&gt;ll of the fault event telemetry required to open a service
+request has already been transmitted&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; to Sun Services.
+Unless contacted and instructed otherwise by a Sun Service
+representative,&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; no further actions is required to report this problem to Sun
+Microsystems.&lt;br&gt;
+&lt;/font&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The e-mail notification will provide a pointer back to this same
+article. &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;&lt;br&gt;
+&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; If you are reading this article in response to a fault
+message or SNMP trap generated on the product, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; rather than
+in response to the ASR notification e-mail above, then you
+can check on the status of the &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; associated service request by logging into the Members
+Support Center at&amp;nbsp; &lt;a href=&quot;http://sun.com/support&quot;&gt;http://sun.com/support&lt;/a&gt;&amp;nbsp;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; For more information on Auto Service Request
+(ASR) and the currently supported products, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; please refer to &lt;a href=&quot;http://sun.com/service/asr&quot;&gt;http://sun.com/service/asr&lt;/a&gt;
+&lt;div&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;
+&lt;/font&gt;&lt;/font&gt;
+&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Submitting
+a Service Request via the Members Support Center Portal&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+In cases where ASR has not been activated:&lt;br&gt;
+&lt;br&gt;
+&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/font&gt;&lt;/font&gt;1.&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;Times New Roman&quot;
+ size=&quot;3&quot;&gt;&amp;nbsp; Login to
+the Members Support Center at&amp;nbsp; &lt;/font&gt;&lt;a
+ href=&quot;http://sun.com/support&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;http://sun.com/support&lt;/font&gt;&lt;/a&gt;&lt;font
+ face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt; &lt;/font&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;&lt;/font&gt;2.&lt;font color=&quot;#000000&quot;
+ style=&quot;font-weight: bold;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&amp;nbsp;
+&lt;/font&gt;&lt;/font&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;Create
+a Service
+Request &lt;/font&gt;&lt;/div&gt;
+&lt;div&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;/font&gt;3.&lt;font color=&quot;#000000&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&amp;nbsp;
+&lt;/font&gt;&lt;/font&gt;&lt;font face=&quot;Times New Roman&quot; color=&quot;#000000&quot; size=&quot;3&quot;&gt;Copy
+and paste the
+information displayed using the instructions provided in &lt;a
+ href=&quot;file:///C:/Downloads/Lynx/FMA/KnowledgeArticles_85/DONE_ILOM_CPU_Errors_27_021209/External_Complete_Feb2009/SPX86-8001-0Q.html#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;Section
+A&lt;/a&gt; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; to identify the faulty
+FRU(s), into the Service Request notes.&lt;/font&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;a
+ name=&quot;C_Clearing_Fault_after_Processor&quot;&gt;&lt;/a&gt;Section C -&amp;nbsp;
+Clearing Fault after Replacement&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;text-decoration: underline;&quot;&gt;LEGEND&lt;/span&gt;&lt;br
+ style=&quot;text-decoration: underline;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;GREEN =&amp;nbsp;
+FRU&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp; EVENT_ID&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp;
+SUNW-MSG-ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Solaris Command
+to Clear the Fault&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; Once the processor/chip has been physically
+replaced
+and the system
+is rebooted, a fault management command is&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; required to clear the processor/chip fault
+from the
+Solaris fault manager&#39;s resource cache to accurately reflect faults &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; that are no
+longer
+present.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Invoke the &quot;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;fmadm repair&lt;/span&gt;&quot;
+command along with the &lt;span
+ style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;UUID&lt;/span&gt;
+(Universally
+Unique IDentifier) associated with the faulted processor.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; e.g.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Sep 26
+20:46:15 &lt;span style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8a47c7ba-8e66-c19f-f874-8f22a2b70cac&lt;/span&gt;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8000-6C&amp;nbsp;&lt;/span&gt;
+Major &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Note:&amp;nbsp; The
+Event-ID&amp;nbsp; shown
+in &lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A1&lt;/span&gt;
+and UUID shown in &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;
+are one in the same, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; as is the MSG-ID shown in &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Step A1&lt;/span&gt;
+and SUNW-MSG-ID shown in &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Step A2&lt;/span&gt;.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;span style=&quot;font-style: italic;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+Example:&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp; &lt;/span&gt;Use
+fmadm (1M) repair to clear the fault using the UUID (Universally
+Unique Identifier).&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+#&lt;/span&gt; &lt;span style=&quot;font-weight: bold;&quot;&gt;fmadm
+repair&amp;nbsp;&lt;/span&gt; &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8a47c7ba-8e66-c19f-f874-8f22a2b70cac&lt;/span&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; fmadm: recorded
+repair to&amp;nbsp; &lt;span
+ style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;8a47c7ba-8e66-c19f-f874-8f22a2b70cac&lt;/span&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;ILOM &lt;/span&gt;&lt;/span&gt;&lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Command to
+Clear the Fault&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; On Sun platforms with ILOM 2.0
+or later on the service processor, you may also need to clear the
+processor/chip &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; fault from the
+ILOM fault manager&#39;s resource cache to accurately reflect faults that
+are no longer present and to extinguish&lt;br&gt;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; the service
+required LED for the faulty CPU/processor and chassis wide service
+required LED.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The nomenclature ILOM
+uses to describe
+a CPU/Processor is &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;Px&lt;/span&gt;, where
+&#39;x&#39;
+represents the processor number.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+Sun platforms use zero-based numbering for their labeling
+scheme, and as such, &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+the faulty
+processor/chip
+identified in our example above
+(e.g. &quot;&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;/chip=1&lt;/span&gt;&quot;)
+would be interpreted as &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P1&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; e.g.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=0&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P0&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=1&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P1&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=2&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P2&quot;&lt;/span&gt;.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;chip=3&lt;/span&gt;
+maps to the physical location labeled &lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;&quot;P3&quot;&lt;/span&gt;.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Login to the ILOM
+command line interface as &#39;root&#39; and use the following command to clear
+the fault.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-style: italic;&quot;&gt;Example:&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;font-weight: bold;&quot;&gt;-&amp;gt;
+&lt;span style=&quot;font-style: italic;&quot;&gt;set /SYS/MB/P1 clear_fault_action=true&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Are you sure you
+want to clear &lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;/SYS/MB/P1&lt;/span&gt;
+(y/n)?&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp; &lt;big&gt;y&lt;/big&gt;&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Set
+&#39;clear_fault_action&#39; to &#39;true&#39;&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; NOTE:&amp;nbsp; The
+example above specifically clears the fault associated with &quot;&lt;span
+ style=&quot;font-weight: bold; color: rgb(0, 153, 0);&quot;&gt;P1&lt;/span&gt;&quot;.&amp;nbsp;
+You will need to provide the CPU/processor &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+number in the command above as determined by the process defined
+in&amp;nbsp; &lt;a href=&quot;#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;Section A&lt;/a&gt;
+of this article.&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&lt;br&gt;
+&amp;nbsp; &lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;&lt;a
+ name=&quot;D_Enable_Processor&quot;&gt;&lt;/a&gt;Section D -&amp;nbsp; Enable Off-lined
+Resource&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;text-decoration: underline;&quot;&gt;LEGEND&lt;/span&gt;&lt;br
+ style=&quot;text-decoration: underline;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quot;&gt;GREEN =&amp;nbsp;
+FRU&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;BLUE&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp; EVENT_ID&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;RED&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+=&amp;nbsp;
+SUNW-MSG-ID&lt;br&gt;
+&lt;br&gt;
+&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
+term &quot;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline; color: rgb(0, 153, 0);&quot;&gt;chip&lt;/span&gt;&quot;
+is used to describe the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;physical&lt;/span&gt;
+CPU/Processor.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
+term &quot;&lt;span style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;cpuid&lt;/span&gt;&quot;
+is used to describe the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;logical/virtual
+&lt;/span&gt;CPU/Processor&amp;nbsp; ( e.g. Affects: cpu:///cpuid=1 )&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; A logical CPU is a strand/thread of a
+core contained within a physical CPU/Processor.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solairs assigns CPU numbers based on
+threads/strands, not cores or chips.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; A chip that consists of four(4) dual-threaded
+cores would show up as eight(8) logical CPU&#39;s&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; and a chip that consists of two(2)
+dual-threaded cores would show up as four(4) logical CPU&#39;s&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; Verify the status of the processor/chip in
+the
+active
+configuration by identifying the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;logical/virtual&lt;br&gt;
+&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; CPU/Processor that was faulted by
+using
+the &quot;&lt;span style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;psrinfo&lt;/span&gt;&quot;
+command..&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-style: italic;&quot;&gt;Example&lt;/span&gt;:&amp;nbsp;
+Use psrinfo (1M) to obtain status of &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;logical/virtual
+&lt;/span&gt;processors/chips.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+# &lt;span style=&quot;font-weight: bold;&quot;&gt;psrinfo&lt;/span&gt;&lt;br
+ style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+0&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:04:57&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span
+ style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;
+1&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; faulted &amp;nbsp; since 09/26/2008
+20:46:15&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+2&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:19&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:21&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+4&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:23&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+5&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:25&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+6&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+7&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:29&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;small
+ style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;&lt;/small&gt;&lt;span
+ style=&quot;color: rgb(0, 0, 0);&quot;&gt;
+8&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;on-line&lt;span
+ style=&quot;color: rgb(0, 0, 0);&quot;&gt; &amp;nbsp; since 09/26/2008
+18:05:31&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+9&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:33&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+10&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:35&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+11&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:37&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+12&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:39&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+13&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:41&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+14&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:43&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+15&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:45&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; Enable the faulted processor/chip back
+into the active configuration by using the&amp;nbsp; &quot;&lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;psradm&lt;/span&gt;&quot;
+command.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-style: italic;&quot;&gt;Example&lt;/span&gt;:&amp;nbsp;
+Use psradm (1M) to online a processor.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+# &lt;span style=&quot;font-weight: bold;&quot;&gt;psradm -F -n 1
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span
+ style=&quot;font-style: italic;&quot;&gt; ,&lt;/span&gt; whereby &#39;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;1&lt;/span&gt;&#39; represents the&lt;span
+ style=&quot;font-style: italic;&quot;&gt; &lt;/span&gt;&quot;&lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;cpuid&lt;/span&gt;&quot;
+number in the line
+beginning with &lt;span
+ style=&quot;font-weight: bold; text-decoration: underline;&quot;&gt;Affects&lt;/span&gt;&lt;span
+ style=&quot;font-style: italic;&quot;&gt;..&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; Verify the status of the processor/chip in the
+active
+configuration to confirm the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;logical/virtual
+&lt;/span&gt;CPU number is enabled.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;span style=&quot;font-style: italic;&quot;&gt;Example&lt;/span&gt;:&amp;nbsp;
+Use psrinfo (1M) to obtain status of processors/chips.&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+# &lt;span style=&quot;font-weight: bold;&quot;&gt;psrinfo&lt;/span&gt;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+0&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:04:57&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span
+ style=&quot;color: rgb(51, 204, 0); font-weight: bold;&quot;&gt;
+1&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 20:57:15&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+2&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:19&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:21&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+4&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:23&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+5&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:25&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+6&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:27&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+7&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:29&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&lt;/span&gt;
+&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;8&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+on-line&amp;nbsp;&amp;nbsp; since 09/26/2008 18:05:31&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+9&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since
+09/26/2008 18:05:33&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+10&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:35&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+11&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:37&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+12&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:39&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+13&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:41&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+14&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:43&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+15&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; on-line&amp;nbsp;&amp;nbsp; since 09/26/2008
+18:05:45&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp; Optionally, one can use the &lt;span
+ style=&quot;font-weight: bold;&quot;&gt;&quot;psrinfo -vp&quot;&lt;/span&gt; command to show the &lt;span
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;logical/virtual&lt;/span&gt;
+CPU/processor numbering&amp;nbsp; assigned to processor.&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+e.g.&amp;nbsp; A chip that consists of four(4) dual-threaded cores would
+show up as eight(8) logical CPU&#39;s&lt;br&gt;
+&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+# &lt;span style=&quot;font-weight: bold;&quot;&gt;psrinfo -vp&lt;/span&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The physical processor has 4 cores and 8 virtual processors (0-3 8-11)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; The core has 2 virtual processors (0 8)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; The core has 2 virtual processors (1 9)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; The core has 2 virtual processors (2 10)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; The core has 2 virtual processors (3 11)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; x86 (GenuineIntel 106A5 family 6 model
+26 step 5 clock 2533 MHz)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; Intel(r) Xeon(r)
+CPU&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+E5540&amp;nbsp; @ 2.53GHz&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+The physical processor has 4 cores and 8 virtual processors (4-7 12-15)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; The core has 2 virtual processors (4 12)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; The core has 2 virtual processors (5 13)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; The core has 2 virtual processors (6 14)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; The core has 2 virtual processors (7 15)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; x86 (GenuineIntel 106A5 family 6 model 26
+step 5 clock 2533 MHz)&lt;br&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Intel(r) Xeon(r)
+CPU&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+E5540&amp;nbsp; @ 2.53GHz&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;</item>
+	<name>impact</name>
+	<item>Performance of this system may be affected.</item>
+	<name>response</name>
+	<item>The system will attempt to offline this cpu to remove it from service.</item>
+	<name>title</name>
+	<item>Level 0 Data TLB Fault</item>
+</event_registry_properties>

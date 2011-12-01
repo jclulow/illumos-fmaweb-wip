@@ -1,0 +1,57 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)11.html	1.4	07/01/30 SMI" -->
+
+	<p>
+	  If a service is enabled and its dependencies are met, the Solaris
+	  Service Manager will send a start command to the service's
+	  restarter.
+	  If the service's restarter is the Solaris Service Manager
+	  (<code>svc:/system/svc/restarter:default</code>), it will execute
+	  the service's start method.
+	  For most services, when the method completes successfully, the
+	  service will be placed in the online state.
+
+	<p>
+	The Message ID:&nbsp;&nbsp; <font
+	  size="+1"><code><b>SMF-8000-C4</b></code></font> indicates
+        that the transition from offline to online is in progress.
+	This outcome can indicate a booting or restarting system, or
+	a defect in Solaris or third
+	party software. 
+	</p>
+
+	<p>
+	  If the service does not leave the offline state, contact Sun
+	  Service with the output of
+	<code>svcs&nbsp;-x</code> and
+	<code>svcs&nbsp;-l <i>service_fmri</i></code>.
+	</p>
+	<p>
+	See <a href="http://www.sun.com/bigadmin/content/selfheal/">"Predictive
+	Self-Healing"</a> for additional information.
+        </p>

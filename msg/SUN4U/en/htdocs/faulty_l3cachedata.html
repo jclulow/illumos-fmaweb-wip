@@ -1,0 +1,53 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)faulty_l3cachedata.html	1.4	07/01/30 SMI" -->
+
+The Message ID:&nbsp;&nbsp;
+<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates that the Solaris[TM] Fault Manager has received reports from 
+a CPU that one or more errors associated with the Level 3 cache (L3SRAM)
+have been detected.  The Diagnostic Engine (DE) has triggered an 
+automatic FMA response to disable and isolate this CPU from the 
+configuration in order to prevent repeat errors and increase the 
+system's total Availability.
+<p>
+Arrangements should be made to replace the Field Replaceable Unit (FRU)
+on which the suspect CPU is located.  Refer to the information displayed
+in the FRU: field of the fmdump output.  For example: 
+<p>
+<ul>
+<tt>FRU: legacy-hc:///component=Slot A</tt>
+</ul>
+<p>
+<b>Sun Fire Midrange and High End notes:</b>
+<p>
+There may be additional fault information logged by System Controller 
+Application (ScApp) on Sun Fire[TM] Midrange (3800, 48x0, 6800, v1280, 
+E2900, E4900, E6900) and System Management Services (SMS) on 
+High End (12K, 15K, E20K, E25K) Servers.  
+Availability enhancements (called AVL) have been integrated into 
+ScApp 5.19.0 and SMS 1.5 to allow FMA/AVL interaction to coexist.

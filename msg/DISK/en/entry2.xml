@@ -1,0 +1,167 @@
+<!-- ident	"@(#)entry2.xml	1.20	07/05/18 SMI" -->
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident      "@(#)entry2.xml 1.8     07/01/30 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected disk.
+Use fmdump -v -u &amp;lt;EVENT_ID&amp;gt; to identify the disk.
+</item>
+	<name>description</name>
+	<item>One or more disk self tests failed.
+</item>
+	<name>details</name>
+	<item>This message indicates that the Solaris Fault Manager has received reports
+from a Disk Drive&#39;s firmware indicating that a self-test failure has occurred
+and the Disk Drive has failed.
+&lt;P&gt;
+The recommended service action for this event is to schedule replacement
+of the affected Disk Drive at the earliest possible convenience.
+&lt;P&gt;
+Follow the steps below to complete the recommended repair action.
+&lt;P&gt;
+&lt;UL&gt;&lt;PRE&gt;&lt;B&gt;NOTE:&lt;/B&gt;For the examples below:
+&lt;FONT COLOR=RED&gt;RED   HIGHLITE = Sun Message ID&lt;/FONT&gt;
+&lt;FONT COLOR=BLUE&gt;BLUE  HIGHLITE = UUID or EVENT_ID&lt;/FONT&gt;
+&lt;FONT COLOR=GREEN&gt;GREEN HIGHLITE = FRU&lt;/FONT&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+
+&lt;B&gt;Step 1: &lt;/B&gt;Find the 36 character UUID string associated with thefault.
+&lt;P&gt;
+It can be located using several methods. Use either the fmdump (1M) or
+fmadm (1M) command shown in Example 1.1 below, or extract the UUID
+from the fault message displayed in the console output at the time of the
+fault.
+&lt;P&gt;
+Note: Be sure to get the correct 36 character UUID string if more
+than one is listed.  You can identify the correct string by associating
+the fault with the date and time stamp (highlighted in blue in Example 1.1
+below) from the fmdump output. The fmadm faulty output also shows the
+UUID (highlighted in red).
+&lt;UL&gt;
+&lt;B&gt;Example 1.1 - finding the UUID (36 character string):&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmdump
+TIME                 UUID                                 SUNW-MSG-ID
+May 08 16:01:43.9265&lt;/FONT&gt; &lt;FONT COLOR=BLUE&gt;5a9e5915-250b-c9b9-ddb2-df99af529a11&lt;/FONT&gt; &lt;FONT COLOR=RED&gt;DISK-8000-2J&lt;/FONT&gt;
+Sep 13 06:01:43.9332 1c13b3fe-ceb7-6cff-d9cd-8527db6a0d88 DISK-8000-0X
+Jun 08 14:01:43.9404 43e391a3-94a2-e846-aebe-ef0beffacc1a DISK-8000-12
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm faulty
+   STATE RESOURCE / UUID
+------------------------------------------------------------------------------
+ degraded dev:///:devid=id1,sd@SATA_____HITACHI_HDS7225S______VDS41DT4F0823J//pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@0,0
+         &lt;FONT COLOR=BLUE&gt;5a9e5915-250b-c9b9-ddb2-df99af529a11&lt;/FONT&gt;
+------------------------------------------------------------------------------
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;B&gt;Step 2: &lt;/B&gt;Use the command; fmdump -v -u &lt;I&gt;UUID&lt;/I&gt;, to locate the faulty
+Disk Drive, where &lt;I&gt;UUID&lt;/I&gt; consists of the 36 character string
+obtained in Step 1 above. The FRU (highlighted in green) identifies the faulty
+Disk Drive.  See Example 2.1 below.
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 2.1 - determining which FRU (Disk Drive) needs to be replaced:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmdump -v -u  &lt;FONT COLOR=BLUE&gt;5a9e5915-250b-c9b9-ddb2-df99af529a11&lt;/FONT&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+May 08 16:01:43.9404 &lt;FONT COLOR=BLUE&gt;5a9e5915-250b-c9b9-ddb2-df99af529a11&lt;/FONT&gt; &lt;FONT COLOR=RED&gt;DISK-8000-2J&lt;/FONT&gt;
+  100%  fault.io.disk.self-test-failure
+
+        Problem in: hc:///:serial=VDK41BT4C7PJYS:part=HITACHI-HDS7225SBSUN250G-527N7PJYS:
+                           revision=V44OA81A/motherboard=0/hostbridge=2/pcibus=9/pcidev=8
+                           /pcifn=0/pcibus=11/pcidev=1/pcifn=0/sata-port=6/disk=0
+           Affects: dev:///:devid=id1,sd@SATA_____HITACHI_HDS7225S______VDS41DT4F0823J//pci@0,0/pci1022,7458@1/pci11ab,11ab@1/disk@0,0
+               FRU: hc:///:serial=VDK41BT4C7PJYS:part=HITACHI-HDS7225SBSUN250G-527N7PJYS:
+                           revision=V44OA81A/motherboard=0/hostbridge=2/pcibus=9/pcidev=8
+                           /pcifn=0/pcibus=11/pcidev=1/pcifn=0/sata-port=6/disk=0
+          Location: &lt;FONT COLOR=GREEN&gt;HD_ID_29&lt;/FONT&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;UL&gt;On older Solaris systems, this output will look slightly
+different:&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmdump -v -u 5a9e5915-250b-c9b9-ddb2-df99af529a11
+TIME                 UUID                                 SUNW-MSG-ID
+May 08 16:01:43.9404 5a9e5915-250b-c9b9-ddb2-df99af529a11 DISK-8000-0X
+  100%  fault.io.disk.predictive-failure
+
+        Problem in: hc:///:serial=VDK41BT4C7PJYS:part=HITACHI-HDS7225SBSUN250G-527N7PJYS:
+                           revision=V44OA81A/motherboard=0/hostbridge=2/pcibus=9/pcidev=8
+                           /pcifn=0/pcibus=11/pcidev=1/pcifn=0/sata-port=6/disk=0
+           Affects: hc:///component=sata5/6
+               FRU: &lt;FONT COLOR=GREEN&gt;hc:///component=HD_ID_29&lt;/FONT&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;B&gt;Step 3: &lt;/B&gt;Identify the FRU that needs to be replaced.
+&lt;P&gt;
+On supported platforms, the FRU will contain an identifier in the &#39;FRU&#39;
+label (highlighted in green above).  In our example, the service action would be
+to replace the Disk located in slot 29, as the HD_ID identified in the string
+is HD_ID_29.  On platforms where this information isn't available, the user
+should refer to platform-specific documentation for identifying which physical
+location corresponds to the failed device.
+&lt;P&gt;
+&lt;B&gt;Step 4: &lt;/B&gt;Replacing the faulty FRU (repairing the faulted resource).
+&lt;P&gt;
+Refer to your specific Platform&#39;s Hardware Maintenance Manual or service
+label for proper disk replacement procedures. These procedures can include
+software manipulation to prepare the disk for replacement; e.g. umounting
+filesystems, disk management considerations, cfgadm commands, etc...
+&lt;P&gt;
+&lt;B&gt;Step 5: &lt;/B&gt;Verify the repaired resource is no longer faulty
+&lt;P&gt;
+After the Disk Drive has been replaced, use the Solaris command &#39;fmadm faulty&#39; to display
+all faulted resources in the system. Confirm that the repaired resource is no
+longer listed as faulted. See Example 5.1.
+&lt;P&gt;
+&lt;/PRE&gt;&lt;/UL&gt;
+&lt;P&gt;
+&lt;UL&gt;
+&lt;B&gt;Example 5.1 - verifying the repaired resource is no longer faulty:&lt;/B&gt;
+&lt;/UL&gt;
+&lt;UL&gt;&lt;PRE&gt;
+# fmadm faulty
+   STATE RESOURCE / UUID
+------------------------------------------------------------------------------
+&lt;/PRE&gt;&lt;/UL&gt;</item>
+	<name>impact</name>
+	<item>The disk has failed.
+</item>
+	<name>po-action</name>
+	<item>Schedule a repair procedure to replace the affected disk.
+Use fmdump -v -u &amp;lt;EVENT_ID&amp;gt; to identify the disk.
+</item>
+	<name>response</name>
+	<item>None.
+</item>
+	<name>title</name>
+	<item>Disk Self-Test Failure
+</item>
+</event_registry_properties>

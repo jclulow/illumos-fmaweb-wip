@@ -1,0 +1,97 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry16.xml	1.2	08/07/16 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>title</name>
+	<item>ZFS pool I/O failures</item>
+	<name>description</name>
+	<item>The ZFS pool has experienced currently unrecoverable I/O failures.</item>
+	<name>response</name>
+	<item>No automated response will be taken.</item>
+	<name>impact</name>
+	<item>Read and write I/Os cannot be serviced.</item>
+	<name>action</name>
+	<item>
+&lt;p&gt;
+The pool has experienced I/O failures. Since the ZFS pool property 'failmode'
+is set to 'wait', all I/Os (reads and writes) are blocked.  See the zpool(1M)
+manpage for more information on the 'failmode' property.  Manual intervention
+is required for I/Os to be serviced.  You can see which devices are
+affected by running 'zpool status -x':
+&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool status -x
+  pool: test
+ state: FAULTED
+status: There are I/O failures.
+action: Make sure the affected devices are connected, then run 'zpool clear'.
+   see: http://www.sun.com/msg/ZFS-8000-HC
+ scrub: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        test        FAULTED      0    13     0  insufficient replicas
+          c0t0d0    FAULTED      0     7     0  experienced I/O failures
+          c0t1d0    ONLINE       0     0     0
+
+errors: 1 data errors, use '-v' for a list
+&lt;/pre&gt;
+
+&lt;p&gt;
+After you have made sure the affected devices are connected, run 'zpool clear'
+to allow I/O to the pool again:
+&lt;/p&gt;
+
+&lt;pre&gt;
+# zpool clear test
+&lt;/pre&gt;
+
+&lt;p&gt;
+If I/O failures continue to happen, then applications and commands  for the
+pool may hang.  At this point, a reboot may be necessary to allow I/O to the
+pool again.
+&lt;/p&gt;
+
+	</item>
+	<name>details</name>
+	<item>The Message ID: &lt;tt&gt;%MSGID%&lt;/tt&gt; indicates that
+	    the pool has experienced I/O failures.  Take the documented
+	    action to resolve the problem.</item>
+	<name>po-description</name>
+	<item>The ZFS pool has experienced currently unrecoverable I/O
+	    failures.</item>
+	<name>po-impact</name>
+	<item>Read and write I/Os cannot be serviced.</item>
+	<name>po-response</name>
+	<item>No automated response will be taken.</item>
+	<name>po-action</name>
+	<item>Make sure the affected devices are connected, then run
+	    'zpool clear'.</item>
+</event_registry_properties>

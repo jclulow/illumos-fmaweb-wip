@@ -1,0 +1,69 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)faulty_core.html	1.9	07/01/30 SMI" -->
+The Message ID:&nbsp;&nbsp;
+<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates a diagnosis has determined that one of the cores in the 
+multi-thread processor contains a faulty resource.  The diagnosis determined 
+the impact of the fault is localized to a single thread that 
+is being removed from service.  However, the faulty resource is shared
+ by all four threads in the core.  There is the potential 
+for the other threads sharing this resource to experience an error.  
+It is recommended that the system administrator contact Sun support and 
+arrange for the replacement of the affected component.
+<p>
+The physical thread number reported by the fault manager may not be the 
+same as the logical thread number reported by Solaris.  In the example
+below, the physical thread number is 8 while the logical thread number
+is 4.
+<p>
+<pre>
+# fmdump -v -u fc4ac2b0-d5f0-c4ab-8fd8-bf3d542d2f83
+TIME                 UUID                                 SUNW-MSG-ID
+Nov 28 10:36:42.4482 fc4ac2b0-d5f0-c4ab-8fd8-bf3d542d2f83 SUN4V-8000-1S
+  100%  fault.cpu.ultraSPARC-T1.ireg
+         FRU: hc:///component=MB
+        rsrc: cpu:///cpuid=8/serial=FFFFF23894429557
+
+#psrinfo
+0	on-line   since 11/09/2005 20:06:02
+1	on-line   since 11/09/2005 20:06:03
+2	on-line   since 11/09/2005 20:06:03
+3	on-line   since 11/09/2005 20:06:03
+4	faulted   since 11/10/2005 04:40:13
+5	on-line   since 11/09/2005 20:06:03
+6	on-line   since 11/09/2005 20:06:03
+7	on-line   since 11/09/2005 20:06:03
+8	on-line   since 11/09/2005 20:06:03
+9	on-line   since 11/09/2005 20:06:03
+10	on-line   since 11/09/2005 20:06:03
+11	on-line   since 11/09/2005 20:06:03
+12	on-line   since 11/09/2005 20:06:03
+13	on-line   since 11/09/2005 20:06:03
+14	on-line   since 11/09/2005 20:06:03
+15	on-line   since 11/09/2005 20:06:03
+</pre>

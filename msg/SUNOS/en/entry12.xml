@@ -1,0 +1,65 @@
+<!--
+ Copyright 2009 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry12.xml	1.1	09/02/05 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Run &lt;tt&gt;svcs -x&lt;/tt&gt; to determine why the service failed and the location of logfiles, if any.</item>
+	<name>po-action</name>
+	<item>Run 'svcs -x' to determine why the service failed and the location of logfiles, if any.</item>
+	<name>details</name>
+	<item>
+&lt;p&gt;A service has failed and is not able to start.  The service is
+misconfigured or otherwise fatally broken.  For further information on the
+problem, run &lt;tt&gt;svcs -x&lt;/tt&gt;:&lt;/p&gt;
+
+&lt;pre&gt;
+	# svcs -x
+	svc:/network/nfs/server:default (NFS server)
+	 State: maintenance since Wed Feb 04 00:14:38 2009
+	Reason: Restarter svc:/system/svc/restarter:default gave no explanation.
+	   See: &lt;b&gt;http://sun.com/msg/SMF-8000-9C&lt;/b&gt;
+	   See: nfsd(1M)
+	   See: /var/svc/log/network-nfs-server:default.log
+	Impact: This service is not running.
+&lt;/pre&gt;
+
+&lt;p&gt;The output should reference a more detailed article that will provide
+more information about the failure.&lt;/p&gt;
+</item>
+	<name>impact</name>
+	<item>The service is unavailable.</item>
+	<name>description</name>
+	<item>A service failed and could not be restarted.</item>
+	<name>po-description</name>
+	<item>A service failed and could not be restarted.</item>
+	<name>title</name>
+	<item>Service failed.</item>
+	<name>response</name>
+	<item>The service has been placed into the maintenance state.</item>
+</event_registry_properties>

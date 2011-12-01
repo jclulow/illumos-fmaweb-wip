@@ -1,0 +1,110 @@
+<!--
+ Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry251.xml	1.1	08/02/08 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair action to replace the affected Field Replaceable Unit (FRU),
+the identity of which can be determined using fmdump -v -u EVENT_ID.
+Please consult the detail section of the knowledge article for additional information.
+</item>
+	<name>description</name>
+	<item>The XSCF could not determine whether POST is running correctly on a domain/XSB.
+</item>
+	<name>details</name>
+	<item>The XSCF could not determine whether POST is running correctly on a
+domain/XSB.
+
+The domain or the XSB will be powered down. If this fault did not occur during a DR operation,
+the XSB will be deconfigured.
+
+The recommended service action for this event is to schedule the replacement of the affected FRU.
+
+Step 1. Collect the fault message (use one of the following methods):
+
+
+   Single-line fault message displayed on the XSCF console:
+
+   Dec 12 12:26:32 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
+   EVENT-ID: 8b5cfa23-0219-493c-aaed-64d785d3b793
+   Refer to http://www.sun.com/msg/SCF-8007-UQ for detailed information.
+
+   Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
+
+   MSG-ID: SCF-8007-UQ, TYPE: Fault, VER: 1, SEVERITY: Critical
+   EVENT-TIME: Wed Dec 12 12:26:32 PST 2007
+   PLATFORM: SPARC Enterprise M5000, CSN: BE80601000, HOSTNAME: san-ff2-16-0
+   SOURCE: sde, REV: 1.15
+   EVENT-ID: 8b5cfa23-0219-493c-aaed-64d785d3b793
+   DESC: The XSCF could not determine whether POST is running correctly on a domain/XSB.
+   Refer to http://www.sun.com/msg/SCF-8007-UQ for more information.
+   AUTO-RESPONSE: If the event occurred during POST at domain startup, the domain is powered
+   down. If the event occurred during POST at the time of a DR operation, the XSB
+   being DR&#39;ed is powered down.  No other action is taken.
+   IMPACT: The domain or the XSB will be powered down.
+   REC-ACTION: Schedule a repair action to replace the affected Field Replaceable Unit (FRU),
+   the identity of which can be determined using fmdump -v -u EVENT_ID.
+   Please consult the detail section of the knowledge article for additional information.
+
+
+Step 2. Collect the output from the &#39;fmdump -v -u EVENT_ID&#39; command
+
+ xscf&gt; fmdump -v -u 8b5cfa23-0219-493c-aaed-64d785d3b793
+
+        TIME                 UUID                                 MSG-ID
+        Dec 12 12:26:32.7882 8b5cfa23-0219-493c-aaed-64d785d3b793 SCF-8007-UQ
+        100%  fault.chassis.domain.post
+
+              Problem in: hc:///chassis=0/cmu=0/xsb=0
+                 Affects: hc:///chassis=0/cmu=0/xsb=0
+                     FRU: hc://:product-id=SPARC Enterprise M5000:chassis-id=BE80601000:
+                          server-id=san-ff2-16-0:
+                          part=CA20393-B50X 001AA:revision=0101/component=/MBU_B
+                Location: /MBU_B
+
+
+Step 3. Contact your Authorized Service Provider.
+
+
+
+If you require additional information, please refer to InfoDoc #87402.
+
+
+
+</item>
+	<name>impact</name>
+	<item>The domain or the XSB will be powered down.
+</item>
+	<name>response</name>
+	<item>If the event occurred during POST at domain startup, the domain is powered
+down. If the event occurred during POST at the time of a DR operation, the XSB
+being DR&#39;ed is powered down.  No other action is taken.
+</item>
+	<name>title</name>
+	<item>The XSCF could not determine whether POST is running correctly on a domain/XSB.
+</item>
+</event_registry_properties>

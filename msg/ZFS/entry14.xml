@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry14.xml	1.1	07/09/06 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>keys</name>
+	<item>fault.fs.zfs.vdev.io</item>
+	<name>severity</name>
+	<item>major</item>
+	<name>type</name>
+	<item>fault</item>
+</event_registry_properties>

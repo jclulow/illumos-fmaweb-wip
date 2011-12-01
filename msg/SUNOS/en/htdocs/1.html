@@ -1,0 +1,82 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)1.html	1.20	08/04/21 SMI" -->
+
+The Message ID:&nbsp;&nbsp;
+<font size="+1"><tt><b>%MSGID%</b></tt></font>
+indicates errors were detected but the module responsible for
+diagnosing those errors was unable to arrive at a diagnosis.
+This may be caused more commonly by downrev or incompatible revisions  
+of software, or less frequently by bugs in the diagnosis module or subsystem.   
+<P>
+For SPARC based systems running Solaris 10, the kernel patch  127111
+and Solaris FMA patch 119578 are particularly critical and should 
+be examined.  Ensure that any dependencies documented in the patch 
+README files are noted and addressed.
+<P>
+For x64 based systems running Solaris 10, the kernel patch 127112
+and Solaris FMA patches 118344 and 125370 are particularly critical 
+and should be examined.  Ensure that any dependencies documented in 
+the patch README files are noted and addressed.
+<P>
+If all patches appear to be current and all dependencies are properly
+addressed, error telemetry will need to be examined by Service personnel 
+to make a further determination of the problem.  Please see the 
+information below for certain platform specific patch requirements.
+<P>
+For T1000,T2000,Netra T2000,T5120,and T5220 systems, please make sure
+that the software and firmware patch levels are as follows:
+<P>
+1.) Solaris 5.10: kernel patch 127111-08 or higher
+<P>
+2.) Solaris 5.10: FMA Patch 119578-30 or higher
+<P>
+3.) System firmware:
+<P>
+T5120 and T5220 firmware patch 127580-05 or higher
+<P>
+T2000 firmware patch 136927-01 or higher
+<P>
+Netra T2000 firmware patch 136929-01 or higher
+<P>
+T1000 firmware patch 127577-03 or higher
+<P>
+<P>
+<b>Please Note -</b> On some system platforms there could be additional 
+information that may disclose a hardware fault, see the following:
+<P>
+On Sun SPARC Enterprise Mx000 systems,  
+please check the output of "showstatus" and "fmdump" from the xscfu for 
+possible hardware faults.
+<P>
+On Sun Fire 12K, 15K, 20K and E25K systems, please check the output of  
+"showlogs -E -p e list 3" from the main system controller for 
+information about possible hardware faults.
+<P>
+On Sun Fire 3800, 48x0, 6800, v1280, E2900, E4900, E6900 and Netra 1280/1290 systems, 
+please check the output of "showlogs -v" from the main system controller 
+for information about possible hardware faults.

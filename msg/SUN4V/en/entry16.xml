@@ -1,0 +1,131 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ident	"@(#)entry16.xml	1.12	07/10/25 SMI" -->
+<!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
+<event_registry_properties>
+	<name>action</name>
+	<item>Schedule a repair procedure to replace the affected CPU, the identity of which can be determined using fmdump -v -u &amp;lt;EVENT_ID&amp;gt;.
+</item>
+	<name>description</name>
+	<item>The number of floating register errors associated with this thread has exceeded acceptable levels.
+</item>
+	<name>details</name>
+	<item>&lt;!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+--&gt;
+
+&lt;!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the &quot;License&quot;).
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets &quot;[]&quot; replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+--&gt;
+
+&lt;!-- ident	&quot;@(#)faulty_strand.html	1.17	07/10/16	SMI&quot; --&gt;
+The Message ID:&amp;nbsp;&amp;nbsp;
+&lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt;&lt;/font&gt;
+indicates a diagnosis has determined that one of the threads
+in the multi-thread processor is faulty.  The fault manager arranged an 
+automated attempt to disable this thread.  The diagnosis determined 
+the fault is localized to a single thread that is being 
+removed from service.  However, it is recommended that the system 
+administrator contact Sun support and arrange for the replacement of the 
+affected component.  Use the command &lt;tt&gt;&lt;b&gt;fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp;
+with the &amp;nbsp;&lt;tt&gt;&lt;b&gt;&lt;font color = &quot;BLUE&quot;&gt;&amp;lt;EVENT_ID&amp;gt;&lt;/font&gt;&lt;/b&gt;&lt;/tt&gt;&amp;nbsp; from the console message to locate the faulty component.
+&lt;p&gt;
+The physical thread number reported by the fault manager may not be the 
+same as the logical thread number reported by Solaris.  In the example
+below, the physical thread number is 8 while the logical thread number
+is 4.
+&lt;p&gt;
+&lt;pre&gt;
+# fmdump -v -u &lt;font color = &quot;BLUE&quot;&gt;fd940ac2-d21e-c94a-f258-f8a9bb69d05b&lt;/font&gt;
+TIME                 UUID                                 SUNW-MSG-ID
+Jul 31 12:47:42.2007 &lt;font color = &quot;BLUE&quot;&gt;fd940ac2-d21e-c94a-f258-f8a9bb69d05b&lt;/font&gt; &lt;font color = &quot;RED&quot;&gt;SUN4V-8000-HP&lt;/font&gt;
+ 100%  fault.cpu.ultraSPARC-T2.freg
+
+       Problem in: cpu:///cpuid=8/serial=5D67334847
+          Affects: cpu:///cpuid=8/serial=5D67334847
+              &lt;font color = &quot;GREEN&quot;&gt;FRU: hc://:serial=101083:part=541215101/motherboard=0&lt;/font&gt;
+         Location: MB 
+
+#psrinfo
+0	on-line   since 07/09/2007 20:06:02
+1	on-line   since 07/09/2007 20:06:03
+2	on-line   since 07/09/2007 20:06:03
+3	on-line   since 07/09/2007 20:06:03
+4	faulted   since 07/31/2007 12:47:42
+5	on-line   since 07/09/2007 20:06:03
+6	on-line   since 07/09/2007 20:06:03
+7	on-line   since 07/09/2007 20:06:03
+8	on-line   since 07/09/2007 20:06:03
+9	on-line   since 07/09/2007 20:06:03
+10	on-line   since 07/09/2007 20:06:03
+11	on-line   since 07/09/2007 20:06:03
+12	on-line   since 07/09/2007 20:06:03
+13	on-line   since 07/09/2007 20:06:03
+14	on-line   since 07/09/2007 20:06:03
+15	on-line   since 07/09/2007 20:06:03
+&lt;/pre&gt;
+&lt;p&gt;
+Note the FRU called out includes a part number and a Location field:
+&lt;p&gt;
+&lt;pre&gt;
+part=541215101
+
+Location: MB
+&lt;/pre&gt;
+&lt;p&gt;
+This part number is the FRU part number.  The Location field calls out
+the MB (motherboard) as the FRU to be replaced.
+&lt;p&gt;</item>
+	<name>impact</name>
+	<item>System performance may be affected. 
+</item>
+	<name>response</name>
+	<item>The fault manager will attempt to remove the affected thread
+from service.
+</item>
+	<name>title</name>
+	<item>Single thread floating register errors exceeded acceptable levels
+</item>
+</event_registry_properties>

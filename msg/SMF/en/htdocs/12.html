@@ -1,0 +1,50 @@
+<!--
+ Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+ Use is subject to license terms.
+-->
+
+<!--
+ CDDL HEADER START
+
+ The contents of this file are subject to the terms of the
+ Common Development and Distribution License (the "License").
+ You may not use this file except in compliance with the License.
+
+ You can obtain a copy of the license at usr/src/OPENSOLARIS.LICENSE
+ or http://www.opensolaris.org/os/licensing.
+ See the License for the specific language governing permissions
+ and limitations under the License.
+
+ When distributing Covered Code, include this CDDL HEADER in each
+ file and include the License file at usr/src/OPENSOLARIS.LICENSE.
+ If applicable, add the following below this CDDL HEADER, with the
+ fields enclosed by brackets "[]" replaced with your own identifying
+ information: Portions Copyright [yyyy] [name of copyright owner]
+
+ CDDL HEADER END
+-->
+
+<!-- ident	"@(#)12.html	1.5	07/01/30 SMI" -->
+
+	<p>
+	  The restarter for a service may determine that the service is
+	  operational, but not at full capacity.
+	  When it does so, it places the service in the degraded state.
+
+	<p>
+	The Message ID:&nbsp;&nbsp; <font
+	  size="+1"><code><b>SMF-8000-DX</b></code></font> indicates
+	that the administrator has requested that the service be marked as
+	degraded.
+	</p>
+
+	<p>
+	  If running <code>svcadm&nbsp;clear&nbsp;<i>service_fmri</i></code> fails to clear the degraded state, contact Sun Service with the output of
+	<code>svcs&nbsp;-x</code> and
+	<code>svcs&nbsp;-l <i>service_fmri</i></code>.
+	</p>
+
+	<p>
+	See <a href="http://www.sun.com/bigadmin/content/selfheal/">"Predictive
+	Self-Healing"</a> for additional information.
+        </p>
