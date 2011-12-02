@@ -1,7 +1,7 @@
 h1 Message: #{msgid}
 table(border='1', cellpadding='6')
-	each field_value, field_title in obj
+	each field in fields
 		tr
 			td
-				b= field_title
-			td !{field_value}
+				b= field.name
+			td !{field.value}

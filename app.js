@@ -46,13 +46,26 @@ app.get('/msg/:code', function(req, res) {
 
 		delete vals['dict-entry'];
 		delete vals['dictid'];
+
+		var fields = [];
 		for (var key in vals) {
-			if (vals[key] === 'XXX')
-				delete vals[key];
+			if (['XXX', 'dict-entry', 'dictid'].indexOf(key) >= 0)
+				continue;
+			fields.push({'name': key, 'value': vals[key]});
+
 		}
+
+		// The order in which fields should appear, unspecified fields are arbitrary and last
+		const order = ["title", "description", "severity", "type", "keys",
+			       "details", "impact", "response", "action"];
+
+		fields.sort(function (a, b) {
+			return order.indexOf(a.name) - order.indexOf(b.name);
+		});
+
 		var hash = {
 			title: "awesome",
-			obj: vals,
+			fields: fields,
 			msgid: req.params.code
 		};
 		return (res.render('msg.jade', hash));
