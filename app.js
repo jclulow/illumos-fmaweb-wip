@@ -21,11 +21,11 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
-  app.use(express.errorHandler()); 
+  app.use(express.errorHandler());
 });
 
 // Routes
@@ -40,6 +40,7 @@ app.get('/msg/:code', function(req, res) {
 
 	sunmsg.getMessage(obj.name, obj.value, function hand1(err, vals) {
 		if (err) {
+			console.log("ERROR: " + err.message);
 			return (res.render('fail.jade', { title: "error", error: err }));
 		}
 

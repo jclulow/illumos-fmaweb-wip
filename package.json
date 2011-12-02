@@ -6,7 +6,8 @@
 		"express": "2.5.0",
 		"jade": ">= 0.0.1",
 		"fmamsg": ">= 0.0.1",
-		"sax": "*"
+		"sax": "*",
+		"async": ">= 0.1.15"
 	},
 	"author": {
 		"name": "Joshua M. Clulow",
@@ -19,5 +20,5 @@
 	},
 	"engines": [ "node" ],
 	"description": "Provide http://www.illumos.org/msg/ZFS-8000-1W style URLs",
-	"homepage": "https://github.com/jclulow/node-fmamsg"
+	"homepage": "https://github.com/jclulow/illumos-fmaweb-wip"
 }
