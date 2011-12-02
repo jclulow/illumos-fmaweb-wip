@@ -64,7 +64,7 @@ app.get('/msg/:code', function(req, res) {
 		});
 
 		var hash = {
-			title: "awesome",
+			title: req.params.code,
 			fields: fields,
 			msgid: req.params.code
 		};
