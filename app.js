@@ -4,7 +4,6 @@
  */
 
 var express = require('express');
-var fmamsg = require('fmamsg');
 var sunmsg = require('./sunmsg');
 
 var app = module.exports = express.createServer();
@@ -32,15 +31,9 @@ app.configure('production', function(){
 
 app.get('/msg/:code', function(req, res) {
 	var obj;
-	try {
-		obj = fmamsg.decode(req.params.code);
-	} catch (errstr) {
-		return (res.render('fail.jade', { title: "error", error: errstr }));
-	}
 
-	sunmsg.getMessage(obj.name, obj.value, function hand1(err, vals) {
+	sunmsg.getMessage(req.params.code, function hand1(err, vals) {
 		if (err) {
-			console.log("ERROR: " + err.message);
 			return (res.render('fail.jade', { title: "error", error: err }));
 		}
 

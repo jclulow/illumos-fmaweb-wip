@@ -5,6 +5,7 @@ var sys = require('sys');
 var sax = require('sax');
 var path = require('path');
 var async = require('async');
+var fmamsg = require('fmamsg');
 
 function log(str) {
 	console.log(str);
@@ -22,8 +23,17 @@ function ind(num) {
 	return (str);
 }
 
-module.exports.getMessage = function getMessage(dict, num, cb) {
-	log("get message for " + dict + " entry " + num);
+module.exports.getMessage = function getMessage(msgid, cb) {
+	try {
+		var entry = fmamsg.decode(msgid);
+	} catch (errstr) {
+		return cb(errstr, null);
+	}
+
+	var dict = entry.name;
+	var num = entry.value;
+
+	log("get message for: " + msgid + " dict: " + dict + " entry: " + num);
 
 	var output = {};
 	var current_name = null;
@@ -72,7 +82,7 @@ module.exports.getMessage = function getMessage(dict, num, cb) {
 			if (tag === "name") {
 				current_name = current_text;
 			} else if (tag === "item") {
-				output[current_name] = current_text;
+				output[current_name] = current_text.replace(/%MSGID%/, msgid);
 				current_name = null;
 			}
 		});
