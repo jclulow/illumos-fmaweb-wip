@@ -3,6 +3,9 @@
 var fs = require('fs');
 var sys = require('sys');
 var sax = require('sax');
+var path = require('path');
+var async = require('async');
+var fmamsg = require('fmamsg');
 
 function log(str) {
 	console.log(str);
@@ -11,7 +14,7 @@ function ins(obj) {
 	return (sys.inspect(obj));
 }
 
-var BASEDIR = __dirname + "/msg";
+const BASEDIR = path.join(__dirname, "msg");
 
 function ind(num) {
 	var str = "";
@@ -20,87 +23,79 @@ function ind(num) {
 	return (str);
 }
 
-module.exports.getMessage = function getMessage(dict, num, cb) {
-	var indent = 0;
+module.exports.getMessage = function getMessage(msgid, cb) {
+	try {
+		var entry = fmamsg.decode(msgid);
+	} catch (errstr) {
+		return cb(errstr, null);
+	}
 
-	log("get message for " + dict + " entry " + num);
+	var dict = entry.name;
+	var num = entry.value;
+
+	log("get message for: " + msgid + " dict: " + dict + " entry: " + num);
 
 	var output = {};
 	var current_name = null;
 	var current_text = "";
 
-	var files = [
-		BASEDIR + "/defaults.xml",
-		BASEDIR + "/" + dict + "/defaults.xml",
-		BASEDIR + "/" + dict + "/properties.xml",
-		BASEDIR + "/" + dict + "/entry" + num + ".xml",
-		BASEDIR + "/" + dict + "/en/defaults.xml",
-		BASEDIR + "/" + dict + "/en/properties.xml",
-		BASEDIR + "/" + dict + "/en/entry" + num + ".xml"
+	const files = [
+		path.join(BASEDIR, "defaults.xml"),
+		path.join(BASEDIR, dict, "defaults.xml"),
+		path.join(BASEDIR, dict, "properties.xml"),
+		path.join(BASEDIR, dict, "entry" + num + ".xml"),
+		path.join(BASEDIR, dict, "en", "defaults.xml"),
+		path.join(BASEDIR, dict, "en", "properties.xml"),
+		path.join(BASEDIR, dict, "en", "entry" + num + ".xml")
 	];
 
-	var next, makeStream;
-	next = function(err) {
-		if (err)
-			return(cb(err, null));
 
-		if (files.length < 1)
-			return (cb(null, output));
+	function fail(err) {
+		cb(err, null);
+	}            
 
-		/*log(files.length + " files left ...");*/
+	function done(data) {
+		cb(null, data);
+        }
 
-		var fname = files.shift();
-		/*try {*/
-			var stre = fs.createReadStream(fname);
-			stre.on('open', function(fd) {
-				log("  ... loading: " + fname);
-			});
-			stre.on('error', function(ex) {
-				log("  ... skipping, because: " + ex.message);
-				setTimeout(next, 0);
-			});
-			stre.pipe(makeStream());
-		/*} catch (ex) {
+	var q = async.queue(function (fname, next) {
+        	var file = fs.createReadStream(fname);
+		var xml = sax.createStream(true);
+		file.pipe(xml);
+
+		file.on('open', function(fd) {
+			log("  ... loading: " + fname);
+		});
+		file.on('error', function(ex) {
 			log("  ... skipping, because: " + ex.message);
 			next();
-		}*/
-	}
-	makeStream = function() {
-		var _pars = sax.createStream(true);
-		_pars.on('error', function(err) {
-			log("ERROR: " + err.message);
-			next(err);
 		});
-		_pars.on('text', function(tag) {
-			/* log(ind(indent) + "text: " + ins(tag)); */
 
+		xml.on('error', fail);
+		xml.on('text', function(tag) {
 			current_text += tag;
 		});
-		_pars.on('opentag', function(tag) {
-			indent++;
-			/* log(ind(indent) + "opentag: " + ins(tag)); */
-
+		xml.on('opentag', function(tag) {
 			current_text = "";
 		});
-		_pars.on('closetag', function(tag) {
-			/* log(ind(indent) + "closetag: " + ins(tag)); */
-			indent--;
-
+		xml.on('closetag', function(tag) {
 			if (tag === "name") {
 				current_name = current_text;
 			} else if (tag === "item") {
-				output[current_name] = current_text;
+				output[current_name] = current_text.replace(/%MSGID%/, msgid);
 				current_name = null;
 			}
 		});
-		_pars.on('end', function() {
-			next();
-		});
-		return (_pars);
-	}
+		xml.on('end', next);
+        }, 1);
 
-	next();
-	/*log("END getMessage");*/
+        q.drain = function() {
+		done(output);
+        };
+
+	files.forEach(function (f) {
+            q.push(f, function() {});
+        });
 }
 
 /*

@@ -4,7 +4,6 @@
  */
 
 var express = require('express');
-var fmamsg = require('fmamsg');
 var sunmsg = require('./sunmsg');
 
 var app = module.exports = express.createServer();
@@ -21,37 +20,45 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
-  app.use(express.errorHandler()); 
+  app.use(express.errorHandler());
 });
 
 // Routes
 
 app.get('/msg/:code', function(req, res) {
 	var obj;
-	try {
-		obj = fmamsg.decode(req.params.code);
-	} catch (errstr) {
-		return (res.render('fail.jade', { title: "error", error: errstr }));
-	}
 
-	sunmsg.getMessage(obj.name, obj.value, function hand1(err, vals) {
+	sunmsg.getMessage(req.params.code, function hand1(err, vals) {
 		if (err) {
 			return (res.render('fail.jade', { title: "error", error: err }));
 		}
 
 		delete vals['dict-entry'];
 		delete vals['dictid'];
+
+		var fields = [];
 		for (var key in vals) {
-			if (vals[key] === 'XXX')
-				delete vals[key];
+			if (['XXX', 'dict-entry', 'dictid'].indexOf(key) >= 0)
+				continue;
+			fields.push({'name': key, 'value': vals[key]});
+
 		}
+
+		// The order in which fields should appear, unspecified fields are arbitrary and last
+		const order = ["title", "description", "severity", "type", "keys",
+			       "details", "impact", "response", "action"];
+
+		fields.sort(function (a, b) {
+			return order.indexOf(a.name) - order.indexOf(b.name);
+		});
+
 		var hash = {
-			title: "awesome",
-			obj: vals,
+			title: req.params.code,
+			fields: fields,
 			msgid: req.params.code
 		};
 		return (res.render('msg.jade', hash));
