@@ -44,16 +44,18 @@ app.get('/msg/:code', function(req, res) {
 		for (var key in vals) {
 			if (['XXX', 'dict-entry', 'dictid'].indexOf(key) >= 0)
 				continue;
+			if (key.match(/^po-/))
+				continue;
 			fields.push({'name': key, 'value': vals[key]});
 
 		}
 
 		// The order in which fields should appear, unspecified fields are arbitrary and last
 		const order = ["title", "description", "severity", "type", "keys",
-			       "details", "impact", "response", "action"];
+			       "details", "impact", "response", "action"].reverse();
 
 		fields.sort(function (a, b) {
-			return order.indexOf(a.name) - order.indexOf(b.name);
+			return order.indexOf(b.name) - order.indexOf(a.name);
 		});
 
 		var hash = {
