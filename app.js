@@ -44,6 +44,8 @@ app.get('/msg/:code', function(req, res) {
 		for (var key in vals) {
 			if (['XXX', 'dict-entry', 'dictid'].indexOf(key) >= 0)
 				continue;
+			if (key.match(/^po-/))
+				continue;
 			fields.push({'name': key, 'value': vals[key]});
 
 		}
