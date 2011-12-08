@@ -67,5 +67,9 @@ app.get('/msg/:code', function(req, res) {
 	});
 });
 
-app.listen(3000);
+var listen_port = Number(process.env.HTTP_LISTEN_PORT);
+if (isNaN(listen_port) || listen_port < 1 || listen_port > 65535)
+  listen_port = 3000;
+
+app.listen(listen_port);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
