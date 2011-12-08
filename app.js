@@ -30,41 +30,44 @@ app.configure('production', function(){
 // Routes
 
 app.get('/msg/:code', function(req, res) {
-	var obj;
+  var obj;
 
-	sunmsg.getMessage(req.params.code, function hand1(err, vals) {
-		if (err) {
-			return (res.render('fail.jade', { title: "error", error: err }));
-		}
+  sunmsg.getMessage(req.params.code, function hand1(err, vals) {
+    if (err) {
+      return (res.render('fail.jade', { title: "error", error: err }));
+    }
 
-		delete vals['dict-entry'];
-		delete vals['dictid'];
+    delete vals['dict-entry'];
+    delete vals['dictid'];
 
-		var fields = [];
-		for (var key in vals) {
-			if (['XXX', 'dict-entry', 'dictid'].indexOf(key) >= 0)
-				continue;
-			if (key.match(/^po-/))
-				continue;
-			fields.push({'name': key, 'value': vals[key]});
+    var fields = [];
+    for (var key in vals) {
+      if (['XXX', 'dict-entry', 'dictid'].indexOf(key) >= 0)
+        continue;
+      if (key.match(/^po-/))
+        continue;
+      fields.push({'name': key, 'value': vals[key]});
 
-		}
+    }
 
-		// The order in which fields should appear, unspecified fields are arbitrary and last
-		const order = ["title", "description", "severity", "type", "keys",
-			       "details", "impact", "response", "action"].reverse();
+    /*
+     * The order in which fields should appear, unspecified fields are
+     * arbitrary and displayed last.
+     */
+    const order = ["title", "description", "severity", "type", "keys",
+        "details", "impact", "response", "action"].reverse();
 
-		fields.sort(function (a, b) {
-			return order.indexOf(b.name) - order.indexOf(a.name);
-		});
+    fields.sort(function (a, b) {
+      return order.indexOf(b.name) - order.indexOf(a.name);
+    });
 
-		var hash = {
-			title: req.params.code,
-			fields: fields,
-			msgid: req.params.code
-		};
-		return (res.render('msg.jade', hash));
-	});
+    var hash = {
+      title: req.params.code,
+      fields: fields,
+      msgid: req.params.code
+    };
+    return (res.render('msg.jade', hash));
+  });
 });
 
 var listen_port = Number(process.env.HTTP_LISTEN_PORT);
@@ -72,4 +75,5 @@ if (isNaN(listen_port) || listen_port < 1 || listen_port > 65535)
   listen_port = 3000;
 
 app.listen(listen_port);
-console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+console.log("Express server listening on port %d in %s mode",
+    app.address().port, app.settings.env);
