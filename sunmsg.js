@@ -59,6 +59,7 @@ module.exports.getMessage = function getMessage(msgid, macros, cb) {
     path.join(BASEDIR, dict, "en", "entry" + num + ".xml")
   ];
 
+  const HTMLPATH = path.join(BASEDIR, dict, "en");
 
   function fail(err) {
     cb(err, null);
@@ -95,6 +96,14 @@ module.exports.getMessage = function getMessage(msgid, macros, cb) {
       } else if (tag === "item") {
         output[current_name] = expandMacros(current_text, macros);
         current_name = null;
+      } else if (tag === "use") {
+        var file = path.join(HTMLPATH, current_text);
+        try {
+            output[current_name] = expandMacros(fs.readFileSync(file, 'utf8'),
+                                                macros);
+        } catch (e) {
+          fail("could not include file: " + e);
+        }
       }
     });
     xml.on('end', next);
