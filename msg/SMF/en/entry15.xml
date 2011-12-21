@@ -35,7 +35,7 @@
 	<item>The service is offline because it depends on a service which is not running.</item>
 
 	<name>impact</name>
-	<item>The service is not running.  It will remain offline until its dependencies are met, when the Solaris Service Manager will attempt to start it.  Services with require-type dependencies on the service will not be started.  (Use &lt;code&gt;svcs&amp;nbsp;-xv &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to see a list of services which are waiting for the service to start.)</item>
+	<item>The service is not running.  It will remain offline until its dependencies are met, when the %DISTRO% Service Manager will attempt to start it.  Services with require-type dependencies on the service will not be started.  (Use &lt;code&gt;svcs&amp;nbsp;-xv &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to see a list of services which are waiting for the service to start.)</item>
 
 	<name>action</name>
 	<item>Use &lt;code&gt;svcs&amp;nbsp;-x &lt;i&gt;dependency_fmri&lt;/i&gt;&lt;/code&gt; to determine why the dependency service is not running.  Once it is running, the service will be started.</item>

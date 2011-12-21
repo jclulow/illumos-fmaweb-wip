@@ -35,7 +35,7 @@
 	<item>The number of errors associated with this memory module continues to exceed acceptable levels.</item>
 
 	<name>description</name>
-	<item>The Solaris Fault Manager has determined that the number of errors reported against a page of physical memory exceeds recommended limits.</item>
+	<item>The %DISTRO% Fault Manager has determined that the number of errors reported against a page of physical memory exceeds recommended limits.</item>
 
 	<name>po-response</name>
 	<item>An attempt will be made to remove this memory page from service.</item>

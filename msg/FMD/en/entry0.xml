@@ -33,7 +33,7 @@ If the fault management software is properly installed, also refer to the
 &lt;b&gt;NOTE&lt;/b&gt; at the end of the &lt;b&gt;Details&lt;/b&gt; section below before 
 contacting Sun for support.</item>
 	<name>description</name>
-	<item>The Solaris Fault Manager received an event from a component to which no automated diagnosis software is currently subscribed.</item>
+	<item>The %DISTRO% Fault Manager received an event from a component to which no automated diagnosis software is currently subscribed.</item>
 	<name>details</name>
 	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
 &lt;html&gt;
@@ -54,16 +54,6 @@ This can indicate a mismatch in the versions of various software components,
 a misconfiguration of the system, automated diagnosis software may 
 not have been loaded or be currently available, or a defect in the 
 software.
-&lt;p&gt;
-For SPARC based systems running Solaris 10, the kernel patch 127111 and 
-Solaris FMA patch 119578 are particularly critical and should be 
-examined. Ensure that any dependencies documented in the patch README 
-files are noted and addressed.
-&lt;p&gt;
-For x64 based systems running Solaris 10, the kernel patch 127112 and 
-Solaris FMA patches 118344 and 125370 are particularly critical and 
-should be examined. Ensure that any dependencies documented in the 
-patch README files are noted and addressed.
 &lt;p&gt;
 The recommended actions for the system administrator are:
 &lt;p style=&quot;margin-bottom: 0in;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; 1.)&amp;nbsp;Run
@@ -107,13 +97,9 @@ can be found in Troubleshooting Doc&lt;a href=http://sunsolve.sun.com/search/doc
 For &lt;span
  style=&quot;font-style: italic; text-decoration: underline;
 &quot;&gt;&#39;Sun Fire T1000, Sun Fire T2000, Netra T2000, Sun SPARC 
-Enterprise T5120,and T5220&#39;&lt;/span&gt;  systems, please make sure that the software and firmware patch levels are as follows:
+Enterprise T5120,and T5220&#39;&lt;/span&gt;  systems, please make sure that the firmware patch levels are as follows:
 &lt;p&gt;
-1.) Solaris 5.10: kernel patch 127111-08 or higher
-&lt;p&gt;
-2.) Solaris 5.10: FMA Patch 119578-30 or higher
-&lt;p&gt;
-3.) System firmware:
+System firmware:
 &lt;p&gt;
 T5120 and T5220 firmware patch 127580-05 or higher
 &lt;p&gt;
@@ -149,5 +135,5 @@ hardware faults.
 	<name>response</name>
 	<item>Error reports from the component will be logged for examination by a Sun Service technician.</item>
 	<name>title</name>
-	<item>Solaris Fault Manager Received Unexpected Event</item>
+	<item>%DISTRO% Fault Manager Received Unexpected Event</item>
 </event_registry_properties>

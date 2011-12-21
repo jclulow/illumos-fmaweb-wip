@@ -33,13 +33,13 @@ and schedule a service action.
 Please consult the detail section of the knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain using a device behind a PCI-Express/PCI-X
+	<item>Failure to boot %DISTRO% on a domain using a device behind a PCI-Express/PCI-X
 bridge chip. This includes the PCI-X slot and internal I/O on an IOU (if the
 PCI-Express/PCI-X bridge is located on an IOU or IOUA) and the PCI-X slots of
 an I/O Boat (if the PCI-Express/PCI-X bridge is located on an I/O Boat).
 </item>
 	<name>details</name>
-	<item>This message indicates a failure to boot Solaris on a domain using a device on the PCI-Express bridge.
+	<item>This message indicates a failure to boot %DISTRO% on a domain using a device on the PCI-Express bridge.
 
 The OpenBoot PROM fcode did not detect any fault with the device.
 
@@ -63,6 +63,6 @@ The administrator should investigate the cause of the boot problem and schedule 
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain using a device behind a PCI-Express/PCI-X bridge.
+	<item>Failure to boot %DISTRO% on a domain using a device behind a PCI-Express/PCI-X bridge.
 </item>
 </event_registry_properties>

@@ -47,8 +47,8 @@ gcore(1) utility.
 	<item>The service instance&#39;s state is not recognized by the system.</item>
 	<name>details</name>
 	<item>&lt;p&gt;
-The Solaris Service Manager issues commands for a service to its
-responsible restarter, which may be the Solaris Service Manager itself.
+The %DISTRO% Service Manager issues commands for a service to its
+responsible restarter, which may be the %DISTRO% Service Manager itself.
 In the course of operations, the the responsible restarter updates the
 service&#39;s state in the non-persistent portion of the repository.  If a
 component failure results in the state update being incorrect, then

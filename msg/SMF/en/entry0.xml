@@ -29,7 +29,7 @@
 <!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
 <event_registry_properties>
 	<name>action</name>
-	<item>To request the Solaris Service Manager to start the service, run &lt;code&gt;svcadm&amp;nbsp;enable &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt;. To see its state, run &lt;code&gt;svcs&amp;nbsp;&lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt;.</item>
+	<item>To request the %DISTRO% Service Manager to start the service, run &lt;code&gt;svcadm&amp;nbsp;enable &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt;. To see its state, run &lt;code&gt;svcs&amp;nbsp;&lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt;.</item>
 	<name>description</name>
 	<item>The service is disabled.  It is not running and will not be started.</item>
 	<name>details</name>

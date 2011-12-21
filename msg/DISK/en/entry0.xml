@@ -37,7 +37,7 @@ Use fmdump -v -u &amp;lt;EVENT_ID&amp;gt; to identify the disk.
 failure is imminent.
 </item>
 	<name>details</name>
-	<item>This message indicates that the Solaris Fault Manager has received reports
+	<item>This message indicates that the %DISTRO% Fault Manager has received reports
 from the SMART (Self-Monitoring, Analysis and Reporting Technology)
 health-monitoring firmware indicating a disk failure is imminent.
 &lt;P&gt;
@@ -107,20 +107,6 @@ May 08 16:01:43.9404 &lt;FONT COLOR=BLUE&gt;5a9e5915-250b-c9b9-ddb2-df99af529a11
                            /pcifn=0/pcibus=11/pcidev=1/pcifn=0/sata-port=6/disk=0
           Location: &lt;FONT COLOR=GREEN&gt;HD_ID_29&lt;/FONT&gt;
 &lt;/PRE&gt;&lt;/UL&gt;
-&lt;UL&gt;On older Solaris systems, this output will look slightly
-different:&lt;/UL&gt;
-&lt;UL&gt;&lt;PRE&gt;
-# fmdump -v -u 5a9e5915-250b-c9b9-ddb2-df99af529a11
-TIME                 UUID                                 SUNW-MSG-ID
-May 08 16:01:43.9404 5a9e5915-250b-c9b9-ddb2-df99af529a11 DISK-8000-0X
-  100%  fault.io.disk.predictive-failure
-
-        Problem in: hc:///:serial=VDK41BT4C7PJYS:part=HITACHI-HDS7225SBSUN250G-527N7PJYS:
-                           revision=V44OA81A/motherboard=0/hostbridge=2/pcibus=9/pcidev=8
-                           /pcifn=0/pcibus=11/pcidev=1/pcifn=0/sata-port=6/disk=0
-           Affects: hc:///component=sata5/6
-               FRU: &lt;FONT COLOR=GREEN&gt;hc:///component=HD_ID_29&lt;/FONT&gt;
-&lt;/PRE&gt;&lt;/UL&gt;
 &lt;P&gt;
 &lt;B&gt;Step 3: &lt;/B&gt;Identify the FRU that needs to be replaced.
 &lt;P&gt;
@@ -140,7 +126,7 @@ filesystems, disk management considerations, cfgadm commands, etc...
 &lt;P&gt;
 &lt;B&gt;Step 5: &lt;/B&gt;Verify the repaired resource is no longer faulty
 &lt;P&gt;
-After the Disk Drive has been replaced, use the Solaris command &#39;fmadm faulty&#39; to display
+After the Disk Drive has been replaced, use the %DISTRO% command &#39;fmadm faulty&#39; to display
 all faulted resources in the system. Confirm that the repaired resource is no
 longer listed as faulted. See Example 5.1.
 &lt;P&gt;

@@ -27,12 +27,18 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-// Routes
 
+// Routes
 app.get('/msg/:code', function(req, res) {
   var obj;
 
-  sunmsg.getMessage(req.params.code, function hand1(err, vals) {
+    var MACROS = {
+        "msgid": req.params.code,
+        "distro": process.env.FMA_DISTRO || "Illumos"
+    };
+
+
+  sunmsg.getMessage(req.params.code, MACROS, function hand1(err, vals) {
     if (err) {
       return (res.render('fail.jade', { title: "error", error: err }));
     }

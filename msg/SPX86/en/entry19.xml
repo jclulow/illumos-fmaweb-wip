@@ -75,7 +75,7 @@ server will also be illuminated.&lt;br&gt;
 The ILOM CLI will display the status of the chassis-wide LED indicator
 as:&amp;nbsp; /SYS/SERVICE = On&lt;br&gt;
 &lt;br&gt;
-If running the Solaris operating system, the Predictive Self-Healing
+If running the %DISTRO% operating system, the Predictive Self-Healing
 capabilities will &lt;br&gt;
 diagnose this same fault and result in the processor to be off-lined
 upon a system &lt;br&gt;
@@ -416,7 +416,7 @@ Clearing Fault after Replacement&lt;/span&gt;&lt;br&gt;
 necessary to clear a fault are largely
 dependent on the type of server platform (blade vs rackmount) &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; and the
-operating system on the host (Solaris, Linux, Windows, etc.).&lt;br&gt;
+operating system on the host (%DISTRO%, Linux, Windows, etc.).&lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span
@@ -436,7 +436,7 @@ FRU/component&amp;nbsp; is physically replaced.&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &amp;nbsp;&amp;nbsp;
-Solaris-based faults are always persistent.&lt;br&gt;
+%DISTRO%-based faults are always persistent.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span
@@ -457,7 +457,7 @@ replaced.&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &amp;nbsp;&amp;nbsp;
-Solaris-based faults are always persistent.&lt;br&gt;
+%DISTRO%-based faults are always persistent.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &lt;br&gt;
 &lt;br&gt;
@@ -485,7 +485,7 @@ C1&lt;/span&gt;&amp;nbsp; is required on this server running any operating syste
 &lt;span style=&quot;text-decoration: underline;&quot;&gt;Step
 C1&lt;/span&gt;&amp;nbsp; and&amp;nbsp; &lt;span style=&quot;text-decoration: underline;&quot;&gt;Step
 C2&lt;/span&gt;&amp;nbsp; are required on this server when running the
-Solaris operating system.&lt;br&gt;
+%DISTRO% operating system.&lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;span style=&quot;font-weight: bold;&quot;&gt;
@@ -502,7 +502,7 @@ system.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &lt;span style=&quot;text-decoration: underline;&quot;&gt;Step
 C2&lt;/span&gt;&amp;nbsp; is required on a blade server running the
-Solaris operating system.&lt;br&gt;
+%DISTRO% operating system.&lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -535,13 +535,13 @@ want to clear &lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quo
 &lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;a
- name=&quot;Step_C2._Use_Solaris_Operating_System&quot;&gt;&lt;/a&gt;&lt;span
+ name=&quot;Step_C2._Use_%DISTRO%_Operating_System&quot;&gt;&lt;/a&gt;&lt;span
  style=&quot;font-weight: bold;&quot;&gt;Step C2.&amp;nbsp;
-Use Solaris Operating System to Clear Fault&lt;/span&gt;&lt;span
+Use %DISTRO% Operating System to Clear Fault&lt;/span&gt;&lt;span
  style=&quot;font-style: italic;&quot;&gt; &lt;/span&gt;&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-If running the Solaris operating system, the Predictive Self-Healing
+If running the %DISTRO% operating system, the Predictive Self-Healing
 capabilities will&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; diagnose this same fault and
@@ -553,7 +553,7 @@ interruptions until the processor
 can be replaced.&amp;nbsp; &lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Use the Solaris fault management utilities to
+Use the %DISTRO% fault management utilities to
 clear processor fault and enable processor.&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
@@ -573,7 +573,7 @@ Please refer to &lt;font face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;&lt
 	<item>System will panic and reset and system performance may be impacted.
 </item>
 	<name>response</name>
-	<item>If running Solaris, the processor will be off-lined upon system reboot to prevent future interruptions.
+	<item>If running %DISTRO%, the processor will be off-lined upon system reboot to prevent future interruptions.
 </item>
 	<name>title</name>
 	<item>Level 0 Instruction Cache Fault on Processor

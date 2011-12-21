@@ -33,7 +33,7 @@ and schedule a service action, if necessary.
 Please consult the detail section of the knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain using a device behind a PCI-Express/PCI-X 
+	<item>Failure to boot %DISTRO% on a domain using a device behind a PCI-Express/PCI-X 
 bridge chip. This includes the PCI-X slot and internal I/O on an IOU (if the
 PCI-Express/PCI-X bridge is located on an IOU or IOUA) and the PCI-X slots of
 an I/O Boat (if the PCI-Express/PCI-X bridge is located on an I/O Boat).
@@ -47,7 +47,7 @@ an I/O Boat (if the PCI-Express/PCI-X bridge is located on an I/O Boat).
   &lt;title&gt;&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-Failure to boot Solaris on a domain using a device behind a
+Failure to boot %DISTRO% on a domain using a device behind a
 PCI-Express/PCI-X bridge chip.&lt;br&gt;
 &lt;br&gt;
 This message is informational in nature and not a diagnosis.&lt;br&gt;
@@ -115,7 +115,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a2d1efee-7f13-4801-aa81-aaa8cbead200&lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; DESC: Failure to boot Solaris on a domain using a device
+&amp;nbsp;&amp;nbsp; DESC: Failure to boot %DISTRO% on a domain using a device
 behind a PCI-Express/PCI-X &lt;br&gt;
 &amp;nbsp;&amp;nbsp; bridge chip. This includes the PCI-X slot and internal I/O
 on an IOU (if the&lt;br&gt;
@@ -178,6 +178,6 @@ Step 3. Contact your Authorized Service Provider.&lt;br&gt;
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain using a device behind a PCI-Express/PCI-X bridge.
+	<item>Failure to boot %DISTRO% on a domain using a device behind a PCI-Express/PCI-X bridge.
 </item>
 </event_registry_properties>

@@ -32,7 +32,7 @@
 	<name>description</name>
 	<item>The number of errors associated with this CPU has exceeded acceptable levels.</item>
 	<name>details</name>
-	<item>This message indicates that the Solaris Fault Manager has received 
+	<item>This message indicates that the %DISTRO% Fault Manager has received 
 reports from a CPU indicating that one or more Level 1 Data 
 Cache errors have occurred and a CPU fault has been diagnosed. If
 an uncorrectable error was reported, it likely resulted in a system 
@@ -146,7 +146,7 @@ with the EVENT_ID (highlighted in red) in Example 1.1 above.
 &lt;P&gt;
 &lt;B&gt;Step 6: &lt;/B&gt;Verify the repaired resource is no longer faulty
 &lt;P&gt;
-Use the Solaris command &#39;fmadm faulty&#39; to display all faulted resources
+Use the %DISTRO% command &#39;fmadm faulty&#39; to display all faulted resources
 in the system.  Confirm that the repaired resource is no longer listed
 as faulted as shown in Example 6.1 below where no resources are
 faulted.
@@ -165,7 +165,7 @@ faulted.
 &lt;B&gt;Step 7: &lt;/B&gt;Place the CPU back into the active configuration
 &lt;P&gt;
 Once you have completed the repair action, and told the fault manager 
-that the FRU has been repaired, it may still be necessary to tell Solaris 
+that the FRU has been repaired, it may still be necessary to tell %DISTRO% 
 to use the affected system resource.  If the &lt;B&gt;Automated Response&lt;/B&gt; 
 described above in this article was; &quot;An attempt will be made to remove 
 this CPU from service.&quot;, you will need to place the CPU back into the 
@@ -175,7 +175,7 @@ To place the CPU back into the active configuration, you will need to
 know the logical CPU number that was faulted.  The logical CPU number 
 was identified in the fmdump output following the label &#39;Affects:&#39; 
 (highlighted in green) in Example 2.1 above. You can also identify a 
-CPU that is still considered faulted by Solaris using the psrinfo (1M) 
+CPU that is still considered faulted by %DISTRO% using the psrinfo (1M) 
 command shown in Example 7.1 below.  
 &lt;UL&gt;
 &lt;B&gt;Example 7.1 - identifying the logical CPU number that was faulted:&lt;/B&gt;
@@ -200,7 +200,7 @@ Place the faulted CPU back into the active configuration using the psradm
 &lt;P&gt;
 &lt;B&gt;Step 8: &lt;/B&gt;Verify the CPU is in use by the system.
 &lt;P&gt;
-To verify that the CPU has been returned to service, use the Solaris 
+To verify that the CPU has been returned to service, use the %DISTRO% 
 command psrinfo (1M). See Example 8.1 below.
 &lt;P&gt;
 &lt;UL&gt;

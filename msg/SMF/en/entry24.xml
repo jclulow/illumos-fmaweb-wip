@@ -40,7 +40,7 @@ and decide to place this service in maintenance.
 </item>
 	<name>details</name>
 	<item>&lt;p&gt;
-Related services can request the Solaris Service Manager to
+Related services can request the %DISTRO% Service Manager to
 place another service into maintenance state.&lt;br&gt;
 
 &lt;p&gt;

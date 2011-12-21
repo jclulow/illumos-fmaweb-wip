@@ -32,7 +32,7 @@
 	<item>Service specifies invalid restarter</item>
 
 	<name>description</name>
-	<item>The Solaris Service Manager can not manipulate the service because its restarter specification is invalid.</item>
+	<item>The %DISTRO% Service Manager can not manipulate the service because its restarter specification is invalid.</item>
 
 	<name>impact</name>
 	<item>The service will remain in the current state until its restarter declaration is fixed.  Services with dependencies on the service may be affected.  (Use &lt;code&gt;svcs&amp;nbsp;-xv &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to see a list of services waiting for the service to start.)</item>

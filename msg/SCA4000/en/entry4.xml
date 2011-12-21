@@ -32,13 +32,13 @@
 	<item>Sun Crypto Accelerator 4000 Driver May Be Defective</item>
 
 	<name>description</name>
-	<item>The Solaris Fault Manager has determined that a software
+	<item>The %DISTRO% Fault Manager has determined that a software
 defect was detected in Sun Crypto Accelerator 4000 driver which
 requires repair action.</item>
 
 	<name>response</name>
 	<item>The driver has been disabled and unregistered as a hardware
-provider to the Solaris Cryptographic Framework.</item>
+provider to the %DISTRO% Cryptographic Framework.</item>
 
 	<name>impact</name>
 	<item>The card will no longer function as a network device or

@@ -32,8 +32,6 @@
 	<item>Online any CPU that was automatically offlined in response to this fault
 (use fmdump -v -u &amp;lt;EVENT_ID&amp;gt; to identify the CPU).  The fault
 should also be repaired with fmadm repair &amp;lt;EVENT_ID&amp;gt;.
-This misdiagnosis bug is being fixed - patch numbers for Solaris 10
-will appear here when aavailable.\n
 </item>
 	<name>description</name>
 	<item>(This is a misdiagnosis of a potential main memory (DIMM) fault as a CPU cache fault.  Ignore this fault and look for memory errors and faults from the DIMMS associated with this CPU.)

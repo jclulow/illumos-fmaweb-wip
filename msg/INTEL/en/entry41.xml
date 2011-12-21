@@ -32,7 +32,7 @@
 	<name>description</name>
 	<item>The number of correctable errors associated with this memory module has exceeded acceptable levels.</item>
 	<name>details</name>
-	<item>This message indicates that the Solaris Fault Manager has received 
+	<item>This message indicates that the %DISTRO% Fault Manager has received 
 reports of single bit correctable errors from a Memory Module at a 
 rate exceeding acceptable levels, and a Memory Module fault has been 
 diagnosed. No data has been lost, and pages of the affected Memory 

@@ -38,7 +38,7 @@
 	<item>The service may or may not be running.  It will not be started until the maintenance state is cleared.  Services with require-type dependencies on the service will not be started.  (Use &lt;code&gt;svcs&amp;nbsp;-xv &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to see a list of services waiting for the service to start.)</item>
 
 	<name>action</name>
-	<item>&lt;p&gt;Determine what method failed and why.  Consult the service's log file, typically in &lt;code&gt;/var/svc/log&lt;/code&gt; and named based on the service's FMRI.  (Very early in boot, service logs are placed in &lt;code&gt;/etc/svc/volatile&lt;/code&gt;.)  If the stop method failed, processes which belonged to the service may still be running.&lt;p&gt;Once the problem has been fixed, run &lt;code&gt;svcadm&amp;nbsp;clear &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to request that the Solaris Service Manager clear the maintenance state and treat the service normally.  If it is enabled and its dependencies are met, it will be started.</item>
+	<item>&lt;p&gt;Determine what method failed and why.  Consult the service's log file, typically in &lt;code&gt;/var/svc/log&lt;/code&gt; and named based on the service's FMRI.  (Very early in boot, service logs are placed in &lt;code&gt;/etc/svc/volatile&lt;/code&gt;.)  If the stop method failed, processes which belonged to the service may still be running.&lt;p&gt;Once the problem has been fixed, run &lt;code&gt;svcadm&amp;nbsp;clear &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to request that the %DISTRO% Service Manager clear the maintenance state and treat the service normally.  If it is enabled and its dependencies are met, it will be started.</item>
 
 	<name>details</name>
 	<use>htdocs/8.html</use>

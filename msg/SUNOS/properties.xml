@@ -29,7 +29,7 @@
 <!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
 <event_registry_properties>
 	<name>description</name>
-	<item>Solaris/SunOS Diagnoses</item>
+	<item>%DISTRO% Diagnoses</item>
 	<name>dictid</name>
 	<item>0x4f53</item>
 </event_registry_properties>

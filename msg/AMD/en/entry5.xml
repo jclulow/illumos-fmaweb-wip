@@ -35,7 +35,7 @@
 	<item>&lt;P&gt;
 &lt;B&gt;Step 4: &lt;/B&gt;Verify the CPU is in use by the system.
 &lt;P&gt;
-To verify that the CPU has been returned to service, use the Solaris 
+To verify that the CPU has been returned to service, use the %DISTRO% 
 command psrinfo (1M). See Example 4.1 below.
 &lt;P&gt;
 &lt;UL&gt;

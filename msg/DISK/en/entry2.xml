@@ -36,7 +36,7 @@ Use fmdump -v -u &amp;lt;EVENT_ID&amp;gt; to identify the disk.
 	<item>One or more disk self tests failed.
 </item>
 	<name>details</name>
-	<item>This message indicates that the Solaris Fault Manager has received reports
+	<item>This message indicates that the %DISTRO% Fault Manager has received reports
 from a Disk Drive&#39;s firmware indicating that a self-test failure has occurred
 and the Disk Drive has failed.
 &lt;P&gt;
@@ -104,7 +104,7 @@ May 08 16:01:43.9404 &lt;FONT COLOR=BLUE&gt;5a9e5915-250b-c9b9-ddb2-df99af529a11
                            /pcifn=0/pcibus=11/pcidev=1/pcifn=0/sata-port=6/disk=0
           Location: &lt;FONT COLOR=GREEN&gt;HD_ID_29&lt;/FONT&gt;
 &lt;/PRE&gt;&lt;/UL&gt;
-&lt;UL&gt;On older Solaris systems, this output will look slightly
+&lt;UL&gt;On older %DISTRO% systems, this output will look slightly
 different:&lt;/UL&gt;
 &lt;UL&gt;&lt;PRE&gt;
 # fmdump -v -u 5a9e5915-250b-c9b9-ddb2-df99af529a11
@@ -137,7 +137,7 @@ filesystems, disk management considerations, cfgadm commands, etc...
 &lt;P&gt;
 &lt;B&gt;Step 5: &lt;/B&gt;Verify the repaired resource is no longer faulty
 &lt;P&gt;
-After the Disk Drive has been replaced, use the Solaris command &#39;fmadm faulty&#39; to display
+After the Disk Drive has been replaced, use the %DISTRO% command &#39;fmadm faulty&#39; to display
 all faulted resources in the system. Confirm that the repaired resource is no
 longer listed as faulted. See Example 5.1.
 &lt;P&gt;

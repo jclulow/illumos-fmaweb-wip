@@ -32,7 +32,7 @@
 	<item>Sun Crypto Accelerator 4000 Unable To Load Keystore</item>
 
 	<name>description</name>
-	<item>The Solaris Fault Manager has determined that there is a
+	<item>The %DISTRO% Fault Manager has determined that there is a
 problem loading the keystore to the Sun Crypto Accelerator 4000 via the
 vcad daemon which requires repair action.</item>
 

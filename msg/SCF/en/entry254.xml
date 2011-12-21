@@ -33,10 +33,10 @@ problem and schedule a service action.
 Please consult the detail section of the knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain using Gigabit Ethernet.
+	<item>Failure to boot %DISTRO% on a domain using Gigabit Ethernet.
 </item>
 	<name>details</name>
-	<item>This message indicates a failure to boot Solaris on a domain via the network.
+	<item>This message indicates a failure to boot %DISTRO% on a domain via the network.
 
 The OpenBoot PROM fcode did not detect any fault with the device.
 
@@ -62,6 +62,6 @@ and schedule a service action if necessary.
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain using Gigabit Ethernet.
+	<item>Failure to boot %DISTRO% on a domain using Gigabit Ethernet.
 </item>
 </event_registry_properties>

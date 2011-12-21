@@ -40,9 +40,9 @@ failed.)  The next state may be viewed by invoking &quot;svcs -v&quot;.
 	<name>details</name>
 	<item>&lt;p&gt;
 If a service is being moved to a state (due to an administrative action
-or a response to a failure of that service or a dependency), the Solaris
+or a response to a failure of that service or a dependency), the %DISTRO%
 Service Manager will ultimately send a request to the service&#39;s restarter. If
-the service&#39;s restarter is the Solaris Service Manager
+the service&#39;s restarter is the %DISTRO% Service Manager
 (svc:/system/svc/restarter:default), it will execute the service&#39;s
 appropriate method to complete the transition. For most services, when
 the method completes successfully, the service will be placed in the
@@ -52,7 +52,7 @@ requested state.
 &lt;p&gt;
 The Message ID:   SMF-8000-PH indicates that the transition 
 is in progress. This outcome can indicate a system being shut down,
-or a defect in Solaris or third party software.
+or a defect in %DISTRO% or third party software.
 &lt;/p&gt;
 	
 &lt;p&gt;

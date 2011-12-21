@@ -32,7 +32,7 @@
 Please consult the detail section of the knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>The XSCF has detected that a Solaris domain has panic&#39;ed.
+	<item>The XSCF has detected that a %DISTRO% domain has panic&#39;ed.
 </item>
 	<name>details</name>
 	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
@@ -43,7 +43,7 @@ Please consult the detail section of the knowledge article for additional inform
   &lt;title&gt;&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-The XSCF has detected that a Solaris domain has panic&#39;ed.&lt;br&gt;
+The XSCF has detected that a %DISTRO% domain has panic&#39;ed.&lt;br&gt;
 &lt;br&gt;
 The reason for the domain panic is unknown by XSCF software.&lt;br&gt;
 &lt;br&gt;
@@ -110,12 +110,12 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;bacfa243-a8f3-4ce2-8c38-ee0afc468092&lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; DESC: The XSCF has detected that a Solaris domain has
+&amp;nbsp;&amp;nbsp; DESC: The XSCF has detected that a %DISTRO% domain has
 panic&#39;ed.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8005-PX for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: No action is taken due to this fault.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; IMPACT: The Solaris domain has panic&#39;ed.&lt;br&gt;
+&amp;nbsp;&amp;nbsp; IMPACT: The %DISTRO% domain has panic&#39;ed.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; REC-ACTION: The administrator should look at the domain&#39;s
 console to identify the cause of the panic.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
@@ -157,12 +157,12 @@ Step 3. Contact your Authorized Service Provider.&lt;br&gt;
 &lt;/body&gt;
 &lt;/html&gt;</item>
 	<name>impact</name>
-	<item>The Solaris domain has panic&#39;ed.
+	<item>The %DISTRO% domain has panic&#39;ed.
 </item>
 	<name>response</name>
 	<item>No action is taken due to this fault.
 </item>
 	<name>title</name>
-	<item>The XSCF has detected that a Solaris domain has panic&#39;ed.
+	<item>The XSCF has detected that a %DISTRO% domain has panic&#39;ed.
 </item>
 </event_registry_properties>

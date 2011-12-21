@@ -33,7 +33,7 @@ and schedule a service action, if necessary.
 Please consult the detail section of the knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain via an internal disk drive on the SAS controller.
+	<item>Failure to boot %DISTRO% on a domain via an internal disk drive on the SAS controller.
 </item>
 	<name>details</name>
 	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
@@ -44,7 +44,7 @@ Please consult the detail section of the knowledge article for additional inform
   &lt;title&gt;&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-Failure to boot Solaris on a domain via an internal disk drive on the
+Failure to boot %DISTRO% on a domain via an internal disk drive on the
 SAS controller.&lt;br&gt;
 &amp;nbsp;&lt;br&gt;
 This message is informational in nature and not a diagnosis.&lt;br&gt;
@@ -113,7 +113,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a6f09f62-f00a-46b7-8912-39114607792a&lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; DESC: Failure to boot Solaris on a domain via an internal
+&amp;nbsp;&amp;nbsp; DESC: Failure to boot %DISTRO% on a domain via an internal
 disk drive on the SAS controller.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8001-KC for more
 information.&lt;br&gt;
@@ -171,6 +171,6 @@ Step 3. Contact your Authorized Service Provider.&lt;br&gt;
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain via an internal disk drive on the SAS controller.
+	<item>Failure to boot %DISTRO% on a domain via an internal disk drive on the SAS controller.
 </item>
 </event_registry_properties>

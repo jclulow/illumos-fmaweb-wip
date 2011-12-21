@@ -81,7 +81,7 @@ server will also be illuminated.&lt;br&gt;
 The ILOM CLI will display the status of the chassis-wide LED indicator
 as:&amp;nbsp; /SYS/SERVICE = On&lt;br&gt;
 &lt;br&gt;
-If running Solaris, it&#39;s Predictive Self-Healing
+If running %DISTRO%, it&#39;s Predictive Self-Healing
 capabilities will also evaluate errors reported,&lt;br&gt;
 which will result in pages being retired
 to prevent future
@@ -89,7 +89,7 @@ interruptions.&lt;br&gt;
 &lt;br&gt;
 See the information in &lt;a href=&quot;#A_Identify_the_Faulty_ComponentFRU_&quot;&gt;Section
 A&lt;/a&gt; below to determine if DIMM replacement is necessary when you are
-running Solaris.&lt;br&gt;
+running %DISTRO%.&lt;br&gt;
 &lt;tt&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;/font&gt;&lt;/tt&gt;&lt;br&gt;
@@ -282,15 +282,15 @@ for details.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span
  style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;&lt;span
  style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;If System is
-Running Solaris&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;/span&gt;&lt;br&gt;
+Running %DISTRO%&lt;/span&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Solaris provides a robust memory management solution, which includes
+%DISTRO% provides a robust memory management solution, which includes
 page retirement &lt;br&gt;
 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; features capable of
 eliminating correctable errors by retiring the affected page(s).&amp;nbsp; &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;
-Should Solaris determine that a memory DIMM replacement is necessary, &lt;br&gt;
+Should %DISTRO% determine that a memory DIMM replacement is necessary, &lt;br&gt;
 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp; it will issue a fault
 with a link to a message indicating the appropriate actions to take.&lt;br&gt;
 &lt;br&gt;
@@ -310,7 +310,7 @@ replacement.&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;font-weight: bold;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &lt;/span&gt;&lt;span style=&quot;text-decoration: underline;&quot;&gt;&lt;span
- style=&quot;font-weight: bold;&quot;&gt;If System is NOT Running Solaris&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
+ style=&quot;font-weight: bold;&quot;&gt;If System is NOT Running %DISTRO%&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp; The
 recommended service action for this event is to schedule replacement&lt;br&gt;
@@ -805,10 +805,10 @@ want to clear &lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quo
 &lt;/body&gt;
 &lt;/html&gt;</item>
 	<name>impact</name>
-	<item>The memory DIMM is still in use and has not been disabled.  If running Solaris, total system memory capacity has been slightly reduced.
+	<item>The memory DIMM is still in use and has not been disabled.  If running %DISTRO%, total system memory capacity has been slightly reduced.
 </item>
 	<name>response</name>
-	<item>If running Solaris, the affected pages of memory associated with the faulty memory module will be designated for removal from service to avoid additional errors. Other operating systems may ignore these correctable events.
+	<item>If running %DISTRO%, the affected pages of memory associated with the faulty memory module will be designated for removal from service to avoid additional errors. Other operating systems may ignore these correctable events.
 </item>
 	<name>title</name>
 	<item>Memory Correctable ECC Fault

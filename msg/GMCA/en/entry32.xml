@@ -32,7 +32,7 @@
 	<name>description</name>
 	<item>A memory module has suffered an uncorrectable error.</item>
 	<name>details</name>
-	<item>This message ID: &lt;B&gt;GMCA-8001-09&lt;/B&gt; indicates that the Solaris Fault Manager has received reports
+	<item>This message ID: &lt;B&gt;GMCA-8001-09&lt;/B&gt; indicates that the %DISTRO% Fault Manager has received reports
 of Uncorrectable Multiple-Bit memory errors associated with a Memory 
 Module have been detected, and a Memory Module fault has been diagnosed.
 No data has been lost, and pages of the affected Memory Module are being
@@ -138,7 +138,7 @@ resetting capture the outputs from fmstat -m eft, fmstat -s -m eft.
 &lt;p&gt;
 &lt;B&gt;Step 6: &lt;/B&gt;Verify the repaired resource is no longer faulty
 &lt;P&gt;
-Use the Solaris command &#39;fmadm faulty&#39; to display all faulted resources
+Use the %DISTRO% command &#39;fmadm faulty&#39; to display all faulted resources
 in the system.  Confirm that the repaired resource is no longer listed
 as faulted shown in Example 6.1.
 &lt;P&gt;
@@ -155,7 +155,7 @@ as faulted shown in Example 6.1.
 	<name>impact</name>
 	<item>\n\nPage retirement (where supported) is capped at a small fraction of memory to avoid performance impact.\n</item>
 	<name>response</name>
-	<item>\n\nIf Solaris is running on bare-metal (native) then affected memory pages associated with this memory module will be removed from service.\n</item>
+	<item>\n\nIf %DISTRO% is running on bare-metal (native) then affected memory pages associated with this memory module will be removed from service.\n</item>
 	<name>title</name>
 	<item>A memory module has suffered an uncorrectable error.</item>
 </event_registry_properties>

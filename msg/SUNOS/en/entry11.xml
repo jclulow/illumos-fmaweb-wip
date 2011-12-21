@@ -33,7 +33,7 @@
 described in &lt;b&gt;Details&lt;/b&gt;.
 </item>
 	<name>description</name>
-	<item>Solaris OS could not automatically adjust
+	<item>%DISTRO% OS could not automatically adjust
 &lt;tt&gt;/boot/grub/menu.lst&lt;/tt&gt;
 to the new boot architecture
 </item>
@@ -52,7 +52,7 @@ this file as specified below. See &lt;tt&gt;boot&lt;/tt&gt;(1M) and
 &lt;tt&gt;bootadm&lt;/tt&gt;(1M) for more information on GRUB&#39;s &lt;tt&gt;menu.lst&lt;/tt&gt; file
 and the direct boot service.
 
-&lt;p&gt;&lt;b&gt;&lt;tt&gt;menu.lst&lt;/tt&gt; changes if you are running Solaris on hardware&lt;/b&gt;
+&lt;p&gt;&lt;b&gt;&lt;tt&gt;menu.lst&lt;/tt&gt; changes if you are running %DISTRO% on hardware&lt;/b&gt;
 
 &lt;p&gt;The default entries in the &lt;tt&gt;menu.lst&lt;/tt&gt; file for a multiboot
 environment typically look like this:
@@ -92,8 +92,8 @@ module$ /platform/i86pc/$ISADIR/boot_archive
 #---------------------END BOOTADM--------------------
 &lt;/pre&gt;
 
-&lt;p&gt;This will boot 64-bit Solaris on 64-bit capable machines, and 32-bit 
-Solaris on all other machines.  To boot 32-bit Solaris, you must remove 
+&lt;p&gt;This will boot 64-bit %DISTRO% on 64-bit capable machines, and 32-bit 
+%DISTRO% on all other machines.  To boot 32-bit %DISTRO%, you must remove 
 &lt;tt&gt;$ISADIR&lt;/tt&gt; in two places in the first entry: before &lt;tt&gt;unix&lt;/tt&gt; in 
 the kernel line, and before &lt;tt&gt;boot_archive&lt;/tt&gt; in the module line:
 

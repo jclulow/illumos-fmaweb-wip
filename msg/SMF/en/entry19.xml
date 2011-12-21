@@ -32,7 +32,7 @@
 	<item>Service restarting too quickly</item>
 
 	<name>description</name>
-	<item>The service terminated and was restarted more frequently than normal.  The Solaris Service Manager placed the service into maintenance mode instead of restarting it again.</item>
+	<item>The service terminated and was restarted more frequently than normal.  The %DISTRO% Service Manager placed the service into maintenance mode instead of restarting it again.</item>
 
 	<name>impact</name>
 	<item>The service will remain stopped until its maintenance state is cleared.  Other services with require-type dependencies on the service will not be started until this service is repaired.  (Use &lt;code&gt;svcs&amp;nbsp;-xv&amp;nbsp;&lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to list such impacted services.)</item>

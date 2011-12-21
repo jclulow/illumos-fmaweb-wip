@@ -35,7 +35,7 @@
 	<item>The number of errors associated with this memory module has exceeded acceptable levels.</item>
 
 	<name>description</name>
-	<item>The Solaris Fault Manager has determined that one or more uncorrectable (multibit) memory errors indicating a fault which requires repair action is present.</item>
+	<item>The %DISTRO% Fault Manager has determined that one or more uncorrectable (multibit) memory errors indicating a fault which requires repair action is present.</item>
 
 	<name>po-response</name>
 	<item>Pages of memory associated with this memory module are being removed from service as errors are reported.</item>

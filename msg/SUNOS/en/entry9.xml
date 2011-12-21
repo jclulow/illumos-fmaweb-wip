@@ -29,11 +29,11 @@
 <!DOCTYPE event_registry_properties SYSTEM "event_registry.dtd.1">
 <event_registry_properties>
 	<name>title</name>
-	<item>Upgrading Solaris systems with non-global zones installed</item>
+	<item>Upgrading %DISTRO% systems with non-global zones installed</item>
 
 	<name>description</name>
 	<item>
-	The Solaris system or boot environment that is being upgraded
+	The %DISTRO% system or boot environment that is being upgraded
 	has non-global zones installed.  The current version of Live
 	Upgrade cannot upgrade a boot environment that has non-global
 	zones installed.
@@ -43,7 +43,7 @@
 	<item>The upgrade procedure has been terminated.</item>
 
 	<name>impact</name>
-	<item>The Solaris system or boot environment is not upgraded.</item>
+	<item>The %DISTRO% system or boot environment is not upgraded.</item>
 
 	<name>action</name>
 	<item>
@@ -55,7 +55,7 @@
 	<item>
 	&lt;ul&gt;
 	&lt;li&gt;
-	Use the standard Solaris interactive installation program to
+	Use the standard %DISTRO% interactive installation program to
 	upgrade your system.  See Chapter 3, Solaris Installation and
 	Upgrade (Planning) in
 	&lt;a href=&quot;http://docs.sun.com/app/docs/doc/817-5505/&quot;&gt;
@@ -99,7 +99,7 @@
 
 	&lt;br&gt;
 	&lt;li&gt;
-	Choose to wait for Solaris Live Upgrade to be supported on your
+	Choose to wait for %DISTRO% Live Upgrade to be supported on your
 	system configuration in a future release.  With this option,
 	specific patches for issues of concern can still be installed
 	at this time.

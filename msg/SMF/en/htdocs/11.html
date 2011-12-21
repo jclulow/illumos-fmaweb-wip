@@ -27,10 +27,10 @@
 <!-- ident	"@(#)11.html	1.4	07/01/30 SMI" -->
 
 	<p>
-	  If a service is enabled and its dependencies are met, the Solaris
+	  If a service is enabled and its dependencies are met, the %DISTRO%
 	  Service Manager will send a start command to the service's
 	  restarter.
-	  If the service's restarter is the Solaris Service Manager
+	  If the service's restarter is the %DISTRO% Service Manager
 	  (<code>svc:/system/svc/restarter:default</code>), it will execute
 	  the service's start method.
 	  For most services, when the method completes successfully, the
@@ -41,7 +41,7 @@
 	  size="+1"><code><b>SMF-8000-C4</b></code></font> indicates
         that the transition from offline to online is in progress.
 	This outcome can indicate a booting or restarting system, or
-	a defect in Solaris or third
+	a defect in %DISTRO% or third
 	party software. 
 	</p>
 

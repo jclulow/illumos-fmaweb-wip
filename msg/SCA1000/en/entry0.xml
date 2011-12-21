@@ -46,7 +46,7 @@ follow the procedures described in the Sun Crypto Accelerator 1000
 Board User&#39;s Guide to replace the board or schedule a repair
 procedure to replace it.</item>
 	<name>description</name>
-	<item>The Solaris Fault Manager has determined that a hardware fault requiring repair action was detected on
+	<item>The %DISTRO% Fault Manager has determined that a hardware fault requiring repair action was detected on
 a Sun Crypto Accelerator 1000 board.</item>
 	<name>details</name>
 	<item>The Message ID:&amp;nbsp;&amp;nbsp;
@@ -85,13 +85,13 @@ For example:
 &lt;tt&gt;EVENT-ID: 39b30371-f009-c76c-90ee-b245784d2277&lt;/tt&gt;
 &lt;/ul&gt;</item>
 	<name>po-description</name>
-	<item>The Solaris Fault Manager has detected a hardware failure on the Sun Crypto Accelerator 1000 card.</item>
+	<item>The %DISTRO% Fault Manager has detected a hardware failure on the Sun Crypto Accelerator 1000 card.</item>
 	<name>po-impact</name>
 	<item>The card will no longer function as a cryptographic accelerator.</item>
 	<name>po-response</name>
-	<item>The module has been disabled and un-registered as a hardware provider to the Solaris Cryptographic Framework.</item>
+	<item>The module has been disabled and un-registered as a hardware provider to the %DISTRO% Cryptographic Framework.</item>
 	<name>response</name>
-	<item>The accelerator board&#39;s driver has been disabled and un-registered as a hardware provider to the Solaris Cryptographic Framework.</item>
+	<item>The accelerator board&#39;s driver has been disabled and un-registered as a hardware provider to the %DISTRO% Cryptographic Framework.</item>
 	<name>title</name>
 	<item>Sun Crypto Accelerator 1000 Hardware May Be Faulty</item>
 </event_registry_properties>

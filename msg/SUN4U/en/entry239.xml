@@ -31,7 +31,7 @@
 	<item>No repair action is recommended at this time.
 </item>
 	<name>description</name>
-	<item>The Solaris Fault Manager has determined that the
+	<item>The %DISTRO% Fault Manager has determined that the
 number of correctable errors against a
 particular CPU&#39;s cache index and way exceeds recommended
 limts.
@@ -40,7 +40,7 @@ limts.
 	<item>The Message ID: &lt;tt&gt;%MSGID%&lt;/tt&gt; indicates a problem
 in the CPU&#39;s cache subsystem although no repair action is
 needed at this time. No data has been lost. If and when the
-Solaris Fault Manager determines that there is sufficient cause,
+%DISTRO% Fault Manager determines that there is sufficient cause,
 service action will be recommended at that time.
 </item>
 	<name>impact</name>

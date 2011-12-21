@@ -32,7 +32,7 @@
 	<item>Service's method has failed repeatedly</item>
 
 	<name>description</name>
-	<item>The Solaris Service Manager has determined that the service has been moved into maintenance because one of its methods (other than the start method) has failed repeatedly.</item>
+	<item>The %DISTRO% Service Manager has determined that the service has been moved into maintenance because one of its methods (other than the start method) has failed repeatedly.</item>
 
 	<name>impact</name>
 	<item>The service will remain in the maintenance state until the condition that led to method failure is remedied, and the service's maintenance state is cleared by the administrator.  Services that express a dependency on the impacted services may also be affected.</item>

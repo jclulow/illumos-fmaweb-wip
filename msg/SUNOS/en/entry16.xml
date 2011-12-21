@@ -41,12 +41,12 @@
 	<item>Automated diagnosis and response for these events will not occur.</item>
 
 	<name>action</name>
-	<item>Ensure that the latest Solaris Kernel and Predictive Self-Healing (PSH) patches are installed.</item>
+	<item>Ensure that the latest %DISTRO% Kernel and Predictive Self-Healing (PSH) patches are installed.</item>
 
 	<name>details</name>
 	<item>The Message ID:&amp;nbsp;&amp;nbsp;&lt;font size=&quot;+1&quot;&gt;&lt;tt&gt;&lt;b&gt;%MSGID%&lt;/b&gt;&lt;/tt&gt;&lt;/font&gt; indicates that errors were detected, but the module responsible for diagnosing those errors was unable to perform a diagnosis due to an unknown internal error.  This may be caused by downrev or incompatible revisions of software, or by bugs in the diagnosis module or subsystem.&lt;P&gt;
 
-	The Solaris Kernel and Predictive Self-Healing (PSH) patches are particularly critical and should be examined.  Ensure that the latest patches are installed, and that any dependencies documented in the patch README files are noted and addressed.  Check &lt;a href=&quot;http://sunsolve.sun.com/show.do?target=home&quot;&gt;'SunSolve'&lt;/a&gt; patch finder for patches with 'fma' and/or 'eft.so' keywords.&lt;P&gt;
+	The %DISTRO% Kernel and Predictive Self-Healing (PSH) patches are particularly critical and should be examined.  Ensure that the latest patches are installed, and that any dependencies documented in the patch README files are noted and addressed.  Check &lt;a href=&quot;http://sunsolve.sun.com/show.do?target=home&quot;&gt;'SunSolve'&lt;/a&gt; patch finder for patches with 'fma' and/or 'eft.so' keywords.&lt;P&gt;
 
 	If all patches appear to be current and all dependencies are properly addressed, error telemetry will need to be examined by Service personnel to make a further determination of the problem.</item>
 
