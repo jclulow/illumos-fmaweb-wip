@@ -29,6 +29,19 @@ app.configure('production', function(){
 
 
 // Routes
+
+app.get('/msg', function(req, res) {
+  res.render('index.jade', { title: 'illumos FMA Message Registry' });
+});
+
+app.post('/msg', function(req, res) {
+  if (req.body.messageid) {
+    res.redirect('/msg/' + req.body.messageid.trim().toUpperCase());
+  } else {
+    res.redirect('/msg');
+  }
+});
+
 app.get('/msg/:code', function(req, res) {
   var obj;
 
