@@ -245,7 +245,7 @@ faulty&lt;br&gt;
 &amp;nbsp; &amp;nbsp;&amp;nbsp; Description : Bad parity detected in memory write
 buffer or byte mask.&amp;nbsp; &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Refer to http://sun.com/msg/INTEL-8001-DJ for more information.&lt;br&gt;
+Refer to %FMAURL%/INTEL-8001-DJ for more information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span
  style=&quot;font-style: italic;&quot;&gt;&lt;/span&gt;&lt;br&gt;

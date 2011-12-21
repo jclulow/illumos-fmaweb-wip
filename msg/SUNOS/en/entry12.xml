@@ -43,7 +43,7 @@ problem, run &lt;tt&gt;svcs -x&lt;/tt&gt;:&lt;/p&gt;
 	svc:/network/nfs/server:default (NFS server)
 	 State: maintenance since Wed Feb 04 00:14:38 2009
 	Reason: Restarter svc:/system/svc/restarter:default gave no explanation.
-	   See: &lt;b&gt;http://sun.com/msg/SMF-8000-9C&lt;/b&gt;
+	   See: &lt;b&gt;%FMAURL%/SMF-8000-9C&lt;/b&gt;
 	   See: nfsd(1M)
 	   See: /var/svc/log/network-nfs-server:default.log
 	Impact: This service is not running.

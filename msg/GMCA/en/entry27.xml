@@ -74,7 +74,7 @@ Problem in  : hc://:product-id=ThirdParty:server-id=random/
 
 Description : Errors reported by a bus or interconnect for memory
               accesses have exceeded acceptable levels  Refer to
-              http://sun.com/msg/GMCA-8000-UV for more information.
+              %FMAURL%/GMCA-8000-UV for more information.
 
 Response    : No automated response action is possible
 

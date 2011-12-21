@@ -152,7 +152,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;31fbb105-d04e-4db5-99f2-e417ec6783e3&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8001-9S&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -170,7 +170,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;31fbb105-d04e-4db5-99f2-e417ec6783e3&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error has occurred within a FLP chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8001-9S for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8001-9S for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: A single domain will be reset and the IO
 Channel associated with the&lt;br&gt;

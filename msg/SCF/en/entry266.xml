@@ -48,7 +48,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Dec 13 06:08:40 san-dc3-2-0 fmd: SOURCE: sde, REV: 1.15, CSN: 2010643002
    EVENT-ID: 9516445d-3f04-479c-b4a6-8efb6f5eee9d
-   Refer to http://www.sun.com/msg/SCF-8008-AN for detailed information.
+   Refer to %FMAURL%/SCF-8008-AN for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -59,7 +59,7 @@ Step 1. Collect the Fault Message  (two methods)
    SOURCE: sde, REV: 1.15 
    EVENT-ID: 9516445d-3f04-479c-b4a6-8efb6f5eee9d
    DESC: An XSCFU_B is either not present or could not be detected during powerup.
-   Refer to http://www.sun.com/msg/SCF-8008-AN for more information.
+   Refer to %FMAURL%/SCF-8008-AN for more information.
    AUTO-RESPONSE: Nothing is deconfigured.
    IMPACT: XSCFU failover is disabled.
    REC-ACTION: Schedule a repair action to replace the XSCFU_B.

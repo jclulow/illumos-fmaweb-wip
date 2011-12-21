@@ -127,7 +127,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;12ce1f2b-dd53-4d11-a288-2cacc1f809bd&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8000-33&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -146,7 +146,7 @@ nwk-dc2-1-sc0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;12ce1f2b-dd53-4d11-a288-2cacc1f809bd&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error was detected within a Clock chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8000-33 for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8000-33 for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The platform will be reset. If there is
 redundant clock capability, an attempt will be made to deconfigure &lt;br&gt;

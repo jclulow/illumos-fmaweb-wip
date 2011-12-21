@@ -97,7 +97,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;64387456-2891-477f-a216-a9d929f30f4d&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-HE&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -119,7 +119,7 @@ internal SAS (Serial Attached&lt;br&gt;
 &amp;nbsp;&amp;nbsp; SCSI) device. This includes the internal hard drives and
 the internal DVD drives&lt;br&gt;
 &amp;nbsp;&amp;nbsp; and the internal tape drives.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8002-HE for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8002-HE for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The domain drops to the OpenBoot PROM &#39;ok&#39; prompt.&lt;br&gt;

@@ -48,7 +48,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Dec 12 12:21:56 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
    EVENT-ID: ebc26928-411e-470a-8bd6-cb6ee75d4ccc
-   Refer to http://www.sun.com/msg/SCF-8008-DL for detailed information.
+   Refer to %FMAURL%/SCF-8008-DL for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -59,7 +59,7 @@ Step 1. Collect the Fault Message  (two methods)
    SOURCE: sde, REV: 1.15
    EVENT-ID: ebc26928-411e-470a-8bd6-cb6ee75d4ccc
    DESC: Either no MEMBs are present in the platform or no MEMBs could be detected.
-   Refer to http://www.sun.com/msg/SCF-8008-DL for more information.
+   Refer to %FMAURL%/SCF-8008-DL for more information.
    AUTO-RESPONSE: The entire platform will not be powered up. The platform becomes unbootable.
    Please consult the detail section of the knowledge article for additional information.
    IMPACT: The entire platform will not be powered up. The platform becomes unbootable.

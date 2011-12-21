@@ -83,7 +83,7 @@ shown below.&lt;p&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;e37f42ad-946d-4e52-8952-3eb3e4c7da21&lt;/font&gt;
    DESC: A thermal sensor is above the high warning threshold in an External I/O Expansion Unit FRU
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-NH&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-NH&lt;/font&gt; for more information.
    AUTO-RESPONSE: Domains using the affected hardware may be shut down.
    IMPACT: Interruption of service to the attached domains if the domain is shut down.
    REC-ACTION: Check ambient temperatures in the environment.&lt;/pre&gt;&lt;p&gt;

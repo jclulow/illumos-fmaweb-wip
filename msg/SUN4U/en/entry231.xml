@@ -92,7 +92,7 @@ CSN:nwk-ff2-1, HOSTNAME: nwk-ff2-1-c&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; DESC: The number of errors associated
 with this CHIP has exceeded
 acceptable levels.&lt;br&gt;
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Refer to http://sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SUN4U-8007-7S&lt;/span&gt;
 for more information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; AUTO-RESPONSE: An attempt will be made

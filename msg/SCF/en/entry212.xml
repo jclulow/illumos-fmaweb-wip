@@ -78,7 +78,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a8e32d9e-1fd2-475b-89fc-8cca18200c10&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8006-MR&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -97,7 +97,7 @@ nwk-dc2-1-sc0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a8e32d9e-1fd2-475b-89fc-8cca18200c10&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: Fatal error detected within a XB chip. This fatal
 error may affect multiple CMU&#39;s.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8006-MR for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8006-MR for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The CMU and all its associated IO are
 deconfigured.&lt;br&gt;

@@ -411,7 +411,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;fcbb859a-a6c8-44d2-abf1-f53f14e946b3&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8003-LS&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -430,7 +430,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;fcbb859a-a6c8-44d2-abf1-f53f14e946b3&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A non-fatal uncorrectable error was detected within
 a MBC chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8003-LS for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8003-LS for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: No immediate action is taken by XSCF
 software due to this fault.&lt;br&gt;

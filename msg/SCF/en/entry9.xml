@@ -58,7 +58,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.16
    EVENT-ID:  &lt;font color = &quot;BLUE&quot;&gt;937df83c-50d5-462e-8073-5930444fe546&lt;/font&gt;
    DESC: An energy storage module is approaching its lifespan.
-   Refer to http://www.sun.com/msg/SCF-8000-9X for more information.
+   Refer to %FMAURL%/SCF-8000-9X for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: Backup power may not be available in event of power loss.
    REC-ACTION: Schedule a repair procedure as soon as possible to replace the ESM..&lt;/pre&gt; &lt;p&gt;

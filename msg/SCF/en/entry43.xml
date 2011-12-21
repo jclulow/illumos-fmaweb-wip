@@ -49,7 +49,7 @@ Step 1. Collect the fault message (use one of the following methods):
 
    Apr 12 16:47:17 san-ik-1-0 fmd: SOURCE: sde, REV: 1.12, CSN: BE80601000  
    EVENT-ID: ba1f856d-e6de-4d65-83db-dc9c15025883
-   Refer to http://www.sun.com/msg/SCF-8001-CP  for detailed information.
+   Refer to %FMAURL%/SCF-8001-CP  for detailed information.
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
 
@@ -60,7 +60,7 @@ Step 1. Collect the fault message (use one of the following methods):
    EVENT-ID: ba1f856d-e6de-4d65-83db-dc9c15025883 
    DESC: A non-fatal uncorrectable error occurred due to an on-board Gigabit 
    Ethernet controller.
-   Refer to http://www.sun.com/msg/SCF-8001-CP for more information.    
+   Refer to %FMAURL%/SCF-8001-CP for more information.    
    AUTO-RESPONSE: No immediate action is taken. Please consult the detail section of the
    knowledge article for additional information.
    IMPACT: The non-fatal error may cause the domain to panic.

@@ -60,7 +60,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;61298103-cafa-4e12-b7cb-dff5d36c6fa2&lt;/font&gt;
    DESC: Excessive input power warnings were detected
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-SC&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-SC&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: There is no impact to the system
    REC-ACTION: Check AC input power&lt;/pre&gt;&lt;p&gt;

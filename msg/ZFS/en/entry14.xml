@@ -24,7 +24,7 @@ will be made to activate a hot spare if available. </item>
 status: The number of I/O errors associated with a ZFS device exceeded
         acceptable levels.
 action: Replace the device using 'zpool replace'.
-   see: http://www.sun.com/msg/ZFS-8000-4J
+   see: %FMAURL%/ZFS-8000-4J
  scrub: none requested
 config:
 

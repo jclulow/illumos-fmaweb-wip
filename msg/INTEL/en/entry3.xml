@@ -242,7 +242,7 @@ faulty&lt;br&gt;
 &lt;span style=&quot;font-style: italic;&quot;&gt;&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &amp;nbsp; &amp;nbsp;&amp;nbsp; Description : A level 1 cache on this cpu is
-faulty.&amp;nbsp; Refer to http://sun.com/msg/&lt;span
+faulty.&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8000-3X&lt;/span&gt;
 for more information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;

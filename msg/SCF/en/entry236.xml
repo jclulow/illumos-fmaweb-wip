@@ -86,7 +86,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a4f2eebe-1940-476f-8265-d0b53c66ce06&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8007-DX&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -105,7 +105,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a4f2eebe-1940-476f-8265-d0b53c66ce06&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: An unexpected trap with some unknown cause was
 detected by a CPU chip during POST.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8007-DX for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8007-DX for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The domain is reset.&lt;br&gt;

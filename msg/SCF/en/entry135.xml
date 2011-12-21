@@ -77,7 +77,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;844f1bb9-f4f9-4187-9a25-37359805ca67&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8004-7P&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -96,7 +96,7 @@ nwk-dc2-1-sc0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;844f1bb9-f4f9-4187-9a25-37359805ca67&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The Clock chip has detected it does not have
 sufficient power to continue operating.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8004-7P for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8004-7P for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article

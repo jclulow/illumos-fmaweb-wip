@@ -48,7 +48,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Dec 12 12:22:00 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
    EVENT-ID: 162ddd31-d7bf-4a9b-be7d-a19052736d77
-   Refer to http://www.sun.com/msg/SCF-8008-EG for detailed information.
+   Refer to %FMAURL%/SCF-8008-EG for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -59,7 +59,7 @@ Step 1. Collect the Fault Message  (two methods)
    SOURCE: sde, REV: 1.15
    EVENT-ID: 162ddd31-d7bf-4a9b-be7d-a19052736d77
    DESC: The IOU#0 is missing or could not be detected during powerup.
-   Refer to http://www.sun.com/msg/SCF-8008-EG for more information.
+   Refer to %FMAURL%/SCF-8008-EG for more information.
    AUTO-RESPONSE: The entire platform will not be powered up. The platform becomes unbootable.
    Please consult the detail section of the knowledge article for additional information.
    IMPACT: The entire platform will not be powered up. The platform becomes unbootable.

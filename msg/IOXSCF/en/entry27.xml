@@ -75,7 +75,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;22b286f8-b174-441f-b240-195d94e93802&lt;/font&gt;
    DESC: Both I/O boats are not being managed by the same host system
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-U4&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-U4&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: FRUID data may be corrupted or hardware is not being monitored
    REC-ACTION: Physically examine the chassis to determine if it is shared by two different host platforms.&lt;/pre&gt;&lt;p&gt;

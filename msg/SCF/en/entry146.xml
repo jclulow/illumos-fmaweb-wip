@@ -162,7 +162,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;bc0ed9c9-ad41-41cd-96a4-1df57a05393c
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8004-KH&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -185,7 +185,7 @@ be caused by insertion&lt;br&gt;
 &amp;nbsp;&amp;nbsp; of the FRU without following the correct procedure. Please
 consult the detail section of the &lt;br&gt;
 &amp;nbsp;&amp;nbsp; knowledge article for additional information.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8004-KH for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8004-KH for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured and no immediate
 action is taken. The FRU will not be&lt;br&gt;

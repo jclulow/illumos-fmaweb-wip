@@ -146,7 +146,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;02c46938-543c-4324-bd58-754a471213b7&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8005-HR&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -166,7 +166,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The number of correctable errors on the interface
 between an IO Channel and a SC chip &lt;br&gt;
 &amp;nbsp;&amp;nbsp; has exceeded an acceptable threshold.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8005-HR for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8005-HR for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The IO Channel is deconfigured after the
 platform is power cycled or &lt;br&gt;

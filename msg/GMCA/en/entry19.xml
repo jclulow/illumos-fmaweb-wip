@@ -87,7 +87,7 @@ FRU         : &lt;FONT COLOR=&quot;green&quot;&gt;&quot;CPU 0&quot;&lt;/FONT&gt;
   
 
 Description : The number of errors associated with this CPU has exceeded
-              acceptable levels.  Refer to http://sun.com/msg/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-LF&lt;/FONT&gt; for
+              acceptable levels.  Refer to %FMAURL%/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-LF&lt;/FONT&gt; for
               more information.
 
 Response    : An attempt will be made to remove this CPU from service.
@@ -140,7 +140,7 @@ FRU         :  hc://:product-id=ThirdParty:server-id=random/
   
 
 Description : The number of errors associated with this CPU has exceeded
-              acceptable levels.  Refer to http://sun.com/msg/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-LF&lt;/FONT&gt; for
+              acceptable levels.  Refer to %FMAURL%/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-LF&lt;/FONT&gt; for
               more information.
 
 Response    : An attempt will be made to remove this CPU from service.

@@ -77,7 +77,7 @@ FRU         : hc://:product-id=Sun-Fire-X2270:chassis-id=0803QCN003:server-id=wa
                   faulty
 
 Description : Error detected in memory controller.  Refer to
-              http://sun.com/msg/&lt;FONT COLOR=&quot;red&quot;&gt;GMCA-8001-1N&lt;/FONT&gt; for more information.
+              %FMAURL%/&lt;FONT COLOR=&quot;red&quot;&gt;GMCA-8001-1N&lt;/FONT&gt; for more information.
 
 Response    : Error detected in memory controller
 

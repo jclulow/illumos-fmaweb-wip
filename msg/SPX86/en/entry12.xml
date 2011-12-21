@@ -80,7 +80,7 @@ reboot
 to prevent&amp;nbsp; future
 interruptions until the processor can be replaced.&amp;nbsp; &lt;br&gt;
 Refer to&amp;nbsp;&lt;font face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;&lt;a target=&quot;l&quot;
- href=&quot;http://sun.com/msg/INTEL-8000-93&quot;&gt;http://sun.com/msg/INTEL-8000-93&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
+ href=&quot;%FMAURL%/INTEL-8000-93&quot;&gt;%FMAURL%/INTEL-8000-93&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; &lt;br&gt;
 The recommended service action for this
 event is to replace the faulty processor.&lt;br&gt;
@@ -285,7 +285,7 @@ The suspect component: &lt;span
  style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;has fault.cpu.intel.dtlb with
 probability=100. &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Refer to http://www.sun.com/msg/&lt;span
+Refer to %FMAURL%/&lt;span
  style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;SPX86-8000-DC&lt;/span&gt;
 for details.&lt;br&gt;
 &lt;font face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;&lt;br&gt;
@@ -554,7 +554,7 @@ clear processor fault and enable processor.&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 Please refer to &lt;font face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;&lt;a
- target=&quot;l&quot; href=&quot;http://sun.com/msg/INTEL-8000-93&quot;&gt;http://sun.com/msg/INTEL-8000-93&lt;/a&gt;&lt;/font&gt;&lt;font
+ target=&quot;l&quot; href=&quot;%FMAURL%/INTEL-8000-93&quot;&gt;%FMAURL%/INTEL-8000-93&lt;/a&gt;&lt;/font&gt;&lt;font
  face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;
 &lt;/font&gt;for additional information.&lt;br&gt;
 &lt;br&gt;

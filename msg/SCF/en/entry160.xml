@@ -82,7 +82,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;196aa1c5-31ab-46e1-bcf2-725bc6f596d4
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8005-0C&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -101,7 +101,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;196aa1c5-31ab-46e1-bcf2-725bc6f596d4&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error was detected within a SC chip. This
 error may affect multiple CMU&#39;s.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8005-0C for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8005-0C for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The CMU that contains this SC chip and all
 its associated IO are deconfigured.&lt;br&gt;

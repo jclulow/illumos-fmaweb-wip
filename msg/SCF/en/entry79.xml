@@ -98,7 +98,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a45be118-fc13-4a50-b42b-239953bf694d&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-GP&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -122,7 +122,7 @@ PCI-Express switch chip &lt;br&gt;
 &amp;nbsp;&amp;nbsp; is located on an IOU), and the PCI-Express slots and PCI-X
 slots on an I/O Boat&lt;br&gt;
 &amp;nbsp;&amp;nbsp; (if the PCI-Express switch chip is located on an I/O Boat).&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8002-GP for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8002-GP for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The domain drops to the OpenBoot PROM &#39;ok&#39; prompt.&lt;br&gt;

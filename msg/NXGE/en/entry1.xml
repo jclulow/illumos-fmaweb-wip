@@ -76,7 +76,7 @@ data for presentation to your authorized service provider.&lt;p&gt;
     SOURCE: eft, REV: 1.16
     EVENT-ID: &lt;font color=blue&gt;fbe714d4-e181-6cfd-aa3d-93b87b3dfacc&lt;/font&gt;
     DESC: A fault in the XAUI component used for 10GbE networking.
-      Refer to http://sun.com/msg/&lt;font color=red&gt;%MSGID%&lt;/font&gt; for more information.
+      Refer to %FMAURL%/&lt;font color=red&gt;%MSGID%&lt;/font&gt; for more information.
     AUTO-RESPONSE: The device instance will be disabled.
     IMPACT: Loss of services provided by the device instances
       associated with this fault.

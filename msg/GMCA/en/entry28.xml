@@ -74,7 +74,7 @@ Problem in  : hc://:product-id=ThirdParty:server-id=random/
 
 Description : Errors reported by a bus or interconnect for io
               accesses have exceeded acceptable levels  Refer to
-              http://sun.com/msg/&lt;FONT COLOR=&quot;red&quot;&gt;GMCA-8000-V6&lt;/FONT&gt; for more information.
+              %FMAURL%/&lt;FONT COLOR=&quot;red&quot;&gt;GMCA-8000-V6&lt;/FONT&gt; for more information.
 
 Response    : No automated response action is possible
 

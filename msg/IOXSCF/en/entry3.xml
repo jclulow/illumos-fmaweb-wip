@@ -65,7 +65,7 @@ SOURCE: sde, REV: 1.12
 EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;383a648e-f537-4426-8058-c8f735007b23&lt;/font&gt;
 DESC: There is a failure with a FRU presence signal
 or I/O boat location signal in an External I/O Expansion Unit.
-Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-35&lt;/font&gt; for more information.
+Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-35&lt;/font&gt; for more information.
 AUTO-RESPONSE: No immediate action is taken
 IMPACT: Hardware may not be monitored by the system.
 REC-ACTION: Schedule a repair procedure to replace the affected FRU.&lt;/pre&gt;&lt;p&gt;

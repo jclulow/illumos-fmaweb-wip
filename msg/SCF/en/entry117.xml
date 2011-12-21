@@ -177,7 +177,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;6a958635-ff42-497c-844c-9d91b3018856
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8003-NY&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -198,7 +198,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A non-fatal uncorrectable internal error was
 detected on the DMA interface used by DSCP &lt;br&gt;
 &amp;nbsp;&amp;nbsp; on a MBC chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8003-NY for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8003-NY for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: DSCP will switch to use some other XSB&#39;s
 DMA interface, if there is an operational DMA interface&lt;br&gt;

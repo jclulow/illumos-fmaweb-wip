@@ -50,7 +50,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Dec 12 12:21:48 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
    EVENT-ID: 0baea974-4c9f-42fd-927e-09add571002d
-   Refer to http://www.sun.com/msg/SCF-8008-5W for detailed information.
+   Refer to %FMAURL%/SCF-8008-5W for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -62,7 +62,7 @@ Step 1. Collect the Fault Message  (two methods)
    EVENT-ID: 0baea974-4c9f-42fd-927e-09add571002d
    DESC: The number of PSUs present or the number of PSUs detected during powerup is insufficient for
    normal platform operation.
-   Refer to http://www.sun.com/msg/SCF-8008-5W for more information.
+   Refer to %FMAURL%/SCF-8008-5W for more information.
    AUTO-RESPONSE: The entire platform will not be powered up. The platform becomes unbootable.
    Please consult the detail section of the knowledge article for additional information.
    IMPACT: The entire platform will not be powered up. The platform becomes unbootable.

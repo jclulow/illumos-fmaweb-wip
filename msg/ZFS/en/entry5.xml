@@ -53,7 +53,7 @@ status: One or more devices could not be used because the the label is missing
         or invalid.  There are insufficient replicas for the pool to continue
         functioning.
 action: Destroy and re-create the pool from a backup source.
-   see: http://www.sun.com/msg/ZFS-8000-5E
+   see: %FMAURL%/ZFS-8000-5E
  scrub: none requested
 config:
 

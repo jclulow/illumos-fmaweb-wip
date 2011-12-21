@@ -84,7 +84,7 @@ CSN: BE80601000 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 102, 255);&quot;&gt;5195e088-6f68-48fe-b97b-6e818a337a07
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8001-RP for detailed
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8001-RP for detailed
 information. &lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp; Complete fault message using &#39;fmdump -m&#39; on the XSCF
@@ -101,7 +101,7 @@ san-dc3-1-0&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
 &lt;/span&gt;&amp;nbsp;&amp;nbsp; &lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error was detected on a PCI-Express card in
 a PCI slot.&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8001-RP for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8001-RP for more
 information.&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The PCI-Express card is
 deconfigured.&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;

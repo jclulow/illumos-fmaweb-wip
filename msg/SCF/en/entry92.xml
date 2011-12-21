@@ -109,7 +109,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;1294ccfb-f283-435f-b6f6-fb472175ea11&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-VP&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -128,7 +128,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;1294ccfb-f283-435f-b6f6-fb472175ea11&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error was detected within the part of a MAC
 chip that controls a memory bank.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8002-VP for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8002-VP for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The bank of memory is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: Domain using the memory bank will be reset.&lt;br&gt;

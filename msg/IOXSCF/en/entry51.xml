@@ -65,7 +65,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;f04d978c-7c1e-4633-9fc3-57629989bab4&lt;/font&gt;
    DESC: A failure was detected in the PCI-Express datapath
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-LJ&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-LJ&lt;/font&gt; for more information.
    AUTO-RESPONSE: The Service Processor may poweroff the affected host slot.
    IMPACT: Communication with the I/O boat is not possible thru the indicated path.
    REC-ACTION: Schedule a repair procedure to replace the affected FRU.&lt;/pre&gt;&lt;p&gt;

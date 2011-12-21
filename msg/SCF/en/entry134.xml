@@ -79,7 +79,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;639c66a2-107c-4543-bc91-fe34f5c9dd8c
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8004-6A&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -99,7 +99,7 @@ nwk-dc2-1-sc0&lt;br&gt;
 &lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The IOC chip has detected it does not have
 sufficient power to continue operating.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8004-6A for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8004-6A for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article

@@ -34,6 +34,7 @@ app.get('/msg/:code', function(req, res) {
 
     var MACROS = {
         "msgid": req.params.code,
+        "fmaurl": process.env.FMA_URL || "http://illumos.org/msg",
         "distro": process.env.FMA_DISTRO || "Illumos"
     };
 

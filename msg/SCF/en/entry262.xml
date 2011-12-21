@@ -58,7 +58,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Dec 12 12:21:52 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
    EVENT-ID: 2fce81fc-5cb1-4fea-8f71-87dc273d4d23
-   Refer to http://www.sun.com/msg/SCF-8008-6F for detailed information.
+   Refer to %FMAURL%/SCF-8008-6F for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -69,7 +69,7 @@ Step 1. Collect the Fault Message  (two methods)
    SOURCE: sde, REV: 1.15
    EVENT-ID: 2fce81fc-5cb1-4fea-8f71-87dc273d4d23
    DESC: The Operator Panel is missing or could not be detected during powerup.
-   Refer to http://www.sun.com/msg/SCF-8008-6F for more information.
+   Refer to %FMAURL%/SCF-8008-6F for more information.
    AUTO-RESPONSE: The platform powers up normally. Please consult the detail section of the knowledge
    article for additional information.
    IMPACT: Nothing is deconfigured. Please consult the detail section of the knowledge

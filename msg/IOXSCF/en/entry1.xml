@@ -63,7 +63,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;2073e3f0-9ce2-4dd4-879f-ee2810274b89&lt;/font&gt;
    DESC: A component failed in an External I/O Expansion Unit FRU
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-1A&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-1A&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: Hardware affected by the device failure may become unusable.
    REC-ACTION: Schedule a repair procedure to replace the affected FRU.&lt;/pre&gt;

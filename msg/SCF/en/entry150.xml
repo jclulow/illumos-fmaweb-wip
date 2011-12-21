@@ -66,7 +66,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Mar 27 15:19:33 nwk-ik-1-0 fmd: SOURCE: sde, REV: 1.12, CSN: BF00000031
    EVENT-ID: 316abc6f-4635-4c4a-880a-a9b646c79cc8
-   Refer to http://www.sun.com/msg/SCF-8004-PS for detailed information.
+   Refer to %FMAURL%/SCF-8004-PS for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -77,7 +77,7 @@ Step 1. Collect the Fault Message  (two methods)
    SOURCE: sde, REV: 1.16
    EVENT-ID: 3df526f5-f743-4ee1-b237-13b945a357dc
    DESC: A serious overvoltage failure has occurred on a device or FRU.
-   Refer to http://www.sun.com/msg/SCF-8004-PS for more information.
+   Refer to %FMAURL%/SCF-8004-PS for more information.
    AUTO-RESPONSE: The device or FRU will be deconfigured.
    IMPACT: Domains may be reset, platform may become unbootable, or the platform may be powered down.
    REC-ACTION: Schedule a repair action to replace the affected Field Replaceable Unit (FRU),

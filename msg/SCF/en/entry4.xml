@@ -290,7 +290,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;dab061df-242f-486d-8c12-076868a4fbe4&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8000-4S&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -310,7 +310,7 @@ nwk-dc2-1-sc0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: Fault was detected during poweron self-test, either
 within a Clock chip with within one of the external&lt;br&gt;
 &amp;nbsp;&amp;nbsp; interfaces of a Clock chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8000-4S for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8000-4S for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: An attempt will be made to remove the
 affected components from service. Please consult the detail &lt;br&gt;

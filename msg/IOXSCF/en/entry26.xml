@@ -67,7 +67,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;5d0ce6cf-ec73-4921-8b12-b082b717fd4c&lt;/font&gt;
    DESC: A power supply experienced loss of input power
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-TR&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-TR&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: If both power supplies lose power, the hardware is unavailable.
    REC-ACTION: Check AC input power for failure. If this error is the result of

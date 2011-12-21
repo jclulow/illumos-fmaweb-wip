@@ -93,7 +93,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;bacfa243-a8f3-4ce2-8c38-ee0afc468092&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8005-PX&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -112,7 +112,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;bacfa243-a8f3-4ce2-8c38-ee0afc468092&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The XSCF has detected that a %DISTRO% domain has
 panic&#39;ed.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8005-PX for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8005-PX for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: No action is taken due to this fault.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The %DISTRO% domain has panic&#39;ed.&lt;br&gt;

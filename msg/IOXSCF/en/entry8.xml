@@ -62,7 +62,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;c63405c8-9cf3-4952-a215-af43220555b7&lt;/font&gt;
    DESC: Detected loss of both management link and data path to an External I/O Expansion Unit
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-84&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-84&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: External I/O Expansion Unit FRUS will no longer be monitored.
    REC-ACTION: Check the cable connection to the External I/O Expansion Unit and

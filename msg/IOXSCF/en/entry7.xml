@@ -58,7 +58,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;71d619f5-d9a0-42cf-aa1b-3d9f054f917f&lt;/font&gt;
    DESC: There are communication failures on the management bus in an External I/O Expansion Unit FRU
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-7D&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-7D&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: External I/O Expansion Unit FRUs may no longer be monitored. They
    also may not be discovered at the next reboot.

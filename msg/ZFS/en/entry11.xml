@@ -53,7 +53,7 @@ action: Recovery is possible, but will result in some data loss.
         will have to be discarded, irreversibly.  Recovery can be
         attempted by executing 'zpool clear -F share'.  A scrub of the pool
         is strongly recommended following a successful recovery.
-   see: &lt;font color='red'&gt;http://www.sun.com/msg/ZFS-8000-72&lt;/font&gt;
+   see: &lt;font color='red'&gt;%FMAURL%/ZFS-8000-72&lt;/font&gt;
  scrub: none requested
 config:
 
@@ -73,7 +73,7 @@ status: One or more devices could not be used because the the label is missing
         or invalid.  There are insufficient replicas for the pool to continue
         functioning.
 action: Destroy and re-create the pool from a backup source.
-   see: &lt;font color='red'&gt;http://www.sun.com/msg/ZFS-8000-5E&lt;/font&gt;
+   see: &lt;font color='red'&gt;%FMAURL%/ZFS-8000-5E&lt;/font&gt;
  scrub: none requested
 config:
 

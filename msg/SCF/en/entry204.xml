@@ -98,7 +98,7 @@ CSN: BE80601000 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;b68ae421-3352-4a82-be4f-4d74140741f7&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8006-DS&lt;/span&gt;
 for detailed information. &lt;br&gt;
 &lt;br&gt;
@@ -116,7 +116,7 @@ san-dc3-1-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;b68ae421-3352-4a82-be4f-4d74140741f7&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error has been detected on the interface
 between two XB chips.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8006-DS for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8006-DS for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: If the fault can be isolated to a CMU, the
 CMU and all its associated &lt;br&gt;

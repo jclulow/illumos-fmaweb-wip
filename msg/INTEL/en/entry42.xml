@@ -52,7 +52,7 @@ Pages of memory associated with this memory module are being removed
 from service as errors&lt;br&gt;
 are reported and overall system memory capacity will be reduced as such
 pages are retired.&lt;font face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;&lt;a
- target=&quot;l&quot; href=&quot;http://sun.com/msg/INTEL-8000-93&quot;&gt;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
+ target=&quot;l&quot; href=&quot;%FMAURL%/INTEL-8000-93&quot;&gt;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
 The recommended service actions for this event are as

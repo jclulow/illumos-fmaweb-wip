@@ -665,7 +665,7 @@ The suspect component: &lt;span
  size=&quot;1&quot; style=&quot;font-size: 8pt;&quot;&gt;fault.io.pciex.fabric.nonfatal &lt;/font&gt;&lt;/font&gt;with
 probability=50. &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Refer to http://www.sun.com/msg/&lt;span
+Refer to %FMAURL%/&lt;span
  style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;SPX86-8000-AA&lt;/span&gt;
 for details.&lt;br&gt;
 &lt;br&gt;
@@ -684,7 +684,7 @@ The suspect component: &lt;span
  size=&quot;1&quot; style=&quot;font-size: 8pt;&quot;&gt;fault.io.pciex.fabric.nonfatal &lt;/font&gt;&lt;/font&gt;with
 probability=50. &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Refer to http://www.sun.com/msg/&lt;span
+Refer to %FMAURL%/&lt;span
  style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;SPX86-8000-AA&lt;/span&gt;
 for details.&lt;br&gt;
 &lt;br&gt;

@@ -241,7 +241,7 @@ faulty&lt;br&gt;
 &amp;nbsp; &amp;nbsp;&amp;nbsp; Description : Memory controller received bad
 transaction tracker ID from interconnect.&amp;nbsp; &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Refer to http://sun.com/msg/INTEL-8001-HS for more information.&lt;br&gt;
+Refer to %FMAURL%/INTEL-8001-HS for more information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span
  style=&quot;font-style: italic;&quot;&gt;&lt;/span&gt;&lt;br&gt;

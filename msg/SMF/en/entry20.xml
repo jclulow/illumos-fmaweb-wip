@@ -64,7 +64,7 @@ svc.configd: smf(5) database integrity check of:
     /lib/svc/bin/restore_repository
 
   can be run to restore a backup version of your repository.  See
-  http://sun.com/msg/SMF-8000-MY for more information.
+  %FMAURL%/SMF-8000-MY for more information.
 	  &lt;/pre&gt;
 	  and exit, informing &lt;code&gt;svc.startd&lt;/code&gt;(1M) that system
 	  maintenance is needed.  &lt;code&gt;svc.startd&lt;/code&gt;(1M) will then
@@ -98,7 +98,7 @@ svc.configd: smf(5) database integrity check of:
 	  &lt;pre&gt;
 Repository Restore utility
 
-See http://sun.com/msg/SMF-8000-MY for more information on the use of
+See %FMAURL%/SMF-8000-MY for more information on the use of
 this script to restore backup copies of the smf(5) repository.
 
 If there are any problems which need human intervention, this script will
