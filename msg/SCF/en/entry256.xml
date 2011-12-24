@@ -33,13 +33,13 @@ and schedule a service action.
 Please consult the detail section of the knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain using a device behind a PCI-Express switch chip.
+	<item>Failure to boot %DISTRO% on a domain using a device behind a PCI-Express switch chip.
 This includes PCI-X slot and internal I/O devices (if the PCI-Express switch chip
 is located on an IOU), and the PCI-Express slots and PCI-X slots on an I/O Boat
 (if the PCI-Express switch chip is located on an I/O Boat).
 </item>
 	<name>details</name>
-	<item>This message indicates a failure to boot Solaris on a domain using a device on the PCI-Express switch.
+	<item>This message indicates a failure to boot %DISTRO% on a domain using a device on the PCI-Express switch.
 
 The OpenBoot PROM fcode did not detect any fault with the device.
 
@@ -64,6 +64,6 @@ The administrator should investigate the cause of the boot problem and schedule 
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain using a device behind a PCI-Express switch.
+	<item>Failure to boot %DISTRO% on a domain using a device behind a PCI-Express switch.
 </item>
 </event_registry_properties>

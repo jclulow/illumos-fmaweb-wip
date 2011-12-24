@@ -32,7 +32,7 @@
 	<name>description</name>
 	<item>\n	Errors reported by a bus or interconnect for memory accesses\n	have exceeded acceptable levels\n	On systems with full\n	memory fault management support you should not see this diagnosis -\n	the additional telemetry available from the memory controller\n	should allow a specific memory fault to be diagnosed on a particular\n	resource;  on other systems all we know is that the error has\n	source outside the detecting cpu, and additional investigation\n	is required to determine the cause.\n	</item>
 	<name>details</name>
-	<item>This message ID: &lt;B&gt;GMCA-8000-UV&lt;/B&gt; indicates that the Solaris Fault 
+	<item>This message ID: &lt;B&gt;GMCA-8000-UV&lt;/B&gt; indicates that the %DISTRO% Fault 
 Manager has received Errors reported by a bus or interconnect for memory 
 accesses that have exceeded acceptable levels. Further investigation 
 needed to determine the cause of the fault.
@@ -66,7 +66,7 @@ Affects     : cpu:///cpuid=0
 Problem in  : hc://:product-id=Sun-Fire-X4600-M2:chassis-id=0806AM0254:server-id=sx64-x4600m2a-bur02
               /motherboard=0/&lt;FONT COLOR=&quot;green&quot;&gt;chip=0&lt;/FONT&gt;/cpu=0
 
-&lt;B&gt;Note:&lt;/B&gt; When Solaris can not determine the platform type. The above product-id=, and
+&lt;B&gt;Note:&lt;/B&gt; When %DISTRO% can not determine the platform type. The above product-id=, and
 server-id= will be seen as follows.
 
 Problem in  : hc://:product-id=ThirdParty:server-id=random/
@@ -74,7 +74,7 @@ Problem in  : hc://:product-id=ThirdParty:server-id=random/
 
 Description : Errors reported by a bus or interconnect for memory
               accesses have exceeded acceptable levels  Refer to
-              http://sun.com/msg/GMCA-8000-UV for more information.
+              %FMAURL%/GMCA-8000-UV for more information.
 
 Response    : No automated response action is possible
 

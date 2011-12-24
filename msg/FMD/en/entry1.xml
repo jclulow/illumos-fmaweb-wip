@@ -30,7 +30,7 @@
 	<name>action</name>
 	<item>Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT-ID&amp;gt;&lt;/tt&gt; to view the diagnosis result.  Run &lt;tt&gt;pkgchk -n SUNWfmd&lt;/tt&gt; to ensure that fault management software is installed properly.</item>
 	<name>description</name>
-	<item>A Solaris Fault Manager component generated a diagnosis for which no message summary exists.</item>
+	<item>A %DISTRO% Fault Manager component generated a diagnosis for which no message summary exists.</item>
 	<name>details</name>
 	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
 &lt;html&gt;
@@ -45,7 +45,7 @@ arranges for the appropriate fault diagnosis and automated responses.
 &lt;p&gt;
 The Message ID:
 &lt;font color = &quot;RED&quot;&gt;&lt;font size=&quot;+1&quot;&gt;FMD-8000-11&lt;/font&gt;&lt;/font&gt;
-indicates that the Solaris Fault Manager received a diagnosis it did
+indicates that the %DISTRO% Fault Manager received a diagnosis it did
 not expect. This can result from a mismatch in the versions of software 
 components, a misconfiguration of the system, automated diagnosis software may
  not be loaded or currently unavailable, or a defect in the software.
@@ -127,5 +127,5 @@ can be found in the Symptoms and Resolutions document&lt;a href=http://sunsolve.
 	<name>response</name>
 	<item>The diagnosis has been saved in the fault log for examination by a Sun Service technician.</item>
 	<name>title</name>
-	<item>Solaris Fault Manager unable to determine message summary</item>
+	<item>%DISTRO% Fault Manager unable to determine message summary</item>
 </event_registry_properties>

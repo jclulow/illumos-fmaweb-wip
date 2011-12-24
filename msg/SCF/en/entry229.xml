@@ -94,7 +94,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;dbbde764-f72d-49a0-8280-68c44342527b&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8007-5H&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -116,7 +116,7 @@ core on a CPU chip, domain software attempts to&lt;br&gt;
 &amp;nbsp;&amp;nbsp; offline the core. This fault occurs when the number of
 offline attempts has exceeded an&lt;br&gt;
 &amp;nbsp;&amp;nbsp; acceptable threshold.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8007-5H for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8007-5H for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Future non-fatal uncorrectable errors for
 this core on a CPU chip will not be recorded on the XSCF.&lt;br&gt;

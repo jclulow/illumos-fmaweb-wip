@@ -102,7 +102,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;445625ce-3c89-47d2-b5d4-77c0140404c4&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8006-GA&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -122,7 +122,7 @@ nwk-dc2-1-sc0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The number of correctable errors on the interface
 between an XB chip and an IOC chip&lt;br&gt;
 &amp;nbsp;&amp;nbsp; has exceeded an acceptable threshold.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8006-GA for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8006-GA for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Depending upon whether a crossbar way has
 already been deconfigured, either an IOC chip or an&lt;br&gt;

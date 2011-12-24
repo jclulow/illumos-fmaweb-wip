@@ -41,7 +41,7 @@
 	<item>Automated diagnosis and response for these events will not occur.</item>
 
 	<name>action</name>
-	<item>Ensure that the latest Solaris Kernel and Predictive Self-Healing (PSH) patches are installed.</item>
+	<item>Ensure that the latest %DISTRO% Kernel and Predictive Self-Healing (PSH) patches are installed.</item>
 
 	<name>details</name>
 	<use>htdocs/14.html</use>

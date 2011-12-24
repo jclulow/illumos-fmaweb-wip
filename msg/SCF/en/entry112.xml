@@ -199,7 +199,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a09fd666-4889-4deb-a5ae-30a734345f86&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8003-HA&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -217,7 +217,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a09fd666-4889-4deb-a5ae-30a734345f86&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error was detected within a MBC chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8003-HA for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8003-HA for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Resources associated with the faulty FRU
 will be deconfigured. Please consult the &lt;br&gt;

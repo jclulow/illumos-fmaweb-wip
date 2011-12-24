@@ -99,7 +99,7 @@ CSN: BE80601000 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 102, 255);&quot;&gt;ad4906dd-3271-4921-8404-743875ee6f71
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8000-2Y&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -120,7 +120,7 @@ san-dc3-1-0&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A Clock chip has detected a lack of connectivity
 between the base cabinet&lt;br&gt;
 &amp;nbsp;&amp;nbsp; and the expansion cabinet.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8000-2Y for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8000-2Y for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The entire platform is reset and the active
 Clock Units are deconfigured&lt;br&gt;

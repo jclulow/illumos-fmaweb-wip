@@ -173,7 +173,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a6c379f3-9380-4ff9-b08f-41fd44535149&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8001-AA&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -193,7 +193,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The number of correctable errors associated with a
 FLP chip has exceeded an&lt;br&gt;
 &amp;nbsp;&amp;nbsp; acceptable threshold.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8001-AA for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8001-AA for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The IO Channel associated with the FLP chip
 will be deconfigured after the platform is power &lt;br&gt;

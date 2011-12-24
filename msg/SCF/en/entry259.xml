@@ -60,7 +60,7 @@ Step 1. Collect the fault message (use one of the following methods):
 
    Dec 12 12:27:23 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
    EVENT-ID: 3c236f3a-7ec0-4fad-94ec-a4195c1a0abc
-   Refer to http://www.sun.com/msg/SCF-8008-3U for detailed information.
+   Refer to %FMAURL%/SCF-8008-3U for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -71,7 +71,7 @@ Step 1. Collect the fault message (use one of the following methods):
    SOURCE: sde, REV: 1.15
    EVENT-ID: 3c236f3a-7ec0-4fad-94ec-a4195c1a0abc
    DESC: A hard-to-diagnose problem was detected by OpenBoot PROM.
-   Refer to http://www.sun.com/msg/SCF-8008-3U for more information.
+   Refer to %FMAURL%/SCF-8008-3U for more information.
    AUTO-RESPONSE: Nothing is deconfigured. Please consult the detail section of the knowledge article
    for additional information.
    IMPACT: System may drop to the &#39;OK&#39; prompt.

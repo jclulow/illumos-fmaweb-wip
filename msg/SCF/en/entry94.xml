@@ -123,7 +123,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;6a097a19-32ce-423c-a03d-2c82c8bdda6d&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-XS&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -142,7 +142,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;6a097a19-32ce-423c-a03d-2c82c8bdda6d&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A non-fatal uncorrectable error was detected within
 the part of a MAC chip that controls a memory bank.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8002-XS for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8002-XS for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Memory associated with this memory bank is
 deconfigured after the platform is power cycled or &lt;br&gt;

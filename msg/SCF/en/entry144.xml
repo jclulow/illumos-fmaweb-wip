@@ -218,7 +218,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;69f0e34e-ecfd-4778-9f68-666e49b4015f
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8004-HY&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -240,7 +240,7 @@ nwk-dc2-1-sc0&lt;br&gt;
 during powerup. &lt;br&gt;
 &amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
 for additional information.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8004-HY for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8004-HY for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The misconfigured FRU or device will not be
 powered up. &lt;br&gt;

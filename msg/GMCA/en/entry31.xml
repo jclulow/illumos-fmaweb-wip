@@ -32,7 +32,7 @@
 	<name>description</name>
 	<item>The number of correctable errors associated with this memory module has exceeded acceptable levels.</item>
 	<name>details</name>
-	<item>This message ID: &lt;B&gt;GMCA-8000-YN&lt;/B&gt; indicates that the Solaris Fault Manager 
+	<item>This message ID: &lt;B&gt;GMCA-8000-YN&lt;/B&gt; indicates that the %DISTRO% Fault Manager 
 has received reportsof single bit correctable errors from a Memory Module at a 
 rate exceeding acceptable levels, and a Memory Module fault has been diagnosed. No
 data has been lost, and pages of the affected Memory Module are being
@@ -141,7 +141,7 @@ resetting capture the outputs from fmstat -m eft, fmstat -s -m eft.
 &lt;p&gt;
 &lt;B&gt;Step 6: &lt;/B&gt;Verify the repaired resource is no longer faulty
 &lt;P&gt;
-Use the Solaris command &#39;fmadm faulty&#39; to display all faulted resources
+Use the %DISTRO% command &#39;fmadm faulty&#39; to display all faulted resources
 in the system.  Confirm that the repaired resource is no longer listed
 as faulted shown in Example 6.1.
 &lt;P&gt;

@@ -40,7 +40,7 @@
 &lt;body&gt;
 &lt;br&gt;
 Message ID: &lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8001-7H&amp;nbsp;&lt;/span&gt;
-indicates that the Solaris Fault Manager
+indicates that the %DISTRO% Fault Manager
 has received error reports&lt;br&gt;
 indicating that correctable memory errors attributed to a single page
 of physical memory has occurred.&lt;br&gt;
@@ -85,7 +85,7 @@ FRU&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
 =&amp;nbsp;
 SUNW-MSG-ID&lt;br&gt;
 &lt;br&gt;
-&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris provides commands that
+&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; %DISTRO% provides commands that
 can be used to obtain
 information about faults present in the system.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; &amp;nbsp; The &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;fmadm faulty&lt;/span&gt;&quot;
@@ -96,7 +96,7 @@ command is an alternative method for
 obtaining simular fault information.&lt;br&gt;
 &lt;br&gt;
 &lt;ul&gt;
-  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris nomenclature numbering assignment is
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; %DISTRO% nomenclature numbering assignment is
 zero-based, therefore all numbering begins with the number 0. &lt;/li&gt;
   &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
 term &quot;&lt;span
@@ -174,7 +174,7 @@ serial=
 &amp;nbsp;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-&amp;nbsp; &amp;nbsp;&amp;nbsp; Description : Solaris Fault Manager has received
+&amp;nbsp; &amp;nbsp;&amp;nbsp; Description : %DISTRO% Fault Manager has received
 reports that correctable memory
 errors attributed to a single page of physical &lt;br&gt;
 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
@@ -358,7 +358,7 @@ recommended at this time.&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/div&gt
 	<name>impact</name>
 	<item>\n\nRemoving a single page from service (where supported) has a negligible impact on performance.\n</item>
 	<name>response</name>
-	<item>\n\nIf Solaris is running on bare-metal (native boot) an attempt will be made to remove this memory page from service.\n</item>
+	<item>\n\nIf %DISTRO% is running on bare-metal (native boot) an attempt will be made to remove this memory page from service.\n</item>
 	<name>title</name>
 	<item>Memory module errors exceeding acceptable levels</item>
 </event_registry_properties>

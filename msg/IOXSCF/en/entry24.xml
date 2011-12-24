@@ -88,7 +88,7 @@ shown below.&lt;p&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;e316246b-99a7-4b85-9ec5-1838353c6473&lt;/font&gt;
    DESC: A thermal sensor is below the low failure threshold in an External I/O Expansion Unit FRU
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-RQ&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-RQ&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: Low temperatures may cause condensation to develop resulting in hardware failures.
    REC-ACTION: Check ambient temperatures in the environment.&lt;/pre&gt;&lt;p&gt;

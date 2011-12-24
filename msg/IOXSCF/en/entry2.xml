@@ -64,7 +64,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;f1c44e9b-4fa8-4d67-98b7-f1bc5a87a46a&lt;/font&gt;
    DESC: There is a failure with an interrupt signal in an i2c component in an External I/O Expansion Unit.
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-2S&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-2S&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: Alarm conditions and FRU removal may not be detected
    REC-ACTION: Schedule a repair procedure to replace the affected FRU.&lt;/pre&gt;&lt;p&gt;

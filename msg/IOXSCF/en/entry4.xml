@@ -64,7 +64,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;cc2379c7-00d6-438d-a60a-9c18a6fbea8a&lt;/font&gt;
    DESC: The static area of a FRUID seeprom is corrupted
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-4Y&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-4Y&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: FRUID updates may not be available. Service Processor software
    may disable use of the datapath associated with the FRU if the FRU type cannot be determined.

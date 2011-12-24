@@ -78,7 +78,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;360ad1f6-df55-4fd1-95fc-31c160fe618f
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8004-3Y&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -98,7 +98,7 @@ san-ff2-21-0&lt;br&gt;
 &lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The MAC chip has detected it does not have
 sufficient power to continue operating.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8004-3Y for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8004-3Y for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The domain using the MAC chip will be reset.&lt;br&gt;

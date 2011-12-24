@@ -38,7 +38,7 @@ the Sun Crypto Accelerator 4000 Board Installation and Users Guide.
 If the zeroize jumper is still detected after being removed, schedule a
 repair procedure to replace the affected adapter.</item>
 	<name>description</name>
-	<item>The Solaris Fault Manager has determined that the zeroize
+	<item>The %DISTRO% Fault Manager has determined that the zeroize
 jumper was detected on the Sun Crypto Accelerator 4000 card which
 requires repair action.</item>
 	<name>details</name>

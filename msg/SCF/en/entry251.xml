@@ -51,7 +51,7 @@ Step 1. Collect the fault message (use one of the following methods):
 
    Dec 12 12:26:32 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
    EVENT-ID: 8b5cfa23-0219-493c-aaed-64d785d3b793
-   Refer to http://www.sun.com/msg/SCF-8007-UQ for detailed information.
+   Refer to %FMAURL%/SCF-8007-UQ for detailed information.
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
 
@@ -61,7 +61,7 @@ Step 1. Collect the fault message (use one of the following methods):
    SOURCE: sde, REV: 1.15
    EVENT-ID: 8b5cfa23-0219-493c-aaed-64d785d3b793
    DESC: The XSCF could not determine whether POST is running correctly on a domain/XSB.
-   Refer to http://www.sun.com/msg/SCF-8007-UQ for more information.
+   Refer to %FMAURL%/SCF-8007-UQ for more information.
    AUTO-RESPONSE: If the event occurred during POST at domain startup, the domain is powered
    down. If the event occurred during POST at the time of a DR operation, the XSB
    being DR&#39;ed is powered down.  No other action is taken.

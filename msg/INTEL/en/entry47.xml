@@ -75,7 +75,7 @@ dimm. &lt;br&gt;
 &lt;br&gt;
 Details&lt;br&gt;
 Message ID: &lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8001-G2&lt;/span&gt;
-indicates that the Solaris Fault Manager has received &lt;br&gt;
+indicates that the %DISTRO% Fault Manager has received &lt;br&gt;
 an error report indicating a spare memory error has occurred.&lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
@@ -117,7 +117,7 @@ FRU&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
 =&amp;nbsp;
 SUNW-MSG-ID&lt;br&gt;
 &lt;br&gt;
-&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris provides commands that
+&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; %DISTRO% provides commands that
 can be used to obtain
 information about faults present in the system.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; &amp;nbsp; The &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;fmadm faulty&lt;/span&gt;&quot;
@@ -128,7 +128,7 @@ command is an alternative method for
 obtaining simular fault information.&lt;br&gt;
 &lt;br&gt;
 &lt;ul&gt;
-  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris nomenclature numbering assignment is
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; %DISTRO% nomenclature numbering assignment is
 zero-based, therefore all numbering begins with the number 0. &lt;/li&gt;
   &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
 term &quot;&lt;span
@@ -646,7 +646,7 @@ SUNW-MSG-ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
 &amp;nbsp;&amp;nbsp; &amp;nbsp; &lt;span
- style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Solaris Command
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;%DISTRO% Command
 to Clear the Fault&lt;/span&gt;&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp; &amp;nbsp; Once the memory DIMM has been physically
@@ -655,7 +655,7 @@ and the system
 is rebooted, a fault management command is&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; required to clear the memory DIMM fault
 from the
-Solaris fault manager&#39;s resource cache to accurately reflect faults &lt;br&gt;
+%DISTRO% fault manager&#39;s resource cache to accurately reflect faults &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; that are no
 longer
 present.&lt;br&gt;

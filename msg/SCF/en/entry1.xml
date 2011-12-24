@@ -195,7 +195,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;color: rgb(51, 51, 255); font-weight: bold;&quot;&gt;c1bc7ddf-f865-4617-a1bd-91600af7d4de
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8000-1D&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -215,7 +215,7 @@ nwk-dc2-1-sc0&lt;br&gt;
 &lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal clock distribution error was detected by an
 ASIC or a CPU chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8000-1D for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8000-1D for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: An attempt will be made to deconfigure the
 faulty components after one &lt;br&gt;

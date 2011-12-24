@@ -93,7 +93,7 @@ data for presentation to your authorized service provider.&lt;p&gt;
     EVENT-ID: &lt;font color=blue&gt;52b4acd8-4a14-6e29-c055-f9962d163d1f&lt;/font&gt;
 
     DESC: The XFP optical transceiver is broken or missing.
-      Refer to http://sun.com/msg/&lt;font color=red&gt;%MSGID%&lt;/font&gt; for more information.
+      Refer to %FMAURL%/&lt;font color=red&gt;%MSGID%&lt;/font&gt; for more information.
     AUTO-RESPONSE: The device instance will be disabled.
     IMPACT: Loss of services provided by the device instances
     associated with this fault.

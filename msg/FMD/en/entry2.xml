@@ -30,7 +30,7 @@
 	<name>action</name>
 	<item>Use &lt;tt&gt;fmdump -v -u &amp;lt;EVENT-ID&amp;gt;&lt;/tt&gt; to locate the module.  Use &lt;tt&gt;fmadm reset &amp;lt;module&amp;gt;&lt;/tt&gt; to reset the module.</item>
 	<name>description</name>
-	<item>A Solaris Fault Manager component has experienced an error that required the module to be disabled.</item>
+	<item>A %DISTRO% Fault Manager component has experienced an error that required the module to be disabled.</item>
 	<name>details</name>
 	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
 &lt;html&gt;
@@ -100,5 +100,5 @@ can be found in Troubleshooting Doc&lt;a href=&quot;http://sunsolve.sun.com/sear
 	<name>response</name>
 	<item>The module has been disabled.  Events destined for the module will be saved for manual diagnosis.</item>
 	<name>title</name>
-	<item>Solaris Fault Manager component had disabling error</item>
+	<item>%DISTRO% Fault Manager component had disabling error</item>
 </event_registry_properties>

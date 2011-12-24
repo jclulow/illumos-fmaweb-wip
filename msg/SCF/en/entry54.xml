@@ -143,7 +143,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;bb6e7899-2afe-496a-9e4a-b804a4cb4d3f
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8001-P2&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -164,7 +164,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error was detected within an IOC chip. This
 fatal error affects only a single&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IO Channel.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8001-P2 for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8001-P2 for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The IO Channel will be deconfigured after
 the domain is reset.&lt;br&gt;

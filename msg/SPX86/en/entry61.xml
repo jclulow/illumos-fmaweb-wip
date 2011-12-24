@@ -253,7 +253,7 @@ The suspect component: &lt;span
  style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;has
 fault.security.integrity-compromised with probability=100. &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Refer to http://www.sun.com/msg/&lt;span
+Refer to %FMAURL%/&lt;span
  style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;SPX86-8001-W3&lt;/span&gt;
 for details.&lt;br&gt;
 &lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;

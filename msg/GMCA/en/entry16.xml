@@ -32,7 +32,7 @@
 	<name>description</name>
 	<item>A level 2 TLB on this cpu is faulty.</item>
 	<name>details</name>
-	<item>This message ID: &lt;B&gt;GMCA-8000-HW&lt;/B&gt; indicates that the Solaris Fault Manager has received 
+	<item>This message ID: &lt;B&gt;GMCA-8000-HW&lt;/B&gt; indicates that the %DISTRO% Fault Manager has received 
 reports from a CPU indicating that one or more errors have occurred 
 with this resource resulting in a CPU fault being diagnosed. If an
 uncorrectable error was reported, it likely resulted in a system panic
@@ -87,7 +87,7 @@ FRU         : &lt;FONT COLOR=&quot;green&quot;&gt;&quot;CPU 0&quot;&lt;/FONT&gt;
   
 
 Description : The number of errors associated with this CPU has exceeded
-              acceptable levels.  Refer to http://sun.com/msg/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-HW&lt;/FONT&gt; for
+              acceptable levels.  Refer to %FMAURL%/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-HW&lt;/FONT&gt; for
               more information.
 
 Response    : An attempt will be made to remove this CPU from service.
@@ -140,7 +140,7 @@ FRU         :  hc://:product-id=ThirdParty:server-id=random/
   
 
 Description : The number of errors associated with this CPU has exceeded
-              acceptable levels.  Refer to http://sun.com/msg/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-HW&lt;/FONT&gt; for
+              acceptable levels.  Refer to %FMAURL%/&lt;FONT COLOR=&quot;red&quot;&gt;GMAC-8000-HW&lt;/FONT&gt; for
               more information.
 
 Response    : An attempt will be made to remove this CPU from service.
@@ -202,13 +202,13 @@ with the EVENT_ID (highlighted in blue) in procedures A or B Example 1.1 above.
           CPU back into the active configuration.
 &lt;P&gt;
 Once you have completed the repair action, and told the fault manager 
-that the FRU has been repaired, it may still be necessary to tell Solaris 
+that the FRU has been repaired, it may still be necessary to tell %DISTRO% 
 to use the affected system resource.  If the &lt;B&gt;Automated Response&lt;/B&gt; 
 described above in this article was; &quot;An attempt will be made to remove 
 this CPU from service.&quot;, you will need to place the CPU back into the 
 active configuration and verify that the CPU has been returned to service.
 &lt;P&gt;
-Use Solaris command psrinfo (1M) to identify the logical CPU number that
+Use %DISTRO% command psrinfo (1M) to identify the logical CPU number that
 was faulted. Example 3.1 below.  
 &lt;UL&gt;
 &lt;B&gt;Example 3.1 - identifying the logical CPU number that was faulted:&lt;/B&gt;
@@ -233,7 +233,7 @@ Place the faulted CPU back into the active configuration using the psradm
 &lt;P&gt;
 &lt;B&gt;Step 4: &lt;/B&gt;Verify the CPU is in use by the system.
 &lt;P&gt;
-To verify that the CPU has been returned to service, use the Solaris 
+To verify that the CPU has been returned to service, use the %DISTRO% 
 command psrinfo (1M). See Example 4.1 below.
 &lt;P&gt;
 &lt;UL&gt;

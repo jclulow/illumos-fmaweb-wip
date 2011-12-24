@@ -66,7 +66,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;f8f35515-327a-45ca-85ae-1d561d734d25&lt;/font&gt;
    DESC: A power failure was detected in an External I/O Expansion Unit FRU
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-0J&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-0J&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: If one power supply fails, the redundant supply will provide
    power to the system. If a power failure occurred in an I/O

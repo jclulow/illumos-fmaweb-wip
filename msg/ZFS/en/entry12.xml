@@ -51,7 +51,7 @@ status: One or more devices could not be used because the label is missing or
         invalid.  Sufficient replicas exist for the pool to continue
         functioning in a degraded state.
 action: Replace the device using 'zpool replace'.
-   see: &lt;font color='red'&gt;http://www.sun.com/msg/ZFS-8000-4J&lt;/font&gt;
+   see: &lt;font color='red'&gt;%FMAURL%/ZFS-8000-4J&lt;/font&gt;
  scrub: none requested
 config:
 

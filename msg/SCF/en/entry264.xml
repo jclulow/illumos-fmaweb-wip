@@ -50,7 +50,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Dec 13 06:08:31 san-dc3-2-0 fmd: SOURCE: sde, REV: 1.15, CSN: 2010643002
    EVENT-ID: cf5ac11c-fc13-4462-9bcf-8272f85c4198
-   Refer to http://www.sun.com/msg/SCF-8008-8T for detailed information.
+   Refer to %FMAURL%/SCF-8008-8T for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -61,7 +61,7 @@ Step 1. Collect the Fault Message  (two methods)
    SOURCE: sde, REV: 1.15
    EVENT-ID: cf5ac11c-fc13-4462-9bcf-8272f85c4198
    DESC: An XBU is either not present or could not be detected during powerup.
-   Refer to http://www.sun.com/msg/SCF-8008-8T for more information.
+   Refer to %FMAURL%/SCF-8008-8T for more information.
    AUTO-RESPONSE: If there are insufficient operational XBUs on the platform, the entire platform will not be
    powered up and the platform becomes unbootable. Please consult the detail section of the knowledge
    article for additional information.

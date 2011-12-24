@@ -92,7 +92,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;c0a6595c-bf10-4c5b-a7aa-b62ce29f725f
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8003-S4&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -113,7 +113,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: An error was detected within the section of a MBC
 chip dealing with a specific&lt;br&gt;
 &amp;nbsp;&amp;nbsp; XSB. This error is detected during self-test.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8003-S4 for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8003-S4 for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The XSB is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: No immediate impact. The XSB is deconfigured.&lt;br&gt;

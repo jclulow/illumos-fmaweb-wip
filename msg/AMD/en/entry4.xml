@@ -32,7 +32,7 @@
 	<name>description</name>
 	<item>A memory module has produced an uncorrectable error.</item>
 	<name>details</name>
-	<item>This message indicates that the Solaris Fault Manager has received reports
+	<item>This message indicates that the %DISTRO% Fault Manager has received reports
 of Uncorrectable Multiple-Bit memory errors associated with a Memory 
 Module have been detected, and a Memory Module fault has been diagnosed.
 No data has been lost, and pages of the affected Memory Module are being
@@ -186,7 +186,7 @@ Note: By resetting the Faulted Page Counters, this will reset ALL diagnosis
 &lt;p&gt;
 &lt;B&gt;Step 7: &lt;/B&gt;Verify the repaired resource is no longer faulty
 &lt;P&gt;
-Use the Solaris command &#39;fmadm faulty&#39; to display all faulted resources
+Use the %DISTRO% command &#39;fmadm faulty&#39; to display all faulted resources
 &lt;br&gt;in the system.  Confirm that the repaired resource is no longer listed
 &lt;br&gt;as faulted shown in Example 7.1.
 &lt;P&gt;
@@ -203,7 +203,7 @@ Use the Solaris command &#39;fmadm faulty&#39; to display all faulted resources
 	<name>impact</name>
 	<item>\n\nPage retirement (where supported) is capped at a small fraction of memory to avoid performance impact.\n</item>
 	<name>response</name>
-	<item>\n\nIf Solaris is running on bare-metal (native) then affected memory pages associated with this memory module will be removed from service.\n</item>
+	<item>\n\nIf %DISTRO% is running on bare-metal (native) then affected memory pages associated with this memory module will be removed from service.\n</item>
 	<name>title</name>
 	<item>Multibit memory module errors</item>
 </event_registry_properties>

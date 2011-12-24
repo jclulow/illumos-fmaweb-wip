@@ -35,10 +35,10 @@ the repository.  Upon successful completion, the system or
 local zone will be rebooted, and the restored repository will
 take effect.</item>
 	<name>description</name>
-	<item>The Solaris Repository Daemon discovered that the smf(5)
+	<item>The %DISTRO% Repository Daemon discovered that the smf(5)
 repository is corrupt.</item>
 	<name>details</name>
-	<item>When &lt;code&gt;svc.configd&lt;/code&gt;(1M), the Solaris Repository Daemon,
+	<item>When &lt;code&gt;svc.configd&lt;/code&gt;(1M), the %DISTRO% Repository Daemon,
 	  is started, it does an integrity check of the &lt;code&gt;smf&lt;/code&gt;(5)
 	  repository, stored in &lt;code&gt;/etc/svc/repository.db&lt;/code&gt;.  This
 	  integrity check can fail due to a disk failure, the database
@@ -64,7 +64,7 @@ svc.configd: smf(5) database integrity check of:
     /lib/svc/bin/restore_repository
 
   can be run to restore a backup version of your repository.  See
-  http://sun.com/msg/SMF-8000-MY for more information.
+  %FMAURL%/SMF-8000-MY for more information.
 	  &lt;/pre&gt;
 	  and exit, informing &lt;code&gt;svc.startd&lt;/code&gt;(1M) that system
 	  maintenance is needed.  &lt;code&gt;svc.startd&lt;/code&gt;(1M) will then
@@ -98,7 +98,7 @@ svc.configd: smf(5) database integrity check of:
 	  &lt;pre&gt;
 Repository Restore utility
 
-See http://sun.com/msg/SMF-8000-MY for more information on the use of
+See %FMAURL%/SMF-8000-MY for more information on the use of
 this script to restore backup copies of the smf(5) repository.
 
 If there are any problems which need human intervention, this script will
@@ -178,7 +178,7 @@ Proceed [yes/no]?
 	   fault. See the &lt;a href=&quot;http://docs.sun.com/app/docs/doc/817-1985/ecdps?a=view&quot;/&gt;
            &quot;SMF Troubleshooting Guide&quot;&lt;/a&gt; for additional details.</item>
 	<name>impact</name>
-	<item>The Solaris Service Manager will start an sulogin(1M) shell on
+	<item>The %DISTRO% Service Manager will start an sulogin(1M) shell on
 the console to allow the administrator to recover the system.  The
 system will not be able to boot until a non-corrupted replacement is
 installed.</item>

@@ -48,7 +48,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Dec 13 06:08:24 san-dc3-2-0 fmd: SOURCE: sde, REV: 1.15, CSN: 2010643002
    EVENT-ID: 61964e64-26a8-47a5-a56b-b7649926193f
-   Refer to http://www.sun.com/msg/SCF-8008-7K for detailed information.
+   Refer to %FMAURL%/SCF-8008-7K for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -59,7 +59,7 @@ Step 1. Collect the Fault Message  (two methods)
    SOURCE: sde, REV: 1.15
    EVENT-ID: 61964e64-26a8-47a5-a56b-b7649926193f
    DESC: Either no CMUs are present in the platform or no CMUs could be detected during powerup.
-   Refer to http://www.sun.com/msg/SCF-8008-7K for more information.
+   Refer to %FMAURL%/SCF-8008-7K for more information.
    AUTO-RESPONSE: The entire platform will not be powered up. The platform becomes unbootable.
    Please consult the detail section of the knowledge article for additional information.
    IMPACT: The entire platform will not be powered up. The platform becomes unbootable.

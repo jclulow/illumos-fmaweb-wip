@@ -40,7 +40,7 @@
 &lt;body&gt;
 &lt;br&gt;
 Message ID: &lt;span style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8000-44&lt;/span&gt;
-indicates that the Solaris Fault Manager
+indicates that the %DISTRO% Fault Manager
 has received an error report&lt;br&gt;
 indicating that a processor has experienced an error in the level 2
 cache.&lt;br&gt;
@@ -50,12 +50,12 @@ uncorrectable
 or fatal processor error is reported by a machine check exception,&lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;font
  color=&quot;#000000&quot;&gt;&lt;font face=&quot;ArialNarrow-Bold&quot;&gt;&lt;font size=&quot;3&quot;&gt;&amp;nbsp;
 &lt;br&gt;
-Solaris
+%DISTRO%
 will generate an ereport and then proceed to panic &lt;/font&gt;&lt;/font&gt;&lt;/font&gt;&lt;font
  color=&quot;#000000&quot;&gt;&lt;font face=&quot;ArialNarrow-Bold&quot;&gt;&lt;font size=&quot;3&quot;&gt;the
 system, followed by a warm reset.&lt;br&gt;
 Upon
-reboot, the Solaris operating system will replay the error telemetry
+reboot, the %DISTRO% operating system will replay the error telemetry
 and diagnose a faulty cpu, &lt;br&gt;
 resulting in that CPU/processor being off-lined.&amp;nbsp; &lt;/font&gt;&lt;/font&gt;&lt;/font&gt;Performance
 of this system may be affected.&lt;br&gt;
@@ -144,7 +144,7 @@ FRU&lt;/span&gt;&lt;br style=&quot;font-weight: bold;&quot;&gt;
 =&amp;nbsp;
 SUNW-MSG-ID&lt;br&gt;
 &lt;br&gt;
-&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris provides commands that
+&lt;/span&gt;&lt;/span&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; %DISTRO% provides commands that
 can be used to obtain
 information about faults present in the system.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; &amp;nbsp; The &quot;&lt;span style=&quot;font-weight: bold;&quot;&gt;fmadm faulty&lt;/span&gt;&quot;
@@ -155,7 +155,7 @@ command is an alternative method for
 obtaining simular fault information.&lt;br&gt;
 &lt;br&gt;
 &lt;ul&gt;
-  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Solaris nomenclature numbering assignment is
+  &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; %DISTRO% nomenclature numbering assignment is
 zero-based, therefore all numbering begins with the number 0. &lt;/li&gt;
   &lt;li&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; The
 term &quot;&lt;span
@@ -242,7 +242,7 @@ faulty&lt;br&gt;
 &lt;span style=&quot;font-style: italic;&quot;&gt;&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
 &amp;nbsp; &amp;nbsp;&amp;nbsp; Description : A level 2 cache on this cpu is
-faulty.&amp;nbsp; Refer to http://sun.com/msg/&lt;span
+faulty.&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;INTEL-8000-44&lt;/span&gt;
 for more information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;
@@ -669,7 +669,7 @@ SUNW-MSG-ID&lt;/span&gt;&lt;/span&gt;&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
 &amp;nbsp;&amp;nbsp; &amp;nbsp; &lt;span
- style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;Solaris Command
+ style=&quot;text-decoration: underline; font-weight: bold;&quot;&gt;%DISTRO% Command
 to Clear the Fault&lt;/span&gt;&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp; &amp;nbsp; Once the processor/chip has been physically
@@ -678,7 +678,7 @@ and the system
 is rebooted, a fault management command is&lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; required to clear the processor/chip fault
 from the
-Solaris fault manager&#39;s resource cache to accurately reflect faults &lt;br&gt;
+%DISTRO% fault manager&#39;s resource cache to accurately reflect faults &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; that are no
 longer
 present.&lt;br&gt;

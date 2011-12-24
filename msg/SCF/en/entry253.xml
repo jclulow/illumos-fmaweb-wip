@@ -33,10 +33,10 @@ and schedule a service action. Please consult the detail section of the
 knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain using a device on IO Channel leaf (1/2 an IO Channel).
+	<item>Failure to boot %DISTRO% on a domain using a device on IO Channel leaf (1/2 an IO Channel).
 </item>
 	<name>details</name>
-	<item>This message indicates a failure to boot Solaris on a domain
+	<item>This message indicates a failure to boot %DISTRO% on a domain
 using a device on the leaf of an IO channel.
 
 The OpenBoot PROM fcode did not detect any fault with the device.
@@ -62,6 +62,6 @@ The administrator should investigate the cause of the boot problem and schedule 
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain using a device on IO Channel leaf.
+	<item>Failure to boot %DISTRO% on a domain using a device on IO Channel leaf.
 </item>
 </event_registry_properties>

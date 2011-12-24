@@ -83,7 +83,7 @@ shown below.&lt;p&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;6f038a30-52bd-4136-a7de-00b46f64c16a&lt;/font&gt;
    DESC: A thermal sensor is above the high failure threshold in an External I/O Expansion Unit FRU
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-P3&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-P3&lt;/font&gt; for more information.
    AUTO-RESPONSE: The affected hardware may be powered off.
    IMPACT: Domains using the hardware may panic if hardware is powered off.
    REC-ACTION: Check ambient temperatures in the environment.&lt;/pre&gt;&lt;p&gt;

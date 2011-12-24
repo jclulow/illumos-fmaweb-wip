@@ -33,11 +33,11 @@ problem and schedule a service action, if necessary.
 Please consult the detail section of the knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain using an internal SAS (Serial Attached SCSI) device.
+	<item>Failure to boot %DISTRO% on a domain using an internal SAS (Serial Attached SCSI) device.
 This includes the internal hard drives and the internal DVD drives and the internal tape drives.
 </item>
 	<name>details</name>
-	<item>This message indicates a failure to boot Solaris on a domain using an internal SAS device.
+	<item>This message indicates a failure to boot %DISTRO% on a domain using an internal SAS device.
 
 The OpenBoot PROM fcode did not detect any fault with the device.
 
@@ -62,6 +62,6 @@ The administrator should investigate the cause of the boot problem and schedule 
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain using an internal SAS device.
+	<item>Failure to boot %DISTRO% on a domain using an internal SAS device.
 </item>
 </event_registry_properties>

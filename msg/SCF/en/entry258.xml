@@ -59,7 +59,7 @@ Step 1. Collect the fault message (use one of the following methods):
 
    Dec 12 12:27:19 san-ff2-16-0 fmd: SOURCE: sde, REV: 1.15, CSN: BE80601000
    EVENT-ID: ac36fd90-cccc-4288-b253-e1087f35b3fb
-   Refer to http://www.sun.com/msg/SCF-8008-27 for detailed information.
+   Refer to %FMAURL%/SCF-8008-27 for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -70,7 +70,7 @@ Step 1. Collect the fault message (use one of the following methods):
    SOURCE: sde, REV: 1.15
    EVENT-ID: ac36fd90-cccc-4288-b253-e1087f35b3fb
    DESC: Unexpected trap with some unknown cause was detected during POST.
-   Refer to http://www.sun.com/msg/SCF-8008-27 for more information.
+   Refer to %FMAURL%/SCF-8008-27 for more information.
    AUTO-RESPONSE: Nothing is deconfigured.
    IMPACT: The domain is reset.
    REC-ACTION: Please consult the detail section of the knowledge article for additional information.

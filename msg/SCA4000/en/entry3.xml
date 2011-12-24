@@ -32,13 +32,13 @@
 	<item>Sun Crypto Accelerator 4000 Invalid Firmware Detected</item>
 
 	<name>description</name>
-	<item>The Solaris Fault Manager has determined that an incorrect
+	<item>The %DISTRO% Fault Manager has determined that an incorrect
 version of firmware was detected on Sun Crypto Accelerator 4000 card
 which requires repair action.</item>
 
 	<name>response</name>
 	<item>The driver is running in a degraded mode and was not
-registered as a hardware provider to the Solaris Cryptographic
+registered as a hardware provider to the %DISTRO% Cryptographic
 Framework.</item>
 
 	<name>impact</name>

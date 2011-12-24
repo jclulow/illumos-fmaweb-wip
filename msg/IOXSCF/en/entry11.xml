@@ -65,7 +65,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;95e12e0b-10f9-480c-bd6f-216c60ffc1c3&lt;/font&gt;
    DESC: There are communication failures on an i2c bus to an External I/O Expansion Unit FRU
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-CQ&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-CQ&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: External I/O Expansion Unit FRUS may no longer be monitored. They
    may not be discovered at the next reboot.

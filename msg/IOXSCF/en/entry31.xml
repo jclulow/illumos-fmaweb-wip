@@ -62,7 +62,7 @@ LEGEND:&lt;br&gt;
    SOURCE: sde, REV: 1.12
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;e8986c1a-d4af-4a7f-bea4-bf2ab8a984aa&lt;/font&gt;
    DESC: An over-current warning was detected in a power supply
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-YE&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8000-YE&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: No immediate impact to the system. This warning may precede a power failure.
    REC-ACTION: Verify that the configuration of the I/O boats are supported, and

@@ -263,7 +263,7 @@ The suspect component: &lt;span
  style=&quot;font-weight: bold;&quot;&gt; &lt;/span&gt;has
 fault.chassis.env.temp.over-fail with probability=100. &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Refer to http://www.sun.com/msg/&lt;span
+Refer to %FMAURL%/&lt;span
  style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;SPX86-8000-6P&lt;/span&gt;
 for details.&lt;br&gt;
 &lt;br&gt;
@@ -466,7 +466,7 @@ want to clear &lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quo
 &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Set
 &#39;clear_fault_action&#39; to &#39;true&#39;&lt;br&gt;
 &lt;font face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;&lt;a target=&quot;l&quot;
- href=&quot;http://sun.com/msg/INTEL-8000-DP*&quot;&gt;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
+ href=&quot;%FMAURL%/INTEL-8000-DP*&quot;&gt;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
 &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;
 &lt;br&gt;

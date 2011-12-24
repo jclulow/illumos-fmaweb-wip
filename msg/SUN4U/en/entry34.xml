@@ -60,7 +60,7 @@ order to determine if any human response is required.</item>
 	<name>po-action</name>
 	<item>Use fmdump -ev -u &amp;lt;EVENT-ID&amp;gt; to view and record the undiagnosed errors.</item>
 	<name>po-description</name>
-	<item>The Solaris Fault Manager received an event from the IO subsystem for which automated diagnosis software is currently unavailable.</item>
+	<item>The %DISTRO% Fault Manager received an event from the IO subsystem for which automated diagnosis software is currently unavailable.</item>
 	<name>po-impact</name>
 	<item>The error log will need to be manually examined using fmdump(1M) in order to determine if any human response is required.</item>
 	<name>po-response</name>

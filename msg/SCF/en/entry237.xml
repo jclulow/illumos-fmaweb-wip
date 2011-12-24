@@ -84,7 +84,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;45ca302c-a253-48db-861a-f8bf1330759b&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8007-E2&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -103,7 +103,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;45ca302c-a253-48db-861a-f8bf1330759b&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: An internal non-fatal uncorrectable error has been
 detected within the CPU chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8007-E2 for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8007-E2 for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The non-fatal uncorrectable error may cause the

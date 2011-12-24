@@ -33,7 +33,7 @@ and schedule a service action, if necessary.
 Please consult the detail section of the knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain using a device behind a PCI-Express switch chip.
+	<item>Failure to boot %DISTRO% on a domain using a device behind a PCI-Express switch chip.
 This includes PCI-X slot and internal I/O devices (if the PCI-Express switch chip 
 is located on an IOU), and the PCI-Express slots and PCI-X slots on an I/O Boat
 (if the PCI-Express switch chip is located on an I/O Boat).
@@ -47,7 +47,7 @@ is located on an IOU), and the PCI-Express slots and PCI-X slots on an I/O Boat
   &lt;title&gt;&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-Failure to boot Solaris on a domain using a device behind a PCI-Express
+Failure to boot %DISTRO% on a domain using a device behind a PCI-Express
 switch chip.&lt;br&gt;
 &lt;br&gt;
 This message is informational in nature and not a diagnosis.&lt;br&gt;
@@ -98,7 +98,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a45be118-fc13-4a50-b42b-239953bf694d&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-GP&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -115,14 +115,14 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a45be118-fc13-4a50-b42b-239953bf694d&lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; DESC: Failure to boot Solaris on a domain using a device
+&amp;nbsp;&amp;nbsp; DESC: Failure to boot %DISTRO% on a domain using a device
 behind a PCI-Express switch chip.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; This includes PCI-X slot and internal I/O devices (if the
 PCI-Express switch chip &lt;br&gt;
 &amp;nbsp;&amp;nbsp; is located on an IOU), and the PCI-Express slots and PCI-X
 slots on an I/O Boat&lt;br&gt;
 &amp;nbsp;&amp;nbsp; (if the PCI-Express switch chip is located on an I/O Boat).&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8002-GP for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8002-GP for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The domain drops to the OpenBoot PROM &#39;ok&#39; prompt.&lt;br&gt;
@@ -175,6 +175,6 @@ Step 3. Contact your Authorized Service Provider.&lt;br&gt;
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain using a device behind a PCI-Express switch.
+	<item>Failure to boot %DISTRO% on a domain using a device behind a PCI-Express switch.
 </item>
 </event_registry_properties>

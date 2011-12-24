@@ -50,7 +50,7 @@ Step 1. Collect the Fault Message  (two methods)
 
    Dec 13 06:08:36 san-dc3-2-0 fmd: SOURCE: sde, REV: 1.15, CSN: 2010643002
    EVENT-ID: 5dafd588-5d3b-4e98-a10b-d628d7aa8e17
-   Refer to http://www.sun.com/msg/SCF-8008-96 for detailed information.
+   Refer to %FMAURL%/SCF-8008-96 for detailed information.
 
 
    Complete fault message using &#39;fmdump -m&#39; on the XSCF console:
@@ -61,7 +61,7 @@ Step 1. Collect the Fault Message  (two methods)
    SOURCE: sde, REV: 1.15
    EVENT-ID: 5dafd588-5d3b-4e98-a10b-d628d7aa8e17
    DESC: A CLKU is either not present or could not be detected during powerup.
-   Refer to http://www.sun.com/msg/SCF-8008-96 for more information.
+   Refer to %FMAURL%/SCF-8008-96 for more information.
    AUTO-RESPONSE: If there are sufficient operational CLKUs on the platform, the platform will be powered up.
    If there are insufficient operational CLKUs on the platform, the entire platform will not be
    powered up and the platform becomes unbootable. Please consult the detail section of the

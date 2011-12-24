@@ -79,7 +79,7 @@ CSN: BE80601000 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;10554ff1-401e-4def-aca0-b52b36bf3f82
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8006-X5&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -100,7 +100,7 @@ san-dc3-1-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The XSCFU_C and XSCFU_B have mismatched board
 numbers. This problem will only&lt;br&gt;
 &amp;nbsp;&amp;nbsp; occur during platform power-on.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8006-X5 for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8006-X5 for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: No domains will be allowed to be powered up
 until the problem is corrected.&lt;br&gt;

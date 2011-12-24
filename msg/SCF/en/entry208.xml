@@ -87,7 +87,7 @@ CSN: BE80601000 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;c602ab06-6753-44c1-b978-c9af49e64e21&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8006-HJ&lt;/span&gt;
 for detailed information. &lt;br&gt;
 &lt;br&gt;
@@ -106,7 +106,7 @@ san-dc3-1-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The number of correctable errors on the interface
 between two XB chips communicating&lt;br&gt;
 &amp;nbsp;&amp;nbsp; over an XBU cable has exceeded an acceptable threshold.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8006-HJ for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8006-HJ for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The crossbar way is deconfigured the next
 time the platform is restarted.&lt;br&gt;

@@ -32,7 +32,7 @@
 	<item>Service depends on itself</item>
 
 	<name>description</name>
-	<item>The Solaris Service Manager has determined that the service depends on itself, directly or indirectly, and has placed the service in the maintenance state.</item>
+	<item>The %DISTRO% Service Manager has determined that the service depends on itself, directly or indirectly, and has placed the service in the maintenance state.</item>
 
 	<name>impact</name>
 	<item>The service is not running.  It will remain in maintenance until the chain of dependencies which leads back to it is broken and the Service Manager has reread the service's configuration.  Services which depend on the service will not be started.  (Use &lt;code&gt;svcs&amp;nbsp;-xv &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to see a list of services waiting for the service to start.)</item>

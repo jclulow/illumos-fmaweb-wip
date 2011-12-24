@@ -92,7 +92,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;1bea4d32-db74-48f3-92c7-aad028275245
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8005-24&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -112,7 +112,7 @@ san-ff2-21-0&lt;br&gt;
 &lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error occurred on the interface between a SC
 chip and a CPU chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8005-24 for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8005-24 for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The CPU chip is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The single domain using the CPU chip is reset.&lt;br&gt;

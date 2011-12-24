@@ -110,7 +110,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;b39c640c-f30c-4e11-8252-c47853693268&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8005-7J&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -130,7 +130,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error occurred on the interface between a SC
 chip and the portion of the MAC chip &lt;br&gt;
 &amp;nbsp;&amp;nbsp; interfaces with a single memory bank.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8005-7J for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8005-7J for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Memory associated with the memory bank is
 deconfigured.&lt;br&gt;

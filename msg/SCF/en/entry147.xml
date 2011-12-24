@@ -219,7 +219,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;a2ae425f-43df-43ca-888a-5e2e02dbf5a0&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8004-LD&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -242,7 +242,7 @@ disappeared. This may be caused&lt;br&gt;
 procedure.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
 for additional information.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8004-LD for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8004-LD for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The FRU will be deconfigured. &lt;br&gt;
 &amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article

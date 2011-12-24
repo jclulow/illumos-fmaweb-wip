@@ -84,7 +84,7 @@ potentially require interpreters other than sh(1) or ksh(1).
 On systems offering a boot archive-based system boot, the
 boot archive may become out of sync with the root filesystem in
 a reboot following an abnormal system shutdown. The recommended
-action is to reboot immediately, choose &quot;Solaris failsafe&quot; when
+action is to reboot immediately, choose &quot;%DISTRO% failsafe&quot; when
 the boot menu is displayed. Type &#39;i&#39; to get an interactive recovery
 shell and follow instructions to update the boot archive.
 &lt;/p&gt;

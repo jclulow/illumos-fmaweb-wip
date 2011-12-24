@@ -274,7 +274,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;c145da9b-cbc2-4391-b1e4-efb64ce52c07&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-JJ&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -292,7 +292,7 @@ nwk-dc2-1-sc0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;c145da9b-cbc2-4391-b1e4-efb64ce52c07&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: JTAG read or write failure to a specific chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8002-JJ for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8002-JJ for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The resources associated with the chip will
 be deconfigured. &lt;br&gt;

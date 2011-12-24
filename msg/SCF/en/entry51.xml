@@ -154,7 +154,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;e1ebda6b-d398-4166-ac14-dc46e4fd4dc8&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8001-LQ&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -173,7 +173,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;e1ebda6b-d398-4166-ac14-dc46e4fd4dc8&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: A fatal error occurred on the interface between an
 IOC chip and a FLP chip.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8001-LQ for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8001-LQ for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The IO Channel associated with the FLP chip
 will be deconfigured after the domain&lt;br&gt;

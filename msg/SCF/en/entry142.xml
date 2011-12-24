@@ -307,7 +307,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;0bdc3201-2573-44c4-a674-1912bee4e115
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8004-FR&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -329,7 +329,7 @@ nwk-dc2-1-sc0&lt;br&gt;
 during a power-off sequence. &lt;br&gt;
 &amp;nbsp;&amp;nbsp; Please consult the detail section of the knowledge article
 for additional information.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8004-FR for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8004-FR for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: The poweroff sequence continues. The FRU or
 device will be deconfigured and will&lt;br&gt;

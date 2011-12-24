@@ -32,13 +32,13 @@
 	<item>Administrator has marked service for maintenance</item>
 
 	<name>description</name>
-	<item>An administrator requested that the Solaris Service Manager stop the service for maintenance.</item>
+	<item>An administrator requested that the %DISTRO% Service Manager stop the service for maintenance.</item>
 
 	<name>impact</name>
 	<item>The service may or may not be running.  It will not be started until the maintenance state is cleared.  Services with require-type dependencies on the service will not be started.  (Use &lt;code&gt;svcs&amp;nbsp;-xv &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to see a list of services waiting for the service to start.)</item>
 
 	<name>action</name>
-	<item>Run &lt;code&gt;svcadm&amp;nbsp;clear &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to request that the Solaris Service Manager clear the service's maintenance state and treat the service normally.  If the service is enabled and its dependencies are met, it will be started.</item>
+	<item>Run &lt;code&gt;svcadm&amp;nbsp;clear &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to request that the %DISTRO% Service Manager clear the service's maintenance state and treat the service normally.  If the service is enabled and its dependencies are met, it will be started.</item>
 
 	<name>details</name>
 	<use>htdocs/6.html</use>

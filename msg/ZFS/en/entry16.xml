@@ -52,7 +52,7 @@ affected by running 'zpool status -x':
  state: FAULTED
 status: There are I/O failures.
 action: Make sure the affected devices are connected, then run 'zpool clear'.
-   see: http://www.sun.com/msg/ZFS-8000-HC
+   see: %FMAURL%/ZFS-8000-HC
  scrub: none requested
 config:
 

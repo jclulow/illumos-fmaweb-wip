@@ -32,17 +32,17 @@
 	<name>description</name>
 	<item>An uncorrectable error was reported on a memory page.</item>
 	<name>details</name>
-	<item>This message ID: &lt;B&gt;GMCA-8000-X9&lt;/B&gt; indicates that the Solaris Fault Manager has received reports 
+	<item>This message ID: &lt;B&gt;GMCA-8000-X9&lt;/B&gt; indicates that the %DISTRO% Fault Manager has received reports 
 that uncorrectable memory errors attributed to a single page of physical 
 memory have been detected. Ongoing diagnosis applied to the error reports has 
 determined that a page is faulty. No repair action is required or recommended 
-at this time. No data has been lost. If and when the Solaris Fault Manager 
+at this time. No data has been lost. If and when the %DISTRO% Fault Manager 
 determines that there is sufficient cause, service action will be recommended 
 at that time.</item>
 	<name>impact</name>
 	<item>\n\nRemoving a single page from service (where supported) has a negligible impact on performance.\n</item>
 	<name>response</name>
-	<item>\n\nIf Solaris is running on bare-metal (native boot) an attempt will be made to remove this memory page from service.\n</item>
+	<item>\n\nIf %DISTRO% is running on bare-metal (native boot) an attempt will be made to remove this memory page from service.\n</item>
 	<name>title</name>
 	<item>An uncorrectable error in a memory page (internal diagnosis)</item>
 </event_registry_properties>

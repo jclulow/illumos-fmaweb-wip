@@ -36,7 +36,7 @@
 	<name>impact</name>
 	<item>\n\nRemoving a single page from service (where supported) has a negligible impact on performance.\n</item>
 	<name>response</name>
-	<item>\n\nIf Solaris is running on bare-metal (native boot) an attempt will be made to remove this memory page from service.\n</item>
+	<item>\n\nIf %DISTRO% is running on bare-metal (native boot) an attempt will be made to remove this memory page from service.\n</item>
 	<name>title</name>
 	<item>Errors from a single page exceeding acceptable levels</item>
 </event_registry_properties>

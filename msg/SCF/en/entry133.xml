@@ -142,7 +142,7 @@ CSN: nwk-dc2-1 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;d3e28c7d-4efb-447a-b74d-fa461783040d&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8004-5S&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -161,7 +161,7 @@ nwk-dc2-1-sc0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;d3e28c7d-4efb-447a-b74d-fa461783040d&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The XB chip has detected it does not have sufficient
 power to continue operating.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8004-5S for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8004-5S for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Resources may be deconfigured after a
 platform reset.&lt;br&gt;

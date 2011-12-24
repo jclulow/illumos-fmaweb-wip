@@ -95,7 +95,7 @@ server will also be illuminated.&lt;br&gt;
 The ILOM CLI will display the status of the chassis-wide LED indicator
 as:&amp;nbsp; /SYS/SERVICE = On&lt;br&gt;
 &lt;font face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;&lt;a target=&quot;l&quot;
- href=&quot;http://sun.com/msg/INTEL-8000-DP*&quot;&gt;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
+ href=&quot;%FMAURL%/INTEL-8000-DP*&quot;&gt;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
 &lt;span style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;Do
 not replace the motherboard&lt;/span&gt;&lt;br&gt;
 &lt;/span&gt;&lt;span style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;Check
@@ -305,7 +305,7 @@ The suspect component: &lt;span
 fault.memory.intel.dimm.population-invalid with
 probability=100. &lt;br&gt;
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-Refer to http://www.sun.com/msg/&lt;span
+Refer to %FMAURL%/&lt;span
  style=&quot;color: rgb(255, 0, 0); font-weight: bold;&quot;&gt;SPX86-8001-NJ&lt;/span&gt;
 for details.&lt;br&gt;
 &lt;br&gt;
@@ -768,7 +768,7 @@ want to clear &lt;span style=&quot;color: rgb(0, 153, 0); font-weight: bold;&quo
 &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Set
 &#39;clear_fault_action&#39; to &#39;true&#39;&lt;br&gt;
 &lt;font face=&quot;PrimaSans BT,Verdana,sans-serif&quot;&gt;&lt;a target=&quot;l&quot;
- href=&quot;http://sun.com/msg/INTEL-8000-DP*&quot;&gt;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
+ href=&quot;%FMAURL%/INTEL-8000-DP*&quot;&gt;&lt;/a&gt;&lt;/font&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;

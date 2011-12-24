@@ -109,7 +109,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;0ea4781c-0dc5-4728-ba80-bf3390c0c72a
 &lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt; SCF-8005-G3&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -130,7 +130,7 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The number of correctable errors on the interface
 between a MAC chip and a SC chip&lt;br&gt;
 &amp;nbsp;&amp;nbsp; has exceeded an acceptable threshold.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8005-G3 for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8005-G3 for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Memory associated with the MAC is
 deconfigured after the platform is power cycled &lt;br&gt;

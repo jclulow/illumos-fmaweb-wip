@@ -33,7 +33,7 @@ and schedule a service action, if necessary. Please consult the detail section o
 knowledge article for additional information.
 </item>
 	<name>description</name>
-	<item>Failure to boot Solaris on a domain using a device on an IO Channel.
+	<item>Failure to boot %DISTRO% on a domain using a device on an IO Channel.
 </item>
 	<name>details</name>
 	<item>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
@@ -44,7 +44,7 @@ knowledge article for additional information.
   &lt;title&gt;&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-Failure to boot Solaris on a domain using a device on an IO channel.&lt;br&gt;
+Failure to boot %DISTRO% on a domain using a device on an IO channel.&lt;br&gt;
 &amp;nbsp;&lt;br&gt;
 This message is informational in nature and not a diagnosis.&lt;br&gt;
 &lt;br&gt;
@@ -143,7 +143,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;70359f6b-7eb7-4b7d-a896-3fdec44bf6d5&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8002-9H&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -160,9 +160,9 @@ san-ff2-21-0&lt;br&gt;
 &amp;nbsp;&amp;nbsp; SOURCE: sde, REV: 1.12&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;70359f6b-7eb7-4b7d-a896-3fdec44bf6d5&lt;/span&gt;&lt;br&gt;
-&amp;nbsp;&amp;nbsp; DESC: Failure to boot Solaris on a domain using a device
+&amp;nbsp;&amp;nbsp; DESC: Failure to boot %DISTRO% on a domain using a device
 on an IO Channel.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8002-9H for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8002-9H for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Nothing is deconfigured.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; IMPACT: The domain drops to the OpenBoot PROM &#39;ok&#39; prompt.&lt;br&gt;
@@ -215,6 +215,6 @@ Step 3. Contact your Authorized Service Provider.&lt;br&gt;
 	<item>Nothing is deconfigured.
 </item>
 	<name>title</name>
-	<item>Failure to boot Solaris on a domain using a device on an IO Channel.
+	<item>Failure to boot %DISTRO% on a domain using a device on an IO Channel.
 </item>
 </event_registry_properties>

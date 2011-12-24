@@ -120,7 +120,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;bdc1e5d1-8ea6-4f8f-9dcf-4e0f92606c88&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8005-J4&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -139,7 +139,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;bdc1e5d1-8ea6-4f8f-9dcf-4e0f92606c88&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: The number of correctable errors on the interface
 between two SC chips has exceeded an acceptable threshold.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8005-J4 for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8005-J4 for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: Some resources associated with the SC chips
 (CPU chips, memory,&amp;nbsp; IO Channels) &lt;br&gt;

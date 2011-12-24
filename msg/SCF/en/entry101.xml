@@ -81,7 +81,7 @@ CSN: 7860000772 &amp;nbsp;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; EVENT-ID: &lt;span
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;7520d0ab-901b-45b3-946f-a52d18627b6a&lt;/span&gt;
 &lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/&lt;span
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/&lt;span
  style=&quot;font-weight: bold; color: rgb(255, 0, 0);&quot;&gt;SCF-8003-5D&lt;/span&gt;
 for detailed information.&lt;br&gt;
 &lt;br&gt;
@@ -100,7 +100,7 @@ san-ff2-21-0&lt;br&gt;
  style=&quot;font-weight: bold; color: rgb(51, 51, 255);&quot;&gt;7520d0ab-901b-45b3-946f-a52d18627b6a&lt;/span&gt;&lt;br&gt;
 &amp;nbsp;&amp;nbsp; DESC: Machine Administration Sofware (MADM) on the domain
 detected a serious I/O problem.&lt;br&gt;
-&amp;nbsp;&amp;nbsp; Refer to http://www.sun.com/msg/SCF-8003-5D for more
+&amp;nbsp;&amp;nbsp; Refer to %FMAURL%/SCF-8003-5D for more
 information.&lt;br&gt;
 &amp;nbsp;&amp;nbsp; AUTO-RESPONSE: No immediate action is taken and nothing is
 deconfigured.&lt;br&gt;

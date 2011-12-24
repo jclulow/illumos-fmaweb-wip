@@ -52,7 +52,7 @@ state:  ONLINE
 status: The pool was last accessed by another system.
 action: The pool can be imported using its name or numeric identifier and
         the '-f' flag.
-   see: http://www.sun.com/msg/ZFS-8000-EY
+   see: %FMAURL%/ZFS-8000-EY
 config:
 
         test              ONLINE

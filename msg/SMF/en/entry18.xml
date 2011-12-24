@@ -32,7 +32,7 @@
 	<item>Service's start method failed</item>
 
 	<name>description</name>
-	<item>The Solaris Service manager tried to start the service, but could not.</item>
+	<item>The %DISTRO% Service manager tried to start the service, but could not.</item>
 
 	<name>impact</name>
 	<item>The service is not running.  It will not be started until the maintenance state is cleared.  Services with require-type dependencies on the service will not be started.  (Use &lt;code&gt;svcs&amp;nbsp;-xv &lt;i&gt;service_fmri&lt;/i&gt;&lt;/code&gt; to see a list of services waiting for the service to start.)</item>

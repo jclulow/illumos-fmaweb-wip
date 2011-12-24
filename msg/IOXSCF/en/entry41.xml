@@ -60,7 +60,7 @@ LEGEND:&lt;br&gt;
    EVENT-ID: &lt;font color = &quot;BLUE&quot;&gt;c4819b64-3fe2-4fe3-a87a-0f8e0b7a11cb&lt;/font&gt;
    DESC: A linkcard installed in an I/O boat is behaving as if it
    were installed in a host I/O slot.
-   Refer to http://www.sun.com/msg/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-9Y&lt;/font&gt; for more information.
+   Refer to %FMAURL%/&lt;font color = &quot;RED&quot;&gt;IOXSCF-8001-9Y&lt;/font&gt; for more information.
    AUTO-RESPONSE: No immediate action is taken
    IMPACT: The I/O devices may not be functional and the FRUS
    accessed via the linkcard may not be monitored.
