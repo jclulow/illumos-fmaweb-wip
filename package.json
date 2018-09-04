@@ -3,22 +3,24 @@
 	"name": "illumos-fmaweb-wip",
 	"version": "0.0.1",
 	"dependencies": {
-		"express": "2.5.0",
-		"jade": ">= 0.0.1",
-		"fmamsg": ">= 0.0.1",
-		"sax": "*",
-		"async": ">= 0.1.15"
+		"assert-plus": "^1.0.0",
+		"bunyan": "^1.8.12",
+		"fmamsg": "^0.0.1",
+		"jsprim": "^2.0.0",
+		"restify": "^7.2.1",
+		"sax": "^1.2.4",
+		"vasync": "^2.2.0",
+		"verror": "^1.10.0"
 	},
 	"author": {
 		"name": "Joshua M. Clulow",
 		"email": "josh@sysmgr.org",
-		"url": "http://blog.sysmgr.org"
+		"url": "https://blog.sysmgr.org"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/jclulow/illumos-fmaweb-wip"
 	},
-	"engines": [ "node" ],
 	"description": "Provide http://www.illumos.org/msg/ZFS-8000-1W style URLs",
 	"homepage": "https://github.com/jclulow/illumos-fmaweb-wip"
 }

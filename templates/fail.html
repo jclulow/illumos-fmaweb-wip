@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>illumos FMA Message Registry</title>
+    <link rel="stylesheet" href="/msg/style.css">
+  </head>
+  <body>
+    <h1>illumos Fault Management Architecture (FMA) Message Registry</h1>
+    <h2>Error</h2>
+    <p>
+    Sorry, but we could not do that because:
+    </p>
+    <p style="font-size: 20pt; color: darkred;">
+    %ERROR%
+    </p>
+    <p>
+      <form action="/msg" method="POST">
+        <label for="messageid">Message ID:
+          <input type="text" name="messageid"/>
+        </label>
+        <input type="submit" name="Load"/>
+      </form>
+    </p>
+  </body>
+</html>
